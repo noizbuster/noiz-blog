@@ -1,3 +1,18 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "My New Hugo Site"
+theme = "m10c"
+
+[params]
+  author = "NoizBuster"
+  description = "NoizBuster"
+  [[params.social]]
+    name = "github"
+    url = "https://github.com/noizbuster"
+  [[params.social]]
+    name = "facebook"
+    url = "https://twitter.com/facebook"
+  [[params.social]]
+    name = "portfolio"
+    url = "https://noizbuster.github.io/portfolio"
+
