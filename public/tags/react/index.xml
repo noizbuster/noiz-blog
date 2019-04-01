@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>React on My New Hugo Site</title>
+    <link>http://example.org/tags/react/</link>
+    <description>Recent content in React on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Jan 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>react-vs-angular2</title>
+      <link>http://example.org/posts/2016-01-18-react-vs-angular2/2016-01-18-react-vs-angular2/</link>
+      <pubDate>Mon, 18 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-01-18-react-vs-angular2/2016-01-18-react-vs-angular2/</guid>
+      <description>#MEAN VS MERN ###AngularJS 2.0 VS ReactJS
+###Contents - AngularJS 2.0 - React - Conclusion - Workload Estimate - Links
+AngularJS 1.3 는 논외로 하기로 함
+http://netil.github.io/slides/angularjs/index3.html#/ - 앞으로 메인테넌스를 2년 미만만 지원됨. - AngularJS 2.0으로의 마이그레이션 방법 없음 - React 보다 7배정도 느림 &amp;ndash;&amp;gt; 2.0 에서 개선 - 소스코드의 재활용이 react에 비해서 떨어진다. &amp;ndash;&amp;gt; 2.0 에서 개선 - watcher가 많아지면 퍼포먼스 하락
+   angular2.0 VS react     two way data binding one way   ES6 완벽지원 JS ES6일부지원    ###AngularJS 2.</description>
+    </item>
+    
+  </channel>
+</rss>

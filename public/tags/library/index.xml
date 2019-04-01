@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Library on My New Hugo Site</title>
+    <link>http://example.org/tags/library/</link>
+    <description>Recent content in Library on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 19 Dec 2016 14:04:19 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/library/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>survey-npm-yaml-lib</title>
+      <link>http://example.org/posts/2016-12-19-140419-survey-npm-yaml-lib/2016-12-19-140419-survey-npm-yaml-lib/</link>
+      <pubDate>Mon, 19 Dec 2016 14:04:19 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-12-19-140419-survey-npm-yaml-lib/2016-12-19-140419-survey-npm-yaml-lib/</guid>
+      <description>Surveyed 2016-12-19
+TL;DR : js-yaml Win  yaml-js License: WTFPL
+2,580 downloads in the last day
+34,263 downloads in the last week
+169,836 downloads in the last month
+js-yaml License: MIT
+134,940 downloads in the last day
+2,614,264 downloads in the last week
+10,545,700 downloads in the last month
+yamljs License: MIT
+7,426 downloads in the last day
+116,115 downloads in the last week
+455,376 downloads in the last month</description>
+    </item>
+    
+  </channel>
+</rss>

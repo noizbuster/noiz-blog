@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on My New Hugo Site</title>
+    <link>http://example.org/tags/web/</link>
+    <description>Recent content in Web on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Mar 2018 14:41:51 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>http2-header-naming-convention</title>
+      <link>http://example.org/posts/2018-03-07-144151-http2-header-naming-convention/2018-03-07-144151-http2-header-naming-convention/</link>
+      <pubDate>Wed, 07 Mar 2018 14:41:51 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2018-03-07-144151-http2-header-naming-convention/2018-03-07-144151-http2-header-naming-convention/</guid>
+      <description> HTTP/2 Header Naming Convention server 코딩을 하는중에 header 를 다 lower case 로 자동변환 시켜주는짓을 API 게이트웨이 서버 미들웨어가 하는것을 발견했다.
+뭔가 이유가 있을것 같아 검색을 해보니 HTTP/2 스펙에서 header 이름을 lowerCase로 변환해줘야한다(MUST) 라고 표현하고 있다는걸 알게 되었다.
+HTTP/2 의 사용처가 점점 많아질것이니까 지금부터 미리미리 대비를 해야겠다.
+다른 서비스에서도 lowerCase로 변경해서 내부적으로 처리하도록 하던가 헬퍼 미들웨어를 만들던가 해야지
+References  발견한 stackoverflow 스레드 Secrion 8.1.2 of rfc7540  </description>
+    </item>
+    
+    <item>
+      <title>actionhero로 API Gateway 구축하기</title>
+      <link>http://example.org/posts/2016-05-17-actionhero-api-gateway-worklog/2016-05-17-actionhero-api-gateway-worklog/</link>
+      <pubDate>Tue, 17 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-05-17-actionhero-api-gateway-worklog/2016-05-17-actionhero-api-gateway-worklog/</guid>
+      <description>서론 라이선스 문제 때문에 LoopBack이 거슬려서 찾아보니 Action Hero 라는걸 찾았다.
+http://www.actionherojs.com/
+일단 기본적으로 나에게 필요한 기능은 다 있는것처럼 보인다.
+ Reusability Scalability(Clustering) RestfulAPI  얘는 독특하게 Web, WebSocket 뿐만 아니라 Socket 도 지원을 한다.
+npm install actionhero ./node_modules/.bin/actionhero generate npm install npm start  이렇게 설치하고 초기화하고 시작할 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>loopback으로 API Gateway 구축하기</title>
+      <link>http://example.org/posts/2016-05-16-loopback-api-gateway-worklog/2016-05-16-loopback-api-gateway-worklog/</link>
+      <pubDate>Sun, 15 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-05-16-loopback-api-gateway-worklog/2016-05-16-loopback-api-gateway-worklog/</guid>
+      <description>서론 Micro Service Architecture 에 대해서는 다음 링크에 조대협님이 쉽게 잘 설명해주셨다.
+조대협의 블로그 - 마이크로 서비스 아키텍쳐 (MSA의 이해)
+이번 포스팅에서는 Loopback을 사용할것이다.
+Loopback 은 IBM의 자회사인 StrongLoop가 만든 API Gateway 미들웨어이다
+Loopback.io 에서 문서들과 예제들을 확인 할 수 있다.
+설치와 초기 세팅 sudo npm install -g strongloop  설치가 끝나면 프로젝트 디렉토리를 하나 만들고 slc loopback 명령어로 프로젝트를 생성한다.
+mkdir project-name cd project-name slc loopback  그러면 yeoman이 트리거되고 설치가 시작된다.</description>
+    </item>
+    
+    <item>
+      <title>Python Flask 로 RestfulAPI 서버 만들기</title>
+      <link>http://example.org/posts/2016-05-09-building-flask-api-server-log/2016-05-09-building-flask-api-server-log/</link>
+      <pubDate>Mon, 09 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-05-09-building-flask-api-server-log/2016-05-09-building-flask-api-server-log/</guid>
+      <description>목표 목표는 RestfulAPI 서버를 만드는것이다.
+요구조건은, WebSocket 을 구현해야 할 수도 있다는 점이고.
+단발성의 API콜이 비주기적으로 많이 들어올수 있다는것.
+되도록이면 Response Time 은 짧은것이 좋다는것.
+Redis 를 캐시로 써서 리턴한다는점이다.
+시작 난 잘 만들어진 보일러플레이트로 시작을 하는것이 좋겠다.
+https://github.com/vovantics/flask-bluebone
+문서화가 잘 되어있고 authentication 도 구현되어있다.
+메인테이너가 한명이고 이슈란에 아무것도 없다는게 마음에 좀 걸리는데 리드미에 이렇게 구현한 이유에 대해서 나름대로 설명을 달아놨기 때문에 공부하기에는 좋아보인다.
+이메일이라던지 스테틱파일 서브와 같은 이번 목적이랑 상관없는것들도 포함되어있는데 걷어내면 되니까 일단은 신경쓰지 않는다.</description>
+    </item>
+    
+    <item>
+      <title>Python WebServer Survey for API Server</title>
+      <link>http://example.org/posts/2016-05-09-python-web-platform-survey/2016-05-09-python-web-platform-survey/</link>
+      <pubDate>Mon, 09 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-05-09-python-web-platform-survey/2016-05-09-python-web-platform-survey/</guid>
+      <description>Restful API 서버를 구현해야 할 문제가 있다.
+요구조건은 다음과 같다.
+ Restful API가 구현 가능해야한다. WebSocket 구현이 용이해야 한다. Scalability 가 좋으면 더욱좋다. Response time 이 짧으면 좋다. Python 이면 좋다.  Flask 사용자가 많아서 커뮤니티 서포트가 좋지만 달려있는게 많기 때문에 상대적으로 아주 무겁고 response time이 상당히 길다는 문제가 있다. 플랫폼을 meinheld 로 바꾸고 나서 많이 빨라졌다. plain text serve 의 경우 아예 퍼포먼스가 좀 느리가 느리다 nodejs 에 비해 7배정도 차이가 있음.</description>
+    </item>
+    
+    <item>
+      <title>css 넘치는 text 줄임말로 처리하기</title>
+      <link>http://example.org/posts/2016-04-12-handling-text-overflow-in-responsivedesign/2016-04-12-handling-text-overflow-in-responsivedesign/</link>
+      <pubDate>Tue, 12 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-04-12-handling-text-overflow-in-responsivedesign/2016-04-12-handling-text-overflow-in-responsivedesign/</guid>
+      <description>문제 div 나 span 내부에 있는 텍스트들이 너무 길어서 칸 밖으로 나갈때 잘라내거나 ... 등으로 줄임표시 하고 싶은 경우가 있다.
+responsive 하게 디자인되지 않은 경우에는 대게 width가 px로 정의되기 때문에 text-overflow 옵션을 조정하여 해결할할 수 있으나.
+엘리먼트의 크기가 percentage 와 같이 상대적인 크기로 정의되어있을때는 제대로 동작하지 않는다는 문제가 있다.
+시도해본것 p { white-space: nowrap; width: 100%; overflow: hidden; /* &amp;quot;overflow&amp;quot; value must be different from &amp;quot;visible&amp;quot; */ text-overflow: ellipsis; }  float:left;  해결방법 .</description>
+    </item>
+    
+    <item>
+      <title>똑똑하게 서버사이드 폴링 하기</title>
+      <link>http://example.org/posts/2016-04-04-serverside-polling/2016-04-04-serverside-polling/</link>
+      <pubDate>Mon, 04 Apr 2016 10:54:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-04-04-serverside-polling/2016-04-04-serverside-polling/</guid>
+      <description>Comet과 LongPolling 웹에서 데이터를 폴링하기 위한 개념으로 comet 이라는 모델이 제시되어있다.
+이것을 구현하는 방법중 하나가 롱 폴링이다.
+ comet 에 대한 설명 https://en.wikipedia.org/wiki/Comet_(programming)
+한글로 된 간략한 설명
+http://egloos.zum.com/genes1s/v/2699984
+ 요약하자면 단발성으로 http request 를 하는것이 아니라 connection을 물고 있다가
+이벤트가 발생하면 응답하여 반응성을 높이는것이다.
+pro : 응답성이 빠르다
+con : 커넥션을 쥐고 있어야 하기 때문에 자원이 많이 든다.
+폴링주기가 제법 길다 &amp;ndash;&amp;gt; 그냥 주기적으로 http request
+폴링주기가 아주 짧다 &amp;ndash;&amp;gt; comet, longpolling 사용</description>
+    </item>
+    
+    <item>
+      <title>Jekyll설치 가이드</title>
+      <link>http://example.org/posts/2016-01-18-jekyll-installation/2016-01-18-jekyll-installation/</link>
+      <pubDate>Fri, 18 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-01-18-jekyll-installation/2016-01-18-jekyll-installation/</guid>
+      <description>install jekyll install ruby2.3 ubuntu
+sudo apt-add-repository ppa:brightbox/ruby-ng sudo apt-get update sudo apt-get install ruby2.3 ruby2.3-dev  install gem
+sudo apt-get install gem
+update gem
+sudo gem install rubygems-update
+install Jekyll
+sudo gem install jekyll
+check jekyll version
+jekyll --version</description>
+    </item>
+    
+    <item>
+      <title>js calendar-componenets-survey</title>
+      <link>http://example.org/posts/2016-01-18-js-calendar-components-survey/2016-01-18-js-calendar-components-survey/</link>
+      <pubDate>Mon, 18 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-01-18-js-calendar-components-survey/2016-01-18-js-calendar-components-survey/</guid>
+      <description>#Schedule Viewer
+Ubuntu 14.04
+MEAN Stack (with Angular2.0)
+JobQueue : Celery(python) with MongoDB(Broker)
+(Optional) Vagrant
+Visualization - graspSchedule.js
+- DOJO
+DOJO
+Demo - fullcalandar
+Demo
+uikit - UIKIT - Bootstrap
+data visualization - http://www.chartjs.org/ - http://d3js.org/ - http://sigmajs.org/ - http://visjs.org/ - https://plot.ly/javascript</description>
+    </item>
+    
+    <item>
+      <title>react-vs-angular2</title>
+      <link>http://example.org/posts/2016-01-18-react-vs-angular2/2016-01-18-react-vs-angular2/</link>
+      <pubDate>Mon, 18 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-01-18-react-vs-angular2/2016-01-18-react-vs-angular2/</guid>
+      <description>#MEAN VS MERN ###AngularJS 2.0 VS ReactJS
+###Contents - AngularJS 2.0 - React - Conclusion - Workload Estimate - Links
+AngularJS 1.3 는 논외로 하기로 함
+http://netil.github.io/slides/angularjs/index3.html#/ - 앞으로 메인테넌스를 2년 미만만 지원됨. - AngularJS 2.0으로의 마이그레이션 방법 없음 - React 보다 7배정도 느림 &amp;ndash;&amp;gt; 2.0 에서 개선 - 소스코드의 재활용이 react에 비해서 떨어진다. &amp;ndash;&amp;gt; 2.0 에서 개선 - watcher가 많아지면 퍼포먼스 하락
+   angular2.0 VS react     two way data binding one way   ES6 완벽지원 JS ES6일부지원    ###AngularJS 2.</description>
+    </item>
+    
+  </channel>
+</rss>

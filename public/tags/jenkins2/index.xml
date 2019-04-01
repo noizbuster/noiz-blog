@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jenkins2 on My New Hugo Site</title>
+    <link>http://example.org/tags/jenkins2/</link>
+    <description>Recent content in Jenkins2 on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Jun 2016 14:20:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/jenkins2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jenkins2 create pipeline job</title>
+      <link>http://example.org/posts/2016-06-14-1420-jenkins2-make-a-job/2016-06-14-1420-jenkins2-make-a-job/</link>
+      <pubDate>Tue, 14 Jun 2016 14:20:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-06-14-1420-jenkins2-make-a-job/2016-06-14-1420-jenkins2-make-a-job/</guid>
+      <description>환경 jenkins server : ubuntu 12.04
+jenkins : v2.8
+작업환경 : ubuntu 14.04
+사족 freestyle job 은 마우스 클릭만 할 줄 알면 기본적인 빌드를 만들 수 있기 때문에 정리가 무색한것 같아서 다음으로 미루도록 하겠다.
+동기 단계가 복잡하거나 하는 일이 많은 job 의 경우 pipeline job 으로 만드는것이 좋은것 같다.
+jenkins2 부터는 설치시에 추천 플러그인으로 설치를 해 준다.
+https://github.com/jenkinsci/pipeline-plugin/blob/master/TUTORIAL.md
+여기를 시작으로 해보도록 하겠다.
+목표 내가 필요한것은
+ git repository로 부터 코드 받기 swagger-codegen 으로 webserver 생성하기 (kind of build) docker image 로 빌드하기 서버에서 이미 돌고 있는 컨테이너 내리기 서버에 이미지를 밀어넣거나 그쪽에서 pull 받아서 실행시키기</description>
+    </item>
+    
+    <item>
+      <title>Jenkins2 설치 및 구성 (docker)</title>
+      <link>http://example.org/posts/2016-06-14-1000-jenkins2-setup/2016-06-14-1000-jenkins2-setup/</link>
+      <pubDate>Tue, 14 Jun 2016 10:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-06-14-1000-jenkins2-setup/2016-06-14-1000-jenkins2-setup/</guid>
+      <description>설치 Jenkins2 를 설치한다 docker 이미지를 제공하니까 이걸 쓰도록 한다.
+20160614 현재 최신버전은 2.8
+https://hub.docker.com/r/jenkinsci/jenkins/tags/
+sudo docker run \ -p 13980:8080 \ -d \ jenkinsci/jenkins  로 실행
+컨테이너의 8080 포트를 13980으로 바인드 한다.
+초기 설정 http://my-ip:13980 로 접속하면
+/var/jenkins_home/secrets/initialAdminPassword 으로 들어가서
+초기 비밀번호를 입력하라는 화면을 보게 된다.
+도커의 shell 에 붙어서 파일을 읽으면 된다.
+sudo docker exec -ti containdername bash 로 쉘에 붙자
+cat /var/jenkins_home/secrets/initialAdminPassword 으로 확인할 수 있다.</description>
+    </item>
+    
+  </channel>
+</rss>

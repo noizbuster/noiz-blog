@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://example.org/posts/2019-01-09-135737-esm-on-nodejs/2019-01-09-135737-esm-on-nodejs/</loc>
+    <lastmod>2019-01-09T13:57:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2018-11-19-161357-js-documentation/2018-11-19-161357-js-documentation/</loc>
+    <lastmod>2018-11-19T16:13:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2018-08-23-162836-errorhandling-async-express-router/2018-08-23-162836-errorhandling-async-express-router/</loc>
+    <lastmod>2018-08-23T16:28:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2018-03-30-180144-cron-on-nodejs/2018-03-30-180144-cron-on-nodejs/</loc>
+    <lastmod>2018-03-30T18:01:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2018-03-12-145933-survey-nodejs-config-package/2018-03-12-145933-survey-nodejs-config-package/</loc>
+    <lastmod>2018-03-12T14:59:33+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2018-03-07-144906-another-webapp-in-angulario/2018-03-07-144906-another-webapp-in-angulario/</loc>
+    <lastmod>2018-03-07T14:49:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2018-03-07-144151-http2-header-naming-convention/2018-03-07-144151-http2-header-naming-convention/</loc>
+    <lastmod>2018-03-07T14:41:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2017-09-04-093944-my-job-philosophy/2017-09-04-093944-my-job-philosophy/</loc>
+    <lastmod>2017-09-04T09:39:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2017-07-25-105709-market-research-hansung-laptop-20170710/2017-07-25-105709-market-research-hansung-laptop-20170710/</loc>
+    <lastmod>2017-07-25T10:57:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2017-07-13-131835-gmail-filtering/2017-07-13-131835-gmail-filtering/</loc>
+    <lastmod>2017-07-13T13:18:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2017-07-13-104204-elements-of-project/2017-07-13-104204-elements-of-project/</loc>
+    <lastmod>2017-07-13T10:42:04+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2017-06-05-141344-authentication-on-angulario/2017-06-05-141344-authentication-on-angulario/</loc>
+    <lastmod>2017-06-05T14:13:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2017-01-16-151731-is-semantic-versioning-fit-on-recently-lifecycle-of-software/2017-01-16-151731-is-semantic-versioning-fit-on-recently-lifecycle-of-software/</loc>
+    <lastmod>2017-01-16T15:17:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2017-01-09-140517-fixing-atom-and-idea-file-refresh-issue/2017-01-09-140517-fixing-atom-and-idea-file-refresh-issue/</loc>
+    <lastmod>2017-01-09T14:05:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-12-19-140419-survey-npm-yaml-lib/2016-12-19-140419-survey-npm-yaml-lib/</loc>
+    <lastmod>2016-12-19T14:04:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-11-27-174831-redemption-monitor-design/2016-11-27-174831-redemption-monitor-design/</loc>
+    <lastmod>2016-11-27T17:48:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-11-03-153952-holywar-about-table-name/2016-11-03-153952-holywar-about-table-name/</loc>
+    <lastmod>2016-11-03T15:39:52+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-11-01-132517-mongodb-transaction/2016-11-01-132517-mongodb-transaction/</loc>
+    <lastmod>2016-11-01T13:25:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-10-31-112249-authentication-on-msa/2016-10-31-112249-authentication-on-msa/</loc>
+    <lastmod>2016-10-31T11:22:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-09-08-102937-restful-api-error-handling/2016-09-08-102937-restful-api-error-handling/</loc>
+    <lastmod>2016-09-08T10:29:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-08-18-093029-docker-swarm-study/2016-08-18-093029-docker-swarm-study/</loc>
+    <lastmod>2016-08-18T09:30:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-08-17-111838-expand-vdi-size/2016-08-17-111838-expand-vdi-size/</loc>
+    <lastmod>2016-08-17T11:18:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-08-11-173123-angular2-rc5-study/2016-08-11-173123-angular2-rc5-study/</loc>
+    <lastmod>2016-08-11T17:31:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-08-11-165835-survey-of-service-discovery/2016-08-11-165835-survey-of-service-discovery/</loc>
+    <lastmod>2016-08-11T16:58:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-07-20-09-51-javascript-documentation/2016-07-20-09-51-javascript-documentation/</loc>
+    <lastmod>2016-07-20T09:51:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-07-13-08-bluebird-promise/2016-07-13-08-bluebird-promise/</loc>
+    <lastmod>2016-07-13T08:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-07-06-angular1.5-survey-best-practice/2016-07-06-angular1.5-survey-best-practice/</loc>
+    <lastmod>2016-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-06-21-14-46-multiple-specs-swagger-ui/2016-06-21-14-46-multiple-specs-swagger-ui/</loc>
+    <lastmod>2016-06-21T14:46:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-06-21-09-54-make-my-npm-module/2016-06-21-09-54-make-my-npm-module/</loc>
+    <lastmod>2016-06-21T09:54:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-06-14-1420-jenkins2-make-a-job/2016-06-14-1420-jenkins2-make-a-job/</loc>
+    <lastmod>2016-06-14T14:20:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-06-14-1000-jenkins2-setup/2016-06-14-1000-jenkins2-setup/</loc>
+    <lastmod>2016-06-14T10:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-05-25-webstorm-node-integration/2016-05-25-webstorm-node-integration/</loc>
+    <lastmod>2016-05-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-05-24-python-virtualenv/2016-05-24-python-virtualenv/</loc>
+    <lastmod>2016-05-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-05-17-actionhero-api-gateway-worklog/2016-05-17-actionhero-api-gateway-worklog/</loc>
+    <lastmod>2016-05-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-05-16-loopback-api-gateway-worklog/2016-05-16-loopback-api-gateway-worklog/</loc>
+    <lastmod>2016-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-05-10-covering-autoremove-mistake/2016-05-10-covering-autoremove-mistake/</loc>
+    <lastmod>2016-05-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-05-09-building-flask-api-server-log/2016-05-09-building-flask-api-server-log/</loc>
+    <lastmod>2016-05-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-05-09-python-web-platform-survey/2016-05-09-python-web-platform-survey/</loc>
+    <lastmod>2016-05-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-04-30-noizbuster-logo-design/2016-04-30-noizbuster-logo-design/</loc>
+    <lastmod>2016-04-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-04-28-stemcell/2016-04-28-stemcell/</loc>
+    <lastmod>2016-04-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-04-20-ova-to-dockerimg/2016-04-20-ova-to-dockerimg/</loc>
+    <lastmod>2016-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-04-12-handling-text-overflow-in-responsivedesign/2016-04-12-handling-text-overflow-in-responsivedesign/</loc>
+    <lastmod>2016-04-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-04-04-commonmarks-direction/2016-04-04-commonmarks-direction/</loc>
+    <lastmod>2016-04-04T13:17:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-04-04-serverside-polling/2016-04-04-serverside-polling/</loc>
+    <lastmod>2016-04-04T10:54:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/review/2016-04-03-phiaton-100nc/2016-04-03-phiaton-100nc/</loc>
+    <lastmod>2016-04-03T10:54:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-03-18-install-jekyll/2016-03-18-install-jekyll/</loc>
+    <lastmod>2016-03-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-01-18-jekyll-installation/2016-01-18-jekyll-installation/</loc>
+    <lastmod>2016-03-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-01-18-celery-with-mongodb/2016-01-18-celery-with-mongodb/</loc>
+    <lastmod>2016-01-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-01-18-js-calendar-components-survey/2016-01-18-js-calendar-components-survey/</loc>
+    <lastmod>2016-01-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-01-18-react-vs-angular2/2016-01-18-react-vs-angular2/</loc>
+    <lastmod>2016-01-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-01-15-kobuki-raspberripi2/2016-01-15-kobuki-raspberripi2/</loc>
+    <lastmod>2016-01-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-01-13-review-p34w-v3/2016-01-13-review-p34w-v3/</loc>
+    <lastmod>2016-01-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-01-04-ros-7-using_rqtconsole_and_roslaunch/2016-01-04-ros-7-using_rqtconsole_and_roslaunch/</loc>
+    <lastmod>2016-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-01-04-ros-8-using_rosed/2016-01-04-ros-8-using_rosed/</loc>
+    <lastmod>2016-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-01-04-ros-9-creating_msg_and_srv/2016-01-04-ros-9-creating_msg_and_srv/</loc>
+    <lastmod>2016-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-01-04-ros-17-record_and_playback_data/2016-01-04-ros-17-record_and_playback_data/</loc>
+    <lastmod>2016-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-01-03-ros-4-node/2016-01-03-ros-4-node/</loc>
+    <lastmod>2016-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-01-03-ros-5-topic/2016-01-03-ros-5-topic/</loc>
+    <lastmod>2016-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2016-01-03-ros-6-service-and-parameter/2016-01-03-ros-6-service-and-parameter/</loc>
+    <lastmod>2016-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2015-12-30-ros-3-create-package/2015-12-30-ros-3-create-package/</loc>
+    <lastmod>2015-12-30T00:06:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2015-12-29-ros-2-navigating-the-filesystem/2015-12-29-ros-2-navigating-the-filesystem/</loc>
+    <lastmod>2015-12-29T00:06:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2015-12-28-ros-1-installation-and-configulation/2015-12-28-ros-1-installation-and-configulation/</loc>
+    <lastmod>2015-12-28T00:06:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/2015-08-11-vs-metafile/2015-08-11-vs-metafile/</loc>
+    <lastmod>2015-12-14T00:06:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/actionhero/</loc>
+    <lastmod>2016-05-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/angular/</loc>
+    <lastmod>2016-07-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/angular1.5/</loc>
+    <lastmod>2016-07-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/angular2/</loc>
+    <lastmod>2016-08-11T17:31:23+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/api/</loc>
+    <lastmod>2016-09-08T10:29:37+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/apt/</loc>
+    <lastmod>2016-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/atom/</loc>
+    <lastmod>2017-01-09T14:05:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/audio/</loc>
+    <lastmod>2016-04-03T10:54:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/authentication/</loc>
+    <lastmod>2016-10-31T11:22:49+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/blog/</loc>
+    <lastmod>2016-03-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/cd/</loc>
+    <lastmod>2016-06-14T14:20:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/celery/</loc>
+    <lastmod>2016-01-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/ci/</loc>
+    <lastmod>2016-06-14T14:20:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/comet/</loc>
+    <lastmod>2016-04-04T10:54:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/commonmark/</loc>
+    <lastmod>2016-04-04T13:17:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/container/</loc>
+    <lastmod>2016-08-18T09:30:29+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/convention/</loc>
+    <lastmod>2016-11-03T15:39:52+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/css/</loc>
+    <lastmod>2016-04-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/design/</loc>
+    <lastmod>2016-04-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/development/</loc>
+    <lastmod>2019-01-09T13:57:37+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/diy/</loc>
+    <lastmod>2016-04-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/docker/</loc>
+    <lastmod>2016-08-18T09:30:29+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/documentation/</loc>
+    <lastmod>2016-07-20T09:51:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/earphone/</loc>
+    <lastmod>2016-04-03T10:54:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/frontend/</loc>
+    <lastmod>2016-01-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/gigabyte/</loc>
+    <lastmod>2016-01-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/http/</loc>
+    <lastmod>2018-03-07T14:41:51+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/ide/</loc>
+    <lastmod>2016-05-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/idea/</loc>
+    <lastmod>2017-01-09T14:05:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/javascript/</loc>
+    <lastmod>2016-07-20T09:51:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/jekyll/</loc>
+    <lastmod>2016-03-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/jenkins/</loc>
+    <lastmod>2016-06-14T14:20:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/jenkins2/</loc>
+    <lastmod>2016-06-14T14:20:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/js/</loc>
+    <lastmod>2016-01-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/jsdoc/</loc>
+    <lastmod>2016-07-20T09:51:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/kobuki/</loc>
+    <lastmod>2016-01-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/laptop/</loc>
+    <lastmod>2016-01-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/library/</loc>
+    <lastmod>2016-12-19T14:04:19+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/linux/</loc>
+    <lastmod>2017-01-09T14:05:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/logo/</loc>
+    <lastmod>2016-04-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/logpolling/</loc>
+    <lastmod>2016-04-04T10:54:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/loopback/</loc>
+    <lastmod>2016-05-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/mapping-table/</loc>
+    <lastmod>2016-11-03T15:39:52+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/mariadb/</loc>
+    <lastmod>2016-11-03T15:39:52+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/markdown/</loc>
+    <lastmod>2016-04-04T13:17:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/markup/</loc>
+    <lastmod>2016-04-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/micro-service-architecture/</loc>
+    <lastmod>2016-10-31T11:22:49+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/mongodb/</loc>
+    <lastmod>2016-11-01T13:25:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/mongoose/</loc>
+    <lastmod>2016-11-01T13:25:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/msa/</loc>
+    <lastmod>2016-10-31T11:22:49+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/</loc>
+    <lastmod>2019-01-09T13:57:37+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/naming-convention/</loc>
+    <lastmod>2016-11-03T15:39:52+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/node/</loc>
+    <lastmod>2016-11-01T13:25:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/nodejs/</loc>
+    <lastmod>2016-11-01T13:25:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/noizbuster/</loc>
+    <lastmod>2016-04-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/npm/</loc>
+    <lastmod>2016-12-19T14:04:19+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/openapi/</loc>
+    <lastmod>2016-06-21T14:46:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/os/</loc>
+    <lastmod>2016-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/ova/</loc>
+    <lastmod>2016-04-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/p34w-v3/</loc>
+    <lastmod>2016-01-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/package/</loc>
+    <lastmod>2016-12-19T14:04:19+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/package-management/</loc>
+    <lastmod>2016-05-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/phiaton/</loc>
+    <lastmod>2016-04-03T10:54:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/polling/</loc>
+    <lastmod>2016-04-04T10:54:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/</loc>
+    <lastmod>2019-01-09T13:57:37+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/promise/</loc>
+    <lastmod>2016-07-13T08:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/protocol/</loc>
+    <lastmod>2018-03-07T14:41:51+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/python/</loc>
+    <lastmod>2016-05-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/python-flask/</loc>
+    <lastmod>2016-05-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/raspberrypi/</loc>
+    <lastmod>2016-01-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/react/</loc>
+    <lastmod>2016-01-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/redemption/</loc>
+    <lastmod>2016-11-27T17:48:31+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/rest/</loc>
+    <lastmod>2016-09-08T10:29:37+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/restful/</loc>
+    <lastmod>2016-09-08T10:29:37+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/review/</loc>
+    <lastmod>2016-04-03T10:54:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/robot/</loc>
+    <lastmod>2016-01-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/ros/</loc>
+    <lastmod>2016-01-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/rust/</loc>
+    <lastmod>2016-04-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/security/</loc>
+    <lastmod>2016-10-31T11:22:49+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/semantic/</loc>
+    <lastmod>2017-01-16T15:17:31+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/semver/</loc>
+    <lastmod>2017-01-16T15:17:31+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/service-discovery/</loc>
+    <lastmod>2016-08-11T16:58:35+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/sql/</loc>
+    <lastmod>2016-11-03T15:39:52+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/staticgen/</loc>
+    <lastmod>2016-04-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/staticweb/</loc>
+    <lastmod>2016-03-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/stemcell/</loc>
+    <lastmod>2016-04-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/swagger/</loc>
+    <lastmod>2016-06-21T14:46:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/swagger-ui/</loc>
+    <lastmod>2016-06-21T14:46:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/swarm/</loc>
+    <lastmod>2016-08-18T09:30:29+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/</loc>
+    <lastmod>2016-05-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/transaction/</loc>
+    <lastmod>2016-11-01T13:25:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/ubuntu/</loc>
+    <lastmod>2016-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/versioning/</loc>
+    <lastmod>2017-01-16T15:17:31+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/virtualbox/</loc>
+    <lastmod>2016-08-17T11:18:38+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/virtualenv/</loc>
+    <lastmod>2016-05-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/visualstudio/</loc>
+    <lastmod>2015-12-14T00:06:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/vm/</loc>
+    <lastmod>2016-04-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/web/</loc>
+    <lastmod>2018-03-07T14:41:51+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/webstorm/</loc>
+    <lastmod>2017-01-09T14:05:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/yaml/</loc>
+    <lastmod>2016-12-19T14:04:19+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Celery on My New Hugo Site</title>
+    <link>http://example.org/tags/celery/</link>
+    <description>Recent content in Celery on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Jan 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/celery/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>celery with mongodb</title>
+      <link>http://example.org/posts/2016-01-18-celery-with-mongodb/2016-01-18-celery-with-mongodb/</link>
+      <pubDate>Mon, 18 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-01-18-celery-with-mongodb/2016-01-18-celery-with-mongodb/</guid>
+      <description>#Celery 와 Mongo DB를 이용한 튜토리얼
+참고링크
+http://skillachie.com/2013/06/15/intro-celery-and-mongodb/
+ install celery
+pip install celery
+pip install -U &#39;celery[mongodb]&#39;or pip install -U celery-with-mongodb
+아래와 같은 형식으로 나중에 브로커를 등록 하면 됨. python BROKER_URL = &#39;mongodb://localhost:27017/database_name&#39; #Where the URL is in the format of: mongodb://userid:password@hostname:port/database_name  bash use test db.createUser( {use: &amp;quot;testUser&amp;quot;, pwd: &amp;quot;test&amp;quot;, roles: [&amp;quot;readWrite&amp;quot;, &amp;quot;dbAdmin&amp;quot;] } ) #다음 명령은 read 권한만 갖고 있는 동일한 사용자를 admin 데이터베이스에 추가하고 testDB2 데이터베이스에 대한 readWrite 권한을 부여한다.</description>
+    </item>
+    
+  </channel>
+</rss>

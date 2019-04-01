@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Angular2 on My New Hugo Site</title>
+    <link>http://example.org/tags/angular2/</link>
+    <description>Recent content in Angular2 on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 Aug 2016 17:31:23 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/angular2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Angular2 rc5</title>
+      <link>http://example.org/posts/2016-08-11-173123-angular2-rc5-study/2016-08-11-173123-angular2-rc5-study/</link>
+      <pubDate>Thu, 11 Aug 2016 17:31:23 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-08-11-173123-angular2-rc5-study/2016-08-11-173123-angular2-rc5-study/</guid>
+      <description>동기 Angular2 rc4가 나왔을때 라우터가 갈려나가는것을 보고 아 이제 좀 고만 고치겠구나 라고 생각했고 이제 슬슬 본격적으로 공부를 해볼까 생각하고 있었는데 얼마안있어 나온 rc5에서 모듈개념이 본격적으로 도입되면서 또 엄청나게 갈려나갔다.
+같은 튜토리얼만 지금 몇번째 보는건지모르겠는데 ㅋㅋ 약간 방향을 바꾸어서 변경된 중요포인트를 확인하고 yeoman 과 같은 보일러플레이트를 활용해서 빠르고 아름답게 초기 환경 설정을 하고 간단한 예제를 만드는것을 목표로 공부를 해 보도록 하겠다.
+부가목표 foundation Bootstrap 레이아웃이 난 맘에 별로 안들었다. 대충 만들기엔 정말 쉽고 편하고 좋은데 너무 정형화 되어있다는 느낌을 받았음.</description>
+    </item>
+    
+    <item>
+      <title>react-vs-angular2</title>
+      <link>http://example.org/posts/2016-01-18-react-vs-angular2/2016-01-18-react-vs-angular2/</link>
+      <pubDate>Mon, 18 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-01-18-react-vs-angular2/2016-01-18-react-vs-angular2/</guid>
+      <description>#MEAN VS MERN ###AngularJS 2.0 VS ReactJS
+###Contents - AngularJS 2.0 - React - Conclusion - Workload Estimate - Links
+AngularJS 1.3 는 논외로 하기로 함
+http://netil.github.io/slides/angularjs/index3.html#/ - 앞으로 메인테넌스를 2년 미만만 지원됨. - AngularJS 2.0으로의 마이그레이션 방법 없음 - React 보다 7배정도 느림 &amp;ndash;&amp;gt; 2.0 에서 개선 - 소스코드의 재활용이 react에 비해서 떨어진다. &amp;ndash;&amp;gt; 2.0 에서 개선 - watcher가 많아지면 퍼포먼스 하락
+   angular2.0 VS react     two way data binding one way   ES6 완벽지원 JS ES6일부지원    ###AngularJS 2.</description>
+    </item>
+    
+  </channel>
+</rss>

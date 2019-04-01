@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Diy on My New Hugo Site</title>
+    <link>http://example.org/tags/diy/</link>
+    <description>Recent content in Diy on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Apr 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/diy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Noizbuster Logo Design</title>
+      <link>http://example.org/posts/2016-04-30-noizbuster-logo-design/2016-04-30-noizbuster-logo-design/</link>
+      <pubDate>Sat, 30 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-04-30-noizbuster-logo-design/2016-04-30-noizbuster-logo-design/</guid>
+      <description>로고 사이즈를 정하는데 보통 가이드라인들은 300px 로 한다
+아이콘으로는 구글 플레이에서 요구하는 가장큰 아이콘은 512*512
+안드로이드 아이콘 사이즈는 48 px, 72 px, 96 px, 144 px, 192 px
+로고 사이즈는 300x300 에 가로나 세로를 맞춰서
+다른 사이즈로는 150px, 96px, 64px, 32px, 16px로 만들면 된다.
+reference</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Redemption on My New Hugo Site</title>
+    <link>http://example.org/tags/redemption/</link>
+    <description>Recent content in Redemption on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 27 Nov 2016 17:48:31 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/redemption/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>redemption-monitor-design</title>
+      <link>http://example.org/posts/2016-11-27-174831-redemption-monitor-design/2016-11-27-174831-redemption-monitor-design/</link>
+      <pubDate>Sun, 27 Nov 2016 17:48:31 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-11-27-174831-redemption-monitor-design/2016-11-27-174831-redemption-monitor-design/</guid>
+      <description>Introduction 게임 서버를 만들었지만 개발자 혹은 운영자가 게임 서버나 내부의 상황을 보기 위해서 매번 REST client 를 이용하는것은 비현실적으로 불편하다.
+때문에 서버 내부의 정보를 시각적으로 혹은, 미리짜여진 규격에 맞추어 관제 할 수 있는 방법이 필요했다.
+그 수단으로 여러가지가 있겠지만 웹앱으로 만드는것이 제일 범용적이고 편할것이라고 판단하였다.
+Design Features  기본적인 서버 상태 확인 (service discovery 와 연동) 게임서버내 맵 상황, 각종 통계 제공  Conditions 개발을 위한 개발을 피하기 위해 몇가지 조건이 수반된다.</description>
+    </item>
+    
+  </channel>
+</rss>

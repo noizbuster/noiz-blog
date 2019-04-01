@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Service Discovery on My New Hugo Site</title>
+    <link>http://example.org/tags/service-discovery/</link>
+    <description>Recent content in Service Discovery on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 Aug 2016 16:58:35 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/service-discovery/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>survey of service discovery in MSA</title>
+      <link>http://example.org/posts/2016-08-11-165835-survey-of-service-discovery/2016-08-11-165835-survey-of-service-discovery/</link>
+      <pubDate>Thu, 11 Aug 2016 16:58:35 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-08-11-165835-survey-of-service-discovery/2016-08-11-165835-survey-of-service-discovery/</guid>
+      <description> Service Discovery 의 개념 설명  https://dzone.com/articles/service-discovery-in-a-microservices-architecture http://microservices.io/patterns/client-side-discovery.html http://www.mammatustech.com/Microservice-Service-Discovery-with-Consul  주요 프로젝트 Jason Wilder&amp;rsquo;s blog 에서 여러가지를 간단하게 정리 해 놓았다.
+ https://github.com/Netflix/eureka https://www.consul.io/ https://github.com/coreos/etcd NginX  https://www.nginx.com/blog/service-discovery-in-a-microservices-architecture/ https://www.nginx.com/blog/service-discovery-nginx-plus-zookeeper/  zookeeper  http://blog.arungupta.me/zookeeper-microservice-registration-discovery/ https://tech.knewton.com/blog/2014/12/eureka-shouldnt-use-zookeeper-service-discovery/  https://github.com/coreos/etcd  </description>
+    </item>
+    
+  </channel>
+</rss>

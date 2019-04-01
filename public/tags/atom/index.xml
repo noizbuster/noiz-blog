@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Atom on My New Hugo Site</title>
+    <link>http://example.org/tags/atom/</link>
+    <description>Recent content in Atom on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 09 Jan 2017 14:05:17 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/atom/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>fixing-atom-and-idea-file-refresh-issue</title>
+      <link>http://example.org/posts/2017-01-09-140517-fixing-atom-and-idea-file-refresh-issue/2017-01-09-140517-fixing-atom-and-idea-file-refresh-issue/</link>
+      <pubDate>Mon, 09 Jan 2017 14:05:17 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2017-01-09-140517-fixing-atom-and-idea-file-refresh-issue/2017-01-09-140517-fixing-atom-and-idea-file-refresh-issue/</guid>
+      <description> Fixing limit of watch issue  sudo vi /etc/sysctl.d/max_user_watches.conf write fs.inotify.max_user_watches = 524288 the file sudo sysctl -p --system restart atom or idea  Reference  https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md#typeerror-unable-to-watch-path https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Development on My New Hugo Site</title>
+    <link>http://example.org/categories/development/</link>
+    <description>Recent content in Development on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Jan 2019 13:57:37 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>esm-on-nodejs</title>
+      <link>http://example.org/posts/2019-01-09-135737-esm-on-nodejs/2019-01-09-135737-esm-on-nodejs/</link>
+      <pubDate>Wed, 09 Jan 2019 13:57:37 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2019-01-09-135737-esm-on-nodejs/2019-01-09-135737-esm-on-nodejs/</guid>
+      <description>동기 EcmaScrit Module 가 explorer 를 제외한 메이저 브라우저에서 모두 지원이 되는 마당에 코드 재활용성 문제도 있고 해서 ESM 스타일로 일부 코드가 작성되었을 경우 nodejs 프로젝트에서도 사용하고 싶게 되었다.
+물론 nodejs 의 고유기능들을 사용하려면 (package.js관련된것이나, 배터리 패키지들) ESM 스타일로 코드를 짠들 브라우저 호환성을 보장 할 수 없지만 전체 코드베이스에서 이런 디펜던시를 가지는 파일들이 몇개나 되는지 생각해보면 적용 할 가치는 충분하다고 생각하고, 시간이 지날수록 더욱 중요해 질것이라고 기대한다.
+javascript 호환성 관련 자료  https://www.</description>
+    </item>
+    
+    <item>
+      <title>js-documentation</title>
+      <link>http://example.org/posts/2018-11-19-161357-js-documentation/2018-11-19-161357-js-documentation/</link>
+      <pubDate>Mon, 19 Nov 2018 16:13:57 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2018-11-19-161357-js-documentation/2018-11-19-161357-js-documentation/</guid>
+      <description>도큐먼트 제네레이션을 하려고 하는데 고민이 많았다. 타입스크립트 쓰면 typedoc 이 대부분 해결 해 주니까 별 문제가 없지만. ES7 를 쓰고있는 프로젝트들은 esdoc 이나 jsdoc 를 끼고 갈 수 밖에 없다.
+내 요구조건은 다음과 같았다.
+ 충분히 유명한 패키지일것 typedef 에서 @extends 혹은 @augments 를 사용 할 수 있을것. document coverage  결론부터 말하자면 document coverage 를 포기하고 커스텀 플러그인을 달아서 jsdoc 를 사용하기로 했다.
+시도해본것들은 다음과 같다.
+ JSDoc</description>
+    </item>
+    
+    <item>
+      <title>errorhandling-async-express-router</title>
+      <link>http://example.org/posts/2018-08-23-162836-errorhandling-async-express-router/2018-08-23-162836-errorhandling-async-express-router/</link>
+      <pubDate>Thu, 23 Aug 2018 16:28:36 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2018-08-23-162836-errorhandling-async-express-router/2018-08-23-162836-errorhandling-async-express-router/</guid>
+      <description>Error Handling On Express 나는 Express API 를 만들때 글로벌 트랩을 만들어서 UnHandled Exception 을 처리하는 방법을 즐겨쓴다.
+// Global Error Handler app.use(function (err, req, res, next) { let status = err.status || 500; let extra = err.extra || {}; l.e(&#39;Unhandled Error&#39;, err); let resBody = {message: err.message, extra: extra, details: err}; if (process.env.NODE_ENV === &#39;production&#39;) { return res.status(status).json({message: &#39;internal error&#39;}); } else { return res.status(status).json(resBody) } });  Synchronous 핸드러를 썼을때는 잘 동작했겠지만 async function 을 쓰면서 부터는 throw 되는 에러들이 express 를 타지 못하는 문제가 있다.</description>
+    </item>
+    
+    <item>
+      <title>cron-on-nodejs</title>
+      <link>http://example.org/posts/2018-03-30-180144-cron-on-nodejs/2018-03-30-180144-cron-on-nodejs/</link>
+      <pubDate>Fri, 30 Mar 2018 18:01:44 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2018-03-30-180144-cron-on-nodejs/2018-03-30-180144-cron-on-nodejs/</guid>
+      <description>What is cron? How can I use? https://en.wikipedia.org/wiki/Cron https://docs.oracle.com/cd/E12058_01/doc/doc.1014/e12030/cron_expressions.htm
+Useful webtools for development with cron check invocations from now http://cron.schlitt.info/ check validation https://crontab.guru/
+My choice for using cron on nodejs project For parsing cron expression to date object. and calculating next invocation. https://github.com/harrisiirak/cron-parser
+Better way to execute some code https://github.com/tellnes/long-timeout</description>
+    </item>
+    
+    <item>
+      <title>survey-nodejs-config-package</title>
+      <link>http://example.org/posts/2018-03-12-145933-survey-nodejs-config-package/2018-03-12-145933-survey-nodejs-config-package/</link>
+      <pubDate>Mon, 12 Mar 2018 14:59:33 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2018-03-12-145933-survey-nodejs-config-package/2018-03-12-145933-survey-nodejs-config-package/</guid>
+      <description>Motivation nodejs 프로젝트를 하면서 build stream 이나 configuration 의 default 를 관리해야 할 일이 많다. 프로젝트들이 복잡해짐에 따라 다양한 요구조건들이 생기는데 내가 써본 라이브러리들이 이런 문제를 다 커버하지 못하는 문제가 있다. 내가 경험했던 패키지들의 특징과 장단점을 비교해보겠다.
+What I Need  배포는 docker 로 이루어 지기 때문에 config 디렉토리가 통째로 빈 디렉토리로 덮어씌워질 수 있다. (docker data volume 은 file 단위의 mount 를 지원하지 않는다.) 하지만 유저가 편집하는데 참고가 되기 위해 default 파일이 필요에 의해 재생되어야 한다 개발편의상 environment variable (NODE_ENV) 에 따라 참조하는 configuration 파일이 달라져야 한다.</description>
+    </item>
+    
+    <item>
+      <title>another-webapp-in-angulario</title>
+      <link>http://example.org/posts/2018-03-07-144906-another-webapp-in-angulario/2018-03-07-144906-another-webapp-in-angulario/</link>
+      <pubDate>Wed, 07 Mar 2018 14:49:06 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2018-03-07-144906-another-webapp-in-angulario/2018-03-07-144906-another-webapp-in-angulario/</guid>
+      <description>Goal 일을 하면서, 혹은 내 서브 프로젝트를 하면서 만들게 될 헤테로지니어스한 웹앱들을 한군데서 서비스(적어도네비게이팅) 을 하고 싶었다.
+지금 당장 제일 손에 익은 툴이 angular.io (angular2 &amp;gt; ) 이기 때문에 이것으로 Navbar 를 비롯탄 일종의 플랫폼? 을 만들고 개별적으로 떠있는 웹 서비스들을 이 안에서 보여주는것을 목표로 잡았다.
+Using Angular Router? 원래 내가 하고 싶었던것은 angular route 가 제어하는 route-outlet 에다가 다른 웹앱을 뿌리는것이었다. 헌데 검색을 해보니 그리 만만치 않다는것을 알게 되었다.</description>
+    </item>
+    
+    <item>
+      <title>http2-header-naming-convention</title>
+      <link>http://example.org/posts/2018-03-07-144151-http2-header-naming-convention/2018-03-07-144151-http2-header-naming-convention/</link>
+      <pubDate>Wed, 07 Mar 2018 14:41:51 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2018-03-07-144151-http2-header-naming-convention/2018-03-07-144151-http2-header-naming-convention/</guid>
+      <description> HTTP/2 Header Naming Convention server 코딩을 하는중에 header 를 다 lower case 로 자동변환 시켜주는짓을 API 게이트웨이 서버 미들웨어가 하는것을 발견했다.
+뭔가 이유가 있을것 같아 검색을 해보니 HTTP/2 스펙에서 header 이름을 lowerCase로 변환해줘야한다(MUST) 라고 표현하고 있다는걸 알게 되었다.
+HTTP/2 의 사용처가 점점 많아질것이니까 지금부터 미리미리 대비를 해야겠다.
+다른 서비스에서도 lowerCase로 변경해서 내부적으로 처리하도록 하던가 헬퍼 미들웨어를 만들던가 해야지
+References  발견한 stackoverflow 스레드 Secrion 8.1.2 of rfc7540  </description>
+    </item>
+    
+    <item>
+      <title>my-job-philosophy</title>
+      <link>http://example.org/posts/2017-09-04-093944-my-job-philosophy/2017-09-04-093944-my-job-philosophy/</link>
+      <pubDate>Mon, 04 Sep 2017 09:39:44 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2017-09-04-093944-my-job-philosophy/2017-09-04-093944-my-job-philosophy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>market-research-hansung-laptop-20170710</title>
+      <link>http://example.org/posts/2017-07-25-105709-market-research-hansung-laptop-20170710/2017-07-25-105709-market-research-hansung-laptop-20170710/</link>
+      <pubDate>Tue, 25 Jul 2017 10:57:09 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2017-07-25-105709-market-research-hansung-laptop-20170710/2017-07-25-105709-market-research-hansung-laptop-20170710/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gmail-filtering</title>
+      <link>http://example.org/posts/2017-07-13-131835-gmail-filtering/2017-07-13-131835-gmail-filtering/</link>
+      <pubDate>Thu, 13 Jul 2017 13:18:35 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2017-07-13-131835-gmail-filtering/2017-07-13-131835-gmail-filtering/</guid>
+      <description>Attachment related e.g. larger:5m older_than:5y
+size:5m searches for attachments of 5MB
+larger:5m searches for attachments of 5MB and larger
+smaller:5m searches for attachments smaller than 5MB
+Label related not labeled email has:nouserlabels
+it query also sent mail
+if not want to see sent mail
+-label:sent
+and also chat log
+-label:chats</description>
+    </item>
+    
+    <item>
+      <title>elements-of-project</title>
+      <link>http://example.org/posts/2017-07-13-104204-elements-of-project/2017-07-13-104204-elements-of-project/</link>
+      <pubDate>Thu, 13 Jul 2017 10:42:04 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2017-07-13-104204-elements-of-project/2017-07-13-104204-elements-of-project/</guid>
+      <description>프로젝트 구성요소
+ Development Environment  IDE Version Coding Convention SCM  CI (Integrate Test) CD  docker  Code Coverage (Unit Test) Documentation  Guide for Contributers API Specification How to Use  Issue Tracker Resource Negotiation  Port   </description>
+    </item>
+    
+    <item>
+      <title>authentication-on-angulario</title>
+      <link>http://example.org/posts/2017-06-05-141344-authentication-on-angulario/2017-06-05-141344-authentication-on-angulario/</link>
+      <pubDate>Mon, 05 Jun 2017 14:13:44 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2017-06-05-141344-authentication-on-angulario/2017-06-05-141344-authentication-on-angulario/</guid>
+      <description>참고 문서
+ https://auth0.com/blog/angular-2-authentication/ https://blog.thoughtram.io/angular/2016/07/18/guards-in-angular-2.html https://medium.com/@blacksonic86/angular-2-authentication-revisited-611bf7373bf9 https://medium.com/@ladyleet/popups-modals-and-navigation-using-angular-material-2-components-in-your-angular-2-project-faf510dbcdee http://4dev.tech/2016/03/login-screen-and-authentication-with-angular2/ https://stackoverflow.com/questions/34464108/angular2-set-headers-for-every-request  </description>
+    </item>
+    
+    <item>
+      <title>근래 소프트웨어 운용방법상 시맨틱 버저닝에 대한 의문</title>
+      <link>http://example.org/posts/2017-01-16-151731-is-semantic-versioning-fit-on-recently-lifecycle-of-software/2017-01-16-151731-is-semantic-versioning-fit-on-recently-lifecycle-of-software/</link>
+      <pubDate>Mon, 16 Jan 2017 15:17:31 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2017-01-16-151731-is-semantic-versioning-fit-on-recently-lifecycle-of-software/2017-01-16-151731-is-semantic-versioning-fit-on-recently-lifecycle-of-software/</guid>
+      <description>Introduction 근래 가장 많이 사용되는 버저닝 방법론으로 semantic versioning 을 이야기 했을때 반대하는 사람은 그리 많지 않을것이다. 매우 체계적이며 직관적이고 버전간 호환관계또한 알 수 있기 때문에 많은 프로젝트와 사람들에게 사랑받고 있는 방법이다.
+하지만 근래에 개발을 해오면서 느끼는 몇가지 한계점이 있고, 이를 어떻게 극복해 볼것인가에 대한 가벼운 고찰을 해보겠다.
+Limitation of semantic versioning  Dynamic 하게 변하는 프로젝트에서 major 버전이 너무 빠르게 올라간다. 변화가 많은 초창기 프로젝트의 버저닝이 곤란하다.  최근 공분을 산 angular4 버전 계획 발표도 비슷한 문제라고 본다.</description>
+    </item>
+    
+    <item>
+      <title>fixing-atom-and-idea-file-refresh-issue</title>
+      <link>http://example.org/posts/2017-01-09-140517-fixing-atom-and-idea-file-refresh-issue/2017-01-09-140517-fixing-atom-and-idea-file-refresh-issue/</link>
+      <pubDate>Mon, 09 Jan 2017 14:05:17 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2017-01-09-140517-fixing-atom-and-idea-file-refresh-issue/2017-01-09-140517-fixing-atom-and-idea-file-refresh-issue/</guid>
+      <description> Fixing limit of watch issue  sudo vi /etc/sysctl.d/max_user_watches.conf write fs.inotify.max_user_watches = 524288 the file sudo sysctl -p --system restart atom or idea  Reference  https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md#typeerror-unable-to-watch-path https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit  </description>
+    </item>
+    
+    <item>
+      <title>survey-npm-yaml-lib</title>
+      <link>http://example.org/posts/2016-12-19-140419-survey-npm-yaml-lib/2016-12-19-140419-survey-npm-yaml-lib/</link>
+      <pubDate>Mon, 19 Dec 2016 14:04:19 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-12-19-140419-survey-npm-yaml-lib/2016-12-19-140419-survey-npm-yaml-lib/</guid>
+      <description>Surveyed 2016-12-19
+TL;DR : js-yaml Win  yaml-js License: WTFPL
+2,580 downloads in the last day
+34,263 downloads in the last week
+169,836 downloads in the last month
+js-yaml License: MIT
+134,940 downloads in the last day
+2,614,264 downloads in the last week
+10,545,700 downloads in the last month
+yamljs License: MIT
+7,426 downloads in the last day
+116,115 downloads in the last week
+455,376 downloads in the last month</description>
+    </item>
+    
+    <item>
+      <title>redemption-monitor-design</title>
+      <link>http://example.org/posts/2016-11-27-174831-redemption-monitor-design/2016-11-27-174831-redemption-monitor-design/</link>
+      <pubDate>Sun, 27 Nov 2016 17:48:31 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-11-27-174831-redemption-monitor-design/2016-11-27-174831-redemption-monitor-design/</guid>
+      <description>Introduction 게임 서버를 만들었지만 개발자 혹은 운영자가 게임 서버나 내부의 상황을 보기 위해서 매번 REST client 를 이용하는것은 비현실적으로 불편하다.
+때문에 서버 내부의 정보를 시각적으로 혹은, 미리짜여진 규격에 맞추어 관제 할 수 있는 방법이 필요했다.
+그 수단으로 여러가지가 있겠지만 웹앱으로 만드는것이 제일 범용적이고 편할것이라고 판단하였다.
+Design Features  기본적인 서버 상태 확인 (service discovery 와 연동) 게임서버내 맵 상황, 각종 통계 제공  Conditions 개발을 위한 개발을 피하기 위해 몇가지 조건이 수반된다.</description>
+    </item>
+    
+    <item>
+      <title>성전! SQL 테이블명</title>
+      <link>http://example.org/posts/2016-11-03-153952-holywar-about-table-name/2016-11-03-153952-holywar-about-table-name/</link>
+      <pubDate>Thu, 03 Nov 2016 15:39:52 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-11-03-153952-holywar-about-table-name/2016-11-03-153952-holywar-about-table-name/</guid>
+      <description>Introduction 디비랑은 별로 안친해서 디테일하게 네이밍 컨벤션 같은것에 대해 생각해본적이 없었다.
+이번에 업무 관련해서 작명하다가 관례가 있을까 싶어 조사하던중 재미있는 discussion 들을 보게 되어 정리해보게 되었다.
+ORM 이 미친짓을 한다? Mongoose 를 쓸적에 collection 이름을 정할때 단수형을 자꾸 복수형으로 바꾸길래 (e.g. user 를 users로 지가 바꾼다) {collection: &#39;user&#39;} 이런식으로 강제로 collection 의 이름을 정해주면서 스키마를 정의한적이 있었다.
+마찬가지로 mariadb 를 사용하기위해 도입한 sequelize 도 똑같은짓을 하는데 얘는 mongoose 처럼 쉽게 테이블 이름을 정해주는것이 아니라</description>
+    </item>
+    
+    <item>
+      <title>Transaction on MongoDB</title>
+      <link>http://example.org/posts/2016-11-01-132517-mongodb-transaction/2016-11-01-132517-mongodb-transaction/</link>
+      <pubDate>Tue, 01 Nov 2016 13:25:17 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-11-01-132517-mongodb-transaction/2016-11-01-132517-mongodb-transaction/</guid>
+      <description>Introduction 서버 개발을 하는 도중 MongoDB의 서로 다른 Document 에 Atomic 하게 update 가 일어나야 하는 상황이 왔다. 서버는 Node로 되어있고 ORM은 mongoose 를 쓰고있다.
+헌데 Mongoose 에는 consistency를 보장하면서 복수의 Document를 업데이트 하는 API가 구현되어있지 않은것으로 보여 이를 해결하고자 한다.
+Transaction in MongoDB MongoDB 는 Optimistic concurrency control (OCC) 를 채용하고 있고 내부적으로 write lock을 건다고 한다. 때문에 한개 Collection (=table in RDB) 내 에서의 consistency 는 보장이 된다.</description>
+    </item>
+    
+    <item>
+      <title>authentication-on-msa</title>
+      <link>http://example.org/posts/2016-10-31-112249-authentication-on-msa/2016-10-31-112249-authentication-on-msa/</link>
+      <pubDate>Mon, 31 Oct 2016 11:22:49 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-10-31-112249-authentication-on-msa/2016-10-31-112249-authentication-on-msa/</guid>
+      <description> 목표 Micro Service Architecture(MSA) 에 부합하게 Authentication 을 전담하는 서비스를 분리하고 구현하는것을 목표로 한다.
+현재의 상황 현재 API Gateway 에서 MongoDB 에 저장된 User, Permissions, User Group, Permission Group 에 접근하여 권한이나 조직관리를 할 수 있게 구현되어있다.
+나중에 여러가지
+References  http://nordicapis.com/how-to-control-user-identity-within-microservices/ https://www.quora.com/How-do-I-handle-authentication-in-a-microservices-architecture-with-the-front-end-decoupled-too  </description>
+    </item>
+    
+    <item>
+      <title>Python Flask 로 RestfulAPI 서버 만들기</title>
+      <link>http://example.org/posts/2016-05-09-building-flask-api-server-log/2016-05-09-building-flask-api-server-log/</link>
+      <pubDate>Mon, 09 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-05-09-building-flask-api-server-log/2016-05-09-building-flask-api-server-log/</guid>
+      <description>목표 목표는 RestfulAPI 서버를 만드는것이다.
+요구조건은, WebSocket 을 구현해야 할 수도 있다는 점이고.
+단발성의 API콜이 비주기적으로 많이 들어올수 있다는것.
+되도록이면 Response Time 은 짧은것이 좋다는것.
+Redis 를 캐시로 써서 리턴한다는점이다.
+시작 난 잘 만들어진 보일러플레이트로 시작을 하는것이 좋겠다.
+https://github.com/vovantics/flask-bluebone
+문서화가 잘 되어있고 authentication 도 구현되어있다.
+메인테이너가 한명이고 이슈란에 아무것도 없다는게 마음에 좀 걸리는데 리드미에 이렇게 구현한 이유에 대해서 나름대로 설명을 달아놨기 때문에 공부하기에는 좋아보인다.
+이메일이라던지 스테틱파일 서브와 같은 이번 목적이랑 상관없는것들도 포함되어있는데 걷어내면 되니까 일단은 신경쓰지 않는다.</description>
+    </item>
+    
+    <item>
+      <title>Python WebServer Survey for API Server</title>
+      <link>http://example.org/posts/2016-05-09-python-web-platform-survey/2016-05-09-python-web-platform-survey/</link>
+      <pubDate>Mon, 09 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-05-09-python-web-platform-survey/2016-05-09-python-web-platform-survey/</guid>
+      <description>Restful API 서버를 구현해야 할 문제가 있다.
+요구조건은 다음과 같다.
+ Restful API가 구현 가능해야한다. WebSocket 구현이 용이해야 한다. Scalability 가 좋으면 더욱좋다. Response time 이 짧으면 좋다. Python 이면 좋다.  Flask 사용자가 많아서 커뮤니티 서포트가 좋지만 달려있는게 많기 때문에 상대적으로 아주 무겁고 response time이 상당히 길다는 문제가 있다. 플랫폼을 meinheld 로 바꾸고 나서 많이 빨라졌다. plain text serve 의 경우 아예 퍼포먼스가 좀 느리가 느리다 nodejs 에 비해 7배정도 차이가 있음.</description>
+    </item>
+    
+    <item>
+      <title>css 넘치는 text 줄임말로 처리하기</title>
+      <link>http://example.org/posts/2016-04-12-handling-text-overflow-in-responsivedesign/2016-04-12-handling-text-overflow-in-responsivedesign/</link>
+      <pubDate>Tue, 12 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-04-12-handling-text-overflow-in-responsivedesign/2016-04-12-handling-text-overflow-in-responsivedesign/</guid>
+      <description>문제 div 나 span 내부에 있는 텍스트들이 너무 길어서 칸 밖으로 나갈때 잘라내거나 ... 등으로 줄임표시 하고 싶은 경우가 있다.
+responsive 하게 디자인되지 않은 경우에는 대게 width가 px로 정의되기 때문에 text-overflow 옵션을 조정하여 해결할할 수 있으나.
+엘리먼트의 크기가 percentage 와 같이 상대적인 크기로 정의되어있을때는 제대로 동작하지 않는다는 문제가 있다.
+시도해본것 p { white-space: nowrap; width: 100%; overflow: hidden; /* &amp;quot;overflow&amp;quot; value must be different from &amp;quot;visible&amp;quot; */ text-overflow: ellipsis; }  float:left;  해결방법 .</description>
+    </item>
+    
+    <item>
+      <title>Jekyll 설치 </title>
+      <link>http://example.org/posts/2016-03-18-install-jekyll/2016-03-18-install-jekyll/</link>
+      <pubDate>Fri, 18 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2016-03-18-install-jekyll/2016-03-18-install-jekyll/</guid>
+      <description>Installation Install ruby2.3 on ubuntu
+sudo apt-add-repository ppa:brightbox/ruby-ng sudo apt-get update sudo apt-get install ruby2.3 ruby2.3-dev  Install gem
+sudo apt-get install gem
+Update gem
+sudo gem install rubygems-update
+Install Jekyll
+sudo gem install jekyll
+Check jekyll version
+jekyll --version</description>
+    </item>
+    
+    <item>
+      <title>ROS Study 002. Navigating The Filesystem</title>
+      <link>http://example.org/posts/2015-12-29-ros-2-navigating-the-filesystem/2015-12-29-ros-2-navigating-the-filesystem/</link>
+      <pubDate>Tue, 29 Dec 2015 00:06:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2015-12-29-ros-2-navigating-the-filesystem/2015-12-29-ros-2-navigating-the-filesystem/</guid>
+      <description>튜토리얼을 위해서 튜토리얼 패키지 설치
+sudo apt-get install ros-&amp;lt;distro&amp;gt;-ros-tutorials  ROS의 파일 시스템 컨셉
+ROS의 파일 시스템 컨셉은 Package와 Manifest로 이루어져있다.
+ Package는 로스코드의 소프트웨어 구성 단위이고 각각의 패키지는 라이브러리, 실행파일, 스크립트 혹은 다른 아티팩트들을 포함할 수 있다. Manifest는 패키지의 다른 패키지와의 의존성, 버전, 관리자, 라이선스 등을 포함하는 메타데이터를 제공하는 패키지에 대한 설명이다.  실습
+ROS의 패키지를 관리하고 탐색하는데 사용되는 명령어들 * rospack : ROS의 패키지관리 툴 * roscd : ROS의 Package 경로로 이동 * rosls : ROS의 Package 경로 내부의 파일을 확인</description>
+    </item>
+    
+    <item>
+      <title>ROS Study 001. Installing and Configuring Your ROS Environment</title>
+      <link>http://example.org/posts/2015-12-28-ros-1-installation-and-configulation/2015-12-28-ros-1-installation-and-configulation/</link>
+      <pubDate>Mon, 28 Dec 2015 00:06:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/2015-12-28-ros-1-installation-and-configulation/2015-12-28-ros-1-installation-and-configulation/</guid>
+      <description>ROS 개발환경 설정
+ 우분투 14.04 LTS IDE : VIM  http://wiki.ros.org/action/login/IDEs#Vim  ROS : JADE Turtle  Ubuntu Setup
+ 우분투 14.04를 VM에 설치함 내 입맛대로 초기 세팅 bash sudo apt-get remove unity-webapps-common	#우분투 웹검색 삭제 sudo apt-get install vim	#VIM 설치 sudo apt-get install git	#Git 설치  ROS 설치 bash #현재 최신 패키지 리스트 팻칭 sudo sh -c &#39;echo &amp;quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&amp;quot; &amp;gt; /etc/apt/sources.list.d/ros-latest.list&#39; #인증 키 발급 sudo apt-key adv --keyserver hkp://pool.</description>
+    </item>
+    
+  </channel>
+</rss>
