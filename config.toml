@@ -3,7 +3,19 @@ languageCode = "en-us"
 title = "NoizBuster"
 theme = "noizbuster"
 
+defaultContentLanguage = "ko"
+defaultContentLanguageInSubdir = true
 
+[Languages]
+[Languages.en]
+title = "Documentation for Hugo Learn Theme"
+weight = 1
+languageName = "English"
+
+[Languages.ko]
+title = "Documentation du thème Hugo Learn"
+weight = 2
+languageName = "Korean"
 
 [params]
 # Prefix URL to edit current page. Will display an "Edit this page" button on top right hand corner of every page.
@@ -28,22 +40,13 @@ disableShortcutsTitle = false
 # When using mulitlingual website, disable the switch language button.
 disableLanguageSwitchingButton = false
 # Hide breadcrumbs in the header and only show the current page title
-disableBreadcrumb = true
+disableBreadcrumb = false
 # Hide Next and Previous page buttons normally displayed full height beside content
 disableNextPrev = true
 # Order sections in menu by "weight" or "title". Default to "weight"
 ordersectionsby = "weight"
 # Change default color scheme with a variant one. Can be "red", "blue", "green".
-themeVariant = ""
-  [[params.social]]
-  name = "github"
-  url = "https://github.com/noizbuster"
-  [[params.social]]
-  name = "facebook"
-  url = "https://twitter.com/facebook"
-  [[params.social]]
-  name = "portfolio"
-    url = "https://noizbuster.github.io/portfolio"
+themeVariant = "noizbuster"
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
