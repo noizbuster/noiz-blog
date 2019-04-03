@@ -1,6 +1,6 @@
 ---
 
-title: 써써쓰- Phiaton 100nc 블루투스 이어폰
+title: "Review: Phiaton 100nc 블루투스 이어폰"
 
 author: noizbuster
 
