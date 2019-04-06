@@ -1,6 +1,6 @@
 ---
 
-title: "test post"
+title: "한글 korean only post"
 
 author: noizbuster
 
