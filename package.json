@@ -1,0 +1,24 @@
+{
+  "name": "noiz-blog",
+  "version": "1.0.0",
+  "description": "`snap install hugo --channel=extended`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "hugo",
+    "deploy": "push-dir --dir=public --branch=gh-pages --cleanup --allow-unclean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noizbuster/noiz-blog.git"
+  },
+  "author": "noizbuster",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noizbuster/noizbuster.github.io/issues"
+  },
+  "homepage": "https://github.com/noizbuster/noizbuster.github.io#readme",
+  "devDependencies": {
+    "push-dir": "^0.4.1"
+  }
+}
