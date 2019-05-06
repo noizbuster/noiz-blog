@@ -1,4 +1,4 @@
-baseURL = "http://noizbuster.github.io/noiz-blog/"
+baseURL = "https://noizbuster.github.io/noiz-blog/"
 languageCode = "ko-kr"
 title = "NoizBuster"
 theme = "hugo-theme-learn"
