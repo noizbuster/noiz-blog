@@ -12,8 +12,6 @@ tags: [earphone, phiaton, audio]
 
 ---
 
-#### 써볼만큼 써보고 쓰는 리뷰
-
 ### Phiaton 100nc
 
 Phiaton 이라는 브랜드는 좀 생소했지만 알고보니 국내 기업 크레신의 브랜드였다.  

@@ -1,6 +1,7 @@
 ---
 
-title: 리뷰
+title: Review
 weight: 300
 
 ---
+
