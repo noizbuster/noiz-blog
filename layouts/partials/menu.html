@@ -12,12 +12,21 @@
 
   <div class="highlightable">
     <ul class="topics">
+      {{ $sections := .Sections }}
+      {{ range .Site.Home.AllTranslations }}
+      {{   $sections = $sections | lang.Merge .Sections }}
+      {{ end }}
+
       {{ if eq .Site.Params.ordersectionsby "title" }}
-      {{   range .Site.Home.Sections.ByTitle }}
+      {{   range $sections.ByTitle }}
+      {{     template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
+      {{   end }}
+      {{ else if eq .Site.Params.ordersectionsby "date" }}
+      {{   range $sections.ByDate }}
       {{     template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
       {{   end }}
       {{ else }}
-      {{   range .Site.Home.Sections.ByWeight }}
+      {{   range $sections.ByWeight }}
       {{     template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
       {{   end }}
       {{ end }}
@@ -119,6 +128,9 @@
     {{   $currentNode.Scratch.Set "pages" (.Pages | union .Sections) }}
     {{ end }}
     {{ $pages := ($currentNode.Scratch.Get "pages") }}
+    {{ range .AllTranslations }}
+    {{   $pages = $pages | lang.Merge .Pages }}
+    {{ end }}
     {{ if eq .Site.Params.ordersectionsby "title" }}
     {{   range $pages.ByTitle }}
     {{     if and .Params.hidden (not $.showhidden) }}

@@ -1158,6 +1158,7 @@ pre .copy-to-clipboard:hover {
     box-sizing: border-box;
     position: relative;
     display: inline;
+}
 .pagination li .disabled {
      display: none;
  }
