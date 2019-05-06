@@ -1,0 +1,6 @@
+{{ define "content" }}
+{{   .Content }}
+{{ if .IsHome }}
+{{   partial "home.html" . }}
+{{ end }}
+{{ end }}

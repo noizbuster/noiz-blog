@@ -17,15 +17,6 @@
       </div>
       <div id="{{ if .Params.chapter }}chapter{{end}}">
         <div id="body-inner">
-          {{if and (not .IsHome) (not .Params.chapter) }}
-          <h1 id="content_title">
-            {{ if eq .Kind "taxonomy" }}
-            {{   .Kind }} ::
-            {{ end }}
-            {{ .Title }}
-          </h1>
-          <p style="text-align:right">{{dateFormat "Monday, Jan 2, 2006" .Date}}</p>
-
           {{/*  translation switch  */}}
           {{ if .IsTranslated }}
           <nav class="LangNav">
@@ -35,6 +26,17 @@
             {{ end}}
           </nav>
           {{ end }}
+
+          {{ if and (not .IsHome) (not .Params.chapter) }}
+          <h1 id="content_title">
+            {{ if eq .Kind "taxonomy" }}
+            {{   .Kind }} ::
+            {{ end }}
+            {{ .Title }}
+          </h1>
+          {{   if not .IsSection }}
+          <p style="text-align:right">{{dateFormat "Monday, Jan 2, 2006" .Date}}</p>
+          {{   end }}
 
           {{ end }}
           {{ block "content" . }} {{ end }}
