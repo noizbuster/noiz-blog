@@ -49,6 +49,7 @@ ordersectionsby = "weight"
 themeVariant = "noizbuster"
 showPaginator = true
 showPaginatorOnSection = true
+hidePostsOnMenu = true
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]

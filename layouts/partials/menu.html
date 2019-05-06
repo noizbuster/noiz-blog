@@ -12,9 +12,12 @@
 
   <div class="highlightable">
     <ul class="topics">
-      {{ $sections := .Sections }}
+      {{ $sections := .Site.Sections}}
+      {{ $currentLang := .Lang }}
       {{ range .Site.Home.AllTranslations }}
+      {{   if not (eq .Lang $currentLang)}}
       {{   $sections = $sections | lang.Merge .Sections }}
+      {{   end }}
       {{ end }}
 
       {{ if eq .Site.Params.ordersectionsby "title" }}
@@ -120,7 +123,10 @@
     <i class="fas fa-check read-icon"></i>
     {{ end }}
   </a>
-  {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
+  {{ $numberOfPages := (len .Sections) }}
+  {{ if not .Site.Params.hidePostsOnMenu }}
+  {{   $numberOfPages = (add (len .Pages) (len .Sections)) }}
+  {{ end }}
   {{ if ne $numberOfPages 0 }}
   <ul>
     {{ $currentNode.Scratch.Set "pages" .Pages }}
@@ -138,6 +144,13 @@
     {{       template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
     {{     end }}
     {{   end }}
+    {{ else if eq .Site.Params.ordersectionsby "date" }}
+    {{   range $pages.ByDate }}
+    {{     if and .Params.hidden (not $.showhidden) }}
+    {{     else }}
+    {{       template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
+    {{     end }}
+    {{   end }}
     {{ else }}
     {{   range $pages.ByWeight }}
     {{     if and .Params.hidden (not $.showhidden) }}
@@ -150,7 +163,7 @@
   {{ end }}
 </li>
 {{   else }}
-{{     if not .Params.Hidden }}
+{{     if and (not .Params.Hidden) (not .Site.Params.hidePostsOnMenu) }}
 <li data-nav-id="{{.URL}}" title="{{.Title}}" class="dd-item {{if eq .UniqueID $currentNode.UniqueID}}active{{end}}">
   <a href="{{ .RelPermalink}}">
     {{ safeHTML .Params.Pre }}{{ or .Params.menuTitle .LinkTitle .Title }}
