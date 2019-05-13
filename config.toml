@@ -7,6 +7,9 @@ theme = "hugo-theme-learn"
 defaultContentLanguage = "ko"
 defaultContentLanguageInSubdir = true
 
+# googleAnalytics
+googleAnalytics = "UA-84347291-1"
+
 [Languages]
 [Languages.en]
 title = "NoizBuster"
