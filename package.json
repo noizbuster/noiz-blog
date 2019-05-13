@@ -4,6 +4,7 @@
   "description": "`snap install hugo --channel=extended`",
   "main": "index.js",
   "scripts": {
+    "start": "hugo server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "hugo",
     "deploy": "push-dir --dir=public --branch=gh-pages --cleanup --allow-unclean"

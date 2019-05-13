@@ -43,7 +43,10 @@
         </div>
       </div> <!-- end chapter-->
     </div>
-    {{ partial "custom-comments.html" . }}
+
+    {{ if .IsPage }}
+    {{   partial "custom-comments.html" . }}
+    {{ end }}
     {{ partial "body-navigation.html" . }}
   </section>
   <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">

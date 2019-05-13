@@ -7,6 +7,9 @@ theme = "hugo-theme-learn"
 defaultContentLanguage = "ko"
 defaultContentLanguageInSubdir = true
 
+# disqus comment
+disqusShortname = "noizbuster"
+
 # googleAnalytics
 googleAnalytics = "UA-84347291-1"
 
