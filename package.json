@@ -6,6 +6,7 @@
   "scripts": {
     "start": "hugo server",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "new": "sh createPost.sh",
     "build": "hugo",
     "deploy": "push-dir --dir=public --branch=master --cleanup --allow-unclean"
   },
@@ -21,5 +22,8 @@
   "homepage": "https://github.com/noizbuster/noizbuster.github.io#readme",
   "devDependencies": {
     "push-dir": "^0.4.1"
+  },
+  "dependencies": {
+    "moment": "^2.24.0"
   }
 }
