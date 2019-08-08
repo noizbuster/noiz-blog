@@ -1,6 +1,6 @@
 ---
-title: "Lodash"
-date: 2019-08-08-141159
+title: "Lodash - 만능 주머니칼"
+date: 2019-08-08 14:11:59
 tags:
 - nodejs
 categories:
