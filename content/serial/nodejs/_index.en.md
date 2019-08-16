@@ -1,6 +1,7 @@
 ---
 
-title: NodeJS Lecture
+title: "Node.js"
+weight: 1
 
 ---
 
