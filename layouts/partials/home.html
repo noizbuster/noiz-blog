@@ -5,7 +5,7 @@
 {{     $pages = $pages | lang.Merge .Site.RegularPages }}
 {{   end }}
 {{ end }}
-{{ $pag := .Paginate ($pages) 20 }}
+{{ $pag := .Paginate ($pages.ByDate.Reverse) 20 }}
 {{   if gt $pag.TotalPages 0 }}
 <h2>Recent Posts</h2>
 {{   end }}
