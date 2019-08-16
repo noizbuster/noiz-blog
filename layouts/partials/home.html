@@ -1,8 +1,8 @@
-{{ $pages := .Pages }}
+{{ $pages := .Site.RegularPages }}
 {{ $currentLang := .Lang }}
 {{ range .AllTranslations }}
 {{   if not (eq $currentLang .Lang) }}
-{{     $pages = $pages | lang.Merge .Pages }}
+{{     $pages = $pages | lang.Merge .Site.RegularPages }}
 {{   end }}
 {{ end }}
 {{ $pag := .Paginate ($pages) 20 }}
@@ -11,7 +11,7 @@
 {{   end }}
 <ul class="article-list">
   {{ range .Paginator.Pages }}
-  <li><a href="{{.URL}}">{{.Title}} <span style="float:right">{{dateFormat "Monday, Jan 2, 2006" .Date}}</span></a></li>
+  <li><a href="{{.RelPermalink}}">{{.Title}} <span style="float:right">{{dateFormat "Monday, Jan 2, 2006" .Date}}</span></a></li>
   {{ end }}
 </ul>
 {{/*  {{ partial "paginator.html" (dict "context" . "paginator" $pag) }}  */}}
