@@ -155,6 +155,67 @@ package.json 파일에 start 스크립트를 추가해줍시다.
 ![](helloworld.png)
 위와 같이 Hello World! 가 잘 출력됩니다.
 
+## gitignore
+
+커밋을 하기전에 status 를 확인해보면 다음과 같은 상태일것입니다.
+``` bash
+> git status
+
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	index.js
+	node_modules/
+	package-lock.json
+	package.json
+	src/
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+아직 커밋되지 않은 항목들이 무슨일을 하는지 살펴보면
+
+__index.js__  
+__src/__  
+우리가 만든 파일과 디렉토리들 입니다.
+
+__node_modules/__  
+다운받은 dependency 들이 저장됩니다.
+
+__package.json__  
+npm 프로젝트에 관련된 정보가 저장됩니다.  
+버전정보와 의존성 패키지를 비롯한 각종 메타데이터와 스크립트들, dev dependency 들이 사용하는 설정값등이 저장됩니다.
+
+__package-lock.json__  
+어떤 버전의 dependency 가 설치되어있는지 기록됩니다.
+package.json 파일안에는 의존성 패키지들의 버전이 범위로 표현됩니다. 때문에 `npm install` 이 실행되는 시점에 따라 서로 다른 버전의 의존성이 설치되고, 이에 따라 서로 다른 사람들간의 미묘한 버전차이가 문제를 만드는 경우 알기 어렵다는 문제가 있었습니다.
+때문에 __원하는 버전의 범위__ 는 package.json 에 저장되고 __실재로 설치된 버전__ 은 package-lock.json 에 저장되게 됩니다.  
+따라서 다른 사람이 내 프로젝트를 받아서 `npm install` 을 했을때 내가 사용하고 있는 dependency 들과 정확하게 같은 버전을 사용하기를 바란다면 package-lock.json 파일도 커밋 해 주어야 합니다.
+
+그럼 .gitignore 파일을 만들어 봅시다.
+
+github 에 사람들이 널리 사용하는 Node.js 프로젝트용 .gitignore 파일들이 공유되고 있습니다.
+
+* https://github.com/nodejs/node/blob/master/.gitignore
+* https://github.com/github/gitignore/blob/master/Node.gitignore
+
+이런파일들을 다운받아서 내 프로젝트에 넣거나 직접 내가 필요한만큼만 넣어서 사용 할 수도 있습니다.
+
+``` bash
+# Node.js
+node_modules/
+
+# IDE
+.idea/
+```
+이런식으로 말이죠
+
+이제 필터링된 파일들을 커밋하면 됩니다.
+
 # 다음순서
 널리 사용하는 미들웨어들을 소개하고 추가해서 RESTful API 서버를 만들 준비를 할것입니다.
 
