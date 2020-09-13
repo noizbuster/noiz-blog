@@ -1,3 +1,3 @@
-[submodule "themes/hugo-theme-learn"]
-	path = themes/hugo-theme-learn
-	url = https://github.com/noizbuster/hugo-theme-learn
+[submodule "themes/hugo-theme-orthogonal"]
+	path = themes/hugo-theme-orthogonal
+	url = https://github.com/upsidedownio/hugo-theme-orthogonal

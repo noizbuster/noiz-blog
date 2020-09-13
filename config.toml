@@ -2,7 +2,7 @@
 baseURL = "https://blog.noizbuster.com/"
 languageCode = "ko-kr"
 title = "NoizBuster"
-theme = "hugo-theme-learn"
+theme = "hugo-theme-orthogonal"
 
 defaultContentLanguage = "ko"
 defaultContentLanguageInSubdir = true
