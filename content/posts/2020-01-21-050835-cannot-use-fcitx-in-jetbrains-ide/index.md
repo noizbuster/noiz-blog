@@ -1,7 +1,6 @@
 ---
 title: "Cannot Use Fcitx in Jetbrains IDE"
 date: 2020-01-21 05:08:37
-draft: true
 tags:
 - webstorm
 - intellij
