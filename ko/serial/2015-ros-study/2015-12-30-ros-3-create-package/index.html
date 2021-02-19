@@ -1,0 +1,2029 @@
+<!DOCTYPE html>
+<html lang="ko" class="js csstransforms3d">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.57.1" />
+  <meta name="description" content="A.K.A. NoizBuster">
+<meta name="author" content="Wonwoo Yang">
+
+  <link rel="icon" href="/images/favicon.png" type="image/png">
+
+  <title>ROS Study 003. Create the Package :: NoizBuster</title>
+
+  
+  <link href="/css/nucleus.css?1565969003" rel="stylesheet">
+  <link href="/css/fontawesome-all.min.css?1565969003" rel="stylesheet">
+  <link href="/css/hybrid.css?1565969003" rel="stylesheet">
+  <link href="/css/featherlight.min.css?1565969003" rel="stylesheet">
+  <link href="/css/perfect-scrollbar.min.css?1565969003" rel="stylesheet">
+  <link href="/css/auto-complete.css?1565969003" rel="stylesheet">
+  <link href="/css/atom-one-dark-reasonable.css?1565969003" rel="stylesheet">
+  <link href="/css/theme.css?1565969003" rel="stylesheet">
+  <link href="/css/hugo-theme.css?1565969003" rel="stylesheet">
+  
+  <link href="/css/theme-noizbuster.css?1565969003" rel="stylesheet">
+  
+
+  <script src="/js/jquery-3.3.1.min.js?1565969003"></script>
+
+  <style type="text/css">
+    :root #header + #content > #left > #rlblock_left{
+        display:none !important;
+    }
+    
+  </style>
+  
+</head>
+
+
+<body class="" data-url="/ko/serial/2015-ros-study/2015-12-30-ros-3-create-package/">
+  <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://blog.noizbuster.com/">
+  <img src="https://blog.noizbuster.com/logo-noizbuster-header.png" style="height:13vh">
+</a>
+<h3 style="margin-top:0;color:white !important;">NoizBuster</h3>
+
+    </div>
+    
+    <div class="searchbox">
+  <label for="search-by"><i class="fas fa-search"></i></label>
+  <input data-search-input id="search-by" type="search" placeholder="Search...">
+  <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="https://blog.noizbuster.com/js/lunr.min.js?1565969003"></script>
+<script type="text/javascript" src="https://blog.noizbuster.com/js/auto-complete.js?1565969003"></script>
+<script type="text/javascript">
+  
+  var baseurl = "https:\/\/blog.noizbuster.com\/\/ko";
+  
+</script>
+<script type="text/javascript" src="https://blog.noizbuster.com/js/search.js?1565969003"></script>
+
+    
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/posts/" title="기술" class="dd-item
+  
+  
+  ">
+  <a href="/ko/posts/">
+    기술
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/serial/" title="연재" class="dd-item
+  parent
+  
+  ">
+  <a href="/ko/serial/">
+    연재
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/serial/nodejs/" title="Node.js" class="dd-item
+  
+  
+  ">
+  <a href="/ko/serial/nodejs/">
+    Node.js
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/serial/nodejs/nodejs-basic/" title="Node.js 기초" class="dd-item
+  
+  
+  ">
+  <a href="/ko/serial/nodejs/nodejs-basic/">
+    Node.js 기초
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/serial/nodejs/express-in-practice/" title="실전 Express!" class="dd-item
+  
+  
+  ">
+  <a href="/ko/serial/nodejs/express-in-practice/">
+    실전 Express!
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/serial/nodejs/package-tour/" title="Node.js 패키지 투어" class="dd-item
+  
+  
+  ">
+  <a href="/ko/serial/nodejs/package-tour/">
+    Node.js 패키지 투어
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/serial/java/" title="JAVA" class="dd-item
+  
+  
+  ">
+  <a href="/ko/serial/java/">
+    JAVA
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/serial/java/spring-boot/" title="Study Note - Spring Boot" class="dd-item
+  
+  
+  ">
+  <a href="/ko/serial/java/spring-boot/">
+    Study Note - Spring Boot
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/serial/2015-ros-study/" title="2015 ~ 2016 ROS 스터디" class="dd-item
+  parent
+  
+  ">
+  <a href="/ko/serial/2015-ros-study/">
+    2015 ~ 2016 ROS 스터디
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/serial/building-restful-api-server-using-express/" title="Express.js로 RESTful API 서버 만들기" class="dd-item
+  
+  
+  ">
+  <a href="/ko/serial/building-restful-api-server-using-express/">
+    Express.js로 RESTful API 서버 만들기
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/essay/" title="수필" class="dd-item
+  
+  
+  ">
+  <a href="/ko/essay/">
+    수필
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/reviews/" title="리뷰" class="dd-item
+  
+  
+  ">
+  <a href="/ko/reviews/">
+    리뷰
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/en/maintaining/" title="Blog Maintanance" class="dd-item
+  
+  
+  ">
+  <a href="/en/maintaining/">
+    Blog Maintanance
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+    </ul>
+
+    
+    
+
+    
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+        
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+            <div class="select-style">
+              
+              <select id="select-language" onchange="location = this.value;">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <option id="ko" value="https://blog.noizbuster.com/ko/serial/2015-ros-study/2015-12-30-ros-3-create-package/" selected>Korean</option>
+                
+                
+                
+                
+              </select>
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+                <g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g>
+              </svg>
+            </div>
+          </a>
+        </li>
+        
+
+        
+      </ul>
+    </section>
+    
+    
+
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+ 
+
+  
+  <section id="body">
+    <div id="overlay"></div>
+    <div class="padding highlightable">
+      
+      <div id="top-bar">
+  
+  
+  
+  
+  <div id="top-github-link">
+    <a class="github-link" title='Edit this page' href="https://github.com/noizbuster/noizbuster.github.io/edit/blog/content/serial/2015-ros-study/2015-12-30-ros-3-create-package/index.md" target="blank">
+      <i class="fas fa-code-branch"></i>
+      <span id="top-github-link-text">Edit this page</span>
+    </a>
+  </div> 
+  
+  
+  
+  <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+    <span id="sidebar-toggle-span">
+      <a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i></a>
+    </span>
+    
+    <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+    
+    <span class="links">
+      
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href='/ko/'>NoizBuster</a> > <a href='/ko/serial/'>연재</a> > <a href='/ko/serial/2015-ros-study/'>2015 ~ 2016 ROS 스터디</a> > ROS Study 003. Create the Package
+
+
+
+
+
+
+
+
+      
+    </span>
+  </div>
+  
+  <div class="progress">
+  <div class="wrapper">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#이렇게-디렉토리와-파일들이-생성된다">이렇게 디렉토리와 파일들이 생성된다.</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+  
+</div>
+
+      
+      <div id="head-tags">
+        
+<div class="tags">
+  
+  <a class="tag-link" href="/ko/tags/robot">robot</a>
+  
+  <a class="tag-link" href="/ko/tags/ros">ros</a>
+  
+</div>
+
+      </div>
+      <div id="">
+        <div id="body-inner">
+          
+          
+
+          
+          <h1 id="content_title">
+            
+            ROS Study 003. Create the Package
+          </h1>
+          
+          <p style="text-align:right">Wednesday, Dec 30, 2015</p>
+          
+
+          
+          
+
+
+<p><strong>패키지 만들기</strong></p>
+
+<p>ros 패키지를 만드는 방법은 2가지가 있다.</p>
+
+<ul>
+<li>roscreate-pkg를 사용한다.
+
+<ul>
+<li>groovy 기반의 이전에 쓰던 방법</li>
+</ul></li>
+<li>catkin을 사용한다
+
+<ul>
+<li>Fuerte 이후 버전에서 사용 할 수 있는 최신의 방법</li>
+</ul></li>
+</ul>
+
+<p><strong>Catkin으로 워크스페이스 만들기</strong></p>
+
+<ol>
+<li>Workspace 디렉토리 생성</li>
+<li><code>catkin_init_workspace</code>로 Workspace 초기화</li>
+<li><code>catkin_make</code>를 해서 빌드</li>
+<li>만약 이 Workspace의 경로를 <code>$ROS_PACKAGE_PATH</code>에 추가 하고 싶으면 <code>source devel/setup.bash</code> 를 하면 된다.</li>
+</ol>
+
+<hr />
+
+<p>Workspace에는 여러개의 Package가 포함 될 수 있다.</p>
+
+<pre><code>workspace_folder/        -- WORKSPACE
+  src/                   -- SOURCE SPACE
+    CMakeLists.txt       -- 'Toplevel' CMake file, provided by catkin
+    package_1/
+      CMakeLists.txt     -- CMakeLists.txt file for package_1
+      package.xml        -- Package manifest for package_1
+    ...
+    package_n/
+      CMakeLists.txt     -- CMakeLists.txt file for package_n
+      package.xml        -- Package manifest for package_n
+</code></pre>
+
+<p>이런식으로 Workspace의 내부가 구성된다.</p>
+
+<hr />
+
+<p>catkin 으로 패키지 만들기
+1. Workspace의 src 디렉토리로 이동
+2. <code>catkin_create_pkg beginner_tutorials std_msgs rospy roscpp</code> 로 패키지 생성
+ - <a href="http://wiki.ros.org/catkin/commands/catkin_create_pkg">파라미터들은 앞에서부터 PackageName, 나머지는 의존성 패키지들</a>
+ - ```bash</p>
+
+<h1 id="이렇게-디렉토리와-파일들이-생성된다">이렇게 디렉토리와 파일들이 생성된다.</h1>
+
+<p>rosand@rossandbox:~/catkin_ws/src$ ls
+beginner_tutorials  CMakeLists.txt
+rosand@rossandbox:~/catkin_ws/src$ ls beginner_tutorials/
+CMakeLists.txt  include  package.xml  src</p>
+
+<pre><code>3. `catkin_make`명령어로 빌드를 해본다.
+ - ```bash
+rosand@rossandbox:~/catkin_ws$ catkin_make
+Base path: /home/rosand/catkin_ws
+Source space: /home/rosand/catkin_ws/src
+Build space: /home/rosand/catkin_ws/build
+Devel space: /home/rosand/catkin_ws/devel
+Install space: /home/rosand/catkin_ws/install
+####
+#### Running command: &quot;cmake /home/rosand/catkin_ws/src -DCATKIN_DEVEL_PREFIX=/home/rosand/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/rosand/catkin_ws/install -G Unix Makefiles&quot; in &quot;/home/rosand/catkin_ws/build&quot;
+####
+-- Using CATKIN_DEVEL_PREFIX: /home/rosand/catkin_ws/devel
+-- Using CMAKE_PREFIX_PATH: /opt/ros/jade
+-- This workspace overlays: /opt/ros/jade
+-- Using PYTHON_EXECUTABLE: /usr/bin/python
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/rosand/catkin_ws/build/test_results
+-- Found gtest sources under '/usr/src/gtest': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.6.16
+-- BUILD_SHARED_LIBS is on
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- ~~  traversing 1 packages in topological order:
+-- ~~  - beginner_tutorials
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- +++ processing catkin package: 'beginner_tutorials'
+-- ==&gt; add_subdirectory(beginner_tutorials)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/rosand/catkin_ws/build
+####
+#### Running command: &quot;make -j4 -l4&quot; in &quot;/home/rosand/catkin_ws/build&quot;
+####
+</code></pre>
+
+<ol>
+<li>만든 패키지를 <code>$ROS_PACKAGE_PATH</code> 에 추가 한다.
+
+<ul>
+<li><code>source /devel/setup.bash</code> 를 이용하면 된다.</li>
+<li>그러면 &lsquo;echo $ROS_PACAKGE_PATH&rsquo; 로 확인했을때 새로운 경로가 추가된것이 보인다.</li>
+<li><strong>/home/rosand/catkin_ws/src</strong>:/opt/ros/jade/share:/opt/ros/jade/stacks</li>
+</ul></li>
+
+<li><p><code>rospack</code> 명령어로 해당 Package가 어떤 first-dependancy 를 가지고 있는지 확인할 수 있다.</p>
+
+<ul>
+<li><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rosand@rossandbox:~/catkin_ws/devel$ rospack depends1 beginner_tutorials
+roscpp
+rospy
+std_msgs</code></pre></div></li>
+
+<li><p>&lsquo;4.&rsquo; 에서 언급한 setup.bash를 하지 않으면 경로를 찾지 못하기 때문에 해 주어야 정상적으로 이렇게 볼수 있다.</p></li>
+
+<li><p>이렇게 확인 할수 있는패키지들은 1차 적으로 의존성을 가지는 패키지들인데 의존성 패키지들 또한 다른 패키지에 의존성을 가진다.</p></li>
+
+<li><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ rospack depends1 rospy
+genpy
+rosgraph
+rosgraph_msgs
+roslib
+std_msgs</code></pre></div></li>
+
+<li><p>이런 간접의존(indirect) 패키지까지 확인할때는 아래와 같이 <code>rospack</code>명령어를 사용하면 된다.</p></li>
+
+<li><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ rospack depends beginner_tutorials
+cpp_common
+rostime
+roscpp_traits
+roscpp_serialization
+genmsg
+genpy
+message_runtime
+rosconsole
+std_msgs
+rosgraph_msgs
+xmlrpcpp
+roscpp
+rosgraph
+catkin
+rospack
+roslib
+rospy</code></pre></div></li>
+
+<li><p>Package.xml 를 수정하여 메인테이너, 라이선스, 의존성등을 관리 할 수 있다.</p></li>
+</ul></li>
+</ol>
+
+
+        </div>
+      </div> 
+    </div>
+
+    
+    <div class="padding">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "noizbuster" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+    
+    <div id="navigation">
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+</div>
+
+
+
+
+  </section>
+  <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+    <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+  </div>
+  <script src="/js/clipboard.min.js?1565969003"></script>
+<script src="/js/perfect-scrollbar.min.js?1565969003"></script>
+<script src="/js/perfect-scrollbar.jquery.min.js?1565969003"></script>
+<script src="/js/jquery.sticky.js?1565969003"></script>
+<script src="/js/featherlight.min.js?1565969003"></script>
+<script src="/js/html5shiv-printshiv.min.js?1565969003"></script>
+<script src="/js/modernizr.custom-3.6.0.js?1565969003"></script>
+<script src="/js/learn.js?1565969003"></script>
+<script src="/js/hugo-learn.js?1565969003"></script>
+<link href="/mermaid/mermaid.css?1565969003" type="text/css" rel="stylesheet" />
+<script src="/mermaid/mermaid.js?1565969003"></script>
+<script>mermaid.initialize({ startOnLoad: true });</script>
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-84347291-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+<footer class="footline" >
+  
+</footer>
+
+</body>
+
+</html>

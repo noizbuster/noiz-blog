@@ -1,0 +1,2072 @@
+<!DOCTYPE html>
+<html lang="ko" class="js csstransforms3d">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.80.0" />
+<meta name="description" content="A.K.A. NoizBuster">
+<meta name="author" content="Wonwoo Yang">
+
+<link rel="icon" href="/images/favicon.png" type="image/png">
+
+<title>Angular2 rc5 :: NoizBuster</title>
+
+
+<link href="/css/nucleus.css?1613724443" rel="stylesheet">
+<link href="/css/fontawesome-all.min.css?1613724443" rel="stylesheet">
+<link href="/css/hybrid.css?1613724443" rel="stylesheet">
+<link href="/css/featherlight.min.css?1613724443" rel="stylesheet">
+<link href="/css/perfect-scrollbar.min.css?1613724443" rel="stylesheet">
+<link href="/css/auto-complete.css?1613724443" rel="stylesheet">
+<link href="/css/atom-one-dark-reasonable.css?1613724443" rel="stylesheet">
+<link href="/css/theme.css?1613724443" rel="stylesheet">
+<link href="/css/hugo-theme.css?1613724443" rel="stylesheet">
+
+<link href="/css/theme-noizbuster.css?1613724443" rel="stylesheet">
+
+
+
+<script src="/js/jquery-3.3.1.min.js?1613724443"></script>
+
+<style>
+  :root #header + #content > #left > #rlblock_left{
+      display:none !important;
+  }
+  
+</style>
+
+
+
+<body class="" data-url="/ko/posts/2016-08-11-173123-angular2-rc5-study/">
+  <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://blog.noizbuster.com/">
+  <img src="https://blog.noizbuster.com/logo-noizbuster-header.png" style="height:13vh">
+</a>
+<h3 style="margin-top:0;color:white !important;">NoizBuster</h3>
+
+    </div>
+    
+    <div class="searchbox">
+  <label for="search-by"><i class="fas fa-search"></i></label>
+  <input data-search-input id="search-by" type="search" placeholder="Search...">
+  <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="https://blog.noizbuster.com//js/lunr.min.js?1613724443"></script>
+<script type="text/javascript" src="https://blog.noizbuster.com//js/auto-complete.js?1613724443"></script>
+<script type="text/javascript">
+  
+    var baseurl = "https:\/\/blog.noizbuster.com\/\/ko";
+  
+</script>
+<script type="text/javascript" src="https://blog.noizbuster.com//js/search.js?1613724443"></script>
+
+    
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/posts/" title="기술" class="dd-item
+  parent
+  
+  ">
+  <a href="/ko/posts/">
+    기술
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/series/" title="연재" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/">
+    연재
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/" title="Node.js" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/">
+    Node.js
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/nodejs-basic/" title="Node.js 기초" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/nodejs-basic/">
+    Node.js 기초
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/express-in-practice/" title="실전 Express!" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/express-in-practice/">
+    실전 Express!
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/package-tour/" title="Node.js 패키지 투어" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/package-tour/">
+    Node.js 패키지 투어
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/java/" title="JAVA" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/java/">
+    JAVA
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/java/spring-boot/" title="Study Note - Spring Boot" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/java/spring-boot/">
+    Study Note - Spring Boot
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/2015-ros-study/" title="2015 ~ 2016 ROS 스터디" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/2015-ros-study/">
+    2015 ~ 2016 ROS 스터디
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/essay/" title="수필" class="dd-item
+  
+  
+  ">
+  <a href="/ko/essay/">
+    수필
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/pensee/" title="감상록" class="dd-item
+  
+  
+  ">
+  <a href="/ko/pensee/">
+    감상록
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/reviews/" title="리뷰" class="dd-item
+  
+  
+  ">
+  <a href="/ko/reviews/">
+    리뷰
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/en/maintaining/" title="Blog Maintanance" class="dd-item
+  
+  
+  ">
+  <a href="/en/maintaining/">
+    Blog Maintanance
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+    </ul>
+
+    
+    
+
+    
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+        
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+            <div class="select-style">
+              
+              <select id="select-language" onchange="location = this.value;">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <option id="ko" value="https://blog.noizbuster.com/ko/posts/2016-08-11-173123-angular2-rc5-study/" selected>Korean</option>
+                
+                
+                
+                
+              </select>
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+                <g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g>
+              </svg>
+            </div>
+          </a>
+        </li>
+        
+
+        
+      </ul>
+    </section>
+    
+    
+
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+ 
+
+  
+  <section id="body">
+    <div id="overlay"></div>
+    <div class="padding highlightable">
+      
+      <div id="top-bar">
+  
+  
+  
+  
+  <div id="top-github-link">
+    <a
+      class="github-link" 
+      title='Edit this page'
+      href="https://github.com/noizbuster/noizbuster.github.io/edit/blog/content/posts/2016-08-11-173123-angular2-rc5-study/index.md"
+      target="blank"
+    >
+      <i class="fas fa-code-branch"></i>
+      <span id="top-github-link-text">Edit this page</span>
+    </a>
+  </div>
+  
+  
+
+  
+  <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+    <span id="sidebar-toggle-span">
+      <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+        <i class="fas fa-bars"></i>
+      </a>
+    </span>
+    
+    <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+    
+    <span class="links">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+<a href='/ko/'>NoizBuster</a> > <a href='/ko/posts/'>기술</a> > Angular2 rc5
+
+
+
+
+
+
+    
+    </span>
+  </div>
+
+  
+  <div class="progress">
+  <div class="wrapper">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#부가목표">부가목표</a>
+      <ul>
+        <li><a href="#foundation">foundation</a></li>
+        <li><a href="#webpack-and-systemjs">webpack and systemjs</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#update">+update</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+  
+</div>
+
+      
+      <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/ko/tags/nodejs">nodejs</a>
+
+  <a class="tag-link" href="/ko/tags/angular2">angular2</a>
+
+</div>
+
+
+      </div>
+      <div id="">
+        <div id="body-inner">
+          
+          
+
+          
+          <h1 id="content_title">
+            
+            Angular2 rc5
+          </h1>
+          
+          <p style="text-align:right">Thursday, Aug 11, 2016</p>
+          
+
+          
+          
+<h1 id="동기">동기</h1>
+<p>Angular2 rc4가 나왔을때 라우터가 갈려나가는것을 보고 아 이제 좀 고만 고치겠구나 라고 생각했고 이제 슬슬 본격적으로 공부를 해볼까 생각하고 있었는데 얼마안있어 나온 rc5에서 모듈개념이 본격적으로 도입되면서 또 엄청나게 갈려나갔다.</p>
+<p>같은 튜토리얼만 지금 몇번째 보는건지모르겠는데 ㅋㅋ 약간 방향을 바꾸어서 변경된 중요포인트를 확인하고 yeoman 과 같은 보일러플레이트를 활용해서 빠르고 아름답게 초기 환경 설정을 하고 간단한 예제를 만드는것을 목표로 공부를 해 보도록 하겠다.</p>
+<h2 id="부가목표">부가목표</h2>
+<h3 id="foundation">foundation</h3>
+<p>Bootstrap 레이아웃이 난 맘에 별로 안들었다. 대충 만들기엔 정말 쉽고 편하고 좋은데 너무 정형화 되어있다는 느낌을 받았음.
+그래서 이번 작은 프로젝트에서는 foundation 을 사용해보도록 하겠다.</p>
+<h3 id="webpack-and-systemjs">webpack and systemjs</h3>
+<p>패킹툴로 angular2에 systemjs가 webpack으로 바뀐다는 소리를 어디선가 들었다. 그래서 걍 공부도 할겸 둘 다 알아놓기로 하고 webpack이 초미의 관심사니까 사용법을 알아놔야겠다.
+이미 튜토리얼에도 systemjs는 방법중 하나라고 내용이 바뀌어있는 상태이다.</p>
+<h1 id="pause">PAUSE</h1>
+<p>자꾸 갈려나가서 Angular 팀의 Milestone 을 보았는데 아직 final release 까지 걸려있는 일들이 엄청 많다는걸 알게되었다.
+일단 final release 까지는 보류해야겠다. 괜히 mega boilerplate 가 ETA 를 미룬게 아닌거 같다.</p>
+<p><img src="./img-paste-20160905153900291.png" alt="img-paste-20160905153900291.png"></p>
+<h2 id="update">+update</h2>
+<p>Angular 2.0 이 이 포스트를 작성하고나서 얼마 안있어 발표되었고<br>
+2016년 11월 1일 현재 벌써 2.1.1이 나왔고, Mega Boilerplate 는 아직 업데이트를 내놓지 않고있다.</p>
+<h1 id="튜토리얼">튜토리얼</h1>
+<p><a href="https://angular.io/docs/ts/latest/quickstart.html">공식 튜토리얼</a> 분량이 얼마 안되니까 그냥 다 보도록 하자.</p>
+
+
+        </div>
+      </div> 
+    </div>
+
+    
+    <div class="padding">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "noizbuster" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+    
+    <div id="navigation">
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+</div>
+
+
+
+
+  </section>
+  <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+    <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+  </div>
+  <script src="/js/clipboard.min.js?1613724443"></script>
+<script src="/js/perfect-scrollbar.min.js?1613724443"></script>
+<script src="/js/perfect-scrollbar.jquery.min.js?1613724443"></script>
+<script src="/js/jquery.sticky.js?1613724443"></script>
+<script src="/js/featherlight.min.js?1613724443"></script>
+<script src="/js/highlight.pack.js?1613724443"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/modernizr.custom-3.6.0.js?1613724443"></script>
+<script src="/js/learn.js?1613724443"></script>
+<script src="/js/hugo-learn.js?1613724443"></script>
+
+
+<script src="/mermaid/mermaid.js?1613724443"></script>
+
+<script> mermaid.initialize({ startOnLoad: true }); </script>
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-84347291-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+<footer class="footline" >
+  
+</footer>
+
+</body>
+
+</html>

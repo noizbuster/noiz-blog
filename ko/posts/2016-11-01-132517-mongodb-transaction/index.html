@@ -1,0 +1,2087 @@
+<!DOCTYPE html>
+<html lang="ko" class="js csstransforms3d">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.80.0" />
+<meta name="description" content="A.K.A. NoizBuster">
+<meta name="author" content="Wonwoo Yang">
+
+<link rel="icon" href="/images/favicon.png" type="image/png">
+
+<title>Transaction on MongoDB :: NoizBuster</title>
+
+
+<link href="/css/nucleus.css?1613724443" rel="stylesheet">
+<link href="/css/fontawesome-all.min.css?1613724443" rel="stylesheet">
+<link href="/css/hybrid.css?1613724443" rel="stylesheet">
+<link href="/css/featherlight.min.css?1613724443" rel="stylesheet">
+<link href="/css/perfect-scrollbar.min.css?1613724443" rel="stylesheet">
+<link href="/css/auto-complete.css?1613724443" rel="stylesheet">
+<link href="/css/atom-one-dark-reasonable.css?1613724443" rel="stylesheet">
+<link href="/css/theme.css?1613724443" rel="stylesheet">
+<link href="/css/hugo-theme.css?1613724443" rel="stylesheet">
+
+<link href="/css/theme-noizbuster.css?1613724443" rel="stylesheet">
+
+
+
+<script src="/js/jquery-3.3.1.min.js?1613724443"></script>
+
+<style>
+  :root #header + #content > #left > #rlblock_left{
+      display:none !important;
+  }
+  
+</style>
+
+
+
+<body class="" data-url="/ko/posts/2016-11-01-132517-mongodb-transaction/">
+  <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://blog.noizbuster.com/">
+  <img src="https://blog.noizbuster.com/logo-noizbuster-header.png" style="height:13vh">
+</a>
+<h3 style="margin-top:0;color:white !important;">NoizBuster</h3>
+
+    </div>
+    
+    <div class="searchbox">
+  <label for="search-by"><i class="fas fa-search"></i></label>
+  <input data-search-input id="search-by" type="search" placeholder="Search...">
+  <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="https://blog.noizbuster.com//js/lunr.min.js?1613724443"></script>
+<script type="text/javascript" src="https://blog.noizbuster.com//js/auto-complete.js?1613724443"></script>
+<script type="text/javascript">
+  
+    var baseurl = "https:\/\/blog.noizbuster.com\/\/ko";
+  
+</script>
+<script type="text/javascript" src="https://blog.noizbuster.com//js/search.js?1613724443"></script>
+
+    
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/posts/" title="기술" class="dd-item
+  parent
+  
+  ">
+  <a href="/ko/posts/">
+    기술
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/series/" title="연재" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/">
+    연재
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/" title="Node.js" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/">
+    Node.js
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/nodejs-basic/" title="Node.js 기초" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/nodejs-basic/">
+    Node.js 기초
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/express-in-practice/" title="실전 Express!" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/express-in-practice/">
+    실전 Express!
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/package-tour/" title="Node.js 패키지 투어" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/package-tour/">
+    Node.js 패키지 투어
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/java/" title="JAVA" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/java/">
+    JAVA
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/java/spring-boot/" title="Study Note - Spring Boot" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/java/spring-boot/">
+    Study Note - Spring Boot
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/2015-ros-study/" title="2015 ~ 2016 ROS 스터디" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/2015-ros-study/">
+    2015 ~ 2016 ROS 스터디
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/essay/" title="수필" class="dd-item
+  
+  
+  ">
+  <a href="/ko/essay/">
+    수필
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/pensee/" title="감상록" class="dd-item
+  
+  
+  ">
+  <a href="/ko/pensee/">
+    감상록
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/reviews/" title="리뷰" class="dd-item
+  
+  
+  ">
+  <a href="/ko/reviews/">
+    리뷰
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/en/maintaining/" title="Blog Maintanance" class="dd-item
+  
+  
+  ">
+  <a href="/en/maintaining/">
+    Blog Maintanance
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+    </ul>
+
+    
+    
+
+    
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+        
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+            <div class="select-style">
+              
+              <select id="select-language" onchange="location = this.value;">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <option id="ko" value="https://blog.noizbuster.com/ko/posts/2016-11-01-132517-mongodb-transaction/" selected>Korean</option>
+                
+                
+                
+                
+              </select>
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+                <g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g>
+              </svg>
+            </div>
+          </a>
+        </li>
+        
+
+        
+      </ul>
+    </section>
+    
+    
+
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+ 
+
+  
+  <section id="body">
+    <div id="overlay"></div>
+    <div class="padding highlightable">
+      
+      <div id="top-bar">
+  
+  
+  
+  
+  <div id="top-github-link">
+    <a
+      class="github-link" 
+      title='Edit this page'
+      href="https://github.com/noizbuster/noizbuster.github.io/edit/blog/content/posts/2016-11-01-132517-mongodb-transaction/index.md"
+      target="blank"
+    >
+      <i class="fas fa-code-branch"></i>
+      <span id="top-github-link-text">Edit this page</span>
+    </a>
+  </div>
+  
+  
+
+  
+  <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+    <span id="sidebar-toggle-span">
+      <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+        <i class="fas fa-bars"></i>
+      </a>
+    </span>
+    
+    <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+    
+    <span class="links">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+<a href='/ko/'>NoizBuster</a> > <a href='/ko/posts/'>기술</a> > Transaction on MongoDB
+
+
+
+
+
+
+    
+    </span>
+  </div>
+
+  
+  <div class="progress">
+  <div class="wrapper">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#transaction-in-mongodb">Transaction in MongoDB</a></li>
+    <li><a href="#two-phase-commits-for-mongodb">Two-phase commits for MongoDB</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+  
+</div>
+
+      
+      <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/ko/tags/mongodb">mongodb</a>
+
+  <a class="tag-link" href="/ko/tags/node">node</a>
+
+  <a class="tag-link" href="/ko/tags/nodejs">nodejs</a>
+
+  <a class="tag-link" href="/ko/tags/mongoose">mongoose</a>
+
+  <a class="tag-link" href="/ko/tags/transaction">transaction</a>
+
+</div>
+
+
+      </div>
+      <div id="">
+        <div id="body-inner">
+          
+          
+
+          
+          <h1 id="content_title">
+            
+            Transaction on MongoDB
+          </h1>
+          
+          <p style="text-align:right">Tuesday, Nov 1, 2016</p>
+          
+
+          
+          
+<h2 id="introduction">Introduction</h2>
+<p>서버 개발을 하는 도중 MongoDB의 서로 다른 Document 에 Atomic 하게 update 가 일어나야 하는 상황이 왔다. 서버는 Node로 되어있고 ORM은 mongoose 를 쓰고있다.<br>
+헌데 Mongoose 에는 consistency를 보장하면서 복수의 Document를 업데이트 하는 API가 구현되어있지 않은것으로 보여 이를 해결하고자 한다.</p>
+<h2 id="transaction-in-mongodb">Transaction in MongoDB</h2>
+<p>MongoDB 는 <a href="https://en.wikipedia.org/wiki/Optimistic_concurrency_control">Optimistic concurrency control (OCC)</a> 를 채용하고 있고 내부적으로 write lock을 건다고 한다. 때문에 한개 Collection (=table in RDB) 내 에서의 consistency 는 보장이 된다.</p>
+<p>하지만 서로 다른 여러개의 collection 에 query 를 수행해야 할 때는 consistency 가 보장되지 않는다.</p>
+<p>RDB 에서는 Transaction 이라는 개념으로 이런 consistency 를 보장하는 기능을 제공하는데<br>
+MongoDB는 Official 하게 이러한 기능을 제공하지 않고 two-phase commits 의 패턴으로 이를 극복하도록 가이드 하고 있다. <a href="https://docs.mongodb.com/v3.2/tutorial/perform-two-phase-commits/">https://docs.mongodb.com/v3.2/tutorial/perform-two-phase-commits/</a></p>
+<h2 id="two-phase-commits-for-mongodb">Two-phase commits for MongoDB</h2>
+<p>Two phase commit 은 널리 알려진 패턴이지만 mongoose 에 helper 가 구현되어있지 않기 때문에 차선을 찾아야 했다. 직접 만드는것은 여간 귀찮은일이 아니며, 나같이 미천한 실력으로 미려하게 만들수 있을지도 모르기 때문에 미리 누군가가 만들어둔것이 있으리라 여기고 탐색을 하였다.</p>
+<p>영 좋지 않은것을 제외하고는 두가지 정도가 물망에 올랐다.</p>
+<ul>
+<li><a href="https://github.com/niahmiah/mongoose-transact">https://github.com/niahmiah/mongoose-transact</a>
+<ul>
+<li>한국 사람이 만들었다, 잘 만들어져 있다. two-phase commit 으로 구현되어있다. rollback 도 구현되어있는듯. 유사시엔 이것을 쓰면 되겠다.</li>
+</ul>
+</li>
+<li><a href="https://github.com/wokim/mongoose-transaction-plugin">https://github.com/wokim/mongoose-transaction-plugin</a>
+<ul>
+<li>다르게 구현된 다른 모듈이다. 양심적으로 README에 잘 적혀있다. &ldquo;만약 네가 이게 필요한거면 넌 잘못된짓을 하고 있다.&rdquo;</li>
+</ul>
+</li>
+</ul>
+<p>만약 필요하다면(반드시 미봉으로 끝나야 겠지만) 이 두개중에? 혹은 그때 나온 괜찮은것을 사용하면 될것이다.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>그들이 <strong>할 수 없었던게 아니라 안하는것이 맞기 때문이었다</strong> 라고 믿고 안하기로 했다.<br>
+내가 MongoDB에 대해 얕게 알고있기에 이를 극복할 수 있는 네이티브한 방법이 있을지도 모를 일이다.<br>
+이에 혹여 이 글을 읽은 자상한분이 나에게 키워드를 던져주시지 않을까?</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Optimistic_concurrency_control">https://en.wikipedia.org/wiki/Optimistic_concurrency_control</a></li>
+</ul>
+<p><strong>surveyed with gogopg, huey</strong></p>
+
+
+        </div>
+      </div> 
+    </div>
+
+    
+    <div class="padding">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "noizbuster" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+    
+    <div id="navigation">
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+</div>
+
+
+
+
+  </section>
+  <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+    <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+  </div>
+  <script src="/js/clipboard.min.js?1613724443"></script>
+<script src="/js/perfect-scrollbar.min.js?1613724443"></script>
+<script src="/js/perfect-scrollbar.jquery.min.js?1613724443"></script>
+<script src="/js/jquery.sticky.js?1613724443"></script>
+<script src="/js/featherlight.min.js?1613724443"></script>
+<script src="/js/highlight.pack.js?1613724443"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/modernizr.custom-3.6.0.js?1613724443"></script>
+<script src="/js/learn.js?1613724443"></script>
+<script src="/js/hugo-learn.js?1613724443"></script>
+
+
+<script src="/mermaid/mermaid.js?1613724443"></script>
+
+<script> mermaid.initialize({ startOnLoad: true }); </script>
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-84347291-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+<footer class="footline" >
+  
+</footer>
+
+</body>
+
+</html>

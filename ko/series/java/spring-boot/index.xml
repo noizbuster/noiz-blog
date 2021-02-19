@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Study Note - Spring Boot on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/series/java/spring-boot/</link>
+    <description>Recent content in Study Note - Spring Boot on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 16 Aug 2019 20:29:00 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/series/java/spring-boot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring Boot 001 - Goal</title>
+      <link>https://blog.noizbuster.com/ko/series/java/spring-boot/001-goal/</link>
+      <pubDate>Sat, 10 Aug 2019 09:14:30 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/series/java/spring-boot/001-goal/</guid>
+      <description>목표 Spring boot 의 기본을 학습합니다.
+간단한 RESTful API 서버를 만들 수 있도록 합니다.
+빌드 스트림관리, 테스팅, 문서화, 로깅과 같이 실무에서 필요한 요소들도 공부해봅니다.
+What is the Spring Boot?  Spring Boot is designed to get you up and running as quickly as possible, with minimal upfront configuration of Spring. Spring Boot takes an opinionated view of building production-ready applications.
+ 토이 프로젝트 예전부터 만들려고 했던 미니 프로젝트 PunchCard를 만드는데 사용해 볼 생각입니다.</description>
+    </item>
+    
+    <item>
+      <title>Spring Boot 002 - Installation</title>
+      <link>https://blog.noizbuster.com/ko/series/java/spring-boot/002-installation/</link>
+      <pubDate>Sat, 10 Aug 2019 10:12:30 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/series/java/spring-boot/002-installation/</guid>
+      <description>목표  Building a RESTful Web Service 가이드를 참고해서 Spring Boot 개발환경을 구축합니다.  SDK 설치 가이드에 따르면 필요한 준비물은 다음과 같습니다
+  About 15 minutes A favorite text editor or IDE JDK 1.8 or later Gradle 4+ or Maven 3.2+ You can also import the code straight into your IDE:  Spring Tool Suite (STS) IntelliJ IDEA     JDK, Gradle 설치 이전에 작성했던 포스트(Install Java with Version Manager)에서 JDK 를 설치하는것을 해보았습니다.</description>
+    </item>
+    
+    <item>
+      <title>Spring Boot 003 - Create Project</title>
+      <link>https://blog.noizbuster.com/ko/series/java/spring-boot/003-create-project/</link>
+      <pubDate>Fri, 16 Aug 2019 14:00:32 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/series/java/spring-boot/003-create-project/</guid>
+      <description>Boiler Plating spring.io 의 추천대로 start.spring.io 에서 프로젝트를 생성하는것을 해보려고 한다.
+이런 광경이 보인다. 예전에 유행했던 MegaBoilerpate 가 생각나는것은 왜일까?
+artifectId 을 작성하는 convention이 있는지 찾아보니 - 과 소문자를 이용해서 짓는게 일반적인것으로 보였다.
+여기까지는 설정이 어려워보이지 않았다.
+그런데&amp;hellip;
+어? 추가 기능을 넣을수 있는게 있구나? 근데 많아도 너무 많다.
+이중에서 내가 필요한것이 무엇인지 어떻게 구분하지?
+지금 알아보기엔 너무 많으니 필요한것 위주로 찾아서 차근차근 읽어보도록 해야겠다.
+그것보다, 나중에 이것들이 추가로 필요해졌을때 쉽게 추가 할 수 있는지가 먼저 궁금해졌다.</description>
+    </item>
+    
+    <item>
+      <title>Spring Boot 004 - MongoDB</title>
+      <link>https://blog.noizbuster.com/ko/series/java/spring-boot/004-integrate-mongodb/</link>
+      <pubDate>Fri, 16 Aug 2019 17:01:21 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/series/java/spring-boot/004-integrate-mongodb/</guid>
+      <description>데이터를 읽고쓰자 MongoDB 를 사용하기위한 의존성 추가하기 start.spring.io 에서 MongoDB 와 관련된 Dependency 들을 보는데 여러개가 보인다. 이밖에도 Embedded MongoDB database 도 있지만 딱봐도 이건 내 관심사가 아니니까 패스해도 될거 같다.
+짧은 설명으로는 reactive 가 붙은놈은 비동기방식으로 처리가 되는놈인거 같다. 이걸로 선택하기로 한다.
+build.gradle 파일의 dependencies 오브젝트 안에
+implementation &amp;#39;org.springframework.boot:spring-boot-starter-data-mongodb-reactive&amp;#39; 가 추가되어있는것을 볼 수 있다.
+HELP.md 파일에 적힌 링크를 타고 들어가면 reactive 가 붙은거랑 안붙은거랑 문서의 같은섹션을 참조하고 있다. 아마도 대동소이한가보다.</description>
+    </item>
+    
+    <item>
+      <title>Spring Boot 005 - Routing (WIP)</title>
+      <link>https://blog.noizbuster.com/ko/series/java/spring-boot/005-restful-api/</link>
+      <pubDate>Fri, 16 Aug 2019 20:29:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/series/java/spring-boot/005-restful-api/</guid>
+      <description>RESTful API 를 구현하자 MongoDB 작업을 했지만 이것이 RESTful API 로 서빙되게 만드는것은 별개 문제다.
+Authentication, Authorization 등은 일단 나중에 생각하기로 하고 routing 을 우선 어떤식으로 하는지부터 알아보자.
+RESTful API 를 위한 의존성 설정  Spring Web Starter - 전통적인 방식의 웹서버를 만드는 방법인것 같다. Spring Reactive Web - 비동기처리를 지원하는 방식인것 같다. MongoDB 도 리엑티브로 사용하고 있으니 이걸 사용해보도록 한다. Rest Repositories - Repository 를 바로 API 에 바인딩 하는 방식인것 같은데.</description>
+    </item>
+    
+  </channel>
+</rss>

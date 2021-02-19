@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/tags/linux/</link>
+    <description>Recent content in linux on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 09 Jan 2017 14:05:17 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fixing-atom-and-idea-file-refresh-issue</title>
+      <link>https://blog.noizbuster.com/ko/posts/2017-01-09-140517-fixing-atom-and-idea-file-refresh-issue/</link>
+      <pubDate>Mon, 09 Jan 2017 14:05:17 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2017-01-09-140517-fixing-atom-and-idea-file-refresh-issue/</guid>
+      <description>Fixing limit of watch issue  sudo vi /etc/sysctl.d/max_user_watches.conf write fs.inotify.max_user_watches = 524288 the file sudo sysctl -p --system restart atom or idea  Reference  https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md#typeerror-unable-to-watch-path https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit  </description>
+    </item>
+    
+    <item>
+      <title>실수로 한 apt-get autoremove 수습하기</title>
+      <link>https://blog.noizbuster.com/ko/posts/2016-05-10-covering-autoremove-mistake/</link>
+      <pubDate>Tue, 10 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2016-05-10-covering-autoremove-mistake/</guid>
+      <description>python3.5 를 설치하다가 3.4를 삭제한 상태에서 실수로 autoremove 를 하여 python3.4 와 의존성을 가지던 패키지들이 다 날아가서 네트워크도 안되고 난장판이었다.
+재부팅하니 GUI도 쓸수 없었다.
+network 복구 ctrl+alt+F1 으로 터미널1에 붙어서 작업을 한다.
+sudo vi /etc/network/interfaces 에 다가 네트워크 정보를 박아주고 ifconfig 나 iwconfig등으로 네트워크를 수동으로 잡아주거나 해서 네트워크를 연결시킨다.
+손실된 패키지 솎아내서 복구 일단 apt-get 의 로그를 찾아야겠다 뭔가 아주 많이 지워졌는데 어디부터 날아갔는지 피해산정이 중요하다.
+vi /var/log/dpkg.log | less 에 내용을 보면</description>
+    </item>
+    
+  </channel>
+</rss>

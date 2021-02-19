@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Node.js on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/serial/nodejs/</link>
+    <description>Recent content in Node.js on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    
+	<atom:link href="https://blog.noizbuster.com/ko/serial/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Node.js 기초</title>
+      <link>https://blog.noizbuster.com/ko/serial/nodejs/nodejs-basic/</link>
+      <pubDate>Sat, 20 Jul 2019 05:34:15 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/serial/nodejs/nodejs-basic/</guid>
+      <description>Node.js 백엔드에서 가장 많이 사용되는 프레임워크인 Express.js 에 대해 소개하고 실전에서 얻은 경험을 공유해보기 위해 강의를 연재해보려고 합니다.</description>
+    </item>
+    
+    <item>
+      <title>실전 Express!</title>
+      <link>https://blog.noizbuster.com/ko/serial/nodejs/express-in-practice/</link>
+      <pubDate>Fri, 16 Aug 2019 14:09:40 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/serial/nodejs/express-in-practice/</guid>
+      <description>Node.js 백엔드에서 가장 많이 사용되는 프레임워크인 Express.js 에 대해 소개하고 실전에서 얻은 경험을 공유해보기 위해 강의를 연재해보려고 합니다.</description>
+    </item>
+    
+    <item>
+      <title>Node.js 패키지 투어</title>
+      <link>https://blog.noizbuster.com/ko/serial/nodejs/package-tour/</link>
+      <pubDate>Thu, 08 Aug 2019 14:11:59 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/serial/nodejs/package-tour/</guid>
+      <description>유용한 Node.js Package 들을 제가 사용하는 위주로 소개해보는 코너 입니다.</description>
+    </item>
+    
+  </channel>
+</rss>

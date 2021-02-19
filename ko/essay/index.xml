@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>수필 on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/essay/</link>
+    <description>Recent content in 수필 on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 30 Aug 2019 14:12:03 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/essay/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>개발 철학</title>
+      <link>https://blog.noizbuster.com/ko/essay/2019-08-30-141203-development-creed/</link>
+      <pubDate>Fri, 30 Aug 2019 14:12:03 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/essay/2019-08-30-141203-development-creed/</guid>
+      <description>나의 개발 철학 이래저래 십수년간 코딩을 하면서 천천히 만들어진 나의 개발철학에 대해서 이야기해보려고 한다.
+ 네 일, 내 일은 따로 없다. 데이터가 가장 중요하다. 지속 가능한 개발을 하자. 신기술을 알아두되 경계하자. 모든 부분이 재미있을 수는 없다.  네 일, 내 일은 따로 없다. 이 항목은 개발관이라기보다는 직업관에 가까운 내용이다.
+한때 나는 나에게 주어진 일만 잘하면 아무런 문제가 없다 라고 생각을 했다. 나에게 주어진 일을 빨리 끝내면 미래의 할 일을 미리 하고 그것마저 다 했다면 업무를 확장하여 더 많은 일을 해내고 이를 통해 능력을 인정받는 것이 엔지니어로서 가장 큰 성취라고 생각을 했었다.</description>
+    </item>
+    
+    <item>
+      <title>던져진 주사위, 엎질러진 물</title>
+      <link>https://blog.noizbuster.com/ko/essay/2019-08-25-093723-thrown-dice/</link>
+      <pubDate>Sun, 25 Aug 2019 09:37:51 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/essay/2019-08-25-093723-thrown-dice/</guid>
+      <description>질답 대부분의 사람이 그렇듯
+난 내가 달성해야 하는 성격의 행위를 할때 그 준비에 공을 많이 들이는 편이다. 물론 그 정도는 나의 간절함에 비례하곤 한다. 그리고 반동으로 행위를 마쳤을때 그 결과에 대해 스트레스도 그만큼 많이 받았다.
+예전에 어떤분께 질문을 할 수 있는 기회가 있었다.
+ 세상일이 내가 열심히 한다고 해서 그에 맞추어 결과가 나오는것이 아닌데, 결정을 내렸을때 그 결과에 대한 스트레스를 어떻게 핸들링 하시는가?
+ 질문을 던졌을때 나는 아주 대단한 철학적인 대답을 기대했던것 같다.</description>
+    </item>
+    
+  </channel>
+</rss>

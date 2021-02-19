@@ -1,0 +1,2081 @@
+<!DOCTYPE html>
+<html lang="ko" class="js csstransforms3d">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.80.0" />
+<meta name="description" content="A.K.A. NoizBuster">
+<meta name="author" content="Wonwoo Yang">
+
+<link rel="icon" href="/images/favicon.png" type="image/png">
+
+<title>성전! SQL 테이블명 :: NoizBuster</title>
+
+
+<link href="/css/nucleus.css?1613724443" rel="stylesheet">
+<link href="/css/fontawesome-all.min.css?1613724443" rel="stylesheet">
+<link href="/css/hybrid.css?1613724443" rel="stylesheet">
+<link href="/css/featherlight.min.css?1613724443" rel="stylesheet">
+<link href="/css/perfect-scrollbar.min.css?1613724443" rel="stylesheet">
+<link href="/css/auto-complete.css?1613724443" rel="stylesheet">
+<link href="/css/atom-one-dark-reasonable.css?1613724443" rel="stylesheet">
+<link href="/css/theme.css?1613724443" rel="stylesheet">
+<link href="/css/hugo-theme.css?1613724443" rel="stylesheet">
+
+<link href="/css/theme-noizbuster.css?1613724443" rel="stylesheet">
+
+
+
+<script src="/js/jquery-3.3.1.min.js?1613724443"></script>
+
+<style>
+  :root #header + #content > #left > #rlblock_left{
+      display:none !important;
+  }
+  
+</style>
+
+
+
+<body class="" data-url="/ko/posts/2016-11-03-153952-holywar-about-table-name/">
+  <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://blog.noizbuster.com/">
+  <img src="https://blog.noizbuster.com/logo-noizbuster-header.png" style="height:13vh">
+</a>
+<h3 style="margin-top:0;color:white !important;">NoizBuster</h3>
+
+    </div>
+    
+    <div class="searchbox">
+  <label for="search-by"><i class="fas fa-search"></i></label>
+  <input data-search-input id="search-by" type="search" placeholder="Search...">
+  <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="https://blog.noizbuster.com//js/lunr.min.js?1613724443"></script>
+<script type="text/javascript" src="https://blog.noizbuster.com//js/auto-complete.js?1613724443"></script>
+<script type="text/javascript">
+  
+    var baseurl = "https:\/\/blog.noizbuster.com\/\/ko";
+  
+</script>
+<script type="text/javascript" src="https://blog.noizbuster.com//js/search.js?1613724443"></script>
+
+    
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/posts/" title="기술" class="dd-item
+  parent
+  
+  ">
+  <a href="/ko/posts/">
+    기술
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/series/" title="연재" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/">
+    연재
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/" title="Node.js" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/">
+    Node.js
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/nodejs-basic/" title="Node.js 기초" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/nodejs-basic/">
+    Node.js 기초
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/express-in-practice/" title="실전 Express!" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/express-in-practice/">
+    실전 Express!
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/package-tour/" title="Node.js 패키지 투어" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/package-tour/">
+    Node.js 패키지 투어
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/java/" title="JAVA" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/java/">
+    JAVA
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/java/spring-boot/" title="Study Note - Spring Boot" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/java/spring-boot/">
+    Study Note - Spring Boot
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/2015-ros-study/" title="2015 ~ 2016 ROS 스터디" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/2015-ros-study/">
+    2015 ~ 2016 ROS 스터디
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/essay/" title="수필" class="dd-item
+  
+  
+  ">
+  <a href="/ko/essay/">
+    수필
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/pensee/" title="감상록" class="dd-item
+  
+  
+  ">
+  <a href="/ko/pensee/">
+    감상록
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/reviews/" title="리뷰" class="dd-item
+  
+  
+  ">
+  <a href="/ko/reviews/">
+    리뷰
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/en/maintaining/" title="Blog Maintanance" class="dd-item
+  
+  
+  ">
+  <a href="/en/maintaining/">
+    Blog Maintanance
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+    </ul>
+
+    
+    
+
+    
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+        
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+            <div class="select-style">
+              
+              <select id="select-language" onchange="location = this.value;">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <option id="ko" value="https://blog.noizbuster.com/ko/posts/2016-11-03-153952-holywar-about-table-name/" selected>Korean</option>
+                
+                
+                
+                
+              </select>
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+                <g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g>
+              </svg>
+            </div>
+          </a>
+        </li>
+        
+
+        
+      </ul>
+    </section>
+    
+    
+
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+ 
+
+  
+  <section id="body">
+    <div id="overlay"></div>
+    <div class="padding highlightable">
+      
+      <div id="top-bar">
+  
+  
+  
+  
+  <div id="top-github-link">
+    <a
+      class="github-link" 
+      title='Edit this page'
+      href="https://github.com/noizbuster/noizbuster.github.io/edit/blog/content/posts/2016-11-03-153952-holywar-about-table-name/index.md"
+      target="blank"
+    >
+      <i class="fas fa-code-branch"></i>
+      <span id="top-github-link-text">Edit this page</span>
+    </a>
+  </div>
+  
+  
+
+  
+  <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+    <span id="sidebar-toggle-span">
+      <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+        <i class="fas fa-bars"></i>
+      </a>
+    </span>
+    
+    <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+    
+    <span class="links">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+<a href='/ko/'>NoizBuster</a> > <a href='/ko/posts/'>기술</a> > 성전! SQL 테이블명
+
+
+
+
+
+
+    
+    </span>
+  </div>
+
+  
+  <div class="progress">
+  <div class="wrapper">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#orm-이-미친짓을-한다">ORM 이 미친짓을 한다?</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+  
+</div>
+
+      
+      <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/ko/tags/mariadb">mariadb</a>
+
+  <a class="tag-link" href="/ko/tags/sql">sql</a>
+
+  <a class="tag-link" href="/ko/tags/naming-convention">naming convention</a>
+
+  <a class="tag-link" href="/ko/tags/convention">convention</a>
+
+  <a class="tag-link" href="/ko/tags/mapping-table">mapping table</a>
+
+</div>
+
+
+      </div>
+      <div id="">
+        <div id="body-inner">
+          
+          
+
+          
+          <h1 id="content_title">
+            
+            성전! SQL 테이블명
+          </h1>
+          
+          <p style="text-align:right">Thursday, Nov 3, 2016</p>
+          
+
+          
+          
+<h2 id="introduction">Introduction</h2>
+<p>디비랑은 별로 안친해서 디테일하게 네이밍 컨벤션 같은것에 대해 생각해본적이 없었다.</p>
+<p>이번에 업무 관련해서 작명하다가 관례가 있을까 싶어 조사하던중 재미있는 discussion 들을 보게 되어 정리해보게 되었다.</p>
+<h2 id="orm-이-미친짓을-한다">ORM 이 미친짓을 한다?</h2>
+<p>Mongoose 를 쓸적에 collection 이름을 정할때 단수형을 자꾸 복수형으로 바꾸길래 (e.g. user 를 users로 지가 바꾼다) <code>{collection: 'user'}</code> 이런식으로 강제로 collection 의 이름을 정해주면서 스키마를 정의한적이 있었다.</p>
+<p>마찬가지로 mariadb 를 사용하기위해 도입한 sequelize 도 똑같은짓을 하는데 얘는 mongoose 처럼 쉽게 테이블 이름을 정해주는것이 아니라</p>
+<pre><code>define: {
+    freezeTableName: true
+}
+</code></pre><p>이런식으로 매번 옵션을 주어야 하는 귀찮은 짓을 해야한다.</p>
+<p>검색해 보니 table 은 복수의 데이터를 저장하기 때문에 복수형으로 명명한다는게 관례라는걸 알게 되었는데 문제는 이제 <a href="https://en.wikipedia.org/wiki/ISO/IEC_11179">ISO 표준</a>으로도 정리가 되어있다는것이다.</p>
+<p>아니 아무리 표준이라고 하지만 그래도 엄연히 사용자가 입력한 필드인데 이런건 convention으로 극복을해야지 ORM이 지멋대로 바꿔도 되는건가? 라는 생각이 든데다가 이게 s, es 만 붙는게 아니라 예외도 많을텐데 그것들도 다 대응을 못할텐데? 라는 의심이 되었다.</p>
+<p>대표적으로 의심이 되었던것이 child -&gt; children 같이 불규칙하거나 water 같이 불가산명사인 경우 어떻게 처리하는지가 궁금해졌다 시도를 해보았다.</p>
+<p>근데 <strong>맙소사 잘 동작한다?</strong> 이런 노가다를 무릅쓰면서까지 이런걸 구현레벨로 끌어다 놓은 저의가 궁금해서 검색을 해보니 아니라 다를까 시궁창 싸움이 벌어지고 있었다.</p>
+<ul>
+<li><a href="http://stackoverflow.com/questions/338156/table-naming-dilemma-singular-vs-plural-names">http://stackoverflow.com/questions/338156/table-naming-dilemma-singular-vs-plural-names</a></li>
+<li><a href="http://stackoverflow.com/questions/4702728/relational-table-naming-convention">http://stackoverflow.com/questions/4702728/relational-table-naming-convention</a></li>
+</ul>
+<p>나에겐 그냥 이건 부먹 찍먹 논쟁처럼 무의미한 정력낭비라고 생각이 되어서 이런걸 구현레벨까지 끌어다 놓은 강경파가 누군지 궁금하여 sequelize repository에서 blame 해보니
+한 유저가 inflection 이라는 라이브러리를 추가해서 이걸 구현해 놓은것을 보았다 대단한 열정인것 같다.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>영원히 팝콘이나 먹으며 강건너 불구경을 하고싶지만 나도 개발전선에 있는이상 결정을 해야한다.<br>
+두가지 경우에 대해 수용하겠다는 입장을 세우기로 하였다.</p>
+<ul>
+<li>복수형을 쓰는 경우에는 코드에도 명시적으로 복수로 언급하여 inflection의 동작을 차단할것.</li>
+<li>단수형을 쓰는 경우에도 OK지만 모든 사람이 동의해야 함.</li>
+</ul>
+<p>사족을 달자면 표준이 복수라는게 깨림직하지만 경험상, 생각되는 문제가 많기로는 복수형을 사용하는게 더 불리해보인다. (naming scheme 이 있는 mapping table 에 끼치는 영향, 신조어에 대응이 느림, 비영어권 사용자들의 실수를 유발 할 수 있음, model명이랑 동일 하게 사용하고 싶은경우 findOne 하더라도 복수형의 인스턴스 이름을 써야함.. 등등)</p>
+<p>진짜 별 이상한데서도 성전이 열린다는 사실이 재미있다.</p>
+
+
+        </div>
+      </div> 
+    </div>
+
+    
+    <div class="padding">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "noizbuster" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+    
+    <div id="navigation">
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+</div>
+
+
+
+
+  </section>
+  <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+    <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+  </div>
+  <script src="/js/clipboard.min.js?1613724443"></script>
+<script src="/js/perfect-scrollbar.min.js?1613724443"></script>
+<script src="/js/perfect-scrollbar.jquery.min.js?1613724443"></script>
+<script src="/js/jquery.sticky.js?1613724443"></script>
+<script src="/js/featherlight.min.js?1613724443"></script>
+<script src="/js/highlight.pack.js?1613724443"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/modernizr.custom-3.6.0.js?1613724443"></script>
+<script src="/js/learn.js?1613724443"></script>
+<script src="/js/hugo-learn.js?1613724443"></script>
+
+
+<script src="/mermaid/mermaid.js?1613724443"></script>
+
+<script> mermaid.initialize({ startOnLoad: true }); </script>
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-84347291-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+<footer class="footline" >
+  
+</footer>
+
+</body>
+
+</html>

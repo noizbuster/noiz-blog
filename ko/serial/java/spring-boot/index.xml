@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Study Note - Spring Boot on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/serial/java/spring-boot/</link>
+    <description>Recent content in Study Note - Spring Boot on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sat, 10 Aug 2019 09:14:30 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.noizbuster.com/ko/serial/java/spring-boot/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Spring Boot 001 - Goal</title>
+      <link>https://blog.noizbuster.com/ko/serial/java/spring-boot/001-goal/</link>
+      <pubDate>Sat, 10 Aug 2019 09:14:30 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/serial/java/spring-boot/001-goal/</guid>
+      <description> 목표 Spring boot 의 기본을 학습합니다.
+간단한 RESTful API 서버를 만들 수 있도록 합니다.
+빌드 스트림관리, 테스팅, 문서화, 로깅과 같이 실무에서 필요한 요소들도 공부해봅니다.
+What is the Spring Boot?  Spring Boot is designed to get you up and running as quickly as possible, with minimal upfront configuration of Spring. Spring Boot takes an opinionated view of building production-ready applications.
+ </description>
+    </item>
+    
+  </channel>
+</rss>

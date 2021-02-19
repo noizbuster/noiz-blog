@@ -1,0 +1,2153 @@
+<!DOCTYPE html>
+<html lang="ko" class="js csstransforms3d">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.80.0" />
+<meta name="description" content="A.K.A. NoizBuster">
+<meta name="author" content="Wonwoo Yang">
+
+<link rel="icon" href="/images/favicon.png" type="image/png">
+
+<title>Spring Boot 004 - MongoDB :: NoizBuster</title>
+
+
+<link href="/css/nucleus.css?1613724443" rel="stylesheet">
+<link href="/css/fontawesome-all.min.css?1613724443" rel="stylesheet">
+<link href="/css/hybrid.css?1613724443" rel="stylesheet">
+<link href="/css/featherlight.min.css?1613724443" rel="stylesheet">
+<link href="/css/perfect-scrollbar.min.css?1613724443" rel="stylesheet">
+<link href="/css/auto-complete.css?1613724443" rel="stylesheet">
+<link href="/css/atom-one-dark-reasonable.css?1613724443" rel="stylesheet">
+<link href="/css/theme.css?1613724443" rel="stylesheet">
+<link href="/css/hugo-theme.css?1613724443" rel="stylesheet">
+
+<link href="/css/theme-noizbuster.css?1613724443" rel="stylesheet">
+
+
+
+<script src="/js/jquery-3.3.1.min.js?1613724443"></script>
+
+<style>
+  :root #header + #content > #left > #rlblock_left{
+      display:none !important;
+  }
+  
+</style>
+
+
+
+<body class="" data-url="/ko/series/java/spring-boot/004-integrate-mongodb/">
+  <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://blog.noizbuster.com/">
+  <img src="https://blog.noizbuster.com/logo-noizbuster-header.png" style="height:13vh">
+</a>
+<h3 style="margin-top:0;color:white !important;">NoizBuster</h3>
+
+    </div>
+    
+    <div class="searchbox">
+  <label for="search-by"><i class="fas fa-search"></i></label>
+  <input data-search-input id="search-by" type="search" placeholder="Search...">
+  <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="https://blog.noizbuster.com//js/lunr.min.js?1613724443"></script>
+<script type="text/javascript" src="https://blog.noizbuster.com//js/auto-complete.js?1613724443"></script>
+<script type="text/javascript">
+  
+    var baseurl = "https:\/\/blog.noizbuster.com\/\/ko";
+  
+</script>
+<script type="text/javascript" src="https://blog.noizbuster.com//js/search.js?1613724443"></script>
+
+    
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/posts/" title="기술" class="dd-item
+  
+  
+  ">
+  <a href="/ko/posts/">
+    기술
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/series/" title="연재" class="dd-item
+  parent
+  
+  ">
+  <a href="/ko/series/">
+    연재
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/" title="Node.js" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/">
+    Node.js
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/nodejs-basic/" title="Node.js 기초" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/nodejs-basic/">
+    Node.js 기초
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/express-in-practice/" title="실전 Express!" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/express-in-practice/">
+    실전 Express!
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/package-tour/" title="Node.js 패키지 투어" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/package-tour/">
+    Node.js 패키지 투어
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/java/" title="JAVA" class="dd-item
+  parent
+  
+  ">
+  <a href="/ko/series/java/">
+    JAVA
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/java/spring-boot/" title="Study Note - Spring Boot" class="dd-item
+  parent
+  
+  ">
+  <a href="/ko/series/java/spring-boot/">
+    Study Note - Spring Boot
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/2015-ros-study/" title="2015 ~ 2016 ROS 스터디" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/2015-ros-study/">
+    2015 ~ 2016 ROS 스터디
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/essay/" title="수필" class="dd-item
+  
+  
+  ">
+  <a href="/ko/essay/">
+    수필
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/pensee/" title="감상록" class="dd-item
+  
+  
+  ">
+  <a href="/ko/pensee/">
+    감상록
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/reviews/" title="리뷰" class="dd-item
+  
+  
+  ">
+  <a href="/ko/reviews/">
+    리뷰
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/en/maintaining/" title="Blog Maintanance" class="dd-item
+  
+  
+  ">
+  <a href="/en/maintaining/">
+    Blog Maintanance
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+    </ul>
+
+    
+    
+
+    
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+        
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+            <div class="select-style">
+              
+              <select id="select-language" onchange="location = this.value;">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <option id="ko" value="https://blog.noizbuster.com/ko/series/java/spring-boot/004-integrate-mongodb/" selected>Korean</option>
+                
+                
+                
+                
+              </select>
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+                <g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g>
+              </svg>
+            </div>
+          </a>
+        </li>
+        
+
+        
+      </ul>
+    </section>
+    
+    
+
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+ 
+
+  
+  <section id="body">
+    <div id="overlay"></div>
+    <div class="padding highlightable">
+      
+      <div id="top-bar">
+  
+  
+  
+  
+  <div id="top-github-link">
+    <a
+      class="github-link" 
+      title='Edit this page'
+      href="https://github.com/noizbuster/noizbuster.github.io/edit/blog/content/series/java/spring-boot/004-integrate-mongodb/index.md"
+      target="blank"
+    >
+      <i class="fas fa-code-branch"></i>
+      <span id="top-github-link-text">Edit this page</span>
+    </a>
+  </div>
+  
+  
+
+  
+  <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+    <span id="sidebar-toggle-span">
+      <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+        <i class="fas fa-bars"></i>
+      </a>
+    </span>
+    
+    <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+    
+    <span class="links">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href='/ko/'>NoizBuster</a> > <a href='/ko/series/'>연재</a> > <a href='/ko/series/java/'>JAVA</a> > <a href='/ko/series/java/spring-boot/'>Study Note - Spring Boot</a> > Spring Boot 004 - MongoDB
+
+
+
+
+
+
+
+
+
+
+    
+    </span>
+  </div>
+
+  
+  <div class="progress">
+  <div class="wrapper">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#mongodb-를-사용하기위한-의존성-추가하기">MongoDB 를 사용하기위한 의존성 추가하기</a></li>
+    <li><a href="#데이터-모델링-draft">데이터 모델링 (draft)</a></li>
+    <li><a href="#구현">구현</a>
+      <ul>
+        <li><a href="#mongodb-model--repository">MongoDB Model &amp; Repository</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+  
+</div>
+
+      
+      <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/ko/tags/java">java</a>
+
+  <a class="tag-link" href="/ko/tags/spring">spring</a>
+
+  <a class="tag-link" href="/ko/tags/spring-boot">spring boot</a>
+
+</div>
+
+
+      </div>
+      <div id="">
+        <div id="body-inner">
+          
+          
+
+          
+          <h1 id="content_title">
+            
+            Spring Boot 004 - MongoDB
+          </h1>
+          
+          <p style="text-align:right">Friday, Aug 16, 2019</p>
+          
+
+          
+          
+<h1 id="데이터를-읽고쓰자">데이터를 읽고쓰자</h1>
+<h2 id="mongodb-를-사용하기위한-의존성-추가하기">MongoDB 를 사용하기위한 의존성 추가하기</h2>
+<p>start.spring.io 에서 MongoDB 와 관련된 Dependency 들을 보는데 여러개가 보인다.
+<img src="MongoDB_Dependencies.png" alt=""></p>
+<p>이밖에도 <code>Embedded MongoDB database</code> 도 있지만 딱봐도 이건 내 관심사가 아니니까 패스해도 될거 같다.<br>
+짧은 설명으로는 reactive 가 붙은놈은 비동기방식으로 처리가 되는놈인거 같다. 이걸로 선택하기로 한다.</p>
+<p>build.gradle 파일의 dependencies 오브젝트 안에</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gradle" data-lang="gradle">implementation <span style="color:#2aa198">&#39;org.springframework.boot:spring-boot-starter-data-mongodb-reactive&#39;</span>
+</code></pre></div><p>가 추가되어있는것을 볼 수 있다.</p>
+<p><code>HELP.md</code> 파일에 적힌 <a href="https://docs.spring.io/spring-boot/docs/2.2.x/reference/htmlsingle/#boot-features-mongodb">링크</a>를 타고 들어가면 reactive 가 붙은거랑 안붙은거랑 문서의 같은섹션을 참조하고 있다. 아마도 대동소이한가보다.</p>
+<p>바라보고있는 MongoDB 의 database 를 바꿔주기위해 main.resources/application.properties 에 아래를 추가해준다.<br>
+DB에 크레덴셜도 없고 로컬호스트를 보고있게 되어있으니 일단 devel 서픽스를 붙여놓자.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">spring<span style="color:#719e07">.</span>data<span style="color:#719e07">.</span>mongodb<span style="color:#719e07">.</span>uri<span style="color:#719e07">=</span>mongodb<span style="color:#719e07">:</span><span style="color:#586e75">//localhost:27017/punch_card_devel
+</span></code></pre></div><p>설명을 더 읽어보면 <code>MongoTemplate</code> <code>Spring Data MongoDB Repositories</code> 등에 대해서 이야기 하고 있는데 <code>MongoTemplate</code> 는 JDBC 의 그것과 비교하고 있어서 무슨말인지 알수가 없고 <code>Spring Data MongoDB Repositories</code> 의 경우는 정의된 메서드 이름에 따라 쿼리를 자동으로 생성해주는놈으로 이해했다.</p>
+<p>모델을 정의하고 이것을 RESTful 인터페이스까지 매핑하는것에대한 정보는 부족해서 좀 더 찾아보았다.</p>
+<h2 id="데이터-모델링-draft">데이터 모델링 (draft)</h2>
+<p>뭐라도 있어야 코딩을 해볼테니 아주 간단하게 사용할 데이터 모델을 약식으로 만들어 보자.</p>
+<pre><code class="language-mermaid" data-lang="mermaid">classDiagram
+User *-- Blueprint
+Blueprint o-- Subject
+PunchCard o-- Subject
+User : ObjectId id
+User : string name
+User : string email
+Blueprint : ObjectId user
+Blueprint : Subject[] subjects
+Subject : string name
+Subject : string type
+PunchCard : Subject[] subjects
+PunchCard : date date
+</code></pre><h2 id="구현">구현</h2>
+<h3 id="mongodb-model--repository">MongoDB Model &amp; Repository</h3>
+<p>굳이 Express.js 와 Mongoose 에 대응해서 비교를 해보자면 <code>Repository</code> 가 Mongoose 의 model 역할을 하고 인자로 집어넣은 Model 이 Schema 역할을 해준다.</p>
+<p>reactive 를 사용하고 안하고의 차이는 비동기처리를 Flux를 통해서 해주는데 RxJava 와 비슷한 방식으로 보인다.</p>
+<p>Repository를 만듬에 있어서 예제에서처럼 필요한 함수를 매번 만들어줄 필요가 없었다.<br>
+기존에 생성되는 함수의 용도나 내부 구현을 바꾸고 싶거나 할때 추가해서 재구현을 하는 느낌이다. 예를들어 비밀번호의 경우 업데이트 할 때 내용을 hashing 해서 넘겨줘야 할텐데 이런작업을 여기다가 구현하면 되는거 같다.</p>
+<h4 id="model">Model</h4>
+<p>모델은 이런식으로 만들었다. MongoDB 에서 사용하는 데이터 타입을 명시하기 위해서 필요한것 이외에는 별다른 의존성은 없다.
+lombok 으로 getters, setters 를 자동생성 해주었다.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">package</span> io.upsidedown.punchcardapi.model<span style="color:#719e07">;</span>
+
+<span style="color:#719e07">import</span> lombok.Getter<span style="color:#719e07">;</span>
+<span style="color:#719e07">...</span>
+<span style="color:#719e07">import</span> java.util.Set<span style="color:#719e07">;</span>
+
+<span style="color:#268bd2">@Getter</span>
+<span style="color:#268bd2">@Setter</span>
+<span style="color:#268bd2">@NoArgsConstructor</span>
+<span style="color:#268bd2">@Accessors</span><span style="color:#719e07">(</span>chain <span style="color:#719e07">=</span> <span style="color:#cb4b16">true</span><span style="color:#719e07">)</span>
+<span style="color:#268bd2">@Document</span><span style="color:#719e07">(</span>collection <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;users&#34;</span><span style="color:#719e07">)</span>
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">UserModel</span> <span style="color:#719e07">{</span>
+    <span style="color:#268bd2">@Id</span>
+    <span style="color:#268bd2">private</span> String id<span style="color:#719e07">;</span>
+
+    <span style="color:#268bd2">@Indexed</span><span style="color:#719e07">(</span>unique <span style="color:#719e07">=</span> <span style="color:#cb4b16">true</span><span style="color:#719e07">,</span> direction <span style="color:#719e07">=</span> IndexDirection<span style="color:#719e07">.</span>DESCENDING<span style="color:#719e07">,</span> dropDups <span style="color:#719e07">=</span> <span style="color:#cb4b16">true</span><span style="color:#719e07">)</span>
+    <span style="color:#268bd2">private</span> String email<span style="color:#719e07">;</span>
+
+    <span style="color:#268bd2">private</span> String password<span style="color:#719e07">;</span>
+
+    <span style="color:#268bd2">private</span> String name<span style="color:#719e07">;</span>
+
+<span style="color:#719e07">}</span>
+</code></pre></div><h4 id="repository">Repository</h4>
+<p>레포지터리는 아래와 같이 만들었다. 비밀번호 관련해서는 작업을 추후에 해줄생각이고
+일단은 동작 자체를 확인해보는게 중요하니 이렇게만 만들어두자.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">package</span> io.upsidedown.punchcardapi.repository<span style="color:#719e07">;</span>
+
+<span style="color:#719e07">import</span> io.upsidedown.punchcardapi.model.UserModel<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.springframework.data.mongodb.repository.ReactiveMongoRepository<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.springframework.stereotype.Repository<span style="color:#719e07">;</span>
+
+<span style="color:#268bd2">@Repository</span>
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">interface</span> <span style="color:#268bd2">UserRepository</span> <span style="color:#268bd2">extends</span> ReactiveMongoRepository<span style="color:#719e07">&lt;</span>UserModel<span style="color:#719e07">,</span> String<span style="color:#719e07">&gt;</span> <span style="color:#719e07">{</span>
+
+<span style="color:#719e07">}</span>
+</code></pre></div><h1 id="references">References</h1>
+<ul>
+<li><a href="https://docs.spring.io/spring-boot/docs/2.2.x/reference/htmlsingle/#boot-features-mongodb">boot-features-mongodb</a></li>
+<li><a href="https://dzone.com/articles/creating-a-reactive-restful-web-service-using-spri-1">creating-a-reactive-restful-web-service-using-spri-1</a></li>
+<li><a href="https://www.callicoder.com/reactive-rest-apis-spring-webflux-reactive-mongo/">reactive-rest-apis-spring-webflux-reactive-mongo</a></li>
+</ul>
+
+
+        </div>
+      </div> 
+    </div>
+
+    
+    <div class="padding">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "noizbuster" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+    
+    <div id="navigation">
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+</div>
+
+
+
+
+  </section>
+  <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+    <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+  </div>
+  <script src="/js/clipboard.min.js?1613724443"></script>
+<script src="/js/perfect-scrollbar.min.js?1613724443"></script>
+<script src="/js/perfect-scrollbar.jquery.min.js?1613724443"></script>
+<script src="/js/jquery.sticky.js?1613724443"></script>
+<script src="/js/featherlight.min.js?1613724443"></script>
+<script src="/js/highlight.pack.js?1613724443"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/modernizr.custom-3.6.0.js?1613724443"></script>
+<script src="/js/learn.js?1613724443"></script>
+<script src="/js/hugo-learn.js?1613724443"></script>
+
+
+<script src="/mermaid/mermaid.js?1613724443"></script>
+
+<script> mermaid.initialize({ startOnLoad: true }); </script>
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-84347291-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+<footer class="footline" >
+  
+</footer>
+
+</body>
+
+</html>

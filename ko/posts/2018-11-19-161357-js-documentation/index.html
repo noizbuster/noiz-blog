@@ -1,0 +1,2156 @@
+<!DOCTYPE html>
+<html lang="ko" class="js csstransforms3d">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.80.0" />
+<meta name="description" content="A.K.A. NoizBuster">
+<meta name="author" content="Wonwoo Yang">
+
+<link rel="icon" href="/images/favicon.png" type="image/png">
+
+<title>js-documentation :: NoizBuster</title>
+
+
+<link href="/css/nucleus.css?1613724443" rel="stylesheet">
+<link href="/css/fontawesome-all.min.css?1613724443" rel="stylesheet">
+<link href="/css/hybrid.css?1613724443" rel="stylesheet">
+<link href="/css/featherlight.min.css?1613724443" rel="stylesheet">
+<link href="/css/perfect-scrollbar.min.css?1613724443" rel="stylesheet">
+<link href="/css/auto-complete.css?1613724443" rel="stylesheet">
+<link href="/css/atom-one-dark-reasonable.css?1613724443" rel="stylesheet">
+<link href="/css/theme.css?1613724443" rel="stylesheet">
+<link href="/css/hugo-theme.css?1613724443" rel="stylesheet">
+
+<link href="/css/theme-noizbuster.css?1613724443" rel="stylesheet">
+
+
+
+<script src="/js/jquery-3.3.1.min.js?1613724443"></script>
+
+<style>
+  :root #header + #content > #left > #rlblock_left{
+      display:none !important;
+  }
+  
+</style>
+
+
+
+<body class="" data-url="/ko/posts/2018-11-19-161357-js-documentation/">
+  <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://blog.noizbuster.com/">
+  <img src="https://blog.noizbuster.com/logo-noizbuster-header.png" style="height:13vh">
+</a>
+<h3 style="margin-top:0;color:white !important;">NoizBuster</h3>
+
+    </div>
+    
+    <div class="searchbox">
+  <label for="search-by"><i class="fas fa-search"></i></label>
+  <input data-search-input id="search-by" type="search" placeholder="Search...">
+  <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="https://blog.noizbuster.com//js/lunr.min.js?1613724443"></script>
+<script type="text/javascript" src="https://blog.noizbuster.com//js/auto-complete.js?1613724443"></script>
+<script type="text/javascript">
+  
+    var baseurl = "https:\/\/blog.noizbuster.com\/\/ko";
+  
+</script>
+<script type="text/javascript" src="https://blog.noizbuster.com//js/search.js?1613724443"></script>
+
+    
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/posts/" title="기술" class="dd-item
+  parent
+  
+  ">
+  <a href="/ko/posts/">
+    기술
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/series/" title="연재" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/">
+    연재
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/" title="Node.js" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/">
+    Node.js
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/nodejs-basic/" title="Node.js 기초" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/nodejs-basic/">
+    Node.js 기초
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/express-in-practice/" title="실전 Express!" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/express-in-practice/">
+    실전 Express!
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/package-tour/" title="Node.js 패키지 투어" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/package-tour/">
+    Node.js 패키지 투어
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/java/" title="JAVA" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/java/">
+    JAVA
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/java/spring-boot/" title="Study Note - Spring Boot" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/java/spring-boot/">
+    Study Note - Spring Boot
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/2015-ros-study/" title="2015 ~ 2016 ROS 스터디" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/2015-ros-study/">
+    2015 ~ 2016 ROS 스터디
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/essay/" title="수필" class="dd-item
+  
+  
+  ">
+  <a href="/ko/essay/">
+    수필
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/pensee/" title="감상록" class="dd-item
+  
+  
+  ">
+  <a href="/ko/pensee/">
+    감상록
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/reviews/" title="리뷰" class="dd-item
+  
+  
+  ">
+  <a href="/ko/reviews/">
+    리뷰
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/en/maintaining/" title="Blog Maintanance" class="dd-item
+  
+  
+  ">
+  <a href="/en/maintaining/">
+    Blog Maintanance
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+    </ul>
+
+    
+    
+
+    
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+        
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+            <div class="select-style">
+              
+              <select id="select-language" onchange="location = this.value;">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <option id="ko" value="https://blog.noizbuster.com/ko/posts/2018-11-19-161357-js-documentation/" selected>Korean</option>
+                
+                
+                
+                
+              </select>
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+                <g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g>
+              </svg>
+            </div>
+          </a>
+        </li>
+        
+
+        
+      </ul>
+    </section>
+    
+    
+
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+ 
+
+  
+  <section id="body">
+    <div id="overlay"></div>
+    <div class="padding highlightable">
+      
+      <div id="top-bar">
+  
+  
+  
+  
+  <div id="top-github-link">
+    <a
+      class="github-link" 
+      title='Edit this page'
+      href="https://github.com/noizbuster/noizbuster.github.io/edit/blog/content/posts/2018-11-19-161357-js-documentation/index.md"
+      target="blank"
+    >
+      <i class="fas fa-code-branch"></i>
+      <span id="top-github-link-text">Edit this page</span>
+    </a>
+  </div>
+  
+  
+
+  
+  <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+    <span id="sidebar-toggle-span">
+      <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+        <i class="fas fa-bars"></i>
+      </a>
+    </span>
+    
+    <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+    
+    <span class="links">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+<a href='/ko/'>NoizBuster</a> > <a href='/ko/posts/'>기술</a> > js-documentation
+
+
+
+
+
+
+    
+    </span>
+  </div>
+
+  
+  <div class="progress">
+  <div class="wrapper">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+
+  
+</div>
+
+      
+      <div id="head-tags">
+        
+
+      </div>
+      <div id="">
+        <div id="body-inner">
+          
+          
+
+          
+          <h1 id="content_title">
+            
+            js-documentation
+          </h1>
+          
+          <p style="text-align:right">Monday, Nov 19, 2018</p>
+          
+
+          
+          
+<p>도큐먼트 제네레이션을 하려고 하는데 고민이 많았다.
+타입스크립트 쓰면 typedoc 이 대부분 해결 해 주니까 별 문제가 없지만.
+ES7 를 쓰고있는 프로젝트들은 esdoc 이나 jsdoc 를 끼고 갈 수 밖에 없다.</p>
+<p>내 요구조건은 다음과 같았다.</p>
+<ol>
+<li>충분히 유명한 패키지일것</li>
+<li>typedef 에서 @extends 혹은 @augments 를 사용 할 수 있을것.</li>
+<li>document coverage</li>
+</ol>
+<p>결론부터 말하자면 document coverage 를 포기하고 커스텀 플러그인을 달아서 jsdoc 를 사용하기로 했다.</p>
+<p>시도해본것들은 다음과 같다.</p>
+<ul>
+<li>
+<p>JSDoc</p>
+<ul>
+<li>template
+<ul>
+<li>docdash</li>
+<li>tui-jsdoc-template</li>
+</ul>
+</li>
+<li>plugins
+<ul>
+<li>plugins/markdown</li>
+<li>typedef-extends (handmade)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>ESDoc</p>
+<ul>
+<li>template: built in</li>
+</ul>
+</li>
+<li>
+<p>ETC</p>
+<ul>
+<li>inchjs</li>
+<li>istanbul</li>
+<li>nyc</li>
+</ul>
+</li>
+</ul>
+<p>제법 긴 시간동안 검색해보았지만 coverage 툴에서 제공하는 documentation 플러그인이나
+jsdoc 플러그인중에서 coverage 를 제공하는것은 지금 시점에서는 찾지 못했다.
+아, inchjs 라는게 있었는데 실행이 되지 않았고 메인테이닝도 잘 되지 않는것 같았다.
+결국 2,3번 요구조건중 하나는 당분간 포기해야 하는데 결국 도큐먼테이션의 본질에 가까운것이 coverage 가 아니기에 jsdoc 으로 선택하였다.</p>
+<h1 id="references">References</h1>
+<ul>
+<li><a href="https://stackoverflow.com/questions/42124012/jsdoc-include-all-properties-from-another-typedef-object">https://stackoverflow.com/questions/42124012/jsdoc-include-all-properties-from-another-typedef-object</a></li>
+<li><a href="https://github.com/OpenGeoscience/geojs/blob/master/jsdoc/plugins/typedef_augments.js">https://github.com/OpenGeoscience/geojs/blob/master/jsdoc/plugins/typedef_augments.js</a></li>
+<li></li>
+</ul>
+<p>hard copy of above</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#586e75">/**
+</span><span style="color:#586e75"> * Define a jsdoc plugin to update typedefs that use augments.
+</span><span style="color:#586e75"> */</span>
+exports.handlers <span style="color:#719e07">=</span> {
+  <span style="color:#586e75">/**
+</span><span style="color:#586e75">   * Modify typedefs that use augments (extends).  Add the base typedef&#39;s
+</span><span style="color:#586e75">   * properties to the augmented typedefs.
+</span><span style="color:#586e75">   */</span>
+  parseComplete<span style="color:#719e07">:</span> <span style="color:#268bd2">function</span> (e) {
+    <span style="color:#268bd2">var</span> typedefs <span style="color:#719e07">=</span> {},
+        augmentedTypedefs <span style="color:#719e07">=</span> {},
+        numAugmented <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>;
+    <span style="color:#586e75">/* Make a dictionary of all known typedefs and a dictionary of augmented
+</span><span style="color:#586e75">     * typedefs */</span>
+    e.doclets.forEach(<span style="color:#268bd2">function</span> (doclet) {
+      <span style="color:#719e07">if</span> (doclet.kind <span style="color:#719e07">===</span> <span style="color:#2aa198">&#39;typedef&#39;</span>) {
+        typedefs[doclet.longname] <span style="color:#719e07">=</span> doclet;
+        <span style="color:#719e07">if</span> (doclet.augments <span style="color:#719e07">&amp;&amp;</span> doclet.augments.length) {
+          augmentedTypedefs[doclet.longname] <span style="color:#719e07">=</span> doclet;
+        }
+      }
+    });
+    <span style="color:#719e07">while</span> (<span style="color:#b58900">Object</span>.keys(augmentedTypedefs).length <span style="color:#719e07">!==</span> numAugmented) {
+      numAugmented <span style="color:#719e07">=</span> <span style="color:#b58900">Object</span>.keys(augmentedTypedefs).length;
+      <span style="color:#b58900">Object</span>.keys(augmentedTypedefs).forEach(<span style="color:#268bd2">function</span> (name) {
+        <span style="color:#268bd2">var</span> doclet <span style="color:#719e07">=</span> augmentedTypedefs[name];
+        <span style="color:#586e75">/* If this typedef is augmented by an augmented typedef, skip it for
+</span><span style="color:#586e75">         * now.  Ignore self references */</span>
+        <span style="color:#719e07">if</span> (doclet.augments.some(<span style="color:#268bd2">function</span> (augmentName) {
+          <span style="color:#719e07">return</span> augmentName <span style="color:#719e07">!==</span> name <span style="color:#719e07">&amp;&amp;</span> augmentedTypedefs[augmentName];
+        })) {
+          <span style="color:#719e07">return</span>;
+        }
+        <span style="color:#586e75">/* Ensure we have properties */</span>
+        doclet.properties <span style="color:#719e07">=</span> doclet.properties <span style="color:#719e07">||</span> [];
+        <span style="color:#586e75">/* Make a dictionary so we don&#39;t clobber known properties. */</span>
+        <span style="color:#268bd2">var</span> properties <span style="color:#719e07">=</span> {};
+        doclet.properties.forEach(<span style="color:#268bd2">function</span> (prop) {
+          properties[prop.name] <span style="color:#719e07">=</span> prop;
+        });
+        <span style="color:#586e75">/* For each augment base, add its properties if we don&#39;t already have
+</span><span style="color:#586e75">         * them.  If the typedef augments two other typedefs that each have a
+</span><span style="color:#586e75">         * property of the same name, the last listed will be shown (done by
+</span><span style="color:#586e75">         * reversing the augments list). */</span>
+        doclet.augments.slice().reverse().forEach(<span style="color:#268bd2">function</span> (augmentName) {
+          <span style="color:#719e07">if</span> (augmentName <span style="color:#719e07">!==</span> name <span style="color:#719e07">&amp;&amp;</span> typedefs[augmentName] <span style="color:#719e07">&amp;&amp;</span> typedefs[augmentName].properties) {
+            typedefs[augmentName].properties.forEach(<span style="color:#268bd2">function</span> (origprop) {
+              <span style="color:#719e07">if</span> (<span style="color:#719e07">!</span>properties[origprop.name]) {
+                <span style="color:#586e75">/* Make a copy so we don&#39;t mutate the original property. */</span>
+                <span style="color:#268bd2">var</span> prop <span style="color:#719e07">=</span> <span style="color:#b58900">Object</span>.assign({}, origprop);
+                <span style="color:#586e75">/* Add a value that a rendering template could use to show that
+</span><span style="color:#586e75">                 * the property was inherted from a parent.  Since that in turn
+</span><span style="color:#586e75">                 * could have been inherited, preserve a known value. */</span>
+                prop.inherited <span style="color:#719e07">=</span> prop.inherited <span style="color:#719e07">||</span> augmentName;
+                <span style="color:#586e75">/* Add the property to the typedef and to the list of known
+</span><span style="color:#586e75">                 * properties. */</span>
+                doclet.properties.push(prop);
+                properties[prop.name] <span style="color:#719e07">=</span> prop;
+              }
+            });
+          }
+        });
+        <span style="color:#586e75">/* We&#39;ve finished processing this typedef, so remove it from the
+</span><span style="color:#586e75">         * augmented list. */</span>
+        <span style="color:#719e07">delete</span> augmentedTypedefs[name];
+      });
+    }
+  }
+};
+</code></pre></div>
+
+        </div>
+      </div> 
+    </div>
+
+    
+    <div class="padding">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "noizbuster" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+    
+    <div id="navigation">
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+</div>
+
+
+
+
+  </section>
+  <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+    <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+  </div>
+  <script src="/js/clipboard.min.js?1613724444"></script>
+<script src="/js/perfect-scrollbar.min.js?1613724444"></script>
+<script src="/js/perfect-scrollbar.jquery.min.js?1613724444"></script>
+<script src="/js/jquery.sticky.js?1613724444"></script>
+<script src="/js/featherlight.min.js?1613724444"></script>
+<script src="/js/highlight.pack.js?1613724444"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/modernizr.custom-3.6.0.js?1613724444"></script>
+<script src="/js/learn.js?1613724444"></script>
+<script src="/js/hugo-learn.js?1613724444"></script>
+
+
+<script src="/mermaid/mermaid.js?1613724444"></script>
+
+<script> mermaid.initialize({ startOnLoad: true }); </script>
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-84347291-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+<footer class="footline" >
+  
+</footer>
+
+</body>
+
+</html>

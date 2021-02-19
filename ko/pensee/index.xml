@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>감상록 on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/pensee/</link>
+    <description>Recent content in 감상록 on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language><atom:link href="https://blog.noizbuster.com/ko/pensee/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vm on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/tags/vm/</link>
+    <description>Recent content in vm on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/tags/vm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Converting .OVA to docker image</title>
+      <link>https://blog.noizbuster.com/ko/posts/2016-04-20-ova-to-dockerimg/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2016-04-20-ova-to-dockerimg/</guid>
+      <description>0.서론 도커 이미지를 만드는것은 그리 어렵지 않았다.
+근데 지금 쓰고있는 VM을 docker image 로 바꿔서 실행하면
+서버나 시뮬레이터를 좀 더 편하게 만들고 실행할때는 속도가 더 빠를것이라고 기대했다.
+VM 툴들은 스냅샷도 지원하니까 버전관리도 할 수 있다.
+물론 도커 이미지를 다른 이미지를 베이스로 하여 올리는것보다는 빌드에 시간도 많이 걸리고
+실행시에 엔트리 포인트도 정해 줘야 할 것 같은 불길한 예감이 들지만
+뭐 어떠한가! 빠른데!
+1. Extracting .vmdk from VM (.OVA) 우선 Virtual machine to docker image 따위의 키워드로 구글링 해보니</description>
+    </item>
+    
+  </channel>
+</rss>

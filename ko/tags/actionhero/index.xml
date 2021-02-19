@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>actionhero on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/tags/actionhero/</link>
+    <description>Recent content in actionhero on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 17 May 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/tags/actionhero/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>actionhero로 API Gateway 구축하기</title>
+      <link>https://blog.noizbuster.com/ko/posts/2016-05-17-actionhero-api-gateway-worklog/</link>
+      <pubDate>Tue, 17 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2016-05-17-actionhero-api-gateway-worklog/</guid>
+      <description>서론 라이선스 문제 때문에 LoopBack이 거슬려서 찾아보니 Action Hero 라는걸 찾았다.
+http://www.actionherojs.com/
+일단 기본적으로 나에게 필요한 기능은 다 있는것처럼 보인다.
+ Reusability Scalability(Clustering) RestfulAPI  얘는 독특하게 Web, WebSocket 뿐만 아니라 Socket 도 지원을 한다.
+npm install actionhero ./node_modules/.bin/actionhero generate npm install npm start 이렇게 설치하고 초기화하고 시작할 수 있다.</description>
+    </item>
+    
+  </channel>
+</rss>

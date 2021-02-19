@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>frontend on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/categories/frontend/</link>
+    <description>Recent content in frontend on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 18 Feb 2021 05:46:07 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/categories/frontend/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Billboardjs With React</title>
+      <link>https://blog.noizbuster.com/ko/posts/2021-02-18-054607-billboardjs-with-react/</link>
+      <pubDate>Thu, 18 Feb 2021 05:46:07 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2021-02-18-054607-billboardjs-with-react/</guid>
+      <description>Billboard.js with React React.js 앱에 차트 표현을 위해 Billboard.js 를 사용하는방법을 간단하게 알아보고
+사용해보면서 겪은 시행착오나 느낌에 대해 이야기 해보려고 합니다.
+이 포스팅에서 작성된 예제코드는 Github repo 에서 확인 할 수 있습니다.
+Environment  Ubuntu 18.04 node.js v14.x (LTS) react.js v17.x  How to Prerequisites  node.js react.js  준비 및 설정 프로젝트 준비  이미 사용하고 있는 프로젝트가 있다면 생략하셔도 됩니다.
+ npx create-react-app billboard-with-react 의존성 설치 npm install --save billboard.</description>
+    </item>
+    
+  </channel>
+</rss>

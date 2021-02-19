@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Serial on NoizBuster</title>
+    <link>https://blog.noizbuster.com/en/serial/</link>
+    <description>Recent content in Serial on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    
+	<atom:link href="https://blog.noizbuster.com/en/serial/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Node.js</title>
+      <link>https://blog.noizbuster.com/en/serial/nodejs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/en/serial/nodejs/</guid>
+      <description> This is NodeJS Lecture </description>
+    </item>
+    
+    <item>
+      <title>Building RESTful API Server using Express.js</title>
+      <link>https://blog.noizbuster.com/en/serial/building-restful-api-server-using-express/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/en/serial/building-restful-api-server-using-express/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,2235 @@
+<!DOCTYPE html>
+<html lang="ko" class="js csstransforms3d">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.80.0" />
+<meta name="description" content="A.K.A. NoizBuster">
+<meta name="author" content="Wonwoo Yang">
+
+<link rel="icon" href="/images/favicon.png" type="image/png">
+
+<title>Express in Practice 002 - 프로젝트 만들기 :: NoizBuster</title>
+
+
+<link href="/css/nucleus.css?1613724443" rel="stylesheet">
+<link href="/css/fontawesome-all.min.css?1613724443" rel="stylesheet">
+<link href="/css/hybrid.css?1613724443" rel="stylesheet">
+<link href="/css/featherlight.min.css?1613724443" rel="stylesheet">
+<link href="/css/perfect-scrollbar.min.css?1613724443" rel="stylesheet">
+<link href="/css/auto-complete.css?1613724443" rel="stylesheet">
+<link href="/css/atom-one-dark-reasonable.css?1613724443" rel="stylesheet">
+<link href="/css/theme.css?1613724443" rel="stylesheet">
+<link href="/css/hugo-theme.css?1613724443" rel="stylesheet">
+
+<link href="/css/theme-noizbuster.css?1613724443" rel="stylesheet">
+
+
+
+<script src="/js/jquery-3.3.1.min.js?1613724443"></script>
+
+<style>
+  :root #header + #content > #left > #rlblock_left{
+      display:none !important;
+  }
+  
+</style>
+
+
+
+<body class="" data-url="/ko/series/nodejs/express-in-practice/002-create-express-project/">
+  <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://blog.noizbuster.com/">
+  <img src="https://blog.noizbuster.com/logo-noizbuster-header.png" style="height:13vh">
+</a>
+<h3 style="margin-top:0;color:white !important;">NoizBuster</h3>
+
+    </div>
+    
+    <div class="searchbox">
+  <label for="search-by"><i class="fas fa-search"></i></label>
+  <input data-search-input id="search-by" type="search" placeholder="Search...">
+  <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="https://blog.noizbuster.com//js/lunr.min.js?1613724443"></script>
+<script type="text/javascript" src="https://blog.noizbuster.com//js/auto-complete.js?1613724443"></script>
+<script type="text/javascript">
+  
+    var baseurl = "https:\/\/blog.noizbuster.com\/\/ko";
+  
+</script>
+<script type="text/javascript" src="https://blog.noizbuster.com//js/search.js?1613724443"></script>
+
+    
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/posts/" title="기술" class="dd-item
+  
+  
+  ">
+  <a href="/ko/posts/">
+    기술
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/series/" title="연재" class="dd-item
+  parent
+  
+  ">
+  <a href="/ko/series/">
+    연재
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/" title="Node.js" class="dd-item
+  parent
+  
+  ">
+  <a href="/ko/series/nodejs/">
+    Node.js
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/nodejs-basic/" title="Node.js 기초" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/nodejs-basic/">
+    Node.js 기초
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/express-in-practice/" title="실전 Express!" class="dd-item
+  parent
+  
+  ">
+  <a href="/ko/series/nodejs/express-in-practice/">
+    실전 Express!
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/package-tour/" title="Node.js 패키지 투어" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/package-tour/">
+    Node.js 패키지 투어
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/java/" title="JAVA" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/java/">
+    JAVA
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/java/spring-boot/" title="Study Note - Spring Boot" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/java/spring-boot/">
+    Study Note - Spring Boot
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/2015-ros-study/" title="2015 ~ 2016 ROS 스터디" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/2015-ros-study/">
+    2015 ~ 2016 ROS 스터디
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/essay/" title="수필" class="dd-item
+  
+  
+  ">
+  <a href="/ko/essay/">
+    수필
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/pensee/" title="감상록" class="dd-item
+  
+  
+  ">
+  <a href="/ko/pensee/">
+    감상록
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/reviews/" title="리뷰" class="dd-item
+  
+  
+  ">
+  <a href="/ko/reviews/">
+    리뷰
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/en/maintaining/" title="Blog Maintanance" class="dd-item
+  
+  
+  ">
+  <a href="/en/maintaining/">
+    Blog Maintanance
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+    </ul>
+
+    
+    
+
+    
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+        
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+            <div class="select-style">
+              
+              <select id="select-language" onchange="location = this.value;">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <option id="ko" value="https://blog.noizbuster.com/ko/series/nodejs/express-in-practice/002-create-express-project/" selected>Korean</option>
+                
+                
+                
+                
+              </select>
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+                <g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g>
+              </svg>
+            </div>
+          </a>
+        </li>
+        
+
+        
+      </ul>
+    </section>
+    
+    
+
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+ 
+
+  
+  <section id="body">
+    <div id="overlay"></div>
+    <div class="padding highlightable">
+      
+      <div id="top-bar">
+  
+  
+  
+  
+  <div id="top-github-link">
+    <a
+      class="github-link" 
+      title='Edit this page'
+      href="https://github.com/noizbuster/noizbuster.github.io/edit/blog/content/series/nodejs/express-in-practice/002-create-express-project/index.md"
+      target="blank"
+    >
+      <i class="fas fa-code-branch"></i>
+      <span id="top-github-link-text">Edit this page</span>
+    </a>
+  </div>
+  
+  
+
+  
+  <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+    <span id="sidebar-toggle-span">
+      <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+        <i class="fas fa-bars"></i>
+      </a>
+    </span>
+    
+    <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+    
+    <span class="links">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href='/ko/'>NoizBuster</a> > <a href='/ko/series/'>연재</a> > <a href='/ko/series/nodejs/'>Node.js</a> > <a href='/ko/series/nodejs/express-in-practice/'>실전 Express!</a> > Express in Practice 002 - 프로젝트 만들기
+
+
+
+
+
+
+
+
+
+
+    
+    </span>
+  </div>
+
+  
+  <div class="progress">
+  <div class="wrapper">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#사전준비">사전준비</a></li>
+    <li><a href="#git-npm-초기화">git, npm 초기화</a></li>
+    <li><a href="#expressjs-패키지-추가">Express.js 패키지 추가</a></li>
+    <li><a href="#express-서버-만들기">Express 서버 만들기</a></li>
+    <li><a href="#gitignore">gitignore</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+  
+</div>
+
+      
+      <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/ko/tags/nodejs">nodejs</a>
+
+  <a class="tag-link" href="/ko/tags/express">express</a>
+
+</div>
+
+
+      </div>
+      <div id="">
+        <div id="body-inner">
+          
+          
+
+          
+          <h1 id="content_title">
+            
+            Express in Practice 002 - 프로젝트 만들기
+          </h1>
+          
+          <p style="text-align:right">Monday, Aug 19, 2019</p>
+          
+
+          
+          
+<h1 id="expressjs-프로젝트-만들기">Express.js 프로젝트 만들기</h1>
+<h2 id="사전준비">사전준비</h2>
+<ul>
+<li>Node.js - <a href="/ko/series/nodejs/nodejs-basic/001-install-nodejs/">Node.js 제대로 설치하기</a> 참고</li>
+<li>Git</li>
+</ul>
+<h2 id="git-npm-초기화">git, npm 초기화</h2>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#586e75"># 디렉토리를 하나 만들고</span>
+&gt; mkdir lecture-express-in-practice
+&gt; <span style="color:#b58900">cd</span> lecture-express-in-practice
+
+<span style="color:#586e75"># git 초기화</span>
+&gt; git init
+
+<span style="color:#586e75"># npm 초기화</span>
+&gt; npm init
+
+package name: <span style="color:#719e07">(</span>lecture-express-in-practice<span style="color:#719e07">)</span> 
+version: <span style="color:#719e07">(</span>1.0.0<span style="color:#719e07">)</span> 0.0.0
+description: 
+entry point: <span style="color:#719e07">(</span>index.js<span style="color:#719e07">)</span> 
+<span style="color:#b58900">test</span> command: 
+git repository: https://github.com/noizbuster/lecture-express-in-practice.git
+keywords: 
+author: NoizBuster
+license: <span style="color:#719e07">(</span>ISC<span style="color:#719e07">)</span> MIT
+About to write to /home/noizbuster/project/noizbuster/lecture/lecture-express-in-practice/package.json:
+
+<span style="color:#719e07">{</span>
+  <span style="color:#2aa198">&#34;name&#34;</span>: <span style="color:#2aa198">&#34;lecture-express-in-practice&#34;</span>,
+  <span style="color:#2aa198">&#34;version&#34;</span>: <span style="color:#2aa198">&#34;0.0.0&#34;</span>,
+  <span style="color:#2aa198">&#34;description&#34;</span>: <span style="color:#2aa198">&#34;&#34;</span>,
+  <span style="color:#2aa198">&#34;main&#34;</span>: <span style="color:#2aa198">&#34;index.js&#34;</span>,
+  <span style="color:#2aa198">&#34;scripts&#34;</span>: <span style="color:#719e07">{</span>
+    <span style="color:#2aa198">&#34;test&#34;</span>: <span style="color:#2aa198">&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span>
+  <span style="color:#719e07">}</span>,
+  <span style="color:#2aa198">&#34;repository&#34;</span>: <span style="color:#719e07">{</span>
+    <span style="color:#2aa198">&#34;type&#34;</span>: <span style="color:#2aa198">&#34;git&#34;</span>,
+    <span style="color:#2aa198">&#34;url&#34;</span>: <span style="color:#2aa198">&#34;git+https://github.com/noizbuster/lecture-express-in-practice.git&#34;</span>
+  <span style="color:#719e07">}</span>,
+  <span style="color:#2aa198">&#34;author&#34;</span>: <span style="color:#2aa198">&#34;NoizBuster&#34;</span>,
+  <span style="color:#2aa198">&#34;license&#34;</span>: <span style="color:#2aa198">&#34;MIT&#34;</span>,
+  <span style="color:#2aa198">&#34;bugs&#34;</span>: <span style="color:#719e07">{</span>
+    <span style="color:#2aa198">&#34;url&#34;</span>: <span style="color:#2aa198">&#34;https://github.com/noizbuster/lecture-express-in-practice/issues&#34;</span>
+  <span style="color:#719e07">}</span>,
+  <span style="color:#2aa198">&#34;homepage&#34;</span>: <span style="color:#2aa198">&#34;https://github.com/noizbuster/lecture-express-in-practice#readme&#34;</span>
+<span style="color:#719e07">}</span>
+
+</code></pre></div><p>프로젝트를 만들 준비가 다 끝났다.</p>
+<h2 id="expressjs-패키지-추가">Express.js 패키지 추가</h2>
+<p>Express.js 가 아직 알파라서 그냥 <code>npm install express</code> 로 설치하면 4.x 버전이 설치될것입니다. 그러니 현재 가장 높은 버전이 무엇인지 확인해 보아야 합니다.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; npm info express
+express@4.17.1 | MIT | deps: <span style="color:#2aa198">30</span> | versions: <span style="color:#2aa198">263</span>
+Fast, unopinionated, minimalist web framework
+http://expressjs.com/
+
+keywords: express, framework, sinatra, web, rest, restful, router, app, api
+
+...
+
+dist-tags:
+latest: 4.17.1       next: 5.0.0-alpha.7  
+
+published <span style="color:#2aa198">2</span> months ago by dougwilson &lt;doug@somethingdoug.com&gt;
+
+</code></pre></div><p><code>next</code> tag 로 버전 <code>5.0.0-alpha.7</code> 이 퍼블리시 되어있습니다. 이걸로 받아보도록 하죠.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; npm install express@next --save
+npm notice created a lockfile as package-lock.json. You should commit this file.
++ express@5.0.0-alpha.7
+added <span style="color:#2aa198">53</span> packages from <span style="color:#2aa198">38</span> contributors and audited <span style="color:#2aa198">130</span> packages in 2.1s
+found <span style="color:#2aa198">0</span> vulnerabilities
+</code></pre></div><p>그 다음 package.json 파일을 확인해보면 dependencies에 express 가 <code>&quot;express&quot;: &quot;^5.0.0-alpha.7&quot;</code> 이렇게 추가된것을 볼 수 있습니다.</p>
+<h2 id="express-서버-만들기">Express 서버 만들기</h2>
+<p>Express 홈페이지에 <code>Getting started</code> 가이드에는 크게 두가지 방법을 제공합니다 Hello World 예제와 Express generator 를 사용하는방법입니다.<br>
+그런데 Express generator 를 사용해서 프로젝트를 만들면 view render 같은 RESTful API 서버를 만드는데 직접적으로 관련이 없는 코드까지 생성을 해줍니다.<br>
+어짜피 generator 를 이용해서 프로젝트를 만들어도 생성해주는 코드의 분량이 그렇게 많지 않으므로 그냥 Hello World 예제부터 시작해서 살을 붙여나가도록 하겠습니다.</p>
+<p>일단 아래 모양처럼 디렉토리와 파일을 만들어줍니다.<br>
+express server 는 src/server.js 에 작성될것이고 index.js 는 단순히 호출만 해서 실행시키는 역할을 해줄것입니다.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">.
+├── index.js
+├── package.json
+├── package-lock.json
+└── src
+    └── server.js
+</code></pre></div><p>server.js 는 Express 홈페이지의 hello world 예제를 그대로 가져옵니다.<br>
+한가지 추가된점은 module.exports 로 express app 을 지정 해 주는것입니다.<br>
+이렇게 해두면 나중에 여러개의 app 을 켜거나 test code 를 작성할때 express app 에 접근하기가 쉬워집니다.</p>
+<p>src 디렉토리 밑에 코드들을 배치하는것은 제 취향인데요, 나중에 src 디렉토리 내부를 트랜스파일링 하거나 한다면 이렇게 작성된 코드는 한개 디렉토리 밑에서 관리ㄴ는게  설정을 쉽게 하는데 도움이 됩니다.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"># src<span style="color:#719e07">/</span>server.js
+<span style="color:#268bd2">const</span> express <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;express&#39;</span>);
+<span style="color:#268bd2">const</span> app <span style="color:#719e07">=</span> express();
+<span style="color:#268bd2">const</span> port <span style="color:#719e07">=</span> <span style="color:#2aa198">3000</span>;
+
+app.get(<span style="color:#2aa198">&#39;/&#39;</span>, (req, res) =&gt; res.send(<span style="color:#2aa198">&#39;Hello World!&#39;</span>));
+
+app.listen(port, () =&gt; console.log(<span style="color:#586e75">`Example app listening on port </span><span style="color:#2aa198">${</span>port<span style="color:#2aa198">}</span><span style="color:#586e75">!`</span>));
+
+module.exports <span style="color:#719e07">=</span> app;
+</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"># index.js
+<span style="color:#268bd2">const</span> server <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;./src/server&#39;</span>);
+
+module.exports <span style="color:#719e07">=</span> server;
+</code></pre></div><p>index 파일을 만들어서 사용하는것도 그냥 제 취향입니다.<br>
+나중에 다른 서비스들이나 APM 같이 express 앱보다 먼저 초기화가 되어야 하는 경우에 코드가 섞여서 보이지 않게 해줍니다.<br>
+필요하지 않다면 index.js 파일을 만들지 않고 start script가 바로 src/server.js 를 실행해도 됩니다.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#2aa198">&#34;scripts&#34;</span>: {
+  <span style="color:#268bd2">&#34;test&#34;</span>: <span style="color:#2aa198">&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span>,
+  <span style="color:#268bd2">&#34;start&#34;</span>: <span style="color:#2aa198">&#34;node index.js&#34;</span>
+},
+</code></pre></div><p>package.json 파일에 start 스크립트를 추가해줍시다.</p>
+<p><code>npm start</code> 로 실행한다음 브라우저에서 localhost:3000 으로 접속해보면
+<img src="helloworld.png" alt="">
+위와 같이 Hello World! 가 잘 출력됩니다.</p>
+<h2 id="gitignore">gitignore</h2>
+<p>커밋을 하기전에 status 를 확인해보면 다음과 같은 상태일것입니다.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; git status
+
+On branch master
+
+No commits yet
+
+Untracked files:
+  <span style="color:#719e07">(</span>use <span style="color:#2aa198">&#34;git add &lt;file&gt;...&#34;</span> to include in what will be committed<span style="color:#719e07">)</span>
+
+	index.js
+	node_modules/
+	package-lock.json
+	package.json
+	src/
+
+nothing added to commit but untracked files present <span style="color:#719e07">(</span>use <span style="color:#2aa198">&#34;git add&#34;</span> to track<span style="color:#719e07">)</span>
+</code></pre></div><p>아직 커밋되지 않은 항목들이 무슨일을 하는지 살펴보면</p>
+<p><strong>index.js</strong><br>
+<strong>src/</strong><br>
+우리가 만든 파일과 디렉토리들 입니다.</p>
+<p><strong>node_modules/</strong><br>
+다운받은 dependency 들이 저장됩니다.</p>
+<p><strong>package.json</strong><br>
+npm 프로젝트에 관련된 정보가 저장됩니다.<br>
+버전정보와 의존성 패키지를 비롯한 각종 메타데이터와 스크립트들, dev dependency 들이 사용하는 설정값등이 저장됩니다.</p>
+<p><strong>package-lock.json</strong><br>
+어떤 버전의 dependency 가 설치되어있는지 기록됩니다.
+package.json 파일안에는 의존성 패키지들의 버전이 범위로 표현됩니다. 때문에 <code>npm install</code> 이 실행되는 시점에 따라 서로 다른 버전의 의존성이 설치되고, 이에 따라 서로 다른 사람들간의 미묘한 버전차이가 문제를 만드는 경우 알기 어렵다는 문제가 있었습니다.
+때문에 <strong>원하는 버전의 범위</strong> 는 package.json 에 저장되고 <strong>실재로 설치된 버전</strong> 은 package-lock.json 에 저장되게 됩니다.<br>
+따라서 다른 사람이 내 프로젝트를 받아서 <code>npm install</code> 을 했을때 내가 사용하고 있는 dependency 들과 정확하게 같은 버전을 사용하기를 바란다면 package-lock.json 파일도 커밋 해 주어야 합니다.</p>
+<p>그럼 .gitignore 파일을 만들어 봅시다.</p>
+<p>github 에 사람들이 널리 사용하는 Node.js 프로젝트용 .gitignore 파일들이 공유되고 있습니다.</p>
+<ul>
+<li><a href="https://github.com/nodejs/node/blob/master/.gitignore">https://github.com/nodejs/node/blob/master/.gitignore</a></li>
+<li><a href="https://github.com/github/gitignore/blob/master/Node.gitignore">https://github.com/github/gitignore/blob/master/Node.gitignore</a></li>
+</ul>
+<p>이런파일들을 다운받아서 내 프로젝트에 넣거나 직접 내가 필요한만큼만 넣어서 사용 할 수도 있습니다.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#586e75"># Node.js</span>
+node_modules/
+
+<span style="color:#586e75"># IDE</span>
+.idea/
+</code></pre></div><p>이런식으로 말이죠</p>
+<p>이제 필터링된 파일들을 커밋하면 됩니다.</p>
+<h1 id="code">Code</h1>
+<p><a href="https://github.com/noizbuster/lecture-express-in-practice">https://github.com/noizbuster/lecture-express-in-practice</a></p>
+<h1 id="다음순서">다음순서</h1>
+<p>널리 사용하는 미들웨어들을 소개하고 추가해서 RESTful API 서버를 만들 준비를 할것입니다.</p>
+<h1 id="references">References</h1>
+<ul>
+<li><a href="https://expressjs.com/en/starter/hello-world.html">express - hello world</a></li>
+</ul>
+
+
+        </div>
+      </div> 
+    </div>
+
+    
+    <div class="padding">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "noizbuster" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+    
+    <div id="navigation">
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+</div>
+
+
+
+
+  </section>
+  <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+    <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+  </div>
+  <script src="/js/clipboard.min.js?1613724444"></script>
+<script src="/js/perfect-scrollbar.min.js?1613724444"></script>
+<script src="/js/perfect-scrollbar.jquery.min.js?1613724444"></script>
+<script src="/js/jquery.sticky.js?1613724444"></script>
+<script src="/js/featherlight.min.js?1613724444"></script>
+<script src="/js/highlight.pack.js?1613724444"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/modernizr.custom-3.6.0.js?1613724444"></script>
+<script src="/js/learn.js?1613724444"></script>
+<script src="/js/hugo-learn.js?1613724444"></script>
+
+
+<script src="/mermaid/mermaid.js?1613724444"></script>
+
+<script> mermaid.initialize({ startOnLoad: true }); </script>
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-84347291-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+<footer class="footline" >
+  
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>react on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/tags/react/</link>
+    <description>Recent content in react on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 18 Feb 2021 05:46:07 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Billboardjs With React</title>
+      <link>https://blog.noizbuster.com/ko/posts/2021-02-18-054607-billboardjs-with-react/</link>
+      <pubDate>Thu, 18 Feb 2021 05:46:07 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2021-02-18-054607-billboardjs-with-react/</guid>
+      <description>Billboard.js with React React.js 앱에 차트 표현을 위해 Billboard.js 를 사용하는방법을 간단하게 알아보고
+사용해보면서 겪은 시행착오나 느낌에 대해 이야기 해보려고 합니다.
+이 포스팅에서 작성된 예제코드는 Github repo 에서 확인 할 수 있습니다.
+Environment  Ubuntu 18.04 node.js v14.x (LTS) react.js v17.x  How to Prerequisites  node.js react.js  준비 및 설정 프로젝트 준비  이미 사용하고 있는 프로젝트가 있다면 생략하셔도 됩니다.
+ npx create-react-app billboard-with-react 의존성 설치 npm install --save billboard.</description>
+    </item>
+    
+    <item>
+      <title>react-vs-angular2</title>
+      <link>https://blog.noizbuster.com/ko/posts/2016-01-18-react-vs-angular2/</link>
+      <pubDate>Mon, 18 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2016-01-18-react-vs-angular2/</guid>
+      <description>#MEAN VS MERN ###AngularJS 2.0 VS ReactJS
+###Contents
+ AngularJS 2.0 React Conclusion Workload Estimate Links   AngularJS 1.3 는 논외로 하기로 함
+http://netil.github.io/slides/angularjs/index3.html#/
+ 앞으로 메인테넌스를 2년 미만만 지원됨. AngularJS 2.0으로의 마이그레이션 방법 없음 React 보다 7배정도 느림 &amp;ndash;&amp;gt; 2.0 에서 개선 소스코드의 재활용이 react에 비해서 떨어진다. &amp;ndash;&amp;gt; 2.0 에서 개선 watcher가 많아지면 퍼포먼스 하락     angular2.0 VS react     two way data binding one way   ES6 완벽지원 JS ES6일부지원     ###AngularJS 2.</description>
+    </item>
+    
+  </channel>
+</rss>

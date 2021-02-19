@@ -1,0 +1,2063 @@
+<!DOCTYPE html>
+<html lang="ko" class="js csstransforms3d">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.57.1" />
+  <meta name="description" content="A.K.A. NoizBuster">
+<meta name="author" content="Wonwoo Yang">
+
+  <link rel="icon" href="/images/favicon.png" type="image/png">
+
+  <title>001. Nodejs 제대로 설치하기 :: NoizBuster</title>
+
+  
+  <link href="/css/nucleus.css?1565969002" rel="stylesheet">
+  <link href="/css/fontawesome-all.min.css?1565969002" rel="stylesheet">
+  <link href="/css/hybrid.css?1565969002" rel="stylesheet">
+  <link href="/css/featherlight.min.css?1565969002" rel="stylesheet">
+  <link href="/css/perfect-scrollbar.min.css?1565969002" rel="stylesheet">
+  <link href="/css/auto-complete.css?1565969002" rel="stylesheet">
+  <link href="/css/atom-one-dark-reasonable.css?1565969002" rel="stylesheet">
+  <link href="/css/theme.css?1565969002" rel="stylesheet">
+  <link href="/css/hugo-theme.css?1565969002" rel="stylesheet">
+  
+  <link href="/css/theme-noizbuster.css?1565969002" rel="stylesheet">
+  
+
+  <script src="/js/jquery-3.3.1.min.js?1565969002"></script>
+
+  <style type="text/css">
+    :root #header + #content > #left > #rlblock_left{
+        display:none !important;
+    }
+    
+  </style>
+  
+</head>
+
+
+<body class="" data-url="/ko/serial/nodejs/nodejs-basic/001-install-nodejs/">
+  <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://blog.noizbuster.com/">
+  <img src="https://blog.noizbuster.com/logo-noizbuster-header.png" style="height:13vh">
+</a>
+<h3 style="margin-top:0;color:white !important;">NoizBuster</h3>
+
+    </div>
+    
+    <div class="searchbox">
+  <label for="search-by"><i class="fas fa-search"></i></label>
+  <input data-search-input id="search-by" type="search" placeholder="Search...">
+  <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="https://blog.noizbuster.com/js/lunr.min.js?1565969002"></script>
+<script type="text/javascript" src="https://blog.noizbuster.com/js/auto-complete.js?1565969002"></script>
+<script type="text/javascript">
+  
+  var baseurl = "https:\/\/blog.noizbuster.com\/\/ko";
+  
+</script>
+<script type="text/javascript" src="https://blog.noizbuster.com/js/search.js?1565969002"></script>
+
+    
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/posts/" title="기술" class="dd-item
+  
+  
+  ">
+  <a href="/ko/posts/">
+    기술
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/serial/" title="연재" class="dd-item
+  parent
+  
+  ">
+  <a href="/ko/serial/">
+    연재
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/serial/nodejs/" title="Node.js" class="dd-item
+  parent
+  
+  ">
+  <a href="/ko/serial/nodejs/">
+    Node.js
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/serial/nodejs/nodejs-basic/" title="Node.js 기초" class="dd-item
+  parent
+  
+  ">
+  <a href="/ko/serial/nodejs/nodejs-basic/">
+    Node.js 기초
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/serial/nodejs/express-in-practice/" title="실전 Express!" class="dd-item
+  
+  
+  ">
+  <a href="/ko/serial/nodejs/express-in-practice/">
+    실전 Express!
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/serial/nodejs/package-tour/" title="Node.js 패키지 투어" class="dd-item
+  
+  
+  ">
+  <a href="/ko/serial/nodejs/package-tour/">
+    Node.js 패키지 투어
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/serial/java/" title="JAVA" class="dd-item
+  
+  
+  ">
+  <a href="/ko/serial/java/">
+    JAVA
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/serial/java/spring-boot/" title="Study Note - Spring Boot" class="dd-item
+  
+  
+  ">
+  <a href="/ko/serial/java/spring-boot/">
+    Study Note - Spring Boot
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/serial/2015-ros-study/" title="2015 ~ 2016 ROS 스터디" class="dd-item
+  
+  
+  ">
+  <a href="/ko/serial/2015-ros-study/">
+    2015 ~ 2016 ROS 스터디
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/serial/building-restful-api-server-using-express/" title="Express.js로 RESTful API 서버 만들기" class="dd-item
+  
+  
+  ">
+  <a href="/ko/serial/building-restful-api-server-using-express/">
+    Express.js로 RESTful API 서버 만들기
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/essay/" title="수필" class="dd-item
+  
+  
+  ">
+  <a href="/ko/essay/">
+    수필
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/reviews/" title="리뷰" class="dd-item
+  
+  
+  ">
+  <a href="/ko/reviews/">
+    리뷰
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/en/maintaining/" title="Blog Maintanance" class="dd-item
+  
+  
+  ">
+  <a href="/en/maintaining/">
+    Blog Maintanance
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+    </ul>
+
+    
+    
+
+    
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+        
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+            <div class="select-style">
+              
+              <select id="select-language" onchange="location = this.value;">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <option id="ko" value="https://blog.noizbuster.com/ko/serial/nodejs/nodejs-basic/001-install-nodejs/" selected>Korean</option>
+                
+                
+                
+                
+              </select>
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+                <g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g>
+              </svg>
+            </div>
+          </a>
+        </li>
+        
+
+        
+      </ul>
+    </section>
+    
+    
+
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+ 
+
+  
+  <section id="body">
+    <div id="overlay"></div>
+    <div class="padding highlightable">
+      
+      <div id="top-bar">
+  
+  
+  
+  
+  <div id="top-github-link">
+    <a class="github-link" title='Edit this page' href="https://github.com/noizbuster/noizbuster.github.io/edit/blog/content/serial/nodejs/nodejs-basic/001-install-nodejs/index.md" target="blank">
+      <i class="fas fa-code-branch"></i>
+      <span id="top-github-link-text">Edit this page</span>
+    </a>
+  </div> 
+  
+  
+  
+  <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+    <span id="sidebar-toggle-span">
+      <a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i></a>
+    </span>
+    
+    <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+    
+    <span class="links">
+      
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href='/ko/'>NoizBuster</a> > <a href='/ko/serial/'>연재</a> > <a href='/ko/serial/nodejs/'>Node.js</a> > <a href='/ko/serial/nodejs/nodejs-basic/'>Node.js 기초</a> > 001. Nodejs 제대로 설치하기
+
+
+
+
+
+
+
+
+
+
+      
+    </span>
+  </div>
+  
+  <div class="progress">
+  <div class="wrapper">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#node-js-제대로-설치하기">Node.js 제대로 설치하기</a>
+<ul>
+<li><a href="#장-단점">장, 단점</a>
+<ul>
+<li><a href="#nvm-을-사용하는-경우">NVM 을 사용하는 경우</a></li>
+<li><a href="#package-manager-를-이용해서-설치-했을-경우">Package Manager 를 이용해서 설치 했을 경우</a></li>
+<li><a href="#수동으로-빌드하거나-binary를-사용하는-경우">수동으로 빌드하거나 Binary를 사용하는 경우</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#nvm을-이용한-node-js-설치">NVM을 이용한 Node.js 설치</a>
+<ul>
+<li>
+<ul>
+<li><a href="#설치">설치</a></li>
+<li><a href="#설정">설정</a>
+<ul>
+<li><a href="#1-bash-설정">1. bash 설정</a></li>
+<li><a href="#2-설정-확인">2. 설정 확인</a></li>
+<li><a href="#3-node-npm-설치">3. node &amp; npm 설치</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#packagemanager-를-통해-설치했을때-팁">PackageManager 를 통해 설치했을때 팁</a></li>
+<li><a href="#마치며">마치며</a>
+<ul>
+<li><a href="#references">References</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+  
+</div>
+
+      
+      <div id="head-tags">
+        
+<div class="tags">
+  
+  <a class="tag-link" href="/ko/tags/nodejs">nodejs</a>
+  
+</div>
+
+      </div>
+      <div id="">
+        <div id="body-inner">
+          
+          
+
+          
+          <h1 id="content_title">
+            
+            001. Nodejs 제대로 설치하기
+          </h1>
+          
+          <p style="text-align:right">Saturday, Jul 20, 2019</p>
+          
+
+          
+          
+
+
+<h1 id="node-js-제대로-설치하기">Node.js 제대로 설치하기</h1>
+
+<p>Node.js 를 설치하는 방법은 아주 다양합니다. 크게 나눠보자면</p>
+
+<ul>
+<li>Binary 를 다운로드 받아 사용하는 방법</li>
+<li>PackageManager 를 사용해서 설치하는 방법</li>
+<li>직접 빌드하는 방법</li>
+<li>NVM (Node Version Manager) 를 사용하는 방법</li>
+</ul>
+
+<p>으로 분류 할 수 있습니다.</p>
+
+<p>거두절미하고 제가 강력하게 추천하는 방법은 NVM 을 사용하는것입니다.</p>
+
+<p>설치 방법을 빠르게 배우고 싶은 사람은 <a href="#nvm을-이용한-node-js-설치">NVM을 이용한 Node.js 설치</a> 부터 보세요.</p>
+
+<h2 id="장-단점">장, 단점</h2>
+
+<h3 id="nvm-을-사용하는-경우">NVM 을 사용하는 경우</h3>
+
+<ul>
+<li>Pros
+
+<ul>
+<li>사용하는 Node.js 버전을 쉽게 변경 할 수 있다.</li>
+<li>Global Package 를 사용할때 권한 관련 문제가 없다.</li>
+</ul></li>
+<li>Cons
+
+<ul>
+<li>설치가 다소 번거롭다</li>
+</ul></li>
+</ul>
+
+<h3 id="package-manager-를-이용해서-설치-했을-경우">Package Manager 를 이용해서 설치 했을 경우</h3>
+
+<ul>
+<li>Pros
+
+<ul>
+<li>설치가 간단하다.</li>
+</ul></li>
+<li>Cons
+
+<ul>
+<li>Global Package 를 설치하고 사용할때 권한관련 문제가 발생 할 수 있다.</li>
+</ul></li>
+</ul>
+
+<h3 id="수동으로-빌드하거나-binary를-사용하는-경우">수동으로 빌드하거나 Binary를 사용하는 경우</h3>
+
+<ul>
+<li>Pros
+
+<ul>
+<li>Package Manager 가 없는 OS배포판에서 사용 할 수 있다.<br /></li>
+<li>설정을 내 맘대로 고치기 편하다.</li>
+</ul></li>
+<li>Cons
+
+<ul>
+<li>설치가 !매우! 번거롭다.</li>
+</ul></li>
+</ul>
+
+<h1 id="nvm을-이용한-node-js-설치">NVM을 이용한 Node.js 설치</h1>
+
+<p>아래 가이드는 Linux(ubuntu) 를 사용하는것을 가정하고 작성되었습니다.</p>
+
+<p><a href="https://github.com/nvm-sh/nvm#install-script">Github &gt; nvm-sh</a> 의 <code>README.md</code> 를 참고해서 설치하면 됩니다.</p>
+
+<h3 id="설치">설치</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#586e75"># CURL 로 설치 스크립트를 다운로드 받아서 실행합니다.</span>
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+<span style="color:#586e75"># 만약 CURL 말고 WGET 을 사용하고 싶은 경우에는 다음 명령어를 대신 사용하세요</span>
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash</code></pre></div>
+<h3 id="설정">설정</h3>
+
+<h4 id="1-bash-설정">1. bash 설정</h4>
+
+<p>홈디렉토리 아래 있는 .bashrc 혹은 .history 파일을 텍스트에디터로 열어서 맨 아래에 아래 스크립트를 추가해주도록 합시다.<br />
+<code>만약 zsh 를 사용하는 경우에는 .zshrc 파일에 추가해주어야 합니다.</code></p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#b58900">export</span> <span style="color:#268bd2">NVM_DIR</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;</span><span style="color:#2aa198">${</span><span style="color:#268bd2">XDG_CONFIG_HOME</span>/<span style="color:#719e07">:-</span><span style="color:#268bd2">$HOME</span>/.<span style="color:#2aa198">}</span><span style="color:#2aa198">nvm&#34;</span>
+<span style="color:#719e07">[</span> -s <span style="color:#2aa198">&#34;</span><span style="color:#268bd2">$NVM_DIR</span><span style="color:#2aa198">/nvm.sh&#34;</span> <span style="color:#719e07">]</span> <span style="color:#719e07">&amp;&amp;</span> <span style="color:#cb4b16">\.</span> <span style="color:#2aa198">&#34;</span><span style="color:#268bd2">$NVM_DIR</span><span style="color:#2aa198">/nvm.sh&#34;</span> <span style="color:#586e75"># This loads nvm</span></code></pre></div>
+<h4 id="2-설정-확인">2. 설정 확인</h4>
+
+<p>이렇게 추가된 스크립트는 새로운 터미널을 열어야지 적용이 됩니다. 만약 작업하던 터미널에서 바로 사용하고 싶다면 그냥 터미널에 위 명령어를 다시한번 입력하면 됩니다.</p>
+
+<p><code>nvm --version</code> 명령어로 nvm 이 잘 설치되었는지 확인 할 수 있습니다. 정상이라면 화면에 nvm 의 버전이 출력될것입니다.</p>
+
+<h4 id="3-node-npm-설치">3. node &amp; npm 설치</h4>
+
+<p><code>nvm ls-remote --lts</code> 명령어로 설치 할 수 있는 버전의 목록을 볼 수 있습니다.
+&ndash;lts 옵션을 떼면 nightly build 나 legacy 빌드도 볼 수 있습니다.</p>
+
+<p>이글을 쓰는 시점에서 LTS는 10.16.x 버전 입니다.
+<code>nvm install 10</code> 명령어로 설치하도록 합니다.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nvm install <span style="color:#2aa198">10</span>
+Downloading and installing node v10.16.0...
+Downloading https://nodejs.org/dist/v10.16.0/node-v10.16.0-linux-x64.tar.xz...
+<span style="color:#586e75">###################################... 100.0%</span>
+Computing checksum with sha256sum
+Checksums matched!
+Now using node v10.16.0 <span style="color:#719e07">(</span>npm v6.9.0<span style="color:#719e07">)</span><span style="color:#586e75">```</span></code></pre></div>
+<p><code>nvm current</code> 명령어로 현재 설정된 node 버전을 확인 할 수 있습니다. <code>node --version</code> 에도 동일한 버전이 보일것입니다.<br />
+만약 설치된 다른 버전(8)을 사용하고 싶다면 <code>nvm use 8</code> 과 같은 방법으로 그때 그때 변경해서 다른 버전을 사용 할 수 있습니다.</p>
+
+<p>자, 이제 설치된 Node.js 로 재미있게 개발을 시작할 준비가 되었습니다.
+설치한 유저별로 별도의 global package 디렉토리를 가지기 때문에 sudo 권한이 없더라도 <code>npm install -g some-package</code> 같은 명령어도 아무런 문제없이 사용 할 수 있습니다.</p>
+
+<h1 id="packagemanager-를-통해-설치했을때-팁">PackageManager 를 통해 설치했을때 팁</h1>
+
+<p>nvm 을 사용하고 싶지 않거나 이미 Pacakge Manager 를 통해서 설치를 해서 사용중인경우 Global Package 를 설치할때 문제가 발생 할 수 있습니다.</p>
+
+<blockquote>
+<p>개인적인 경험으로는 angular 를 설치할때 Sass 관련 패키지들의 바이너리 빌드가 권한 문제로 실패를 해서 문제를 일으키곤 했었습니다.</p>
+</blockquote>
+
+<p>ubuntu 에서 apt 를 이용해서 node 를 설치한 경우 Global로 설치된 패키지들은 <code>/usr/local/lib/node_modules</code>에 위치하게 됩니다. 그런데 이 경로는 root 권한이 있어야지 파일을 쓸 수 있는 영역입니다. 때문에 <code>sudo npm install some-package</code> 처럼 실행해줘야 하는것이죠</p>
+
+<p>그런데 어떤 패키지들은 다른 언어로 된 외부 라이브러리를 설치 이후에 빌드를 하여 바이너리를 생성하는 경우가 있습니다. 이때, 설치는 sudo 권한으로 이루어졌지만 post install 스크립트는 유저권한으로 실행되기 때문에 빌드 결과물이 <code>/usr/local/lib/node_modules</code> 안에 안착하지 못하게 되어 문제가 발생하게 됩니다.</p>
+
+<p>이를 해결하기위해 <code>sudo -i</code> 옵션을 주거나, global 경로에 일부분만 권한을 다르게 주는등의 지저분한 방법을 사용 할 수도 있지만, 매번 해주어야 하고 다른 문제를 야기 할지도 모르는 일이니 지양하는것이 좋습니다.</p>
+
+<p>보다 나은 해결 방법은 <a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions">npmjs.com &gt; fixing-npm-permissions</a> 에서 제안하고 있습니다.</p>
+
+<p>global package 가 설치되는 경로를 권한문제가 없는 user 의 홈디렉토리로 변경해서 사용하는 방법 입니다.</p>
+
+<p>요약하면 아래와 같습니다.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#586e75"># 홈디렉토리에 global package 를 저장할 디렉토리를 하나 만듭니다.</span>
+mkdir ~/.npm-global</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#586e75"># npm config 명령어로 설정을 변경해줍니다.</span>
+npm config <span style="color:#b58900">set</span> prefix <span style="color:#2aa198">&#39;~/.npm-global&#39;</span></code></pre></div>
+<p>global 패키지들 터미널에서 실행시킬수 있도록 PATH 에 해당 디렉토리를 추가해줍니다.<br />
+아래 내용을 <code>.bashrc</code>, <code>.zshrc</code>, <code>.profile</code> 와 같은 위치에 넣어줍니다.</p>
+
+<pre><code>export PATH=~/.npm-global/bin:$PATH
+</code></pre>
+
+<p>이제 sudo 권한을 주지 않아도 global package 를 설치해서 사용 할 수 있게 되었습니다.</p>
+
+<blockquote>
+<p>만약 이 방법으로 global 설정을 한 상태에서 nvm 을 사용하는 방법으로 돌아가려면 nvm 설치 이전에 홈디렉토리에 .npm 으로 시작하는 관련된 설정 파일들을 모두 삭제 해주어야 합니다. 그리고 package manager 를 통해 node 를 삭제한 후 남아있는 PATH 나 심볼릭 링크가 있는지 확인하여 (<code>which node</code>) 찾아 삭제도 해주어야 합니다.</p>
+</blockquote>
+
+<h1 id="마치며">마치며</h1>
+
+<p>어떤식으로 설치를 하건간에 큰 문제는 없지만, 이왕이면 편하고, 다양한 상황에 잘 대처 할 수 있는 방법이 무엇인지 찾다가 nvm 을 사용하는 방법으로 정착했습니다.<br />
+주변에 Node.js 를 나중에 시작하신분들이 아직 Node.js 를 배워가는 과정중에 설치와 관련된 문제를 만나게 되어 골탕을 먹고 고생을 많이 하는 모습을 보았습니다.<br />
+저의 경우 이전에 rvm을 써본적이 있었기에 유사한 구석이 많아서 적응하는데 큰 어려움이 없었지만 대부분 Node.js 를 처음 시작하는 분들이 nvm으로 시작하는 경우는 거의 본적이 없어서 도움이 되지 않을까 기대해 봅니다.</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+<li><a href="https://nodejs.org/en/download/package-manager/#nvm">Node.JS &gt; Installation Guide &gt; PackageManager &gt; nvm</a></li>
+<li><a href="https://github.com/nvm-sh/nvm#install-script">Github &gt; nvm-sh</a></li>
+<li><a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions">npmjs.com &gt; fixing-npm-permissions</a></li>
+</ul>
+
+
+        </div>
+      </div> 
+    </div>
+
+    
+    <div class="padding">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "noizbuster" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+    
+    <div id="navigation">
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+</div>
+
+
+
+
+  </section>
+  <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+    <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+  </div>
+  <script src="/js/clipboard.min.js?1565969002"></script>
+<script src="/js/perfect-scrollbar.min.js?1565969002"></script>
+<script src="/js/perfect-scrollbar.jquery.min.js?1565969002"></script>
+<script src="/js/jquery.sticky.js?1565969002"></script>
+<script src="/js/featherlight.min.js?1565969002"></script>
+<script src="/js/html5shiv-printshiv.min.js?1565969002"></script>
+<script src="/js/modernizr.custom-3.6.0.js?1565969002"></script>
+<script src="/js/learn.js?1565969002"></script>
+<script src="/js/hugo-learn.js?1565969002"></script>
+<link href="/mermaid/mermaid.css?1565969002" type="text/css" rel="stylesheet" />
+<script src="/mermaid/mermaid.js?1565969002"></script>
+<script>mermaid.initialize({ startOnLoad: true });</script>
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-84347291-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+<footer class="footline" >
+  
+</footer>
+
+</body>
+
+</html>

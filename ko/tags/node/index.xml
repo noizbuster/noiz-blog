@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>node on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/tags/node/</link>
+    <description>Recent content in node on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 01 Nov 2016 13:25:17 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/tags/node/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Transaction on MongoDB</title>
+      <link>https://blog.noizbuster.com/ko/posts/2016-11-01-132517-mongodb-transaction/</link>
+      <pubDate>Tue, 01 Nov 2016 13:25:17 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2016-11-01-132517-mongodb-transaction/</guid>
+      <description>Introduction 서버 개발을 하는 도중 MongoDB의 서로 다른 Document 에 Atomic 하게 update 가 일어나야 하는 상황이 왔다. 서버는 Node로 되어있고 ORM은 mongoose 를 쓰고있다.
+헌데 Mongoose 에는 consistency를 보장하면서 복수의 Document를 업데이트 하는 API가 구현되어있지 않은것으로 보여 이를 해결하고자 한다.
+Transaction in MongoDB MongoDB 는 Optimistic concurrency control (OCC) 를 채용하고 있고 내부적으로 write lock을 건다고 한다. 때문에 한개 Collection (=table in RDB) 내 에서의 consistency 는 보장이 된다.</description>
+    </item>
+    
+    <item>
+      <title>make my npm module</title>
+      <link>https://blog.noizbuster.com/ko/posts/2016-06-21-09-54-make-my-npm-module/</link>
+      <pubDate>Tue, 21 Jun 2016 09:54:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2016-06-21-09-54-make-my-npm-module/</guid>
+      <description>기존에 도커 data volume 의 default configuration을 file에 저장하는 용도로 사용했던 코드 조각이 있었는데 이게 여기저기서 사용이 되기 시작해서 유지보수 비용이 증가하게 되었고 때문에 모듈화를 해야겠다고 생각이 되었다.
+사실 configuration을 도와주는 라이브러리는 있지만 사용상 추구하는 바가 다소 다르기 때문에 커스터마이징을 안할수 없는 상황이어서 (조회가 안되면 디폴트값을 다시 조회하여 error tolerant 를 확보하는 등&amp;hellip;) 그냥 새로운 모듈을 만들어서 관리하기 하였다.
+어떻게 node module 을 만드는것이 가장 이쁜 방법인지 잘 모르기 때문에 유명한 라이브러리의 소스코드나 세팅 구조를 참고하기로 하였다.</description>
+    </item>
+    
+  </channel>
+</rss>

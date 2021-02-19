@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>development on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/tags/development/</link>
+    <description>Recent content in development on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 30 Aug 2019 14:12:03 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>개발 철학</title>
+      <link>https://blog.noizbuster.com/ko/essay/2019-08-30-141203-development-creed/</link>
+      <pubDate>Fri, 30 Aug 2019 14:12:03 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/essay/2019-08-30-141203-development-creed/</guid>
+      <description>나의 개발 철학 이래저래 십수년간 코딩을 하면서 천천히 만들어진 나의 개발철학에 대해서 이야기해보려고 한다.
+ 네 일, 내 일은 따로 없다. 데이터가 가장 중요하다. 지속 가능한 개발을 하자. 신기술을 알아두되 경계하자. 모든 부분이 재미있을 수는 없다.  네 일, 내 일은 따로 없다. 이 항목은 개발관이라기보다는 직업관에 가까운 내용이다.
+한때 나는 나에게 주어진 일만 잘하면 아무런 문제가 없다 라고 생각을 했다. 나에게 주어진 일을 빨리 끝내면 미래의 할 일을 미리 하고 그것마저 다 했다면 업무를 확장하여 더 많은 일을 해내고 이를 통해 능력을 인정받는 것이 엔지니어로서 가장 큰 성취라고 생각을 했었다.</description>
+    </item>
+    
+  </channel>
+</rss>

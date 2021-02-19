@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>development on NoizBuster</title>
+    <link>https://blog.noizbuster.com/en/categories/development/</link>
+    <description>Recent content in development on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 30 Mar 2018 18:01:44 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/en/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cron-on-nodejs</title>
+      <link>https://blog.noizbuster.com/en/posts/2018-03-30-180144-cron-on-nodejs/</link>
+      <pubDate>Fri, 30 Mar 2018 18:01:44 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/en/posts/2018-03-30-180144-cron-on-nodejs/</guid>
+      <description>header1 header1header1header1header1header1header1header1 check invocations from now http://cron.schlitt.info/ check validation https://crontab.guru/ check invocations from now http://cron.schlitt.info/ check validation https://crontab.guru/
+header2 header1header1header1header1header1header1header1 check invocations from now http://cron.schlitt.info/ check validation https://crontab.guru/ check invocations from now http://cron.schlitt.info/ check validation https://crontab.guru/
+header3 check invocations from now http://cron.schlitt.info/ check validation https://crontab.guru/ check invocations from now http://cron.schlitt.info/ check validation https://crontab.guru/
+header4 check invocations from now http://cron.schlitt.info/ check validation https://crontab.guru/
+header5 check invocations from now http://cron.schlitt.info/ check validation https://crontab.</description>
+    </item>
+    
+  </channel>
+</rss>

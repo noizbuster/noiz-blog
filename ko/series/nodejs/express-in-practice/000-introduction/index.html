@@ -1,0 +1,1997 @@
+<!DOCTYPE html>
+<html lang="ko" class="js csstransforms3d">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.57.1" />
+  <meta name="description" content="A.K.A. NoizBuster">
+<meta name="author" content="Wonwoo Yang">
+
+  <link rel="icon" href="/images/favicon.png" type="image/png">
+
+  <title>Express in Practice 000 - Introduction :: NoizBuster</title>
+
+  
+  <link href="/css/nucleus.css?1565989527" rel="stylesheet">
+  <link href="/css/fontawesome-all.min.css?1565989527" rel="stylesheet">
+  <link href="/css/hybrid.css?1565989527" rel="stylesheet">
+  <link href="/css/featherlight.min.css?1565989527" rel="stylesheet">
+  <link href="/css/perfect-scrollbar.min.css?1565989527" rel="stylesheet">
+  <link href="/css/auto-complete.css?1565989527" rel="stylesheet">
+  <link href="/css/atom-one-dark-reasonable.css?1565989527" rel="stylesheet">
+  <link href="/css/theme.css?1565989527" rel="stylesheet">
+  <link href="/css/hugo-theme.css?1565989527" rel="stylesheet">
+  
+  <link href="/css/theme-noizbuster.css?1565989527" rel="stylesheet">
+  
+
+  <script src="/js/jquery-3.3.1.min.js?1565989527"></script>
+
+  <style type="text/css">
+    :root #header + #content > #left > #rlblock_left{
+        display:none !important;
+    }
+    
+  </style>
+  
+</head>
+
+
+<body class="" data-url="/ko/series/nodejs/express-in-practice/000-introduction/">
+  <nav id="sidebar" class="">
+  
+  
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://blog.noizbuster.com/">
+  <img src="https://blog.noizbuster.com/logo-noizbuster-header.png" style="height:13vh">
+</a>
+<h3 style="margin-top:0;color:white !important;">NoizBuster</h3>
+
+    </div>
+    
+    <div class="searchbox">
+  <label for="search-by"><i class="fas fa-search"></i></label>
+  <input data-search-input id="search-by" type="search" placeholder="Search...">
+  <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="https://blog.noizbuster.com/js/lunr.min.js?1565989527"></script>
+<script type="text/javascript" src="https://blog.noizbuster.com/js/auto-complete.js?1565989527"></script>
+<script type="text/javascript">
+  
+  var baseurl = "https:\/\/blog.noizbuster.com\/\/ko";
+  
+</script>
+<script type="text/javascript" src="https://blog.noizbuster.com/js/search.js?1565989527"></script>
+
+    
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/posts/" title="기술" class="dd-item
+  
+  
+  ">
+  <a href="/ko/posts/">
+    기술
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/series/" title="연재" class="dd-item
+  parent
+  
+  ">
+  <a href="/ko/series/">
+    연재
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/" title="Node.js" class="dd-item
+  parent
+  
+  ">
+  <a href="/ko/series/nodejs/">
+    Node.js
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/nodejs-basic/" title="Node.js 기초" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/nodejs-basic/">
+    Node.js 기초
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/express-in-practice/" title="실전 Express!" class="dd-item
+  parent
+  
+  ">
+  <a href="/ko/series/nodejs/express-in-practice/">
+    실전 Express!
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/nodejs/package-tour/" title="Node.js 패키지 투어" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/nodejs/package-tour/">
+    Node.js 패키지 투어
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/java/" title="JAVA" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/java/">
+    JAVA
+    
+    
+  </a>
+  
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/java/spring-boot/" title="Study Note - Spring Boot" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/java/spring-boot/">
+    Study Note - Spring Boot
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+<li data-nav-id="/ko/series/2015-ros-study/" title="2015 ~ 2016 ROS 스터디" class="dd-item
+  
+  
+  ">
+  <a href="/ko/series/2015-ros-study/">
+    2015 ~ 2016 ROS 스터디
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/essay/" title="수필" class="dd-item
+  
+  
+  ">
+  <a href="/ko/essay/">
+    수필
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/ko/reviews/" title="리뷰" class="dd-item
+  
+  
+  ">
+  <a href="/ko/reviews/">
+    리뷰
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+
+
+
+
+
+
+<li data-nav-id="/en/maintaining/" title="Blog Maintanance" class="dd-item
+  
+  
+  ">
+  <a href="/en/maintaining/">
+    Blog Maintanance
+    
+    
+  </a>
+  
+  
+  
+</li>
+
+
+
+
+      
+      
+    </ul>
+
+    
+    
+
+    
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+        
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+            <div class="select-style">
+              
+              <select id="select-language" onchange="location = this.value;">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <option id="ko" value="https://blog.noizbuster.com/ko/series/nodejs/express-in-practice/000-introduction/" selected>Korean</option>
+                
+                
+                
+                
+              </select>
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+                <g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g>
+              </svg>
+            </div>
+          </a>
+        </li>
+        
+
+        
+      </ul>
+    </section>
+    
+    
+
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+ 
+
+  
+  <section id="body">
+    <div id="overlay"></div>
+    <div class="padding highlightable">
+      
+      <div id="top-bar">
+  
+  
+  
+  
+  <div id="top-github-link">
+    <a class="github-link" title='Edit this page' href="https://github.com/noizbuster/noizbuster.github.io/edit/blog/content/series/nodejs/express-in-practice/000-introduction/index.md" target="blank">
+      <i class="fas fa-code-branch"></i>
+      <span id="top-github-link-text">Edit this page</span>
+    </a>
+  </div> 
+  
+  
+  
+  <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+    <span id="sidebar-toggle-span">
+      <a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i></a>
+    </span>
+    
+    <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+    
+    <span class="links">
+      
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href='/ko/'>NoizBuster</a> > <a href='/ko/series/'>연재</a> > <a href='/ko/series/nodejs/'>Node.js</a> > <a href='/ko/series/nodejs/express-in-practice/'>실전 Express!</a> > Express in Practice 000 - Introduction
+
+
+
+
+
+
+
+
+
+
+      
+    </span>
+  </div>
+  
+  <div class="progress">
+  <div class="wrapper">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#실전-express">실전 Express!</a>
+<ul>
+<li><a href="#대상">대상</a></li>
+<li><a href="#개발환경">개발환경</a></li>
+</ul></li>
+<li><a href="#주로-다룰-내용">주로 다룰 내용</a>
+<ul>
+<li><a href="#목차">목차</a></li>
+<li><a href="#목차-w-설명">목차 (w/설명)</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+  
+</div>
+
+      
+      <div id="head-tags">
+        
+<div class="tags">
+  
+  <a class="tag-link" href="/ko/tags/nodejs">nodejs</a>
+  
+  <a class="tag-link" href="/ko/tags/express">express</a>
+  
+</div>
+
+      </div>
+      <div id="">
+        <div id="body-inner">
+          
+          
+
+          
+          <h1 id="content_title">
+            
+            Express in Practice 000 - Introduction
+          </h1>
+          
+          <p style="text-align:right">Saturday, Jul 20, 2019</p>
+          
+
+          
+          
+
+
+<h1 id="실전-express">실전 Express!</h1>
+
+<p>Node.js 백엔드에서 가장 많이 사용되는 프레임워크인 Express.js 에 대해 소개하고 실전에서 얻은 경험을 공유해보기 위해 강의를 연재해보려고 합니다.</p>
+
+<h2 id="대상">대상</h2>
+
+<p>Express.js의 튜토리얼을 마친 상태의 Express.js 유저</p>
+
+<h2 id="개발환경">개발환경</h2>
+
+<ul>
+<li>Node.js v10.16.2   (Latest LTS: Dubnium)
+
+<ul>
+<li>예제 코드들은 CommonJS로 작성됩니다.</li>
+</ul></li>
+<li>Express.js Version 4.x
+
+<ul>
+<li>글을 쓰는 시점에서 5.x 버전이 알파상태입니다. 베타 릴리즈가 되면 5버전 기준으로도 작성해 보도록 하죠</li>
+</ul></li>
+<li>Ubuntu 18.04
+
+<ul>
+<li>다른 운영체제를 사용하더라도 아마 이 강의를 이해하는데 큰 문제가 없을것입니다.</li>
+</ul></li>
+</ul>
+
+<h1 id="주로-다룰-내용">주로 다룰 내용</h1>
+
+<p>이 강의에선 간단하게 RESTful API 서버개발을 위주로 설명을 하도록 하겠습니다.</p>
+
+<p>여기에 이야기된것 이외의 부분에서 다루었으면 하는 내용이 있다면 코멘트나 이메일을 주세요. 여유가 된다면 이번 시리즈나 다음번 글에서 다뤄보도록 하겠습니다.</p>
+
+<h2 id="목차">목차</h2>
+
+<ol>
+<li>프로젝트 시작, Boilerplating</li>
+<li>설정, Configuration</li>
+<li>로깅, Logging</li>
+<li>CORS, Middleware</li>
+<li>비동기 라우터, Async Router</li>
+<li>글로벌 에러 핸들러, Global Error Handler</li>
+<li>테스팅, Testing</li>
+<li>기술문서생성, Documentation</li>
+<li>도커를 이용한 배포, Deployment with Docker
+
+<ul>
+<li>Configuration</li>
+</ul></li>
+</ol>
+
+<h2 id="목차-w-설명">목차 (w/설명)</h2>
+
+<ol>
+<li>프로젝트 시작, Boilerplating
+
+<ul>
+<li>Express 프로젝트를 만들고 각종 세팅을 합니다.</li>
+</ul></li>
+<li>설정, Configuration
+
+<ul>
+<li>Development, Test, Production 별로 다른 설정을 사용하기 위한 설정파일을 세팅하고 다룹니다.</li>
+</ul></li>
+<li>로깅, Logging
+
+<ul>
+<li>서버를 작성하면서 필요한 로그를 남기는 방법에 대해 설명합니다.</li>
+</ul></li>
+<li>CORS, Middleware (Optional)
+
+<ul>
+<li>주로 많이들 쓰는 미들웨어들을 소개하고 세팅합니다. 만약 필요하지 않다면 넘어가도 좋습니다.</li>
+</ul></li>
+<li>비동기 라우터, Async Router
+
+<ul>
+<li>비동기 함수로 만들어진 라우터를 작성하기 위해 필요한 추가적인 내용들을 다룹니다.</li>
+</ul></li>
+<li>글로벌 에러 핸들러, Global Error Handler
+
+<ul>
+<li>에러를 핸들링하는 여러가지 방법에 대해 알아보고 미처 처리하지 못한 예외나 에러를 다루는 방법에 대해 알아봅니다.</li>
+</ul></li>
+<li>테스팅, Testing
+
+<ul>
+<li>서버를 테스팅하는 방법에 대해 간단하게 알아보도록 합니다.</li>
+<li>ava 를 사용할것입니다.</li>
+</ul></li>
+<li>기술문서생성, Documentation
+
+<ul>
+<li>RESTful API Spec을 공유하고 문서화를 자동화해주는 방법에 대해서 다룹니다.</li>
+</ul></li>
+<li>도커를 이용한 배포, Deployment with Docker
+
+<ul>
+<li>서버를 Docker 로 배포하기 위해 필요한 작업들에 대해 다룹니다.</li>
+<li>multi stage image build</li>
+</ul></li>
+</ol>
+
+
+        </div>
+      </div> 
+    </div>
+
+    
+    <div class="padding">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "noizbuster" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+    
+    <div id="navigation">
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+</div>
+
+
+
+
+  </section>
+  <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+    <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+  </div>
+  <script src="/js/clipboard.min.js?1565989527"></script>
+<script src="/js/perfect-scrollbar.min.js?1565989527"></script>
+<script src="/js/perfect-scrollbar.jquery.min.js?1565989527"></script>
+<script src="/js/jquery.sticky.js?1565989527"></script>
+<script src="/js/featherlight.min.js?1565989527"></script>
+<script src="/js/html5shiv-printshiv.min.js?1565989527"></script>
+<script src="/js/modernizr.custom-3.6.0.js?1565989527"></script>
+<script src="/js/learn.js?1565989527"></script>
+<script src="/js/hugo-learn.js?1565989527"></script>
+<link href="/mermaid/mermaid.css?1565989527" type="text/css" rel="stylesheet" />
+<script src="/mermaid/mermaid.js?1565989527"></script>
+<script>mermaid.initialize({ startOnLoad: true });</script>
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-84347291-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+<footer class="footline" >
+  
+</footer>
+
+</body>
+
+</html>

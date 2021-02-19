@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>swarm on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/tags/swarm/</link>
+    <description>Recent content in swarm on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 18 Aug 2016 09:30:29 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/tags/swarm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker Swarm Study</title>
+      <link>https://blog.noizbuster.com/ko/posts/2016-08-18-093029-docker-swarm-study/</link>
+      <pubDate>Thu, 18 Aug 2016 09:30:29 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2016-08-18-093029-docker-swarm-study/</guid>
+      <description>Introduction 동기 이제 슬슬 시스템에 서비스들이 많아지면서 Orchestration을 신경써야 할 필요성이 대두되었다.
+supervisor 등의 툴을 사용해서 관리하고 있었지만 sigterm을 맞고도 바로 죽지 않는 컨테이너가 있는 등 문제가 다소 있었고, 이것을 dockerfile 에서 해결하거나 entrypoint 를 스크립트로 잡고 인위적으로 내부의 pid를 관리해야 하는것이 부자연스럽다고 생각하던 차였다.
+Container Orchestration Tools Container를 Orchestration 해주는 툴들은 근래에 와서 많이 늘어났다.
+8 Container Orchestration Tools to Know 를 보면 주요한 툴들을 잘 설명 해놨다.
+요약하자면</description>
+    </item>
+    
+  </channel>
+</rss>

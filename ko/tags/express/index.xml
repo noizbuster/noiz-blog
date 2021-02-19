@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>express on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/tags/express/</link>
+    <description>Recent content in express on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 26 Aug 2019 15:16:27 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/tags/express/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Express in Practice 001 - Introduction</title>
+      <link>https://blog.noizbuster.com/ko/series/nodejs/express-in-practice/001-introduction/</link>
+      <pubDate>Sat, 17 Aug 2019 06:54:35 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/series/nodejs/express-in-practice/001-introduction/</guid>
+      <description>실전 Express! Express.js 의 5.x 알파버전이 공개되었습니다. Async Router 등의 기능때문에 많이 기대하고 있었는데요. 이 기회를 빌어 Node.js 백엔드에서 가장 많이 사용되는 프레임워크인 Express.js 에 대해 소개하고 실전에서 얻은 경험을 공유해보기 위해 강의를 연재해보려고 합니다.
+Express.js 의 간단한 소개 Express.js 는 여러겹의 middleware로 구성 할 수 있는 Web Framework 입니다.
+좀 더 간단하게 설명해보자면
+graph LR HTTP요청 --&amp;gt; 처리1 처리1 --&amp;gt; 처리2 처리2 --&amp;gt; 처리3 처리3 --&amp;gt; HTTP응답 이와같이 HTTP 요청을 일련된 단계를 거쳐서 응답을 만들어냅니다.</description>
+    </item>
+    
+    <item>
+      <title>Node.js 기초</title>
+      <link>https://blog.noizbuster.com/ko/series/nodejs/nodejs-basic/</link>
+      <pubDate>Sat, 20 Jul 2019 05:34:15 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/series/nodejs/nodejs-basic/</guid>
+      <description>Node.js 백엔드에서 가장 많이 사용되는 프레임워크인 Express.js 에 대해 소개하고 실전에서 얻은 경험을 공유해보기 위해 강의를 연재해보려고 합니다.</description>
+    </item>
+    
+    <item>
+      <title>실전 Express!</title>
+      <link>https://blog.noizbuster.com/ko/series/nodejs/express-in-practice/</link>
+      <pubDate>Mon, 26 Aug 2019 15:16:27 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/series/nodejs/express-in-practice/</guid>
+      <description>Node.js 백엔드에서 가장 많이 사용되는 프레임워크인 Express.js 에 대해 소개하고 실전에서 얻은 경험을 공유해보기 위해 강의를 연재해보려고 합니다.</description>
+    </item>
+    
+    <item>
+      <title>Express in Practice 002 - 프로젝트 만들기</title>
+      <link>https://blog.noizbuster.com/ko/series/nodejs/express-in-practice/002-create-express-project/</link>
+      <pubDate>Mon, 19 Aug 2019 12:55:04 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/series/nodejs/express-in-practice/002-create-express-project/</guid>
+      <description>Express.js 프로젝트 만들기 사전준비  Node.js - Node.js 제대로 설치하기 참고 Git  git, npm 초기화 # 디렉토리를 하나 만들고 &amp;gt; mkdir lecture-express-in-practice &amp;gt; cd lecture-express-in-practice # git 초기화 &amp;gt; git init # npm 초기화 &amp;gt; npm init package name: (lecture-express-in-practice) version: (1.0.0) 0.0.0 description: entry point: (index.js) test command: git repository: https://github.com/noizbuster/lecture-express-in-practice.git keywords: author: NoizBuster license: (ISC) MIT About to write to /home/noizbuster/project/noizbuster/lecture/lecture-express-in-practice/package.json: { &amp;#34;name&amp;#34;: &amp;#34;lecture-express-in-practice&amp;#34;, &amp;#34;version&amp;#34;: &amp;#34;0.0.0&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;main&amp;#34;: &amp;#34;index.</description>
+    </item>
+    
+    <item>
+      <title>Express in Practice 003 - 미들웨어</title>
+      <link>https://blog.noizbuster.com/ko/series/nodejs/express-in-practice/003-middlewares/</link>
+      <pubDate>Mon, 26 Aug 2019 15:16:27 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/series/nodejs/express-in-practice/003-middlewares/</guid>
+      <description>미들웨어 추가하기 널리 사용되는 두가지 미들웨어들을 우리 프로젝트에 추가해보겠습니다.
+이 포스트에서 다루는 미들웨어 패키지 이외에도 필요에 따라 자유롭게 원하는 패키지들을 추가해서 사용하면 됩니다.
+body-parser npm: body-parser
+HTTP body 를 원하는 형태로 파싱해주는 미들웨어 입니다.
+저의 경우 json 으로 파싱을 하는것을 기본으로 두고 사용합니다.
+자세한 내용은 해당 패키지 문서를 참고하세요.
+사용예시 const express = require(&amp;#39;express&amp;#39;); const bodyParser = require(&amp;#39;body-parser&amp;#39;); const app = express(); app.use(bodyParser.json()); app.use(bodyParser.urlencoded({extended: false})); cors npm: cors CORS 는 cross origin resource sharing 의 약자입니다.</description>
+    </item>
+    
+  </channel>
+</rss>

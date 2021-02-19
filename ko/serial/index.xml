@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>연재 on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/serial/</link>
+    <description>Recent content in 연재 on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    
+	<atom:link href="https://blog.noizbuster.com/ko/serial/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Node.js</title>
+      <link>https://blog.noizbuster.com/ko/serial/nodejs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/serial/nodejs/</guid>
+      <description>Node.js 에 대한 강좌나 포스트들입니다.
+제가 잘못 알고있는 내용이나 문서에 오류가 있는 경우에는 연락해주세요</description>
+    </item>
+    
+    <item>
+      <title>JAVA</title>
+      <link>https://blog.noizbuster.com/ko/serial/java/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/serial/java/</guid>
+      <description> Java Language 와 관련된 문서들 입니다. </description>
+    </item>
+    
+    <item>
+      <title>2015 ~ 2016 ROS 스터디</title>
+      <link>https://blog.noizbuster.com/ko/serial/2015-ros-study/</link>
+      <pubDate>Fri, 15 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/serial/2015-ros-study/</guid>
+      <description> ROS 스터디를 하면서 겪은 시행착오들을 정리했습니다. indigo 를 사용한 오래된 기록이기 때문에 현재는 큰 도움이 안 될 수도 있습니다. </description>
+    </item>
+    
+    <item>
+      <title>Express.js로 RESTful API 서버 만들기</title>
+      <link>https://blog.noizbuster.com/ko/serial/building-restful-api-server-using-express/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/serial/building-restful-api-server-using-express/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

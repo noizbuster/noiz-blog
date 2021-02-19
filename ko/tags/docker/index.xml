@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/tags/docker/</link>
+    <description>Recent content in docker on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 27 Oct 2020 12:35:32 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>개발보조 목적의 Minikube 설치 및 설정</title>
+      <link>https://blog.noizbuster.com/ko/posts/2020-10-27-123532-installing-minikube/</link>
+      <pubDate>Tue, 27 Oct 2020 12:35:32 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2020-10-27-123532-installing-minikube/</guid>
+      <description>Minikube 로컬환경에서 kubernetes 환경을 간단하게 세팅해서 개발에 활용 할 수 있는 minikube 의 설치방법에 대해 짧게 다뤄보도록 하겠다.
+Minikube Installation Guide
+1. install curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb sudo dpkg -i minikube_latest_amd64.deb minikube start 2. configuration alias kubectl=&amp;quot;minikube kubectl --&amp;quot; 를 bashrc 나 zshrc 등 사용하는 쉘에 alias 로 추가
+source ~/.zshrc 로 로드하거나 새 터미널을 열고
+kubectl get po -A 로 동작 확인</description>
+    </item>
+    
+    <item>
+      <title>Docker Swarm Study</title>
+      <link>https://blog.noizbuster.com/ko/posts/2016-08-18-093029-docker-swarm-study/</link>
+      <pubDate>Thu, 18 Aug 2016 09:30:29 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2016-08-18-093029-docker-swarm-study/</guid>
+      <description>Introduction 동기 이제 슬슬 시스템에 서비스들이 많아지면서 Orchestration을 신경써야 할 필요성이 대두되었다.
+supervisor 등의 툴을 사용해서 관리하고 있었지만 sigterm을 맞고도 바로 죽지 않는 컨테이너가 있는 등 문제가 다소 있었고, 이것을 dockerfile 에서 해결하거나 entrypoint 를 스크립트로 잡고 인위적으로 내부의 pid를 관리해야 하는것이 부자연스럽다고 생각하던 차였다.
+Container Orchestration Tools Container를 Orchestration 해주는 툴들은 근래에 와서 많이 늘어났다.
+8 Container Orchestration Tools to Know 를 보면 주요한 툴들을 잘 설명 해놨다.
+요약하자면</description>
+    </item>
+    
+    <item>
+      <title>Jenkins2 설치 및 구성 (docker)</title>
+      <link>https://blog.noizbuster.com/ko/posts/2016-06-14-1000-jenkins2-setup/</link>
+      <pubDate>Tue, 14 Jun 2016 10:00:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2016-06-14-1000-jenkins2-setup/</guid>
+      <description>설치 Jenkins2 를 설치한다 docker 이미지를 제공하니까 이걸 쓰도록 한다.
+20160614 현재 최신버전은 2.8
+https://hub.docker.com/r/jenkinsci/jenkins/tags/
+sudo docker run \ -p 13980:8080 \ -d \ jenkinsci/jenkins 로 실행
+컨테이너의 8080 포트를 13980으로 바인드 한다.
+초기 설정 http://my-ip:13980 로 접속하면
+/var/jenkins_home/secrets/initialAdminPassword 으로 들어가서
+초기 비밀번호를 입력하라는 화면을 보게 된다.
+도커의 shell 에 붙어서 파일을 읽으면 된다.
+sudo docker exec -ti containdername bash 로 쉘에 붙자
+cat /var/jenkins_home/secrets/initialAdminPassword 으로 확인할 수 있다.
+다음은 이런 화면인데 Install suggested plugins 를 선택하면 된다</description>
+    </item>
+    
+    <item>
+      <title>Converting .OVA to docker image</title>
+      <link>https://blog.noizbuster.com/ko/posts/2016-04-20-ova-to-dockerimg/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2016-04-20-ova-to-dockerimg/</guid>
+      <description>0.서론 도커 이미지를 만드는것은 그리 어렵지 않았다.
+근데 지금 쓰고있는 VM을 docker image 로 바꿔서 실행하면
+서버나 시뮬레이터를 좀 더 편하게 만들고 실행할때는 속도가 더 빠를것이라고 기대했다.
+VM 툴들은 스냅샷도 지원하니까 버전관리도 할 수 있다.
+물론 도커 이미지를 다른 이미지를 베이스로 하여 올리는것보다는 빌드에 시간도 많이 걸리고
+실행시에 엔트리 포인트도 정해 줘야 할 것 같은 불길한 예감이 들지만
+뭐 어떠한가! 빠른데!
+1. Extracting .vmdk from VM (.OVA) 우선 Virtual machine to docker image 따위의 키워드로 구글링 해보니</description>
+    </item>
+    
+  </channel>
+</rss>

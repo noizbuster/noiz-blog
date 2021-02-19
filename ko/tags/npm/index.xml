@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>npm on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/tags/npm/</link>
+    <description>Recent content in npm on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 19 Dec 2016 14:04:19 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/tags/npm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>survey-npm-yaml-lib</title>
+      <link>https://blog.noizbuster.com/ko/posts/2016-12-19-140419-survey-npm-yaml-lib/</link>
+      <pubDate>Mon, 19 Dec 2016 14:04:19 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2016-12-19-140419-survey-npm-yaml-lib/</guid>
+      <description>Surveyed 2016-12-19
+  TL;DR : js-yaml Win  yaml-js License: WTFPL
+2,580 downloads in the last day
+34,263 downloads in the last week
+169,836 downloads in the last month
+js-yaml License: MIT
+134,940 downloads in the last day
+2,614,264 downloads in the last week
+10,545,700 downloads in the last month
+yamljs License: MIT
+7,426 downloads in the last day
+116,115 downloads in the last week
+455,376 downloads in the last month</description>
+    </item>
+    
+    <item>
+      <title>make my npm module</title>
+      <link>https://blog.noizbuster.com/ko/posts/2016-06-21-09-54-make-my-npm-module/</link>
+      <pubDate>Tue, 21 Jun 2016 09:54:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2016-06-21-09-54-make-my-npm-module/</guid>
+      <description>기존에 도커 data volume 의 default configuration을 file에 저장하는 용도로 사용했던 코드 조각이 있었는데 이게 여기저기서 사용이 되기 시작해서 유지보수 비용이 증가하게 되었고 때문에 모듈화를 해야겠다고 생각이 되었다.
+사실 configuration을 도와주는 라이브러리는 있지만 사용상 추구하는 바가 다소 다르기 때문에 커스터마이징을 안할수 없는 상황이어서 (조회가 안되면 디폴트값을 다시 조회하여 error tolerant 를 확보하는 등&amp;hellip;) 그냥 새로운 모듈을 만들어서 관리하기 하였다.
+어떻게 node module 을 만드는것이 가장 이쁜 방법인지 잘 모르기 때문에 유명한 라이브러리의 소스코드나 세팅 구조를 참고하기로 하였다.</description>
+    </item>
+    
+  </channel>
+</rss>

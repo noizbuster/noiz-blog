@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vmware on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/tags/vmware/</link>
+    <description>Recent content in vmware on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 27 Oct 2020 08:22:34 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/tags/vmware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu Mouse Wheel in Vmware</title>
+      <link>https://blog.noizbuster.com/ko/posts/2020-10-27-082234-ubuntu-mouse-wheel-in-vmware/</link>
+      <pubDate>Tue, 27 Oct 2020 08:22:34 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2020-10-27-082234-ubuntu-mouse-wheel-in-vmware/</guid>
+      <description>문제? 불가피하게 게임기에서 리눅스를 써야할일이 있을때 virtual box 를 이용해서 우분투를 계속 써왔는데 여러개 모니터를 사용하거나 할때 vram 도 부족하고 마우스가 오작동하는등의 어려움이 있어서 이번에 vmware 를 사용해보기로 했다.
+player 만해도 퍼포먼스가 정말 좋아서 맘에 들었는데.
+마우스 조작과 관련해서 맘에 안드는게 너무 많았다.
+ 마우스의 앞으로, 뒤로 버튼이 동작하지 않음 마우스의 휠이 이상하게 동작함 (위아래로 점프한다거나 하는등 신호가 덜 들어가는 느낌?)  이 문제를 해결하기위해 약 이틀정도 삽질을 해서 해결했다.</description>
+    </item>
+    
+  </channel>
+</rss>

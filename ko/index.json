@@ -1,0 +1,1499 @@
+[
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/",
+	"title": "기술",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/nodejs/",
+	"title": "Node.js",
+	"tags": [],
+	"description": "",
+	"content": "Node.js 에 대한 강좌나 포스트들입니다.\n제가 잘못 알고있는 내용이나 문서에 오류가 있는 경우에는 연락해주세요\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/nodejs/express-in-practice/001-introduction/",
+	"title": "Express in Practice 001 - Introduction",
+	"tags": ["nodejs", "express"],
+	"description": "",
+	"content": "실전 Express! Express.js 의 5.x 알파버전이 공개되었습니다. Async Router 등의 기능때문에 많이 기대하고 있었는데요. 이 기회를 빌어 Node.js 백엔드에서 가장 많이 사용되는 프레임워크인 Express.js 에 대해 소개하고 실전에서 얻은 경험을 공유해보기 위해 강의를 연재해보려고 합니다.\nExpress.js 의 간단한 소개 Express.js 는 여러겹의 middleware로 구성 할 수 있는 Web Framework 입니다.\n좀 더 간단하게 설명해보자면\ngraph LR HTTP요청 --\u0026gt; 처리1 처리1 --\u0026gt; 처리2 처리2 --\u0026gt; 처리3 처리3 --\u0026gt; HTTP응답 이와같이 HTTP 요청을 일련된 단계를 거쳐서 응답을 만들어냅니다.\n로그를 찍거나, 데이터를 가져오거나, 페이지를 렌더링 하는것들이 모두 middleware 로 구현될 수 있습니다.\n개발자의 관점에서 Express.js 는 매우 간단하고 직관적인 구조를 가지고 있기 때문에 배우기 쉬울뿐만아니라 기능의 확장도 아주 유연합니다.\n 강의계획 대상 Express.js의 튜토리얼을 마친 상태의 Express.js 유저\n개발환경  Node.js v10.16.2 (Latest LTS: Dubnium)  예제 코드들은 CommonJS로 작성됩니다.   Express.js Version 5.x  글을 쓰는 시점에서 5.x 버전이 알파상태입니다.   Ubuntu 18.04  다른 운영체제를 사용하더라도 아마 이 강의를 이해하는데 큰 문제가 없을것입니다.   git  다룰 내용 이 강의에선 간단하게 RESTful API 서버개발을 위주로 설명을 하도록 하겠습니다.\n여기에 이야기된것 이외의 부분에서 다루었으면 하는 내용이 있다면 코멘트나 이메일을 주세요. 여유가 된다면 이번 시리즈나 다음번 글에서 다뤄보도록 하겠습니다.\n목차  프로젝트 시작, Boilerplating CORS, Middleware 설정, Configuration 로깅, Logging 비동기 라우터, Async Router 글로벌 에러 핸들러, Global Error Handler 테스팅, Testing 기술문서생성, Documentation 도커를 이용한 배포, Deployment with Docker  Configuration    목차 (w/설명)  프로젝트 시작, Boilerplating  Express 프로젝트를 만들고 각종 세팅을 합니다.   CORS, Middleware (Optional)  주로 많이들 쓰는 미들웨어들을 소개하고 세팅합니다. 만약 필요하지 않다면 넘어가도 좋습니다.   설정, Configuration  Development, Test, Production 별로 다른 설정을 사용하기 위한 설정파일을 세팅하고 다룹니다.   로깅, Logging  서버를 작성하면서 필요한 로그를 남기는 방법에 대해 설명합니다.   비동기 라우터, Async Router  비동기 함수로 만들어진 라우터를 작성하기 위해 필요한 추가적인 내용들을 다룹니다.   글로벌 에러 핸들러, Global Error Handler  에러를 핸들링하는 여러가지 방법에 대해 알아보고 미처 처리하지 못한 예외나 에러를 다루는 방법에 대해 알아봅니다.   테스팅, Testing  서버를 테스팅하는 방법에 대해 간단하게 알아보도록 합니다. ava 를 사용할것입니다.   기술문서생성, Documentation  RESTful API Spec을 공유하고 문서화를 자동화해주는 방법에 대해서 다룹니다.   도커를 이용한 배포, Deployment with Docker   서버를 Docker 로 배포하기 위해 필요한 작업들에 대해 다룹니다. multi stage image build  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/java/spring-boot/001-goal/",
+	"title": "Spring Boot 001 - Goal",
+	"tags": ["java", "spring", "spring boot"],
+	"description": "",
+	"content": "목표 Spring boot 의 기본을 학습합니다.\n간단한 RESTful API 서버를 만들 수 있도록 합니다.\n빌드 스트림관리, 테스팅, 문서화, 로깅과 같이 실무에서 필요한 요소들도 공부해봅니다.\nWhat is the Spring Boot?  Spring Boot is designed to get you up and running as quickly as possible, with minimal upfront configuration of Spring. Spring Boot takes an opinionated view of building production-ready applications.\n 토이 프로젝트 예전부터 만들려고 했던 미니 프로젝트 PunchCard를 만드는데 사용해 볼 생각입니다.\n프론트엔드는 React.js 로 백엔드는 Spring Boot 를 사용해볼것입니다.\nDB 는 익숙한 MongoDB 를 사용할것이고 사용자 인증은 기존에 만들어준 OAuth를 이용할것입니다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/nodejs/nodejs-basic/",
+	"title": "Node.js 기초",
+	"tags": ["nodejs", "express"],
+	"description": "",
+	"content": "Node.js 백엔드에서 가장 많이 사용되는 프레임워크인 Express.js 에 대해 소개하고 실전에서 얻은 경험을 공유해보기 위해 강의를 연재해보려고 합니다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/nodejs/express-in-practice/",
+	"title": "실전 Express!",
+	"tags": ["nodejs", "express"],
+	"description": "",
+	"content": "Node.js 백엔드에서 가장 많이 사용되는 프레임워크인 Express.js 에 대해 소개하고 실전에서 얻은 경험을 공유해보기 위해 강의를 연재해보려고 합니다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/",
+	"title": "연재",
+	"tags": [],
+	"description": "",
+	"content": "주제에 맞추어 정기적으로, 혹은 각잡고 쓰는 연재성의 글들입니다. "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/nodejs/express-in-practice/002-create-express-project/",
+	"title": "Express in Practice 002 - 프로젝트 만들기",
+	"tags": ["nodejs", "express"],
+	"description": "",
+	"content": "Express.js 프로젝트 만들기 사전준비  Node.js - Node.js 제대로 설치하기 참고 Git  git, npm 초기화 # 디렉토리를 하나 만들고 \u0026gt; mkdir lecture-express-in-practice \u0026gt; cd lecture-express-in-practice # git 초기화 \u0026gt; git init # npm 초기화 \u0026gt; npm init package name: (lecture-express-in-practice) version: (1.0.0) 0.0.0 description: entry point: (index.js) test command: git repository: https://github.com/noizbuster/lecture-express-in-practice.git keywords: author: NoizBuster license: (ISC) MIT About to write to /home/noizbuster/project/noizbuster/lecture/lecture-express-in-practice/package.json: { \u0026#34;name\u0026#34;: \u0026#34;lecture-express-in-practice\u0026#34;, \u0026#34;version\u0026#34;: \u0026#34;0.0.0\u0026#34;, \u0026#34;description\u0026#34;: \u0026#34;\u0026#34;, \u0026#34;main\u0026#34;: \u0026#34;index.js\u0026#34;, \u0026#34;scripts\u0026#34;: { \u0026#34;test\u0026#34;: \u0026#34;echo \\\u0026#34;Error: no test specified\\\u0026#34; \u0026amp;\u0026amp; exit 1\u0026#34; }, \u0026#34;repository\u0026#34;: { \u0026#34;type\u0026#34;: \u0026#34;git\u0026#34;, \u0026#34;url\u0026#34;: \u0026#34;git+https://github.com/noizbuster/lecture-express-in-practice.git\u0026#34; }, \u0026#34;author\u0026#34;: \u0026#34;NoizBuster\u0026#34;, \u0026#34;license\u0026#34;: \u0026#34;MIT\u0026#34;, \u0026#34;bugs\u0026#34;: { \u0026#34;url\u0026#34;: \u0026#34;https://github.com/noizbuster/lecture-express-in-practice/issues\u0026#34; }, \u0026#34;homepage\u0026#34;: \u0026#34;https://github.com/noizbuster/lecture-express-in-practice#readme\u0026#34; } 프로젝트를 만들 준비가 다 끝났다.\nExpress.js 패키지 추가 Express.js 가 아직 알파라서 그냥 npm install express 로 설치하면 4.x 버전이 설치될것입니다. 그러니 현재 가장 높은 버전이 무엇인지 확인해 보아야 합니다.\n\u0026gt; npm info express express@4.17.1 | MIT | deps: 30 | versions: 263 Fast, unopinionated, minimalist web framework http://expressjs.com/ keywords: express, framework, sinatra, web, rest, restful, router, app, api ... dist-tags: latest: 4.17.1 next: 5.0.0-alpha.7 published 2 months ago by dougwilson \u0026lt;doug@somethingdoug.com\u0026gt; next tag 로 버전 5.0.0-alpha.7 이 퍼블리시 되어있습니다. 이걸로 받아보도록 하죠.\n\u0026gt; npm install express@next --save npm notice created a lockfile as package-lock.json. You should commit this file. + express@5.0.0-alpha.7 added 53 packages from 38 contributors and audited 130 packages in 2.1s found 0 vulnerabilities 그 다음 package.json 파일을 확인해보면 dependencies에 express 가 \u0026quot;express\u0026quot;: \u0026quot;^5.0.0-alpha.7\u0026quot; 이렇게 추가된것을 볼 수 있습니다.\nExpress 서버 만들기 Express 홈페이지에 Getting started 가이드에는 크게 두가지 방법을 제공합니다 Hello World 예제와 Express generator 를 사용하는방법입니다.\n그런데 Express generator 를 사용해서 프로젝트를 만들면 view render 같은 RESTful API 서버를 만드는데 직접적으로 관련이 없는 코드까지 생성을 해줍니다.\n어짜피 generator 를 이용해서 프로젝트를 만들어도 생성해주는 코드의 분량이 그렇게 많지 않으므로 그냥 Hello World 예제부터 시작해서 살을 붙여나가도록 하겠습니다.\n일단 아래 모양처럼 디렉토리와 파일을 만들어줍니다.\nexpress server 는 src/server.js 에 작성될것이고 index.js 는 단순히 호출만 해서 실행시키는 역할을 해줄것입니다.\n. ├── index.js ├── package.json ├── package-lock.json └── src └── server.js server.js 는 Express 홈페이지의 hello world 예제를 그대로 가져옵니다.\n한가지 추가된점은 module.exports 로 express app 을 지정 해 주는것입니다.\n이렇게 해두면 나중에 여러개의 app 을 켜거나 test code 를 작성할때 express app 에 접근하기가 쉬워집니다.\nsrc 디렉토리 밑에 코드들을 배치하는것은 제 취향인데요, 나중에 src 디렉토리 내부를 트랜스파일링 하거나 한다면 이렇게 작성된 코드는 한개 디렉토리 밑에서 관리ㄴ는게 설정을 쉽게 하는데 도움이 됩니다.\n# src/server.js const express = require(\u0026#39;express\u0026#39;); const app = express(); const port = 3000; app.get(\u0026#39;/\u0026#39;, (req, res) =\u0026gt; res.send(\u0026#39;Hello World!\u0026#39;)); app.listen(port, () =\u0026gt; console.log(`Example app listening on port ${port}!`)); module.exports = app; # index.js const server = require(\u0026#39;./src/server\u0026#39;); module.exports = server; index 파일을 만들어서 사용하는것도 그냥 제 취향입니다.\n나중에 다른 서비스들이나 APM 같이 express 앱보다 먼저 초기화가 되어야 하는 경우에 코드가 섞여서 보이지 않게 해줍니다.\n필요하지 않다면 index.js 파일을 만들지 않고 start script가 바로 src/server.js 를 실행해도 됩니다.\n\u0026#34;scripts\u0026#34;: { \u0026#34;test\u0026#34;: \u0026#34;echo \\\u0026#34;Error: no test specified\\\u0026#34; \u0026amp;\u0026amp; exit 1\u0026#34;, \u0026#34;start\u0026#34;: \u0026#34;node index.js\u0026#34; }, package.json 파일에 start 스크립트를 추가해줍시다.\nnpm start 로 실행한다음 브라우저에서 localhost:3000 으로 접속해보면 위와 같이 Hello World! 가 잘 출력됩니다.\ngitignore 커밋을 하기전에 status 를 확인해보면 다음과 같은 상태일것입니다.\n\u0026gt; git status On branch master No commits yet Untracked files: (use \u0026#34;git add \u0026lt;file\u0026gt;...\u0026#34; to include in what will be committed) index.js node_modules/ package-lock.json package.json src/ nothing added to commit but untracked files present (use \u0026#34;git add\u0026#34; to track) 아직 커밋되지 않은 항목들이 무슨일을 하는지 살펴보면\nindex.js\nsrc/\n우리가 만든 파일과 디렉토리들 입니다.\nnode_modules/\n다운받은 dependency 들이 저장됩니다.\npackage.json\nnpm 프로젝트에 관련된 정보가 저장됩니다.\n버전정보와 의존성 패키지를 비롯한 각종 메타데이터와 스크립트들, dev dependency 들이 사용하는 설정값등이 저장됩니다.\npackage-lock.json\n어떤 버전의 dependency 가 설치되어있는지 기록됩니다. package.json 파일안에는 의존성 패키지들의 버전이 범위로 표현됩니다. 때문에 npm install 이 실행되는 시점에 따라 서로 다른 버전의 의존성이 설치되고, 이에 따라 서로 다른 사람들간의 미묘한 버전차이가 문제를 만드는 경우 알기 어렵다는 문제가 있었습니다. 때문에 원하는 버전의 범위 는 package.json 에 저장되고 실재로 설치된 버전 은 package-lock.json 에 저장되게 됩니다.\n따라서 다른 사람이 내 프로젝트를 받아서 npm install 을 했을때 내가 사용하고 있는 dependency 들과 정확하게 같은 버전을 사용하기를 바란다면 package-lock.json 파일도 커밋 해 주어야 합니다.\n그럼 .gitignore 파일을 만들어 봅시다.\ngithub 에 사람들이 널리 사용하는 Node.js 프로젝트용 .gitignore 파일들이 공유되고 있습니다.\n https://github.com/nodejs/node/blob/master/.gitignore https://github.com/github/gitignore/blob/master/Node.gitignore  이런파일들을 다운받아서 내 프로젝트에 넣거나 직접 내가 필요한만큼만 넣어서 사용 할 수도 있습니다.\n# Node.js node_modules/ # IDE .idea/ 이런식으로 말이죠\n이제 필터링된 파일들을 커밋하면 됩니다.\nCode https://github.com/noizbuster/lecture-express-in-practice\n다음순서 널리 사용하는 미들웨어들을 소개하고 추가해서 RESTful API 서버를 만들 준비를 할것입니다.\nReferences  express - hello world  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/java/spring-boot/",
+	"title": "Study Note - Spring Boot",
+	"tags": [],
+	"description": "",
+	"content": "Spring Boot 를 배우면서 남기는 스터디 노트 입니다. "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/java/spring-boot/002-installation/",
+	"title": "Spring Boot 002 - Installation",
+	"tags": ["java", "spring", "spring boot"],
+	"description": "",
+	"content": "목표  Building a RESTful Web Service 가이드를 참고해서 Spring Boot 개발환경을 구축합니다.  SDK 설치 가이드에 따르면 필요한 준비물은 다음과 같습니다\n  About 15 minutes A favorite text editor or IDE JDK 1.8 or later Gradle 4+ or Maven 3.2+ You can also import the code straight into your IDE:  Spring Tool Suite (STS) IntelliJ IDEA     JDK, Gradle 설치 이전에 작성했던 포스트(Install Java with Version Manager)에서 JDK 를 설치하는것을 해보았습니다.\nSDKMan 이 Gradle 의 설치도 지원하니까 같은 방법으로 설치를 진행합니다.\n SDKMan 설치: Install Java with Version Manager 참고 JDK 설치: sdk install java 9.0.4-open 설치 가능한 Gradle 버전 확인 sdk list gradle  5.5.1 버전이 가장 최신의 stable빌드 인거 같네요 이것으로 설치해야겠습니다   gradle 설치 : sdk install gradle 5.5.1  설치된 SDK 들을 확인해봅니다.\n\u0026gt; java --version openjdk 9.0.4 OpenJDK Runtime Environment (build 9.0.4+11) OpenJDK 64-Bit Server VM (build 9.0.4+11, mixed mode) \u0026gt; gradle --version ------------------------------------------------------------ Gradle 5.5.1 ------------------------------------------------------------ Build time: 2019-07-10 20:38:12 UTC Revision: 3245f748c7061472da4dc184991919810f7935a5 Kotlin: 1.3.31 Groovy: 2.5.4 Ant: Apache Ant(TM) version 1.9.14 compiled on March 12 2019 JVM: 9.0.4 (Oracle Corporation 9.0.4+11) OS: Linux 4.19.16-041916-lowlatency amd64 References  https://spring.io/guides/gs/rest-service/  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/nodejs/express-in-practice/003-middlewares/",
+	"title": "Express in Practice 003 - 미들웨어",
+	"tags": ["nodejs", "express"],
+	"description": "",
+	"content": "미들웨어 추가하기 널리 사용되는 두가지 미들웨어들을 우리 프로젝트에 추가해보겠습니다.\n이 포스트에서 다루는 미들웨어 패키지 이외에도 필요에 따라 자유롭게 원하는 패키지들을 추가해서 사용하면 됩니다.\nbody-parser npm: body-parser\nHTTP body 를 원하는 형태로 파싱해주는 미들웨어 입니다.\n저의 경우 json 으로 파싱을 하는것을 기본으로 두고 사용합니다.\n자세한 내용은 해당 패키지 문서를 참고하세요.\n사용예시 const express = require(\u0026#39;express\u0026#39;); const bodyParser = require(\u0026#39;body-parser\u0026#39;); const app = express(); app.use(bodyParser.json()); app.use(bodyParser.urlencoded({extended: false})); cors npm: cors CORS 는 cross origin resource sharing 의 약자입니다.\n자바스크립트 엔진 표준 스팩에 동일 출처 정책 (same-origin policy) 라는 보안규칙이 있습니다.\n이런경우 필요에 따라 그 제약을 해제해야 하는 경우가 있는데 CORS 세팅으로 이를 우회 시킬 수 있습니다.\n사용예시 const express = require(\u0026#39;express\u0026#39;); const cors = require(\u0026#39;cors\u0026#39;); const app = express(); app.use(cors()); 이밖에\u0026hellip; 많이 사용되는 express 미들웨어들을 아는대로 적어보았습니다.\n같은 용도로 사용되는 미들웨어들은 사용되는 스타일이나 결과물이 조금씩 다르니 살펴보시고 취향대로 선택해서 쓰시면 됩니다.\n더 많은 패키지들은 나중에 package tour 시리즈에서 다루도록 하겠습니다.\nmultipart multi part 바디를 다루기 위해서 다음 패키지들이 유용할 수 있습니다.\n대표적으로 파일을 업로드 받을때 유용하게 사용 될 수 있습니다.\n npm: multer npm: busboy npm: multiparty npm: formidable  logging 나중에도 다루겠지만 다음과 같은 모듈들이 access log 를 생성하는데 도움이 됩니다.\n npm: express-winston npm: morgan  payload 트래픽을 압축해서 네트워크 비용을 줄여줄 수 있습니다.\n npm: compression  error handling 에러를 유연하게 핸들링 해 주고 API 의 response 로 처리 할 수 있도록 도와줍니다.\n npm: errorhandler npm: express-api-error-handler npm: merror  Code https://github.com/noizbuster/lecture-express-in-practice/tree/003-middlewares\n다음순서 다음에는 configuration 파일을 만들고 실행 환경마다 다른 설정값을 읽을 수 있도록 해보도록 하겠습니다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/java/",
+	"title": "JAVA",
+	"tags": [],
+	"description": "",
+	"content": "Java Language 와 관련된 문서들 입니다. "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/java/spring-boot/003-create-project/",
+	"title": "Spring Boot 003 - Create Project",
+	"tags": ["java", "spring", "spring boot"],
+	"description": "",
+	"content": "Boiler Plating spring.io 의 추천대로 start.spring.io 에서 프로젝트를 생성하는것을 해보려고 한다.\n이런 광경이 보인다. 예전에 유행했던 MegaBoilerpate 가 생각나는것은 왜일까?\nartifectId 을 작성하는 convention이 있는지 찾아보니 - 과 소문자를 이용해서 짓는게 일반적인것으로 보였다.\n여기까지는 설정이 어려워보이지 않았다.\n그런데\u0026hellip;\n어? 추가 기능을 넣을수 있는게 있구나? 근데 많아도 너무 많다.\n이중에서 내가 필요한것이 무엇인지 어떻게 구분하지?\n지금 알아보기엔 너무 많으니 필요한것 위주로 찾아서 차근차근 읽어보도록 해야겠다.\n그것보다, 나중에 이것들이 추가로 필요해졌을때 쉽게 추가 할 수 있는지가 먼저 궁금해졌다.\n일단 시험삼아 내멋대로 디펜던시를 몇개 골라서 프로젝트를 만들어봐야겠다.\n Web  Spring Web Starter Spring Reactive Web   Security  OAuth2 Resource Server (요거를 나중에 추가해보도록 하자)   NoSQL  Spring Data Reactive MongoDB   Ops  Spring Boot Actuator (이게 그렇게 좋다던데)    만들어진 보일러플레이트를 열고 돌려보니 mongodb 커넥션을 못만들었다고 에러를 낸다. docker 로 기본포트로 열려있는 도커 컨테이너를 하나 띄우니 해결되었다.\n디렉토리 구조 파악 ├── build/ - Build 된 결과물이 저장되는 디렉토리 ├── build.gradle - Gradle 의 빌드 설정을 저장, node 의 package.json 과 유사한? ├── settings.gradle - gradle 자체에 대한 설정파일 ├── gradle/ - gradle 을 알아서 받아서 세팅하는 스크립트 등이 들어있음. ├── gradlew - Gradle startup script for UN*X ├── gradlew.bat - Gradle startup script for Windows ├── HELP.md - 기본으로 생성된 도움말 파일 └── src - 소스코드들 ├── main │ ├── java │ │ └── io │ │ └── upsidedown │ │ └── punchcardapi - 애플리케이션 │ │ └── PunchCardApiApplication.java │ └── resources │ ├── application.properties │ ├── static │ └── templates └── test - 테스트코드들 └── java └── io └── upsidedown └── punchcardapi └── PunchCardApiApplicationTests.java 디펜던시들을 교차해가면서 선택해서 보일러플레이트를 만든다음 meld 로 간단하게 비교해 보면 디펜던시를 관리하기 위해 필요한 변경은 대부분 build.gradle 파일을 업데이트 하는것으로 이루어 진다. 디테일한 부분은 모두 spring boot 가 숨겨주는모양. 외부 설정은 main.resources.application.properties 에서 관리된다.\n내가 추가할 디렉토리구조는 어떤식으로 배치하지? arpit khandelwal 이 만들어둔 springboot-starterkit 프로젝트를 참고하자면 PunchCardApiApplication.java 가 위치하는 디렉토리를 거점으로 디렉토리를 확장해나가면 되면 괜찮아보인다.\n아래와 같은 디렉토리가 경우에 따라 필요해질 수 있다고 보여진다.\n config controller dto exceptionupdated model repository security servicesubmissions util  references  Spring Initializr https://spring.io/guides/tutorials/react-and-spring-data-rest/ https://spring.io/guides/gs/actuator-service/ https://spring.io/guides/gs/rest-service/ Arpit Khandelwal - Spring Boot 2.0 — Project Structure and Best Practices springboot-starterkit  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/nodejs/package-tour/",
+	"title": "Node.js 패키지 투어",
+	"tags": [],
+	"description": "",
+	"content": "유용한 Node.js Package 들을 제가 사용하는 위주로 소개해보는 코너 입니다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/java/spring-boot/004-integrate-mongodb/",
+	"title": "Spring Boot 004 - MongoDB",
+	"tags": ["java", "spring", "spring boot"],
+	"description": "",
+	"content": "데이터를 읽고쓰자 MongoDB 를 사용하기위한 의존성 추가하기 start.spring.io 에서 MongoDB 와 관련된 Dependency 들을 보는데 여러개가 보인다. 이밖에도 Embedded MongoDB database 도 있지만 딱봐도 이건 내 관심사가 아니니까 패스해도 될거 같다.\n짧은 설명으로는 reactive 가 붙은놈은 비동기방식으로 처리가 되는놈인거 같다. 이걸로 선택하기로 한다.\nbuild.gradle 파일의 dependencies 오브젝트 안에\nimplementation \u0026#39;org.springframework.boot:spring-boot-starter-data-mongodb-reactive\u0026#39; 가 추가되어있는것을 볼 수 있다.\nHELP.md 파일에 적힌 링크를 타고 들어가면 reactive 가 붙은거랑 안붙은거랑 문서의 같은섹션을 참조하고 있다. 아마도 대동소이한가보다.\n바라보고있는 MongoDB 의 database 를 바꿔주기위해 main.resources/application.properties 에 아래를 추가해준다.\nDB에 크레덴셜도 없고 로컬호스트를 보고있게 되어있으니 일단 devel 서픽스를 붙여놓자.\nspring.data.mongodb.uri=mongodb://localhost:27017/punch_card_devel 설명을 더 읽어보면 MongoTemplate Spring Data MongoDB Repositories 등에 대해서 이야기 하고 있는데 MongoTemplate 는 JDBC 의 그것과 비교하고 있어서 무슨말인지 알수가 없고 Spring Data MongoDB Repositories 의 경우는 정의된 메서드 이름에 따라 쿼리를 자동으로 생성해주는놈으로 이해했다.\n모델을 정의하고 이것을 RESTful 인터페이스까지 매핑하는것에대한 정보는 부족해서 좀 더 찾아보았다.\n데이터 모델링 (draft) 뭐라도 있어야 코딩을 해볼테니 아주 간단하게 사용할 데이터 모델을 약식으로 만들어 보자.\nclassDiagram User *-- Blueprint Blueprint o-- Subject PunchCard o-- Subject User : ObjectId id User : string name User : string email Blueprint : ObjectId user Blueprint : Subject[] subjects Subject : string name Subject : string type PunchCard : Subject[] subjects PunchCard : date date 구현 MongoDB Model \u0026amp; Repository 굳이 Express.js 와 Mongoose 에 대응해서 비교를 해보자면 Repository 가 Mongoose 의 model 역할을 하고 인자로 집어넣은 Model 이 Schema 역할을 해준다.\nreactive 를 사용하고 안하고의 차이는 비동기처리를 Flux를 통해서 해주는데 RxJava 와 비슷한 방식으로 보인다.\nRepository를 만듬에 있어서 예제에서처럼 필요한 함수를 매번 만들어줄 필요가 없었다.\n기존에 생성되는 함수의 용도나 내부 구현을 바꾸고 싶거나 할때 추가해서 재구현을 하는 느낌이다. 예를들어 비밀번호의 경우 업데이트 할 때 내용을 hashing 해서 넘겨줘야 할텐데 이런작업을 여기다가 구현하면 되는거 같다.\nModel 모델은 이런식으로 만들었다. MongoDB 에서 사용하는 데이터 타입을 명시하기 위해서 필요한것 이외에는 별다른 의존성은 없다. lombok 으로 getters, setters 를 자동생성 해주었다.\npackage io.upsidedown.punchcardapi.model; import lombok.Getter; ... import java.util.Set; @Getter @Setter @NoArgsConstructor @Accessors(chain = true) @Document(collection = \u0026#34;users\u0026#34;) public class UserModel { @Id private String id; @Indexed(unique = true, direction = IndexDirection.DESCENDING, dropDups = true) private String email; private String password; private String name; } Repository 레포지터리는 아래와 같이 만들었다. 비밀번호 관련해서는 작업을 추후에 해줄생각이고 일단은 동작 자체를 확인해보는게 중요하니 이렇게만 만들어두자.\npackage io.upsidedown.punchcardapi.repository; import io.upsidedown.punchcardapi.model.UserModel; import org.springframework.data.mongodb.repository.ReactiveMongoRepository; import org.springframework.stereotype.Repository; @Repository public interface UserRepository extends ReactiveMongoRepository\u0026lt;UserModel, String\u0026gt; { } References  boot-features-mongodb creating-a-reactive-restful-web-service-using-spri-1 reactive-rest-apis-spring-webflux-reactive-mongo  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/java/spring-boot/005-restful-api/",
+	"title": "Spring Boot 005 - Routing (WIP)",
+	"tags": ["java", "spring", "spring boot"],
+	"description": "",
+	"content": "RESTful API 를 구현하자 MongoDB 작업을 했지만 이것이 RESTful API 로 서빙되게 만드는것은 별개 문제다.\nAuthentication, Authorization 등은 일단 나중에 생각하기로 하고 routing 을 우선 어떤식으로 하는지부터 알아보자.\nRESTful API 를 위한 의존성 설정  Spring Web Starter - 전통적인 방식의 웹서버를 만드는 방법인것 같다. Spring Reactive Web - 비동기처리를 지원하는 방식인것 같다. MongoDB 도 리엑티브로 사용하고 있으니 이걸 사용해보도록 한다. Rest Repositories - Repository 를 바로 API 에 바인딩 하는 방식인것 같은데. 잠깐 적용해서 써보니 내 입맛대로 바꾸기에는 이건 너무 과한것 같아서 일단 패스하기로 했다.  build.gradle 파일 의 dependencies 안에 아래 설정값을 넣어주면 된다.\nimplementation \u0026#39;org.springframework.boot:spring-boot-starter-webflux\u0026#39; Rest Controller 시행착오를 좀 거쳐서 아래와 같은 컨트롤러를 만들었다. Express 로 치면 router 를 만든것인데 @RequestMapping 을 이용하면 공통된 path 를 밖에다 끄집어서 적어놓을 수 있다. 파라미터를 받는것도 {id} 와 같은식으로 path에 적어놓으면 @PathVariable 을 이용해서 함수에 인자로 넘겨받을 수 있게 되어있다.\npackage io.upsidedown.punchcardapi.controller; import io.upsidedown.punchcardapi.model.UserModel; import io.upsidedown.punchcardapi.repository.UserRepository; ... import reactor.core.publisher.Mono; @RequestMapping(\u0026#34;/users\u0026#34;) @RestController public class UserController { @Autowired private UserRepository userRepository; @GetMapping() public Flux\u0026lt;UserModel\u0026gt; getAllUsers() { return userRepository.findAll(); } @GetMapping(\u0026#34;{id}\u0026#34;) public Mono\u0026lt;ResponseEntity\u0026lt;UserModel\u0026gt;\u0026gt; getTweetById(@PathVariable(value = \u0026#34;id\u0026#34;) String userId) { return userRepository.findById(userId) .map(savedUser -\u0026gt; ResponseEntity.ok(savedUser)) .defaultIfEmpty(ResponseEntity.notFound().build()); } } 우선은 GET 메서드만 만들어서 코드에 접근이 되는지 정도만 확인을 해 보았다.\n이제 대충의 뼈대는 잡은것 같고 이후부터는 비지니스로직을 짜면서 살을 입혀보면 될것 같다.\nReferences  spring.io/guides/gs/reactive-rest-service/ spring-requestmapping-requestparam-pathvariable-example zetcode - GetMapping Tutorial spring-webflux-reactive-rest-api-demo reactive-rest-apis-spring-webflux-reactive-mongo dzone - creating-a-reactive-restful-web-service-using-spri-1  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/essay/",
+	"title": "수필",
+	"tags": [],
+	"description": "",
+	"content": "자유롭게 제 생각과 일상을 기록하는 공간입니다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/pensee/",
+	"title": "감상록",
+	"tags": [],
+	"description": "",
+	"content": "보고, 읽고 짧은 감상들\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/",
+	"title": "NoizBuster",
+	"tags": [],
+	"description": "",
+	"content": "NoizBuster\u0026rsquo;s Blog "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/reviews/",
+	"title": "리뷰",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/billboard/",
+	"title": "billboard",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2021-02-18-054607-billboardjs-with-react/",
+	"title": "Billboardjs With React",
+	"tags": ["react", "billboard"],
+	"description": "",
+	"content": "Billboard.js with React React.js 앱에 차트 표현을 위해 Billboard.js 를 사용하는방법을 간단하게 알아보고\n사용해보면서 겪은 시행착오나 느낌에 대해 이야기 해보려고 합니다.\n이 포스팅에서 작성된 예제코드는 Github repo 에서 확인 할 수 있습니다.\nEnvironment  Ubuntu 18.04 node.js v14.x (LTS) react.js v17.x  How to Prerequisites  node.js react.js  준비 및 설정 프로젝트 준비  이미 사용하고 있는 프로젝트가 있다면 생략하셔도 됩니다.\n npx create-react-app billboard-with-react 의존성 설치 npm install --save billboard.js lodash 차트를 그릴 위치 정하기 // ./src/App.jsx import React from \u0026#39;react\u0026#39;; import \u0026#39;./App.css\u0026#39;; function App() { // 1. billboard가 element 를 찾는데 사용할 reference 를 만들어줍니다.  const myChartRef = React.useRef(null); ... return ( \u0026lt;div className=\u0026#34;App\u0026#34;\u0026gt; {/* 2. 레퍼런스를 차트를 그릴곳에 지정해줍니다. */} \u0026lt;div ref={myChartRef} /\u0026gt; \u0026lt;/div\u0026gt; ); } export default App; 차트 작성 저의 경우 간단한 클래스를 만들어서 작성했지만 chart 를 파라미터로 받는 함수들의 집합을 사용하는것이 오히려 적합한 상황도 있습니다. 꼭 아래와 같이 만들 필요는 없으며 상황에 맞게 작성하시면 됩니다.\nbillboard.js 헬퍼 (optional) 이 예제의 경우에 최초 한번만 차트를 생성하고 이후에는 update 하여 차트가 깜빡이지 않도록 처리했습니다. 업데이트가 될일이 없다거나 하는 경우에는 이런 유틸리티가 필요없을수 있습니다.\n// ./src/utils/billboardHelper.js import * as _ from \u0026#39;lodash\u0026#39;; import bb, {Chart} from \u0026#39;billboard.js\u0026#39;; /** * @param {MutableRefObject} ref * @return {Chart} */ export function findChartByRef(ref) { return _.find(bb.instance, (i) =\u0026gt; _.get(i, \u0026#39;$.chart._groups[0][0]\u0026#39;) === ref.current); } ... billboard 에서 생성된 차트들은 bb.instance 안에서 관리됩니다.\nreact 에서는 MutableRefObject 로 차트를 관리 할것이기 때문에 이것을 가지고 우리가 제어할 차트를 다시 찾아 올 수 있습니다.\n차트 작성 앞서 언급했던것처럼 꼭 이대로 작성 할 필요없습니다.(값의 갱신이 매우 빠르다면 비효율적일수 있습니다.)\n경험상 create, update 를 분리해서 관리하는게 조금 더 편리하고 화면이 깜빡거리지 않게 관리하는데 도움이 되었습니다.\n// ./src/charts/MyPieChart.js import bb, {pie, Chart} from \u0026#39;billboard.js\u0026#39;; import {findChartByRef, jsonToColumns} from \u0026#39;../utils/billboardHelper\u0026#39;; export default class MyPieChart { chartRef; chart; /** * @param {MutableRefObject} chartRef */ constructor(chartRef) { this.chartRef = chartRef; this.chart = findChartByRef(this.chartRef); } /** * 기존에 생성된 차트가 있으면 update 를 하고, 아니면 생성도 해 줍니다. * @param {PIE_DATA_COLUMNS} data */ render(data) { if (!this.chart) { this.create(); } this.update(data); } /** * 차트를 새로 그립니다. * @return {Chart} */ create() { const chartOptions = { title: {text: \u0026#39;탕수육 성전\u0026#39;}, data: { columns: [ [\u0026#39;pour\u0026#39;, 50], [\u0026#39;deep\u0026#39;, 40], [\u0026#39;fry\u0026#39;, 5], ], names: { pour: \u0026#39;부먹\u0026#39;, deep: \u0026#39;찍먹\u0026#39;, fry: \u0026#39;볶먹\u0026#39;, }, type: pie(), }, bindto: this.chartRef.current, }; this.chart = bb.generate(chartOptions); return this.chart; } /** * 차트의 내용물을 업데이트 합니다. * @param {PIE_DATA_COLUMNS} data * @return {Chart} */ update(data) { if (this.chart) { this.chart.load({columns: data}); this.chart.resize(); } } /** * 차트에 입력된 데이터를 가공합니다. * @param {PIE_DATA_JSON} jsonData * @return {PIE_DATA_COLUMNS} */ static forgeData(jsonData) { return jsonToColumns(jsonData); } } 차트를 처음 그릴때 bindto: this.chartRef.current 로 React.useRef() 로만들어진 레퍼런스를 넘겨주기만 하면 됩니다.\n만약 차트의 config 를 고칠일이 있다면 update 에서 처리하는게 적합합니다.\n간혹 Chart.config() 로 제어를 할 수 없는 항목들이 있습니다. title 같은것들이었는데요, 이런경우\n load 의 done 에서 직접 접근해서 DOM 변경 변경 할 항목들을 가지고 Chart 를 아예 다시 생성 Chart 밖으로 꺼내서 다른 방식으로 보여주기  와 같은 방법으로 해결 할 수 있습니다.\n차트를 랜더링 할 수 있도록 호출 // ./src/App.jsx import React from \u0026#39;react\u0026#39;; import MyPieChart from \u0026#39;./charts/MyPieChart\u0026#39;; import \u0026#39;./App.css\u0026#39;; function App() { const myChartRef = React.useRef(null); const [pieData, setPieData] = React.useState({pour: 50, deep: 40, fry: 5}); // 차트가 업데이트 되는것을 보고 싶어서 2초마다 값이 조금씩 증가하게 만들었습니다.  React.useEffect(() =\u0026gt; { setTimeout(() =\u0026gt; { console.log(\u0026#39;data updated from\u0026#39;, pieData); setPieData({ pour: pieData.pour + 1.5, deep: pieData.deep + 1, fry: pieData.fry + 2, }); }, 2000); // 이부분에서 실재로 차트의 랜더링을 발생시킵니다.  const myPie = new MyPieChart(myChartRef); myPie.render(MyPieChart.forgeData(pieData)); }, [pieData]); return ( \u0026lt;div className=\u0026#34;App\u0026#34;\u0026gt; \u0026lt;div ref={myChartRef} /\u0026gt; \u0026lt;/div\u0026gt; ); } export default App; 완성 예제: Github repo\n후기 장점 Billboard.js 는 많은 부분 자동으로 처리해주는 부분이 많아서 쉽게 배워서 사용 할 수 있는 차트 라이브러리입니다.\n간단한 차트를 빠르게 구현해서 보고 싶을때 적합합니다.\n프로젝트가 잘 관리가 되고 있는것으로 보입니다. 질문등이 올라오면 잘 답장을 해주십니다.\nReact 에서 사용할때 불편함이 없었습니다.\n시행착오 견고? 경직? 정해져있는 크기와 일반적인 길이의 텍스트들이 legend 나 axis label 에 보여질때는 손대지 않아도 잘 그려줍니다.\n대신, 거의 모든 텍스트들이 여러줄이 된다거나 위치를 조정하고 싶다면 이때부터는 매우 불편해집니다.\n일반적인 요구조건이라면 문제가 없어서 시작은 쉽지만 커스터마이징은 다소 불편한면이 있습니다.\n문서도 예제도 있지만 헤멜수 있습니다. 생각보다 billboard.js 에서 제공하는 예제와 문서에 모든 디테일들이 있지 않습니다. 있는 기능이지만 예제와 문서에 명시가 되어있지 않다거나, 존재하는 제약사항임에도 API 문서에서 경고하고 있지 않습니다.\n일례로, 다른차트와는 다르게 Pie나 Donut 차트에서는 json 데이터를 사용하지 못하여 무조건 columns 로 변환해주어야 합니다.\n하지만 json 으로 값을 넣었을경우에는 axis 를 파싱하는데 실패한것과 같은 에러로그만 볼 수 있어서 무엇이 문제인지 파악하기가 어려웠습니다.\n결국 github 에 있는 issue 에서 다른분들이 주고받은 대화를 통해 load({json:{}) 형태로 데이터를 사용 할 수 없다는걸 알 수 있었습니다.\n때때로 코드를 읽어야 문제를 해결 할 수 있는 경우도 있었습니다. (코드가 많지는 않아서 읽지 못할분량은 아니였어요).\n마치며 바쁜데 친절한 동아리 선배같은 느낌의 라이브러리였습니다.\n가끔씩 골탕을 먹긴 하지만 전반적으로는 사용하기 편리해서 계속 사용할 의향이 있습니다.\n다만 매우 복잡하거나 작은곳에 높은 밀도로 정보를 보여줘야 하는 경우에는 좀 더 저수준의 라이브러리를 이용할것 같습니다.\n 잘못된 부분이나 궁금한점 있으면 알려주셔요 힘 닿는데까지 함께 고민해보겠습니다.\n "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/categories/development/",
+	"title": "development",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/categories/frontend/",
+	"title": "frontend",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/react/",
+	"title": "react",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/docker/",
+	"title": "docker",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/k8s/",
+	"title": "k8s",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/kubernetes/",
+	"title": "kubernetes",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/minikube/",
+	"title": "minikube",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2020-10-27-123532-installing-minikube/",
+	"title": "개발보조 목적의 Minikube 설치 및 설정",
+	"tags": ["k8s", "kubernetes", "minikube", "docker"],
+	"description": "",
+	"content": "Minikube 로컬환경에서 kubernetes 환경을 간단하게 세팅해서 개발에 활용 할 수 있는 minikube 의 설치방법에 대해 짧게 다뤄보도록 하겠다.\nMinikube Installation Guide\n1. install curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb sudo dpkg -i minikube_latest_amd64.deb minikube start 2. configuration alias kubectl=\u0026quot;minikube kubectl --\u0026quot; 를 bashrc 나 zshrc 등 사용하는 쉘에 alias 로 추가\nsource ~/.zshrc 로 로드하거나 새 터미널을 열고\nkubectl get po -A 로 동작 확인\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/ubuntu/",
+	"title": "ubuntu",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2020-10-27-082234-ubuntu-mouse-wheel-in-vmware/",
+	"title": "Ubuntu Mouse Wheel in Vmware",
+	"tags": ["vmware", "ubuntu"],
+	"description": "",
+	"content": "문제? 불가피하게 게임기에서 리눅스를 써야할일이 있을때 virtual box 를 이용해서 우분투를 계속 써왔는데 여러개 모니터를 사용하거나 할때 vram 도 부족하고 마우스가 오작동하는등의 어려움이 있어서 이번에 vmware 를 사용해보기로 했다.\nplayer 만해도 퍼포먼스가 정말 좋아서 맘에 들었는데.\n마우스 조작과 관련해서 맘에 안드는게 너무 많았다.\n 마우스의 앞으로, 뒤로 버튼이 동작하지 않음 마우스의 휠이 이상하게 동작함 (위아래로 점프한다거나 하는등 신호가 덜 들어가는 느낌?)  이 문제를 해결하기위해 약 이틀정도 삽질을 해서 해결했다.\n해결방법 환경  (host) windows 10 vmware player 16.x (guest) ubuntu 20.04  1. 마우스 앞, 뒤 버튼 활성화 vm이 설치된 폴더에 보면 .vmx 확장자의 파일이 있다.\n이걸 편집해야 한다.\nmouse.vusb.enable = \u0026quot;TRUE\u0026quot; mouse.vusb.useBasicMouse = \u0026quot;FALSE\u0026quot; usb.generic.allowHID = \u0026quot;TRUE\u0026quot; 이 3줄을 YOUR_VM.vmx 파일에다가 붙여넣는다. 개행만 잘 되면 위치는 중요하지 않다.\n2. 마우스 휠 동작의 정상화 관련 패키지 설치 # Install related packages sudo apt install xserver-xorg-core \\  xserver-xorg-input-evdev \\  xserver-xorg-input-evdev-hwe-18.04 \\  imwheel xinput 설정 변경 vi 로 다음 파일을 편집한다. sudo vi /usr/share/X11/xorg.conf.d/40-libinput.conf pointer 항목의 Driver 를 libinput 에서 evdev 로 변경하면 된다\n# 원본 Section \u0026quot;InputClass\u0026quot; Identifier \u0026quot;libinput pointer catchall\u0026quot; MatchIsPointer \u0026quot;on\u0026quot; MatchDevicePath \u0026quot;/dev/input/event*\u0026quot; Driver \u0026quot;libinput\u0026quot; # 이렇게 수정 Section \u0026quot;InputClass\u0026quot; Identifier \u0026quot;libinput pointer catchall\u0026quot; MatchIsPointer \u0026quot;on\u0026quot; MatchDevicePath \u0026quot;/dev/input/event*\u0026quot; Driver \u0026quot;evdev\u0026quot; imwheel 설정 스크립트 작성 http://www.nicknorton.net/mousewheel.sh 의 스크립트를 기반으로 하되 마지막줄을 imwheel -kill --buttons \u0026quot;4 5\u0026quot; 로 수정해준다. (이렇게 하지 않으면 앞, 뒤 버튼이 다시 동작하지 않음)\n#!/bin/bash # Version 0.1 Tuesday, 07 May 2013 # Comments and complaints http://www.nicknorton.net # GUI for mouse wheel speed using imwheel in Gnome # imwheel needs to be installed for this script to work # sudo apt-get install imwheel # Pretty much hard wired to only use a mouse with # left, right and wheel in the middle. # If you have a mouse with complications or special needs, # use the command xev to find what your wheel does. # ### see if imwheel config exists, if not create it ### if [ ! -f ~/.imwheelrc ] then cat \u0026gt;~/.imwheelrc\u0026lt;\u0026lt;EOF \u0026quot;.*\u0026quot; None, Up, Button4, 1 None, Down, Button5, 1 Control_L, Up, Control_L|Button4 Control_L, Down, Control_L|Button5 Shift_L, Up, Shift_L|Button4 Shift_L, Down, Shift_L|Button5 EOF fi ########################################################## CURRENT_VALUE=$(awk -F 'Button4,' '{print $2}' ~/.imwheelrc) NEW_VALUE=$(zenity --scale --window-icon=info --ok-label=Apply --title=\u0026quot;Wheelies\u0026quot; --text \u0026quot;Mouse wheel speed:\u0026quot; --min-value=1 --max-value=100 --value=\u0026quot;$CURRENT_VALUE\u0026quot; --step 1) if [ \u0026quot;$NEW_VALUE\u0026quot; == \u0026quot;\u0026quot; ]; then exit 0 fi sed -i \u0026quot;s/\\($TARGET_KEY *Button4, *\\).*/\\1$NEW_VALUE/\u0026quot; ~/.imwheelrc # find the string Button4, and write new value. sed -i \u0026quot;s/\\($TARGET_KEY *Button5, *\\).*/\\1$NEW_VALUE/\u0026quot; ~/.imwheelrc # find the string Button5, and write new value. cat ~/.imwheelrc imwheel -kill --buttons \u0026quot;4 5\u0026quot; 편한곳에 파일을 저장하고 chmod +x mousewheel.sh 로 실행 권한을 준 뒤에 시작프로그램에 추가해주면 된다.\nreferences  Fixing Mouse Wheel on Chrome in Ubuntu 18.04 Virtualbox / VMWare - Dan Voyce Ubuntu 20.04 mouse scroll wheel speed - Bavouzet Benoît https://io.bikegremlin.com/11541/linux-mouse-scroll-speed/ https://askubuntu.com/questions/439836/extra-mouse-buttons-not-working-in-virtualization-vmware-virtualbox-ubuntu-hos https://help.ubuntu.com/community/VMware/Tools https://wiki.archlinux.org/index.php/IMWheel  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/vmware/",
+	"title": "vmware",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2020-01-21-050835-cannot-use-fcitx-in-jetbrains-ide/",
+	"title": "Cannot Use Fcitx in Jetbrains IDE",
+	"tags": ["webstorm", "intellij", "jetbrains", "idea", "fcitx"],
+	"description": "",
+	"content": "Ubuntu 에서 IDEA 에서 Fcitx 가 사용 불가능한 문제 해결 WebStorm, Intellij, PyCharm 등 IDEA Jetbrains 의 IDE 가 업데이트 되면서 Fcitx 를 사용 할 수 없는 문제가 있다.\n아마도 IDEA가 자신을 실행하기위해 가지고 있는 jdk 가 11버전을 하는데 이것이 바뀌면서 input method 를 자동으로 disable 시키는것으로 보인다. 그래서 IDEA 클라이언트를 돌리는 JVM에 해당기능을 비활성화 해주는 옵션을 주는게 해결 하기위한 아이디어다.\n문제 재현 환경  Ubuntu 18.04 Jetbrains IDEA 2019.3.1  WebStorm, Intellij, PyCharm 등 모두 문제 발생   fcitx 4.2.9.6  해결방법 IDE 가 설치되어있는 디렉토리내에서 *.vmoptions 확장자의 파일을 찾는다.\n나의 경우 ~/Applications/JetBrains/apps/WebStorm/ch-0/193.5662.54.vmoptions 이다.\n파일을 열어 다음한줄을 마지막에 추가해서 저장한다. -Dauto.disable.input.methods=false\n그러면 아래와 같은 모습이 된다.\n-Xms128m -Xmx2048m -XX:ReservedCodeCacheSize=240m ... -Dsun.java2d.renderer=sun.java2d.marlin.MarlinRenderingEngine -Dsun.tools.attach.tmp.only=true -Dide.no.platform.update=true -Dauto.disable.input.methods=false 설정 파일을 저장하고 닫은다음 IDEA 를 다시 시작하면 정상적으로 fcitx 로 입력이 가능한것을 확인 할 수 있었다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/fcitx/",
+	"title": "fcitx",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/idea/",
+	"title": "idea",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/intellij/",
+	"title": "intellij",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/jetbrains/",
+	"title": "jetbrains",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/webstorm/",
+	"title": "webstorm",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/junit/",
+	"title": "junit",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/jvm/",
+	"title": "jvm",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/kotlin/",
+	"title": "kotlin",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2020-01-09-065408-kotlin-jvm-library/",
+	"title": "Kotlin Jvm Library",
+	"tags": ["kotlin", "jvm", "junit"],
+	"description": "",
+	"content": "Kotlin 으로 JVM Library 만들기\n1. Gradle 로 Kotlin 프로젝트 생성 mkdir kotlin-jvm-lib cd kotlin-jvm-lib gradle init Welcome to Gradle 6.0.1! Here are the highlights of this release: - Substantial improvements in dependency management, including - Publishing Gradle Module Metadata in addition to pom.xml - Advanced control of transitive versions - Support for optional features and dependencies - Rules to tweak published metadata - Support for Java 13 - Faster incremental Java and Groovy compilation - New Zinc compiler for Scala - VS2019 support - Support for Gradle Enterprise plugin 3.0 For more details see https://docs.gradle.org/6.0.1/release-notes.html Starting a Gradle Daemon, 2 incompatible Daemons could not be reused, use --status for details Select type of project to generate: 1: basic 2: application 3: library 4: Gradle plugin Enter selection (default: basic) [1..4] 3 Select implementation language: 1: C++ 2: Groovy 3: Java 4: Kotlin 5: Scala 6: Swift Enter selection (default: Java) [1..6] 4 Select build script DSL: 1: Groovy 2: Kotlin Enter selection (default: Kotlin) [1..2] 2 Project name (default: kotlin-jvm-lib): my-library Source package (default: kotlin.jvm.lib): com.myDomain.myGroup BUILD SUCCESSFUL in 39s 2 actionable tasks: 2 executed 이렇게 프로젝트를 초기화 하면 정형화된 디렉토리 구조와 gradle 빌드환경 구성이 제공됩니다.\n추가적으로 JUnit을 이용한 테스트도 함께 구성됩니다.\n2. 문서화를 위한 Dokka 설정 https://github.com/Kotlin/dokka 의 README 를 참고하여 build.gradle.kts 파일을 설정합니다.\n아래와 같이 plugin에 id(\u0026quot;org.jetbrains.dokka\u0026quot;) version \u0026quot;0.10.0\u0026quot; 를 추가합니다.\nplugins { // Apply the Kotlin JVM plugin to add support for Kotlin.  id(\u0026#34;org.jetbrains.kotlin.jvm\u0026#34;) version \u0026#34;1.3.41\u0026#34; id(\u0026#34;org.jetbrains.dokka\u0026#34;) version \u0026#34;0.10.0\u0026#34; // Apply the java-library plugin for API and implementation separation.  `java-library` } dokka를 설정합니다\nimport org.jetbrains.dokka.gradle.DokkaTask tasks { val dokka by getting(DokkaTask::class) { outputFormat = \u0026#34;javadoc\u0026#34; outputDirectory = \u0026#34;$buildDir/dokka\u0026#34; } } gradle dokka 명령어를 통해서 문서를 빌드하면 /build/dokka/index.html 를 열어서 문서를 확인 할 수 있습니다.\n만약 outputFormat을 다른것으로 지정하면 역시 /build/dokka/ 디렉토리 아래 결과물이 생성됩니다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/categories/contemplation/",
+	"title": "contemplation",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/development/",
+	"title": "development",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/essay/2019-08-30-141203-development-creed/",
+	"title": "개발 철학",
+	"tags": ["development"],
+	"description": "",
+	"content": "나의 개발 철학 이래저래 십수년간 코딩을 하면서 천천히 만들어진 나의 개발철학에 대해서 이야기해보려고 한다.\n 네 일, 내 일은 따로 없다. 데이터가 가장 중요하다. 지속 가능한 개발을 하자. 신기술을 알아두되 경계하자. 모든 부분이 재미있을 수는 없다.  네 일, 내 일은 따로 없다. 이 항목은 개발관이라기보다는 직업관에 가까운 내용이다.\n한때 나는 나에게 주어진 일만 잘하면 아무런 문제가 없다 라고 생각을 했다. 나에게 주어진 일을 빨리 끝내면 미래의 할 일을 미리 하고 그것마저 다 했다면 업무를 확장하여 더 많은 일을 해내고 이를 통해 능력을 인정받는 것이 엔지니어로서 가장 큰 성취라고 생각을 했었다.\n하지만 이 생각이 틀렸다는 것을 깨닫는데에는 긴 시간이 걸리지 않았다.\n일단, 어떠한 집단 에서 내가 소속되어 하는 일이 어떤 성격을 가지는지를 생각해보아야 한다.\n인간이 집단을 이루어서 행하는 일들은 대부분 혼자서 해결하기 어렵거나 큰 일이다. 그리고 그중에 나에게 주어진 일이 그자체로 가치를 가지는 경우는 많지 않다. 대게는 다른이가 이룬 성취들과 합쳐져서 큰 목표나 목적을 달성할때 비로소 가치를 얻게 된다.\n즉, 내가 많은 가치를 만드는데 기여하는 사람이 되려면 나에게 주어진 일을 잘 해내야 함은 물론이고, 나의 성취가 전체의 가치의 일부가 되기 위해 필연적으로 의존하고 의존될 다른이의 성취를 가속하는것도 매우 중요하다.\n이 생각을 좀 더 큰 스케일에서 적용 해 보면. 집단이 수행하는 목표나 목적을 달성하기위해 필요한 모든 일은 구성원 모두의 것이며 나에게 주어진 일은 나의 책임의 범위 내에 있을뿐이다 라고 정리 할 수 있다.\n \u0026ldquo;난 내가 할 일을 다 했어!\u0026quot;\n축하한다. 당신은 당신의 책임을 훌륭하게 완수했다.\n이제 더 큰 목표를 이루기 위해 주변을 돌아볼 시간이다.\n 데이터가 가장 중요하다. 컴퓨터 프로그래밍 은 컴퓨터 프로그램을 만드는 행위이고 __컴퓨터 프로그램__은 컴퓨터가 작업을 수행하기위한 명령어들의 집합체 라고 정의된다.\n하지만 난 프로그래밍을 왜 하는지에 대해 계속 질문을 던져왔고 나름대로 정리가 생겼다.\n내가 생각하는 프로그래밍의 목표는 __정보를 다루는 것__이다. 불과 망치로 쇠를가공하듯 코딩을 해서 정보를 다루는것이다.\n정보가 크건, 작건 어딘가 저장이되건, 휘발되건 이런건 큰 의미가 없다. 정보를 생성, 전달, 가공, 보존 하는 모든 행위가 이에 포함된다. 수많은 개념들이 흥망성쇠 했지만 변하지 않는것은 프로그램의 \u0026ldquo;입력과 출력\u0026rdquo;, \u0026ldquo;자극과 반응\u0026quot;의 대상이 되는것은 항상 데이터 자체였다.\n쓰기편하고 아름답게 만들어진 UI, 소설처럼 쉽게 읽히는 예술적인코드, 번개보다 빠르게 동작하는 성능을 가진 프로그램 이라도 잘못된 정보를 만들어낸다면 아무도 사용하지 않을것이다.\n그럼 프로그래밍을 하면서 우리가 최악의 상황에서도 사수해야하는 단 한가지, 그리고 마지막 가치는 정보를 잘 다루는 것이 된다.\n만들지 않아도 될 삼중 for 문을 작성하거나, 반납하지 않은 메모리들이 널부러져있는것도 세상끝 마지막 최후에는 괜찮을 수 있다. 데이터만 \u0026ldquo;잘\u0026rdquo; 처리되고 있다면.\n지속 가능한 개발을 하자. \u0026ldquo;내가\u0026rdquo; 하는 __\u0026ldquo;프로그래밍\u0026rdquo;__의 목적이 __\u0026ldquo;무엇\u0026rdquo;__이냐를 \u0026ldquo;데이터\u0026rdquo; 라고 정의 했다면 프로그래밍을 \u0026ldquo;어떻게\u0026rdquo; 할것이냐 라는 질문이 따라오게 된다.\n프로그램을 작성하는것은 문서와 논리를 자아내는 창작활동인 동시에 생명을 가진 결과물을 만드는 생산활동이다.\n게다가 서로 다른 인격체들이 여럿 모여서 함께 해내야 하는 과제다.\n프로그래밍은 한순간에 끝나지 않기 때문에 작업에 참여하는 사람들의 의식을 한방향으로 유도하지 않으면 갈피를 잃고 코드의 엔트로피가 높아져서 결국은 유지보수가 더2019-08-30T14:12:03.388Z이상 불가능한 지경에 (너무 빨리) 이르게 될것이다.\n그렇다면 프로그램의 \u0026ldquo;수명\u0026rdquo; 을 길게 만들기 위해서는 어떤것들이 필요할까?\n옛날 일기를 꺼내 읽어보면 느낄수 있듯, \u0026ldquo;미래의 나\u0026rdquo; 와 \u0026ldquo;과거의 나\u0026rdquo; 는 \u0026ldquo;현재의 나\u0026rdquo; 가 아닌 타인이나 마찬가지다. 이 때문에 나는 개인 프로젝트를 할 때에도 내 코드를 읽고 이해하며 고치는 사람이 완벽한 타인으로 간주하기로 했다.\n지속가능한 개발이라는것이 \u0026ldquo;내 다음에 일할 사람이 계속해서 작업할 수 있는 환경을 만들어주는것\u0026rdquo; 이라고 정의하면 \u0026ldquo;과거의 나\u0026rdquo; 라는 타인이 내게남긴 코드에서 \u0026ldquo;현재의 나\u0026rdquo; 가 기대하거나 요구하는것들을 \u0026ldquo;미래의 나\u0026rdquo; 에게 만들어 건내주는것이 제일 쉬운 접근방법이라고 생각했다.\n당장 몇개 생각해보자면 이런것들이 있을 수 있겠다.\n 문서화 (자동화) : 여기저기 CMS 를 뒤져 관련문서를 찾기보다는 한군데서 필요한 문서를 얻고싶다. 테스트코드 : 내가 덧붙이거나 고친것이 이전사람이 이룬것을 고장내거나 않았는지 확인하고 싶다. 가독성을 신경쓰기 : 좀 읽을 수 있게 적어놨으면 좋겠다. 코드리뷰 : 만약 의지할 사람이 있다면 내가 잘했는지 검사를 받고 싶다. 리팩토링 : 더 간결하거나 잘 작성 할 수 있는 부분은 좀 고쳐놨으면 좋겠다.  이왕 만드는 내 자식같은 프로그램들이 이왕이면 다른사람의 도움을 받아 많이 발전하고 장수하면 좋지 않은가?\n신기술을 알아두되 경계하자. 신기술은 기존기술의 한계를 극복하기위해 개발되거나 새로운 패러다임을 제시하기 때문에 배울점이 반드시 있다고 본다.\n때문에 항상 우리가 새로 접하는 신기술들은 밝게 빛나보이며 자기들이 제일 잘났다고 소리를 지른다.\n하지만 무조건 현혹되어 비판하지 않고 맹목적으로 신기술을 수용하게 되면 필요도 없는 기술을 공부하는데 시간을 낭비하거나 시야가 좁아질 위험이 있다.\n특히나 요즘은 오픈소스 프로젝트들도 어딘가에는 결국 비지니스를 하는 조직이 있는경우가 많기 때문에 장점이 부풀려지고 단점은 쉬쉬하려고 한다.\n그렇다고 쏜살같이 흘러가버리는 기술트랜드를 그냥 놓아서 흘려 보낼수는 없으니 \u0026ldquo;적당히\u0026rdquo; 파악을 해두는 노력은 항상 해야한다.\n우선, 신기술을 파악해두는 목적이 무엇인지 분명히 해야한다.\n모든 요구조건을 만족시킬 수 있는 완벽한 범용기술은 존재하기 어렵다. 같은 영역에서 사용되는 소프트웨어라고 할지라도 장점과 단점을 각기 가지고, 그로인한 개성과 특징이 기술선정의 이유 혹은 목적이 된다.\n그래서 나는 \u0026ldquo;미래에 내가 이런기술이 필요할때 선택지에 넣기위해서\u0026rdquo; 알아둔다고 생각한다.\n이런 생각을 가지고 나면 신기술을 공부할때 관심있게 보아야 하는 포인트들이 명확해진다.\n 용도, 만들어진 이유 장점 단점 배우는데 걸리는 수고  전문가가 될 필요도 없고, 어디가서 아는척을 할 필요도 없다. 단지 머릿속에 색인해두고 가끔씩 업데이트 해두면 나중에 기술선정을 해야할때 서베이를 시작하는 마중물로 사용하기만 해도 충분히 가치가 있을것이다.\n모든 부분이 재미있을 수는 없다. 파이의 테두리나 수박의 흰부분처럼 맛없는 부분 같은게 프로그래밍에도 있다. 문서작성, 테스트코드작성, 혹은 자동화하기 애매한 반복작업등이 내게는 그런 부분이다.\n이런 일들은 남이 대신해주지 않을뿐더러 해주는게 효율적이지도 않다. 완성된 소프트웨어를 만드는데는 반드시 필요한 부분이기 때문에 피할 수도 없다.\n나는 이런 일들을 최대한 줄이거나 효율적으로 처리하기 위해 가능한 자동화를 하지만, 이렇게까지 해도 결국 우직하게 해 내야만 하는 일은 남는다.\n받아들이는데는 여러가지 방법이 있겠지만 난 이것을 완성을 하는 작업이나 일종의 수양으로 받아들이곤 한다.\n용그림의 눈에 점을 찍는다는 마음으로 인내를 가지고 할 수 밖에 없다.\n그리고 비로소 전체가 완성되었을때 느낄 수 있는 희열은 코딩이나 디버깅을 하면서 얻을 수 있는 그것과는 또 다른 느낌인지라 나름대로의 재미가 있다.\n줄이며 프로그래머 100명이 있다면 개발철학도 100개가 있을것이고, 나의 기준과 완벽히 대치되는 지점에 서있는 누군가도 있을것이다.\n그렇기에 이런 생각들은 맞고 틀리고를 가리고자 하는 기준이라기 보다는 프로그래머의 개으로 보고 서로 존중하는것이 좋다고 생각한다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/express/",
+	"title": "express",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/nodejs/",
+	"title": "nodejs",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/categories/nodejs/",
+	"title": "nodejs",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/contemplation/",
+	"title": "contemplation",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/essay/2019-08-25-093723-thrown-dice/",
+	"title": "던져진 주사위, 엎질러진 물",
+	"tags": ["contemplation"],
+	"description": "",
+	"content": "질답 대부분의 사람이 그렇듯\n난 내가 달성해야 하는 성격의 행위를 할때 그 준비에 공을 많이 들이는 편이다. 물론 그 정도는 나의 간절함에 비례하곤 한다. 그리고 반동으로 행위를 마쳤을때 그 결과에 대해 스트레스도 그만큼 많이 받았다.\n예전에 어떤분께 질문을 할 수 있는 기회가 있었다.\n 세상일이 내가 열심히 한다고 해서 그에 맞추어 결과가 나오는것이 아닌데, 결정을 내렸을때 그 결과에 대한 스트레스를 어떻게 핸들링 하시는가?\n 질문을 던졌을때 나는 아주 대단한 철학적인 대답을 기대했던것 같다.\n하지만 내가 들을 수 있었던 대답은 생각보다 담백한 내용이었다.\n 최선을 다 해보고 그다음 결과가 어떻게 나오는지에 대해서는 신경쓰지 않으려고 한다. 이미 일어난 일은 그냥 일어난 일이다.\n 사유 질답의 길이에 비해서는 많은 생각을 오랫동안 할 수 있었다.\n문제를 해결하기 위해 하는 고민, 노력, 전략적 선택, 각기다른 결과에 따른 대응안. 이런것들을 고려하지 않는다는 이야기가 아니였다.\n내가 개입 할 수 있는 변수가 아닌 미지수에 의해 발생하는 결과의 불확실성 때문에 받는 스트레스는 예비과정의 그것과는 완전히 별개의 것으로 취급한다는 것이였다.\n좀 더 줄여 말하면, __결과를 받아들이는 일은 행위와 별개__라는 것이다.\n내 스타일대로 이 질답을 음미하면서 난 두가지 생각을 세우게 되었다.\n하나,\n어떤 행위에 대한 결과는 내가 스트레스를 받는다고 하여 바뀌지 않는다. 결과의 자체가 스트레스가 될 필요가 없다.\n중요한것은 그 이후에 내가 어떻게 행동할것인가 인데, 이것은 평상시에 내가 어떻게 예상을 하고 계획을 세워왔는지에 달려있다. 평소에 잘 준비하고 대비했다면 자책할일도 없을것이라고 생각한다.\n둘,\n다른 사람이 행한 일이 잘못되었을때도 마찬가지이다. 결과에 대응하고, 이후 그 사람에 대한 변수를 업데이트 하면 된다.\n실수나 잘못된 판단을 한 타인에 대해 감정적으로 대응 할 필요가 없어진다. 내가 화내고 싸운들 결과가 바뀌지 않는다. 그 사람과는 다음에 취할 행동이나 일하는 방식에 대해서만 이야기 하면 된다.\n물론 아는것과 실천하는것은 다르다.\n아직도 내가 스트레스로부터 완전히 자유로워진것은 아닌것 같지만. 이전과 비교해서 지금의 나는 훨씬 의연하게 결과를 받아들일 수 있는 여유가 생긴것 같다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/java/",
+	"title": "java",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/categories/java/",
+	"title": "java",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/spring/",
+	"title": "spring",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/spring-boot/",
+	"title": "spring boot",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2019-08-10-064434-install-java-with-version-manager/",
+	"title": "Install Java With Version Manager",
+	"tags": ["java"],
+	"description": "",
+	"content": "왜 Version Manager 가 필요한가? Ruby 의 RVM, Node.js 의 NVM 을 사용했을때 의 경험이 매우 좋았습니다.\n다른 버전의 실행환경에서 미리 테스트도 할 수 있었고 새 버전으로 넘어갈때 훌륭한 백업 플랜을 제공해주기도 했으니까요.\n무엇보다도 개발환경을 큰 시간을 들여서 매번 갈아엎을 필요가 없다는것이 가장 큰 매력이었습니다.\n왜 이제와서? 제가 JAVA 를 주로 쓸적에는 (주로 Android 프로젝트를 많이 했습니다.) Windows 나 Linux 에 Oracle JDK 를 깔아서 기본 설정된 PATH를 중심으로 사용했었습니다. 이제와서 JAVA 프로젝트를 다시 해볼까 싶어서 보니 OpenJDK 로 넘어가려고 하는 분위기를 풍기는 사람도 있고, 최신버전을 미리 써보니 좋더라 라는 분들도 보였습니다. 그러면 JAVA 도 버전관리 해주는 좋은 툴이 있을까 싶어 찾아보게 되었습니다.\nSDKMan  The Software Development Kit Manager\n 제가 원하던것과 가장 비슷한 툴은 SDKMan 이었습니다.\n설치 가능한 버전을 설치하고 환경변수를 바꾸는 기능도 제공을 해 주고 있습니다.\nJava 뿐만 아니라 JVM 을 사용하는 groovy, scala, grails, gradle, kotlin 등의 다양한 언어들의 설치와 환경관리도 지원합니다.\nInstallation \u0026gt; curl -s \u0026#34;https://get.sdkman.io\u0026#34; | bash \u0026gt; source \u0026#34;$HOME/.sdkman/bin/sdkman-init.sh\u0026#34; 위의 설치 스크립트가 zsh 나 bash 정도는 *rc 파일이나 .profile 파일을 업데이트 해 줍니다. 별도의 작업이 없었습니다.\nJDK 설치 \u0026gt; sdk list java # 설치 가능한 JAVA 리스트를 보여줍니다 ============================================================================ Available Java Versions ============================================================================ Vendor | Use | Version | Dist | Status | Identifier ---------------------------------------------------------------------------- AdoptOpenJDK | | 12.0.1.j9 | adpt | | 12.0.1.j9-adpt | | 12.0.1.hs | adpt | | 12.0.1.hs-adpt | | 11.0.4.j9 | adpt | | 11.0.4.j9-adpt . . . Java.net | | 14.ea.6 | open | | 14.ea.6-open | | 13.ea.30 | open | | 13.ea.30-open | | 12.0.2 | open | | 12.0.2-open | | 11.0.2 | open | | 11.0.2-open | | 10.0.2 | open | | 10.0.2-open | | 9.0.4 | open | | 9.0.4-open SAP | | 12.0.2 | sapmchn | | 12.0.2-sapmchn | | 11.0.4 | sapmchn | | 11.0.4-sapmchn ============================================================================ Use the Identifier for installation: $ sdk install java 11.0.3.hs-adpt ============================================================================ 위와같이 밴더별로 사용 가능한 Java 버전들이 보입니다.\n저는 OpenJDK 9버전을 사용하고 싶으니 아래 안내처럼 설치명령어를 실행했습니다.\n\u0026gt; sdk install java 9.0.4-open Downloading: java 9.0.4-open In progress... ################################################################ 100.0% Repackaging Java 9.0.4-open... Done repackaging... Installing: java 9.0.4-open Done installing! Setting java 9.0.4-open as default. 설치가 잘 되었는지 확인해봅니다.\n\u0026gt; java --version openjdk 9.0.4 OpenJDK Runtime Environment (build 9.0.4+11) OpenJDK 64-Bit Server VM (build 9.0.4+11, mixed mode) 다른 버전도 설치하고 교체 해보기 그럼 다른 버전도 똑같이 설치하고 스위치 해서 사용해보도록 하죠 이전과 마찬가지로 sdk install java 12.0.2-open 을 통해 12버전을 설치하고나서 다시 java 리스트를 보면\n\u0026gt; sdk list java ============================================================================ Available Java Versions ============================================================================ Vendor | Use | Version | Dist | Status | Identifier ---------------------------------------------------------------------------- AdoptOpenJDK | | 12.0.1.j9 | adpt | | 12.0.1.j9-adpt | | 12.0.1.hs | adpt | | 12.0.1.hs-adpt . . . Java.net | | 14.ea.6 | open | | 14.ea.6-open | | 13.ea.30 | open | | 13.ea.30-open | | 12.0.2 | open | installed | 12.0.2-open | | 11.0.2 | open | | 11.0.2-open | | 10.0.2 | open | | 10.0.2-open | \u0026gt;\u0026gt;\u0026gt; | 9.0.4 | open | installed | 9.0.4-open SAP | | 12.0.2 | sapmchn | | 12.0.2-sapmchn | | 11.0.4 | sapmchn | | 11.0.4-sapmchn ============================================================================ 이처럼 9.0.4-open 버전이 사용중이라고 표시가 되어있습니다. 그리고 새로 설치한 12.0.2-open 이 installed 라고 보여집니다. 그럼 이제 12 버전을 사용하도록 바꿔보도록 합니다.\n\u0026gt; sdk use java 12.0.2-open Using java version 12.0.2-open in this shell. \u0026gt; java --version openjdk 12.0.2 2019-07-16 OpenJDK Runtime Environment (build 12.0.2+10) OpenJDK 64-Bit Server VM (build 12.0.2+10, mixed mode, sharing) \u0026gt; which java /home/noizbuster/.sdkman/candidates/java/12.0.2-open/bin/java 명령어 한번에 Environment 까지 모두 설정이 되는 모습을 볼 수 있습니다.\n이제 다른 언어나 버전도 이와같은 방법으로 설치하고 필요에 따라 그때그때 바꿔서 사용 할 수 있습니다.\nReferences  SDKMan  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/nodejs/package-tour/0001-lodash/",
+	"title": "Lodash - 만능 주머니칼",
+	"tags": ["nodejs"],
+	"description": "",
+	"content": "Lodash  A modern JavaScript utility library delivering modularity, performance \u0026amp; extras.\n 처음으로 Package Tour 에서 이야기하고자 하는 패키지는 역시 Lodash 입니다.\n저는 Node.js 를 처음 접하고 다른 사람들의 코드를 읽기 시작하고나서 _.find(data, {id: 'MY_ID'}) 와 같은 코드를 자주 접하게 되었습니다.\nNode.js와 Javascript를 배우기 이전에 제가 주로 사용하던 Python 이나 JAVA 같은 언어에서는 $ 나 _ 같은 특수문자를 단독으로 변수명으로서 사용하는 경우를 본적이 없어서 매우 생소했던 기억이 있습니다.\nLodash 는 array, collection, object 들을 대량으로 조작하는데 필요한 함수들을 다양하게 제공합니다.\njavascript 내장 array의 map(), filter(), reduce() 와 같은 함수들은 때로는 Lodash의 그것보다 빠르거나 느리거나 합니다. 하지만 훨씬 유연하고 작성하기 쉬운 함수들을 제공합니다.\n나의 경험 저는 lodash를 매우 헤비하게 사용합니다. 사실상 거의 모든 기능을 수시로 사용하고 있습니다.\n그중에서도 제가 특히 즐겨 사용하는 기능은 set, get, find 와 같은 함수들 입니다.\n어떤것들은 javascript 에도 있는 기능들이지만 비교해보면 번거로운 작업들을 많이 줄여줍니다.\n예를들어 nasted 한 object 깊숙이 있는 데이터를 꺼내오고 싶을때를 예로들면 이렇습니다.\nconst data = { family: [ {name: \u0026#39;carry\u0026#39;, role: \u0026#39;mother\u0026#39;}, {name: \u0026#39;david\u0026#39;, role: \u0026#39;father\u0026#39;}, {name: \u0026#39;tom\u0026#39;, role: \u0026#39;son\u0026#39;}, ], stranger: [ {name: \u0026#39;kim\u0026#39;, role: \u0026#39;doctor\u0026#39;} ] } 만약 두번째 가족구성원의 역할을 가져오고 싶다면 어떤식으로 접근해야 좋을까요?\n안전하게 데이터를 읽고 싶다면 이런식으로 작성 할 수 있습니다.\nlet role = undefined; if (data.hasOwnProperty(\u0026#39;family\u0026#39;)) { if (data.family.length \u0026gt;=2) { role = data.family[1].role; } } 하지만 lodash를 사용하면 한줄이면 됩니다.\nlet role = _.get(data, \u0026#39;family.1.role\u0026#39;); 만약 family 나 array 의 두번째 원소, 혹은 role 필드가 없다면 위 함수는 undefined 를 리턴하게 됩니다.\n가뜩이나 복잡한 작업을 해야하는데 단순한 json 데이터 접근까지 피곤하다면 금새 지쳐버릴지도 모르죠.\n이럴때 lodash 는 생산성에 큰 도움이 됩니다.\nset 도 마찬가지로 nasted 한 경로를 주고 값을 집어넣으면 중간에 비는 array나 object 를 알아서 생성해줍니다.\nfind 의 경우에는 굳이 함수로 작성하지 않고도 조건을 간단하게 줄 수 있습니다. 위의 예시에서 엄마에 해당하는 object를 찾고 싶다면\nconst motherObject = _.find(data.family, {role: \u0026#39;mother\u0026#39;}); 이런식으로 처리 할 수 있습니다.\nHow to Use 여러가지 방법으로 패키징되어 배포되고 있는 라이브러리지만, 서버작업을 주로하는 저는 npm 으로 설치해서 가장 많이 사용합니다.\nnpm install lodash --save 코드내에서는 저도 _ 문자로 주로 할당해서 사용합니다.\nconst _ = require(\u0026#39;lodash\u0026#39;); const data = {name: \u0026#39;noizbuster\u0026#39;, age: 30, password: \u0026#39;awesome_me\u0026#39;}; const public_data = _.pick(data, [\u0026#39;name\u0026#39;, \u0026#39;age\u0026#39;]); Alternative, Similar Project  underscore - lodash 의 가장 큰 경쟁자입니다. 제공하는 기능도 비슷하고 사용법도, 심지어 이름조차 비슷합니다!  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/nodejs/nodejs-basic/001-install-nodejs/",
+	"title": "001. Nodejs 제대로 설치하기",
+	"tags": ["nodejs"],
+	"description": "",
+	"content": "Node.js 제대로 설치하기 Node.js 를 설치하는 방법은 아주 다양합니다. 크게 나눠보자면\n Binary 를 다운로드 받아 사용하는 방법 PackageManager 를 사용해서 설치하는 방법 직접 빌드하는 방법 NVM (Node Version Manager) 를 사용하는 방법  으로 분류 할 수 있습니다.\n거두절미하고 제가 강력하게 추천하는 방법은 NVM 을 사용하는것입니다.\n설치 방법을 빠르게 배우고 싶은 사람은 NVM을 이용한 Node.js 설치 부터 보세요.\n장, 단점 NVM 을 사용하는 경우  Pros  사용하는 Node.js 버전을 쉽게 변경 할 수 있다. Global Package 를 사용할때 권한 관련 문제가 없다.   Cons  설치가 다소 번거롭다    Package Manager 를 이용해서 설치 했을 경우  Pros  설치가 간단하다.   Cons  Global Package 를 설치하고 사용할때 권한관련 문제가 발생 할 수 있다.    수동으로 빌드하거나 Binary를 사용하는 경우  Pros  Package Manager 가 없는 OS배포판에서 사용 할 수 있다. 설정을 내 맘대로 고치기 편하다.   Cons  설치가 !매우! 번거롭다.    NVM을 이용한 Node.js 설치 아래 가이드는 Linux(ubuntu) 를 사용하는것을 가정하고 작성되었습니다.\nGithub \u0026gt; nvm-sh 의 README.md 를 참고해서 설치하면 됩니다.\n설치 # CURL 로 설치 스크립트를 다운로드 받아서 실행합니다. curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash # 만약 CURL 말고 WGET 을 사용하고 싶은 경우에는 다음 명령어를 대신 사용하세요 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash 설정 1. bash 설정 홈디렉토리 아래 있는 .bashrc 혹은 .history 파일을 텍스트에디터로 열어서 맨 아래에 아래 스크립트를 추가해주도록 합시다.\n만약 zsh 를 사용하는 경우에는 .zshrc 파일에 추가해주어야 합니다.\nexport NVM_DIR=\u0026#34;${XDG_CONFIG_HOME/:-$HOME/.}nvm\u0026#34; [ -s \u0026#34;$NVM_DIR/nvm.sh\u0026#34; ] \u0026amp;\u0026amp; \\. \u0026#34;$NVM_DIR/nvm.sh\u0026#34; # This loads nvm 2. 설정 확인 이렇게 추가된 스크립트는 새로운 터미널을 열어야지 적용이 됩니다. 만약 작업하던 터미널에서 바로 사용하고 싶다면 그냥 터미널에 위 명령어를 다시한번 입력하면 됩니다.\nnvm --version 명령어로 nvm 이 잘 설치되었는지 확인 할 수 있습니다. 정상이라면 화면에 nvm 의 버전이 출력될것입니다.\n3. node \u0026amp; npm 설치 nvm ls-remote --lts 명령어로 설치 할 수 있는 버전의 목록을 볼 수 있습니다. \u0026ndash;lts 옵션을 떼면 nightly build 나 legacy 빌드도 볼 수 있습니다.\n이글을 쓰는 시점에서 LTS는 10.16.x 버전 입니다. nvm install 10 명령어로 설치하도록 합니다.\nnvm install 10 Downloading and installing node v10.16.0... Downloading https://nodejs.org/dist/v10.16.0/node-v10.16.0-linux-x64.tar.xz... ###################################... 100.0% Computing checksum with sha256sum Checksums matched! Now using node v10.16.0 (npm v6.9.0)``` nvm current 명령어로 현재 설정된 node 버전을 확인 할 수 있습니다. node --version 에도 동일한 버전이 보일것입니다.\n만약 설치된 다른 버전(8)을 사용하고 싶다면 nvm use 8 과 같은 방법으로 그때 그때 변경해서 다른 버전을 사용 할 수 있습니다.\n자, 이제 설치된 Node.js 로 재미있게 개발을 시작할 준비가 되었습니다. 설치한 유저별로 별도의 global package 디렉토리를 가지기 때문에 sudo 권한이 없더라도 npm install -g some-package 같은 명령어도 아무런 문제없이 사용 할 수 있습니다.\nPackageManager 를 통해 설치했을때 팁 nvm 을 사용하고 싶지 않거나 이미 Pacakge Manager 를 통해서 설치를 해서 사용중인경우 Global Package 를 설치할때 문제가 발생 할 수 있습니다.\n 개인적인 경험으로는 angular 를 설치할때 Sass 관련 패키지들의 바이너리 빌드가 권한 문제로 실패를 해서 문제를 일으키곤 했었습니다.\n ubuntu 에서 apt 를 이용해서 node 를 설치한 경우 Global로 설치된 패키지들은 /usr/local/lib/node_modules에 위치하게 됩니다. 그런데 이 경로는 root 권한이 있어야지 파일을 쓸 수 있는 영역입니다. 때문에 sudo npm install some-package 처럼 실행해줘야 하는것이죠\n그런데 어떤 패키지들은 다른 언어로 된 외부 라이브러리를 설치 이후에 빌드를 하여 바이너리를 생성하는 경우가 있습니다. 이때, 설치는 sudo 권한으로 이루어졌지만 post install 스크립트는 유저권한으로 실행되기 때문에 빌드 결과물이 /usr/local/lib/node_modules 안에 안착하지 못하게 되어 문제가 발생하게 됩니다.\n이를 해결하기위해 sudo -i 옵션을 주거나, global 경로에 일부분만 권한을 다르게 주는등의 지저분한 방법을 사용 할 수도 있지만, 매번 해주어야 하고 다른 문제를 야기 할지도 모르는 일이니 지양하는것이 좋습니다.\n보다 나은 해결 방법은 npmjs.com \u0026gt; fixing-npm-permissions 에서 제안하고 있습니다.\nglobal package 가 설치되는 경로를 권한문제가 없는 user 의 홈디렉토리로 변경해서 사용하는 방법 입니다.\n요약하면 아래와 같습니다.\n# 홈디렉토리에 global package 를 저장할 디렉토리를 하나 만듭니다. mkdir ~/.npm-global # npm config 명령어로 설정을 변경해줍니다. npm config set prefix \u0026#39;~/.npm-global\u0026#39; global 패키지들 터미널에서 실행시킬수 있도록 PATH 에 해당 디렉토리를 추가해줍니다.\n아래 내용을 .bashrc, .zshrc, .profile 와 같은 위치에 넣어줍니다.\nexport PATH=~/.npm-global/bin:$PATH 이제 sudo 권한을 주지 않아도 global package 를 설치해서 사용 할 수 있게 되었습니다.\n 만약 이 방법으로 global 설정을 한 상태에서 nvm 을 사용하는 방법으로 돌아가려면 nvm 설치 이전에 홈디렉토리에 .npm 으로 시작하는 관련된 설정 파일들을 모두 삭제 해주어야 합니다. 그리고 package manager 를 통해 node 를 삭제한 후 남아있는 PATH 나 심볼릭 링크가 있는지 확인하여 (which node) 찾아 삭제도 해주어야 합니다.\n 마치며 어떤식으로 설치를 하건간에 큰 문제는 없지만, 이왕이면 편하고, 다양한 상황에 잘 대처 할 수 있는 방법이 무엇인지 찾다가 nvm 을 사용하는 방법으로 정착했습니다.\n주변에 Node.js 를 나중에 시작하신분들이 아직 Node.js 를 배워가는 과정중에 설치와 관련된 문제를 만나게 되어 골탕을 먹고 고생을 많이 하는 모습을 보았습니다.\n저의 경우 이전에 rvm을 써본적이 있었기에 유사한 구석이 많아서 적응하는데 큰 어려움이 없었지만 대부분 Node.js 를 처음 시작하는 분들이 nvm으로 시작하는 경우는 거의 본적이 없어서 도움이 되지 않을까 기대해 봅니다.\nReferences  Node.JS \u0026gt; Installation Guide \u0026gt; PackageManager \u0026gt; nvm Github \u0026gt; nvm-sh npmjs.com \u0026gt; fixing-npm-permissions  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2019-01-09-135737-esm-on-nodejs/",
+	"title": "ESM? CJS? In NodeJS",
+	"tags": [],
+	"description": "",
+	"content": "동기 EcmaScrit Module 가 explorer 를 제외한 메이저 브라우저에서 모두 지원이 되는 마당에 코드 재활용성 문제도 있고 해서 ESM 스타일로 일부 코드가 작성되었을 경우 nodejs 프로젝트에서도 사용하고 싶게 되었다.\n물론 nodejs 의 고유기능들을 사용하려면 (package.js관련된것이나, 배터리 패키지들) ESM 스타일로 코드를 짠들 브라우저 호환성을 보장 할 수 없지만 전체 코드베이스에서 이런 디펜던시를 가지는 파일들이 몇개나 되는지 생각해보면 적용 할 가치는 충분하다고 생각하고, 시간이 지날수록 더욱 중요해 질것이라고 기대한다.\njavascript 호환성 관련 자료  https://www.w3schools.com/js/js_versions.asp https://caniuse.com/#tables https://node.green/  비슷한 주제의 읽을거리  Solving the \u0026ldquo;ESM in NodeJS\u0026rdquo; Odyssey.  방법 여러가지 방법이 있지만 시도해본 메이져한 방법들 각각의 장점, 한계점에 대해 이야기를 해 보겠다.\n1. babel build 아예 프로젝트 전체를 트랜스파일링 해서 ES5 나 ES6 로 빌드해버리는 방법\n장점  nodejs 뿐만 아니라 브라우저에서의 동작도 보장할 수 있다.  단점  빌드시간이 오래걸린다. 서드파티 개발자가 디버깅할때 번거로울 수 있다.  2. nodejs native nodejs native ESM 호환 기능을 사용함 \u0026ndash;experimental-modules\n장점  별도의 빌드 과정을 만들고 관리하지 않아도 됨 있는파일 그대로 가지고 디버깅 할 수 있음  단점  낮은버전의 nodejs 에서 동작을 보장하지 않음. 마찬가지로 브라우저에서도 그대로 사용 할 수 없음. esm 형태로 작성된 파일은 무조건 .mjs 확장자를 사용해야함. mjs 파일 내에서는 require 를 사용 할 수 없음.  내부적으로 캐싱이 따로 되기 때문에 require 캐시를 이용하여 싱글톤 패턴처럼 사용한 경우에는 프로그램이 의도하지 않은 동작을 할 수 있음 참고   babel 로 빌드된 모듈을 import 하거나 클래스를 상속받을때 오동작함  3. esm 장점  mjs 확장자를 강요당하지 않음 기존에 쓰던 테스트코드를 그대로 사용 할 수 있음 zero configuration 별도의 빌드 과정을 만들고 관리하지 않아도 됨 (사용하고 싶다면) ESM파일 내에서 require 도 섞어서 쓸 수 있음. (\u0026hellip; 근데 왜?)  단점  babel 로 빌드된 모듈을 import 하거나 클래스를 상속받을때 오동작함 파일이 nodejs 디펜던시가 있는지 없는지 분간하기 어려움 (개발자가 파일에 명시된 디펜던시를 체크해야함)  즉, 웹브라우저에서 쓸수있는 파일이 어떤것인지 명시적이지 않음.    4. @babel/cli 에 포함된 babel-node 장점  esm 과 비슷한 편의성, 빌드관리 하지 않아도 됨 메모리를 더 먹는것 같음 babel 로 빌드된 모듈들을 별다른 설정없이도 잘 읽어들임 mjs 확장자를 강요당하지 않음  단점  빌드시간이 오래걸린다. 서드파티 개발자가 디버깅할때 번거로울 수 있다.  추가설명 nodejs \u0026ndash;experimental-modules, esm 에서 babel로 빌드된 패키지들이 발생시키는 문제 구체적으로 설명하자면 babel로 빌드된 패키지들을 읽어올때 default export 를 제외한 export 를 제대로 인식하지 못한다. 또, 빌드된 class 들의 constructor 안에서 super() 를 콜하더라도 전혀 동작하지 않는것으로 보였다.\n결론 TL;DR;  사용하는 라이브러리가 babel로 빌드되어있으면 당분간은 babel 사용이 좋음  빌드 해야하면 babel 설정 그냥 실행만 시키고 싶으면 @babel/cli 설치후 babel-node 로 실행   사용하는/할 라이브러리가 앞으로도 babel이랑 관계가 없을것으로 기대한다면  mjs 확장자를 싫어하면 esm, 써도 상관없다면 nodejs 의 \u0026ndash;experimental-modules 를 사용    고찰 Broken system esm 이나 nodejs 자체 옵션을 이용하여 얼마든지 ESM 을 사용 할 수 있음. 그러나 이건 어디까지나 ESM 으로 작성된 파일을 사용하는데 국한된 이야기이고 babel로 빌드된 ESM 모듈을 사용하려면 결국 babel 을 사용하는게 정신건강에 이로워보임\n브라우저에서 최신 javascript 스펙들을 지원하기 시작한 이래로 ES6^ 의 이용이 급속도로 전파되고 있는 현상이 commonjs 를 사용하는 Node.js 커뮤니티를 지속적으로, 점점 더 심하게 괴롭힐것으로 예상된다.\nbabel을 사용하고 있는 골드가 되어버린 레거시들이 너무 많은데다 안정된 자리를 차지하고 있고 TypeScript를 사용자들의 입장도 있기 때문에 새로운 커뮤니티의 합의를 이루는것은 점점 더 어려워졌다고 본다. 앞으로는 불가능하다고 보는게 옳을것이다.\n좋을것은 없다. 이런 상황이 Node.js에게 위기가 될것이냐에 대해선 의문이긴 하다. 이미 Node.js 는 충분한 가치를 제공하고 있고 브라우저에서 사용되는 javascript가 commonjs 와 다름에 대해선 선을 그어놓고 있었기 때문에 혼란을 줄 염려도 적다.\n하지만 범용으로 쓰이고 싶은 라이브러리들이 ESM을 공격적으로 받아들이고 있는데다 절대 다수의 프로젝트들이 관리상의 이유로 한가지 빌드만 만들어 npm에 배포시키고 있다. bower 가 죽어가는 마당에 이런 괴리는 점점 심해질것이고, 이런 괴리는 Node.js 의 입지에 악영향을 줄것이다.\nHow to solve 이 문제는 Node.js 가 아니라 npm 으로 풀어야 할 문제인것 같다. 이미 \u0026ndash;experimental-modules 나 esm 과 같은 방법으로 유저들은 Node.js 에서 ESM 을 사용하고 싶은 욕망과 그에대한 답변을 들었으며 이를 실무와 유리시키고 있는것이 트랜스파일링 이라고 본다.\n잠깐 딴 이야기를 하자면 내가 타입스크립트를 좋아하지 않는 이유중에 하나가 type.d 파일의 존재이기도 하다. 아주 거추장스럽고 모든 서드파티들이 신경써준다는 보장도 없다. 버전별로 관리가 될것이라고 기대하는것은 당연히 오산이다.\n이에 나는 npm 이 flavor 별로 배포를 다양화 할 수 있는 방법을 제공해야 한다고 생각한다.\nts, esm, cjs, 지금은 자취를 많이 감춘 coffeescript 등으로 배포를 할 수 있게 만들어야 한다. 일단 그렇게 된다면 앞서 이야기한 babel이 필요없음에도 사용을 강요당한다거나 type.d 파일을 따로 배포한다거나 하는 요상한 일이 일어나지 않을것이고 어떤 패키지가 어떤 환경을 지원하는지 구분하기도 쉬워지고, 때론 이것들이 뒤섞여서 발생하는 오동작이나 어려워지는 테스팅문제가 일부 해결 될 수도 있다.\n맺으며 Node.js 를 2014년부터 써왔지만 드디어 다 긁어먹고 바닥이 보인다는 느낌이다.\n내 자신감과는 별개로 내자신에 대한 나의 평가는 남들이 생각하는것보다 박한편인데도 불구하고, 이제는 어디가서 expert 라고 이야기를 해도 되지 않을까 하는 생각마저 최근 들고 있다.\n그래도 이래저래 편하게 쓰고있는 플랫폼인데 롱런했으면 좋겠다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2018-11-19-161357-js-documentation/",
+	"title": "js-documentation",
+	"tags": [],
+	"description": "",
+	"content": "도큐먼트 제네레이션을 하려고 하는데 고민이 많았다. 타입스크립트 쓰면 typedoc 이 대부분 해결 해 주니까 별 문제가 없지만. ES7 를 쓰고있는 프로젝트들은 esdoc 이나 jsdoc 를 끼고 갈 수 밖에 없다.\n내 요구조건은 다음과 같았다.\n 충분히 유명한 패키지일것 typedef 에서 @extends 혹은 @augments 를 사용 할 수 있을것. document coverage  결론부터 말하자면 document coverage 를 포기하고 커스텀 플러그인을 달아서 jsdoc 를 사용하기로 했다.\n시도해본것들은 다음과 같다.\n  JSDoc\n template  docdash tui-jsdoc-template   plugins  plugins/markdown typedef-extends (handmade)      ESDoc\n template: built in    ETC\n inchjs istanbul nyc    제법 긴 시간동안 검색해보았지만 coverage 툴에서 제공하는 documentation 플러그인이나 jsdoc 플러그인중에서 coverage 를 제공하는것은 지금 시점에서는 찾지 못했다. 아, inchjs 라는게 있었는데 실행이 되지 않았고 메인테이닝도 잘 되지 않는것 같았다. 결국 2,3번 요구조건중 하나는 당분간 포기해야 하는데 결국 도큐먼테이션의 본질에 가까운것이 coverage 가 아니기에 jsdoc 으로 선택하였다.\nReferences  https://stackoverflow.com/questions/42124012/jsdoc-include-all-properties-from-another-typedef-object https://github.com/OpenGeoscience/geojs/blob/master/jsdoc/plugins/typedef_augments.js   hard copy of above\n/** * Define a jsdoc plugin to update typedefs that use augments. */ exports.handlers = { /** * Modify typedefs that use augments (extends). Add the base typedef\u0026#39;s * properties to the augmented typedefs. */ parseComplete: function (e) { var typedefs = {}, augmentedTypedefs = {}, numAugmented = 0; /* Make a dictionary of all known typedefs and a dictionary of augmented * typedefs */ e.doclets.forEach(function (doclet) { if (doclet.kind === \u0026#39;typedef\u0026#39;) { typedefs[doclet.longname] = doclet; if (doclet.augments \u0026amp;\u0026amp; doclet.augments.length) { augmentedTypedefs[doclet.longname] = doclet; } } }); while (Object.keys(augmentedTypedefs).length !== numAugmented) { numAugmented = Object.keys(augmentedTypedefs).length; Object.keys(augmentedTypedefs).forEach(function (name) { var doclet = augmentedTypedefs[name]; /* If this typedef is augmented by an augmented typedef, skip it for * now. Ignore self references */ if (doclet.augments.some(function (augmentName) { return augmentName !== name \u0026amp;\u0026amp; augmentedTypedefs[augmentName]; })) { return; } /* Ensure we have properties */ doclet.properties = doclet.properties || []; /* Make a dictionary so we don\u0026#39;t clobber known properties. */ var properties = {}; doclet.properties.forEach(function (prop) { properties[prop.name] = prop; }); /* For each augment base, add its properties if we don\u0026#39;t already have * them. If the typedef augments two other typedefs that each have a * property of the same name, the last listed will be shown (done by * reversing the augments list). */ doclet.augments.slice().reverse().forEach(function (augmentName) { if (augmentName !== name \u0026amp;\u0026amp; typedefs[augmentName] \u0026amp;\u0026amp; typedefs[augmentName].properties) { typedefs[augmentName].properties.forEach(function (origprop) { if (!properties[origprop.name]) { /* Make a copy so we don\u0026#39;t mutate the original property. */ var prop = Object.assign({}, origprop); /* Add a value that a rendering template could use to show that * the property was inherted from a parent. Since that in turn * could have been inherited, preserve a known value. */ prop.inherited = prop.inherited || augmentName; /* Add the property to the typedef and to the list of known * properties. */ doclet.properties.push(prop); properties[prop.name] = prop; } }); } }); /* We\u0026#39;ve finished processing this typedef, so remove it from the * augmented list. */ delete augmentedTypedefs[name]; }); } } }; "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2018-08-23-162836-errorhandling-async-express-router/",
+	"title": "errorhandling-async-express-router",
+	"tags": [],
+	"description": "",
+	"content": "Error Handling On Express 나는 Express API 를 만들때 글로벌 트랩을 만들어서 UnHandled Exception 을 처리하는 방법을 즐겨쓴다.\n// Global Error Handler app.use(function (err, req, res, next) { let status = err.status || 500; let extra = err.extra || {}; l.e(\u0026#39;Unhandled Error\u0026#39;, err); let resBody = {message: err.message, extra: extra, details: err}; if (process.env.NODE_ENV === \u0026#39;production\u0026#39;) { return res.status(status).json({message: \u0026#39;internal error\u0026#39;}); } else { return res.status(status).json(resBody) } }); Synchronous 핸드러를 썼을때는 잘 동작했겠지만 async function 을 쓰면서 부터는 throw 되는 에러들이 express 를 타지 못하는 문제가 있다.\n// 1-1 router with weak error handling router.get(\u0026#39;/:rid\u0026#39;, async function (req, res) { let resource = await Resource.findOne({_id: req.params.rid}); if (resource) { res.json(resource); } else { res.status(404).json({msg: \u0026#39;not found\u0026#39;}); } }); 예를 들어 위와 같은 코드에서 findOne 이 실패하면 GlobalErrorHandler 을 타지 못하고 UnhandledPromiseRejectionWarning 을 맞게된다.\n아주 정형화된 404 같은 예외는 헬퍼를 작성해서 쓰거나 글로벌에서 하도록 취향껏 선택하면 되니 논외로 하더라도, 예측가능하거나 failover 가 필요한 error 들은 try/catch로 별도로 핸들링 해주어야 한다. 하지만 이밖에 일어나는 예측하지 않은 에러들은 어짜피 API 입장에선 실패이고 (복구 가능하든 가능하지 않든간에) 500 뱉고 끝내야 하므로 global에서 처리하는게 바람직하다.\n// 1-2 router with try/catch router.get(\u0026#39;/:rid\u0026#39;, async function (req, res, next) { try { let resource = await Resource.findOne({_id: req.params.rid}); if (resource) { res.json(resource); } else { res.status(404).json({msg: \u0026#39;not found\u0026#39;}); } } catch (e) { next(e); } }); 이걸 해결하려면 이런식으로 try/catch 로 묶어서 처리해야 한다. 맘에 안든다 별 의미없이 코드 블럭이 한레벨 더 들어가게 되기 때문에 가독성도 떨어질뿐만 아니라 모든 라우트에 try/catch를 해줘야하는것도 번거롭다. 또, 만약 코드 내부에서 선별적으로 다른 Exception 을 발생시켜야 하는 경우에는 생성한 Error 가 복수개의 catch 문을 통과하게 되기 때문에 지저분해진다.\n좀 더 깔끔하게 라우터를 작성할 수 있도록 라우터 핸들러를 wrapping 해서 throw 되는 exception 을 next 로 넘겨주게끔 처리 할 수 있다.\n//wrapper asyncErrorHandler(fn) { return function (req, res, next) { return Promise .resolve(fn(req, res, next)) .catch(next); } } 위와같은 wrapper 를 하나 만들어두고 불러다가 쓰면 훨씬 가독성이 좋아진다\n// 1-3 using asyncErrorHandler router.get(\u0026#39;/:rid\u0026#39;, asyncErrorHandler(async function (req, res, next) { let resource = await Resource.findOne({_id: req.params.rid}); if (resource) { res.json(resource); } else { res.status(404).json({msg: \u0026#39;not found\u0026#39;}); } })); References  using-async-await-in-express-with-node npm package: express-async-handler how-to-write-async-await-without-try-catch-blocks-in-javascript  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2018-03-30-180144-cron-on-nodejs/",
+	"title": "nodejs 에서 Cron 사용하기",
+	"tags": [],
+	"description": "",
+	"content": "cron 이 무엇이고 어떻게 사용해야 하나? https://en.wikipedia.org/wiki/Cron https://docs.oracle.com/cd/E12058_01/doc/doc.1014/e12030/cron_expressions.htm\n유용한 WebTool들 호출이 되는시점을 확인 할때: http://cron.schlitt.info/ Cron 표현식의 유효성 검사 https://crontab.guru/\nNodeJS 프로젝트에서 내가 선택한 패키지 Cron 표현식 파싱, 다음 실행시점 계산 https://github.com/harrisiirak/cron-parser\n긴 기간동안 실행되어야 하는 timeout 을 위한 패키지 https://github.com/tellnes/long-timeout\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2018-03-12-145933-survey-nodejs-config-package/",
+	"title": "survey-nodejs-config-package",
+	"tags": [],
+	"description": "",
+	"content": "Motivation nodejs 프로젝트를 하면서 build stream 이나 configuration 의 default 를 관리해야 할 일이 많다. 프로젝트들이 복잡해짐에 따라 다양한 요구조건들이 생기는데 내가 써본 라이브러리들이 이런 문제를 다 커버하지 못하는 문제가 있다. 내가 경험했던 패키지들의 특징과 장단점을 비교해보겠다.\nWhat I Need  배포는 docker 로 이루어 지기 때문에 config 디렉토리가 통째로 빈 디렉토리로 덮어씌워질 수 있다. (docker data volume 은 file 단위의 mount 를 지원하지 않는다.) 하지만 유저가 편집하는데 참고가 되기 위해 default 파일이 필요에 의해 재생되어야 한다 개발편의상 environment variable (NODE_ENV) 에 따라 참조하는 configuration 파일이 달라져야 한다. 내부에서 동적으로 로드되는 플러그인마다 서로 다른 configuration 을 사용하기 때문에 singleton 뿐만 아니라 instance 형태로도 configuration 을 로드할 수 있어야 한다.  Node Packages config (node-config) 2번 요구조건을 만족한다. 여러가지의 파일 포맷을 지원하며 configuration 을 읽고 없는 값들은 default 에서 마저 로드하는 등의 작업이 되어있다. 사용하기 간편하나 singleton 으로만 동작하고 대부분의 입력값을 environment variable 을 참조하기 때문에 플러그인을 런타임에 로드하는 프로젝트의 특성상 플러그인들은 자신이 가진 별도의 configuration 을 읽지 못한다.\ncosmiconfig 3번 요구조건을 만족한다. instance로 configuration 을 로드 할 수 있기 때문에 plugin 안에서도 자신이 원하는 파일을 로드해서 쓸 수 있다. 단, NODE_ENV 별로 ㄷ른 파일을 읽는 기능은 제공하지 않는다.\nWhat I Did 처음에는 config 를 이용해서 plugin 안에서 다른 파일을 읽게 할 수 있을것이라고 기대했다 때문에 1번 요구조건을 만족시키기 위해 config package 를 config-extra 로 wrapping 해서 사용 했다. plugin 을 리팩토링하면서 제대로 만들려고 하니까 로드가 잘 안된다는것을 확인했고, 다른 라이브러리를 찾아보기로 했고. cosmiconfig 를 그렇게 알게 되었는데 역시나 한계가 많아서 못쓰게 되었다.\nWhat I Going To Do 빡쳐서 안되겠다 직접 만들어서 써야지. 다양한 확장자나 instance 별 로드같이 fancy한 가능 없이 baremetal로 작성해야겠다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2018-03-07-144906-another-webapp-in-angulario/",
+	"title": "another-webapp-in-angulario",
+	"tags": [],
+	"description": "",
+	"content": "Goal 일을 하면서, 혹은 내 서브 프로젝트를 하면서 만들게 될 헤테로지니어스한 웹앱들을 한군데서 서비스(적어도네비게이팅) 을 하고 싶었다.\n지금 당장 제일 손에 익은 툴이 angular.io (angular2 \u0026gt; ) 이기 때문에 이것으로 Navbar 를 비롯탄 일종의 플랫폼? 을 만들고 개별적으로 떠있는 웹 서비스들을 이 안에서 보여주는것을 목표로 잡았다.\nUsing Angular Router? 원래 내가 하고 싶었던것은 angular route 가 제어하는 route-outlet 에다가 다른 웹앱을 뿌리는것이었다. 헌데 검색을 해보니 그리 만만치 않다는것을 알게 되었다. 적어도 이렇게 하려면 angular.io app 으로 만든다음 bootstrap 을 해서 써야 하는데 정상적으로 목표로 하는 방법이 아닌데다가 angular 로 만든앱이 아니거나 버전이 다른것으로 만든것이 돌아가지 않는다는 단점이 있다. 아무래도 범용성이 떨어지니 처음에 조건으로 달았던 이종간 통합 이 물건너 갔으니 이 방법은 패스.\nReferences\n https://www.linkedin.com/pulse/inception-one-angularjs-application-inside-another-m%C3%A1rquez-soto/ https://stackoverflow.com/questions/18184617/angularjs-how-to-nest-applications-within-an-angular-app https://www.linkedin.com/pulse/inception-one-angularjs-application-inside-another-m%C3%A1rquez-soto/ https://stackoverflow.com/questions/18571301/angularjs-multiple-ng-app-within-a-page?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3BH9CfNWXKST%2BpQndZMjYiOA%3D%3D  HttpClient + innerHtml? 다른 방법을 조사를 해보니 iframe 으로 구현하는 방법과 http client 에서 데이터를 얻은다음 이걸 innerHtml 로 뿌리는 방법이 있었다. 일단 innerHtml 을 사용하는 방법은 패스, 스타일을 못불러온다거나 리액티브한 기능들이 제대로 동작할리가 없다고 생각했고 대체적으로 잘 동작한다한들 일부 문제가 생기는걸 고칠 방법이 없다. 이것도 패스.\nUsing iframe 결국 iframe 으로 구현하는 방법만 남았는데 처음부터 알고는 있었지만 의도적으로 피하려고 했던데에는 이유가 있다.\nWeak Security 일단 보안차원에서 취약해진다는 문제가 있다. CORS적용하고 별 고생을 해도 생각치 못한곳에서 XSS가 나를 반겨주겠지만, 이게 아니면 현재로선 별 도리가 없다.\nHostname Issue 서비스를 할때 baseHref 같은건 의도적으로 세팅을 하는것이기 때문에 클라이언트가 태생부터 알 수 있다. 하지만 hostname 은 별개 문제이다. iframe 에 웹앱을 뿌리려면 url을 가지고 던져야 하는데 hostname은 환경마다 다를 수 있다. 플랫폼앱의 url 을 같이 쓰면 된다라고 생각하면 편할것 같지만 앞으로의 서비스 구성이 어떻게 될지 모르기에 그렇게 하고싶지는 않다. 더군다나 public domain 이 아니라 onpremise 로 설치된 경우에는 접속하는 위치에 따라서 hostname 이 달라지기 때문에 빌드타임에 박거나 하드코딩을 할 수 없다.\nService Discovery 전술한 hostname issue 를 해결하기 위해서는 결국 서버의 도움이 필요하다.\n서비스를 추가하거나 상태에 따라 서비스 노출을 제어하고 싶으면 게이트웨이에 하드코딩 하는것보다 서비스 디스커버리를 구현해서 API로 정보를 클라이언트에게 던져주는게 좋을것이다.\nReferences\n https://stackoverflow.com/questions/38862007/loading-external-url-in-angular2-router-outlet  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/http/",
+	"title": "http",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2018-03-07-144151-http2-header-naming-convention/",
+	"title": "http2-header-naming-convention",
+	"tags": ["http", "web", "protocol"],
+	"description": "",
+	"content": "HTTP/2 Header Naming Convention server 코딩을 하는중에 header 를 다 lower case 로 자동변환 시켜주는짓을 API 게이트웨이 서버 미들웨어가 하는것을 발견했다.\n뭔가 이유가 있을것 같아 검색을 해보니 HTTP/2 스펙에서 header 이름을 lowerCase로 변환해줘야한다(MUST) 라고 표현하고 있다는걸 알게 되었다.\nHTTP/2 의 사용처가 점점 많아질것이니까 지금부터 미리미리 대비를 해야겠다.\n다른 서비스에서도 lowerCase로 변경해서 내부적으로 처리하도록 하던가 헬퍼 미들웨어를 만들던가 해야지\nReferences  발견한 stackoverflow 스레드 Secrion 8.1.2 of rfc7540  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/protocol/",
+	"title": "protocol",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/web/",
+	"title": "web",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2017-09-04-093944-my-job-philosophy/",
+	"title": "my-job-philosophy",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2017-07-25-105709-market-research-hansung-laptop-20170710/",
+	"title": "market-research-hansung-laptop-20170710",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2017-07-13-131835-gmail-filtering/",
+	"title": "gmail-filtering",
+	"tags": [],
+	"description": "",
+	"content": "Attachment related e.g. larger:5m older_than:5y\nsize:5m searches for attachments of 5MB\nlarger:5m searches for attachments of 5MB and larger\nsmaller:5m searches for attachments smaller than 5MB\nLabel related not labeled email has:nouserlabels\nit query also sent mail\nif not want to see sent mail\n-label:sent\nand also chat log\n-label:chats\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2017-07-13-104204-elements-of-project/",
+	"title": "elements-of-project",
+	"tags": [],
+	"description": "",
+	"content": "프로젝트 구성요소\n Development Environment  IDE Version Coding Convention SCM   CI (Integrate Test) CD  docker   Code Coverage (Unit Test) Documentation  Guide for Contributers API Specification How to Use   Issue Tracker Resource Negotiation  Port    "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2017-06-05-141344-authentication-on-angulario/",
+	"title": "authentication-on-angulario",
+	"tags": [],
+	"description": "",
+	"content": "참고 문서\n https://auth0.com/blog/angular-2-authentication/ https://blog.thoughtram.io/angular/2016/07/18/guards-in-angular-2.html https://medium.com/@blacksonic86/angular-2-authentication-revisited-611bf7373bf9 https://medium.com/@ladyleet/popups-modals-and-navigation-using-angular-material-2-components-in-your-angular-2-project-faf510dbcdee http://4dev.tech/2016/03/login-screen-and-authentication-with-angular2/ https://stackoverflow.com/questions/34464108/angular2-set-headers-for-every-request  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/semantic/",
+	"title": "semantic",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/semver/",
+	"title": "semver",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/versioning/",
+	"title": "versioning",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2017-01-16-151731-is-semantic-versioning-fit-on-recently-lifecycle-of-software/",
+	"title": "근래 소프트웨어 운용방법상 시맨틱 버저닝에 대한 의문",
+	"tags": ["semver", "semantic", "versioning"],
+	"description": "",
+	"content": "Introduction 근래 가장 많이 사용되는 버저닝 방법론으로 semantic versioning 을 이야기 했을때 반대하는 사람은 그리 많지 않을것이다. 매우 체계적이며 직관적이고 버전간 호환관계또한 알 수 있기 때문에 많은 프로젝트와 사람들에게 사랑받고 있는 방법이다.\n하지만 근래에 개발을 해오면서 느끼는 몇가지 한계점이 있고, 이를 어떻게 극복해 볼것인가에 대한 가벼운 고찰을 해보겠다.\nLimitation of semantic versioning  Dynamic 하게 변하는 프로젝트에서 major 버전이 너무 빠르게 올라간다. 변화가 많은 초창기 프로젝트의 버저닝이 곤란하다.  최근 공분을 산 angular4 버전 계획 발표도 비슷한 문제라고 본다.\n전통적으로 역사가 깊은 소프트웨어들은 지금도 큰 문제가 없다고 본다. stability 가 중요하고 이미 구현해야할 기능들은 어느정도 거의 다 구현이 되어있기 때문에 뭔가 급격하게 바뀌고 이런일이 여간해선 발생하지 않는다. 따라서 breaking change 들은 몰아서 major 업데이트때 한번에 일어난다.\n하지만 웹 기술은 매우 기민하게 변화하고 javascript라는 언어가 싱귤래리티를 목전에 두고 있기 때문에 예측하기 어려운 breaking change 의 대응을 가정해야한다.\n이런 이유 때문인지 angular 팀은 반년, 짧으면 3개월의 메이저 버전 업데이트를 계획해놓고 있으며. 2버전을 목빠지게 기다린 팬보이들에게 오피셜릴리즈 3개월만의 4버전 발표는 정말 큰 도발로 다가왔을것이다.\n결국은 위에서 언급한 문제들은 모두 빠른 배포 사이클로 인해 생기는 문제점이다. 통신, 클라우드 컴퓨팅 인프라가 발전함에 따라 현대의 소프트웨어의 배포주기는 점점 짧아지고 있고, Immutable Infrastructure같은 패러다임이 docker 등을통해 프로덕션레벨로 올라옴에 따라 더욱 이런 흐름은 가속화 되고 있다.\n과연 이런 환경에서 semantic versioning 이 적절한가에 대한 의문이 든다.\n개인적으로 major 버전의 숫자가 커지는것 자체가 문제를 일으킨다고 생각하진 않는다.\n하지만 메이저 버전업의 주기가 빨라지는것은 여러 문제점을 야기한다. 프로젝트 관리차원과 stability 유지차원에서 프로젝트 운영 주체가 그럴싸한 버저닝 가이드라인을 제시하지 않는다면 다음과 같은 문제가 발생할 수 있다.\n LTS 버전관리, 제시의 어려움 patch 해야할 관리 포인트 증가  버전을 freeze 하고 배포해야할 프로그램들이 그나마 안심하고 지원받을 수 있는 방법이 패치버전 업그레이드일것이다. 하지만 프로젝트를 운영하는 주체 입장에서 여러개의 메이저 버전의 패치를 관리하는것은 부담되는일이 아닐수 없다.\n해결안 Milestone 개념으로 version layer 를 추가한다.\n운영방법  m.b.c.d  M: Milestone  LTS 버전등을 관리할 큰 마일스톤 단위   o: obsolete remove deprecation  breaking change 를 야기하는 패치,   a: feature  기능추가, backward competibility를 해치지 않음   p: patch  인터체이스에 영향을 끼치지 않는 버그픽스      "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/atom/",
+	"title": "atom",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2017-01-09-140517-fixing-atom-and-idea-file-refresh-issue/",
+	"title": "fixing-atom-and-idea-file-refresh-issue",
+	"tags": ["linux", "atom", "webstorm", "idea"],
+	"description": "",
+	"content": "Fixing limit of watch issue  sudo vi /etc/sysctl.d/max_user_watches.conf write fs.inotify.max_user_watches = 524288 the file sudo sysctl -p --system restart atom or idea  Reference  https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md#typeerror-unable-to-watch-path https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/linux/",
+	"title": "linux",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/library/",
+	"title": "library",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/npm/",
+	"title": "npm",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/package/",
+	"title": "package",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-12-19-140419-survey-npm-yaml-lib/",
+	"title": "survey-npm-yaml-lib",
+	"tags": ["yaml", "npm", "package", "library"],
+	"description": "",
+	"content": " Surveyed 2016-12-19\n  TL;DR : js-yaml Win  yaml-js License: WTFPL\n2,580 downloads in the last day\n34,263 downloads in the last week\n169,836 downloads in the last month\njs-yaml License: MIT\n134,940 downloads in the last day\n2,614,264 downloads in the last week\n10,545,700 downloads in the last month\nyamljs License: MIT\n7,426 downloads in the last day\n116,115 downloads in the last week\n455,376 downloads in the last month\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/yaml/",
+	"title": "yaml",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/redemption/",
+	"title": "redemption",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-11-27-174831-redemption-monitor-design/",
+	"title": "redemption-monitor-design",
+	"tags": ["redemption"],
+	"description": "",
+	"content": "Introduction 게임 서버를 만들었지만 개발자 혹은 운영자가 게임 서버나 내부의 상황을 보기 위해서 매번 REST client 를 이용하는것은 비현실적으로 불편하다.\n때문에 서버 내부의 정보를 시각적으로 혹은, 미리짜여진 규격에 맞추어 관제 할 수 있는 방법이 필요했다.\n그 수단으로 여러가지가 있겠지만 웹앱으로 만드는것이 제일 범용적이고 편할것이라고 판단하였다.\nDesign Features  기본적인 서버 상태 확인 (service discovery 와 연동) 게임서버내 맵 상황, 각종 통계 제공  Conditions 개발을 위한 개발을 피하기 위해 몇가지 조건이 수반된다.\n 의존성은 최대한 없앤다. 크루즈 컨트롤을 제외한 API는 가능한 gateway 에서 가져다 쓴다. Simple, Simple and Simple 이 앱은 개발\u0026amp;운영 내부자가 사용하고 일반 End-User 에게는 제공되지 않을것이기 때문에 localhost 에서 동작함을 가정한다.  Stacks \u0026amp; Components  angular2  mdl gulp   express js node js  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/convention/",
+	"title": "convention",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/mapping-table/",
+	"title": "mapping table",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/mariadb/",
+	"title": "mariadb",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/naming-convention/",
+	"title": "naming convention",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/sql/",
+	"title": "sql",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-11-03-153952-holywar-about-table-name/",
+	"title": "성전! SQL 테이블명",
+	"tags": ["mariadb", "sql", "naming convention", "convention", "mapping table"],
+	"description": "",
+	"content": "Introduction 디비랑은 별로 안친해서 디테일하게 네이밍 컨벤션 같은것에 대해 생각해본적이 없었다.\n이번에 업무 관련해서 작명하다가 관례가 있을까 싶어 조사하던중 재미있는 discussion 들을 보게 되어 정리해보게 되었다.\nORM 이 미친짓을 한다? Mongoose 를 쓸적에 collection 이름을 정할때 단수형을 자꾸 복수형으로 바꾸길래 (e.g. user 를 users로 지가 바꾼다) {collection: 'user'} 이런식으로 강제로 collection 의 이름을 정해주면서 스키마를 정의한적이 있었다.\n마찬가지로 mariadb 를 사용하기위해 도입한 sequelize 도 똑같은짓을 하는데 얘는 mongoose 처럼 쉽게 테이블 이름을 정해주는것이 아니라\ndefine: { freezeTableName: true } 이런식으로 매번 옵션을 주어야 하는 귀찮은 짓을 해야한다.\n검색해 보니 table 은 복수의 데이터를 저장하기 때문에 복수형으로 명명한다는게 관례라는걸 알게 되었는데 문제는 이제 ISO 표준으로도 정리가 되어있다는것이다.\n아니 아무리 표준이라고 하지만 그래도 엄연히 사용자가 입력한 필드인데 이런건 convention으로 극복을해야지 ORM이 지멋대로 바꿔도 되는건가? 라는 생각이 든데다가 이게 s, es 만 붙는게 아니라 예외도 많을텐데 그것들도 다 대응을 못할텐데? 라는 의심이 되었다.\n대표적으로 의심이 되었던것이 child -\u0026gt; children 같이 불규칙하거나 water 같이 불가산명사인 경우 어떻게 처리하는지가 궁금해졌다 시도를 해보았다.\n근데 맙소사 잘 동작한다? 이런 노가다를 무릅쓰면서까지 이런걸 구현레벨로 끌어다 놓은 저의가 궁금해서 검색을 해보니 아니라 다를까 시궁창 싸움이 벌어지고 있었다.\n http://stackoverflow.com/questions/338156/table-naming-dilemma-singular-vs-plural-names http://stackoverflow.com/questions/4702728/relational-table-naming-convention  나에겐 그냥 이건 부먹 찍먹 논쟁처럼 무의미한 정력낭비라고 생각이 되어서 이런걸 구현레벨까지 끌어다 놓은 강경파가 누군지 궁금하여 sequelize repository에서 blame 해보니 한 유저가 inflection 이라는 라이브러리를 추가해서 이걸 구현해 놓은것을 보았다 대단한 열정인것 같다.\nConclusion 영원히 팝콘이나 먹으며 강건너 불구경을 하고싶지만 나도 개발전선에 있는이상 결정을 해야한다.\n두가지 경우에 대해 수용하겠다는 입장을 세우기로 하였다.\n 복수형을 쓰는 경우에는 코드에도 명시적으로 복수로 언급하여 inflection의 동작을 차단할것. 단수형을 쓰는 경우에도 OK지만 모든 사람이 동의해야 함.  사족을 달자면 표준이 복수라는게 깨림직하지만 경험상, 생각되는 문제가 많기로는 복수형을 사용하는게 더 불리해보인다. (naming scheme 이 있는 mapping table 에 끼치는 영향, 신조어에 대응이 느림, 비영어권 사용자들의 실수를 유발 할 수 있음, model명이랑 동일 하게 사용하고 싶은경우 findOne 하더라도 복수형의 인스턴스 이름을 써야함.. 등등)\n진짜 별 이상한데서도 성전이 열린다는 사실이 재미있다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/mongodb/",
+	"title": "mongodb",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/mongoose/",
+	"title": "mongoose",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/node/",
+	"title": "node",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/transaction/",
+	"title": "transaction",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-11-01-132517-mongodb-transaction/",
+	"title": "Transaction on MongoDB",
+	"tags": ["mongodb", "node", "nodejs", "mongoose", "transaction"],
+	"description": "",
+	"content": "Introduction 서버 개발을 하는 도중 MongoDB의 서로 다른 Document 에 Atomic 하게 update 가 일어나야 하는 상황이 왔다. 서버는 Node로 되어있고 ORM은 mongoose 를 쓰고있다.\n헌데 Mongoose 에는 consistency를 보장하면서 복수의 Document를 업데이트 하는 API가 구현되어있지 않은것으로 보여 이를 해결하고자 한다.\nTransaction in MongoDB MongoDB 는 Optimistic concurrency control (OCC) 를 채용하고 있고 내부적으로 write lock을 건다고 한다. 때문에 한개 Collection (=table in RDB) 내 에서의 consistency 는 보장이 된다.\n하지만 서로 다른 여러개의 collection 에 query 를 수행해야 할 때는 consistency 가 보장되지 않는다.\nRDB 에서는 Transaction 이라는 개념으로 이런 consistency 를 보장하는 기능을 제공하는데\nMongoDB는 Official 하게 이러한 기능을 제공하지 않고 two-phase commits 의 패턴으로 이를 극복하도록 가이드 하고 있다. https://docs.mongodb.com/v3.2/tutorial/perform-two-phase-commits/\nTwo-phase commits for MongoDB Two phase commit 은 널리 알려진 패턴이지만 mongoose 에 helper 가 구현되어있지 않기 때문에 차선을 찾아야 했다. 직접 만드는것은 여간 귀찮은일이 아니며, 나같이 미천한 실력으로 미려하게 만들수 있을지도 모르기 때문에 미리 누군가가 만들어둔것이 있으리라 여기고 탐색을 하였다.\n영 좋지 않은것을 제외하고는 두가지 정도가 물망에 올랐다.\n https://github.com/niahmiah/mongoose-transact  한국 사람이 만들었다, 잘 만들어져 있다. two-phase commit 으로 구현되어있다. rollback 도 구현되어있는듯. 유사시엔 이것을 쓰면 되겠다.   https://github.com/wokim/mongoose-transaction-plugin  다르게 구현된 다른 모듈이다. 양심적으로 README에 잘 적혀있다. \u0026ldquo;만약 네가 이게 필요한거면 넌 잘못된짓을 하고 있다.\u0026rdquo;    만약 필요하다면(반드시 미봉으로 끝나야 겠지만) 이 두개중에? 혹은 그때 나온 괜찮은것을 사용하면 될것이다.\nConclusion 그들이 할 수 없었던게 아니라 안하는것이 맞기 때문이었다 라고 믿고 안하기로 했다.\n내가 MongoDB에 대해 얕게 알고있기에 이를 극복할 수 있는 네이티브한 방법이 있을지도 모를 일이다.\n이에 혹여 이 글을 읽은 자상한분이 나에게 키워드를 던져주시지 않을까?\nReferences  https://en.wikipedia.org/wiki/Optimistic_concurrency_control  surveyed with gogopg, huey\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/authentication/",
+	"title": "authentication",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-10-31-112249-authentication-on-msa/",
+	"title": "authentication-on-msa",
+	"tags": ["msa", "security", "micro service architecture", "authentication"],
+	"description": "",
+	"content": "목표 Micro Service Architecture(MSA) 에 부합하게 Authentication 을 전담하는 서비스를 분리하고 구현하는것을 목표로 한다.\n현재의 상황 현재 API Gateway 에서 MongoDB 에 저장된 User, Permissions, User Group, Permission Group 에 접근하여 권한이나 조직관리를 할 수 있게 구현되어있다.\n나중에 여러가지\nReferences  http://nordicapis.com/how-to-control-user-identity-within-microservices/ https://www.quora.com/How-do-I-handle-authentication-in-a-microservices-architecture-with-the-front-end-decoupled-too  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/micro-service-architecture/",
+	"title": "micro service architecture",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/msa/",
+	"title": "msa",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/security/",
+	"title": "security",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/api/",
+	"title": "api",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-09-08-102937-restful-api-error-handling/",
+	"title": "Handling RESTful API Errors",
+	"tags": ["restful", "api", "rest"],
+	"description": "",
+	"content": "서론 RESTful API를 설계하는데 몇가지 고민거리가 생겼다.\nAuthentication, Clustering, 같은건 구현상의 문제와는 별도로 System 내에서 사용되는 공통 스키마가 있어야 될것 같다.\n지금 당장 필요하거나 상상되는것은\n Global Schema  Transaction ID  gtxid : Global Transaction ID ltxid : Local Transaction ID     Handling Errors Handling Deprecations  Survey  http://apigee.com/about/blog/technology/restful-api-design-what-about-errors 몇가지 비교 해놨음 https://developers.google.com/drive/v3/web/handle-errors 구글은 이렇게 함.  http://blog.restcase.com/rest-api-error-codes-101/   http://www.codingpedia.org/ama/error-handling-in-rest-api-with-jersey/ http://stackoverflow.com/questions/942951/rest-api-error-return-good-practices 구체적인 로직 다이어그램  Schema Design \u0026amp; Convention Common Schema  (optional) error  msg (optional) code (optional) link   (optional) deprecated  msg (optional) details   _metadata  gtxid ltxid (optional) msg   (response data)  Common Convention Do \u0026amp; Don\u0026rsquo;t  Avoid using plain text response (use JSON or XML)  Action Plan Request\n Automation adding gtxid, ltxid, operation msg Selective exposure of stack trace or error log by build option  Response\n Detecting error field Detecting deprecate field  Boilerplatize\n Authentication  JWT   Clustering  Process management, Load balance   Configuration  default.js, docker data volume   Docker Deployment  Docker Scripts   API versioning  provide both url, accept-header way   Logging  using winston or etc. then  Filebeat rsyslog file     Documentation  generate swagger yaml JS doc   change log generator  ?    "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/rest/",
+	"title": "rest",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/restful/",
+	"title": "restful",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/container/",
+	"title": "container",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-08-18-093029-docker-swarm-study/",
+	"title": "Docker Swarm Study",
+	"tags": ["docker", "swarm", "container"],
+	"description": "",
+	"content": "Introduction 동기 이제 슬슬 시스템에 서비스들이 많아지면서 Orchestration을 신경써야 할 필요성이 대두되었다.\nsupervisor 등의 툴을 사용해서 관리하고 있었지만 sigterm을 맞고도 바로 죽지 않는 컨테이너가 있는 등 문제가 다소 있었고, 이것을 dockerfile 에서 해결하거나 entrypoint 를 스크립트로 잡고 인위적으로 내부의 pid를 관리해야 하는것이 부자연스럽다고 생각하던 차였다.\nContainer Orchestration Tools Container를 Orchestration 해주는 툴들은 근래에 와서 많이 늘어났다.\n8 Container Orchestration Tools to Know 를 보면 주요한 툴들을 잘 설명 해놨다.\n요약하자면\n ECS : Amazon EC2 자체 솔루션 ACS : MS Azure 자체 솔루션 Cloud Foundry’s Diego : 스케쥴러 등과 함께 제공된다. CoreOS Fleet : CoreOS에 최적화된 Docker Management 툴.  자체적으로 클라우드를 구성하는 입장이 된다면 이걸 쓰지 않을까 싶다.   Google Container Engine : Google Cloud platform에서 사용함. Kubernetes 를 기반으로 만들어져있다. Kubernetes : Google 에서 만든 컨테이너 매니징툴. 2014년정도엔 이만한게 없었다. Mesosphere Marathon : Apache Mesos 위에서 돌아가는 도커 프레임워크다. Docker Swarm : 하나의 가상 도커 엔진에 여러개의 도커 엔진을 그룹으로 묶어서 운용할 수 있다. 네이티브 클러스터링을 지원한다. 도커팀이 공식적으로 밀고 있는 툴이기 때문에 다른애들은 못하는걸 제공한다.  기술선정 일단 소거법으로 접근해보았다.\nECS, ACS 등은 특정 서비스 프로바이더에 비인딩 되기 때문에 나중에 다른데로 마이그레이트 할때 비용이 발생하며, 복수의 서비스 프로바이더나 온프로미스를 섞어서 헤테로지니어스한 시스템을 구성하기가 사실상 어렵다.\nMesosphere Marathon은 Mesos에 바인드 된다. 우리는 배포시에 ansible 을 쓰기 때문에 이거까지 별도로 올려서 쓸일이 있을까 싶다.\nFleet 의 경우엔 역사가 짧고 CoreOS에 바인드 되어서 패스하기로 했다.\n이리하여 Kubernates 와 docker swarm 간에서 고민을 하게 되었는데.\n우리의 경우엔 기존에 있는 바닐라 컨테이너들을 묶어서 한번에 켜는일이 많기 때문에 swarm 이 좀 더 매력적으로 보였고 documentation이 잘 되어있으며, docker 팀에서 밀고있는 툴이기 때문에 유지보수에 관한 걱정도 없었다. 물론 kubernates 를 이용하면 성능이나 부하를 파라미터화 해서 엘라스틱하게 운용하기 쉽다는 장점이 있으나 우리의 시스템은 그렇게 고 가용성을 요구하는것도 아니고 클러스터링은 스웜도 네이티브로 지원하기 때문에 손해볼것 없다는 판단을 하였다.\nDocker Swarm 나는 군단이다\ndocs.docker.com/swarm 에 문서화가 잘 되어있다.\nInstallation \u0026amp; Execution binary를 설치하기 보다는 docker image 를 그냥 시작 하라고 추천하고 있다.\nswarm 에 기여할게 아니면 전혀 상관이 없는모양\n다음 명령어로 원큐에 설치부터 실행까지 된다.\ndocker run swarm References  https://www.quora.com/What-is-the-best-Docker-Linux-Container-orchestration-tool https://www.linux.com/news/5-next-gen-cloud-technologies-you-should-know https://docs.docker.com/swarm/  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/swarm/",
+	"title": "swarm",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-08-17-111838-expand-vdi-size/",
+	"title": "Expand linux guest&#39;s vdi size on linux host",
+	"tags": ["virtualbox"],
+	"description": "",
+	"content": "동기 처음에 정해진 사이즈 내에서는 vdi의 사이즈가 자동으로 늘어나지만 (기본설정이라면) 그게 넘어가 버리면 용량을 늘리기가 생각보다 귀찮았다. 검색해보니 vdi 를 클로닝 하는 방법이랑 vboxmanage 명령어로 늘리는 방법 두가지가 존재했다. 난 이중에서 명령어를 사용해서 늘리는 식으로 했다.\n방법  우선 VM을 shutdown 해서 끈다. VM 파일이 있는 경로로 이동해서 vdi 파일을 찾는다. vboxmanage modifyhd roconsim-ansible.vdi --resize 30000 식으로 vdi의 사이즈를 바꿔준다. 에러메세지 없이 끝나면 잘 된것이다.  resize 옵션 뒤에 붙는 숫자는 MB 단위로 새로운 크기이다. 예를들어 15기가로 잡고 싶으면 15000 과 비슷한 값이 되겠다.   ubuntu live 나 gparted live disk 를 넣고 gparted 를 켜서 파티션을 재조정한다. 끈다음 재부팅하면 파티션이 늘어나 있다.   주의 : 스냅샷들을 다 지우고 수행하는것을 추천함.\n주의 : 귀찮다고 깔려있는 리눅스로 그냥 부팅해서 gparted 로 리사이즈 하려고 하면 늘어나지 않은 용량으로 보이기 때문에 꼭 live cd 로 부팅해서 써야한다.\n + 난 이정도 기능은 virtualbox 자체적으로 ui가 지원해 주리라 기대했는데 아니였다.\n막상 해보니 시스템 구조상 그럴수도 있겠다 싶기도 하고 OS 마다 다 뭔가 작업을 해주기를 바라는것도 좀 이상하긴 한것 같았다.\n해보지 않았지만 검색하다가 같이 나온 자료들을 보면 Guest OS 가 윈도우인 경우에는 부팅 미디어로 부팅하지 않아도 관리도구에 있는 디스크 관리툴로 리사이즈가 잘 되는 모양이다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/virtualbox/",
+	"title": "virtualbox",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/angular2/",
+	"title": "angular2",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-08-11-173123-angular2-rc5-study/",
+	"title": "Angular2 rc5",
+	"tags": ["nodejs", "angular2"],
+	"description": "",
+	"content": "동기 Angular2 rc4가 나왔을때 라우터가 갈려나가는것을 보고 아 이제 좀 고만 고치겠구나 라고 생각했고 이제 슬슬 본격적으로 공부를 해볼까 생각하고 있었는데 얼마안있어 나온 rc5에서 모듈개념이 본격적으로 도입되면서 또 엄청나게 갈려나갔다.\n같은 튜토리얼만 지금 몇번째 보는건지모르겠는데 ㅋㅋ 약간 방향을 바꾸어서 변경된 중요포인트를 확인하고 yeoman 과 같은 보일러플레이트를 활용해서 빠르고 아름답게 초기 환경 설정을 하고 간단한 예제를 만드는것을 목표로 공부를 해 보도록 하겠다.\n부가목표 foundation Bootstrap 레이아웃이 난 맘에 별로 안들었다. 대충 만들기엔 정말 쉽고 편하고 좋은데 너무 정형화 되어있다는 느낌을 받았음. 그래서 이번 작은 프로젝트에서는 foundation 을 사용해보도록 하겠다.\nwebpack and systemjs 패킹툴로 angular2에 systemjs가 webpack으로 바뀐다는 소리를 어디선가 들었다. 그래서 걍 공부도 할겸 둘 다 알아놓기로 하고 webpack이 초미의 관심사니까 사용법을 알아놔야겠다. 이미 튜토리얼에도 systemjs는 방법중 하나라고 내용이 바뀌어있는 상태이다.\nPAUSE 자꾸 갈려나가서 Angular 팀의 Milestone 을 보았는데 아직 final release 까지 걸려있는 일들이 엄청 많다는걸 알게되었다. 일단 final release 까지는 보류해야겠다. 괜히 mega boilerplate 가 ETA 를 미룬게 아닌거 같다.\n+update Angular 2.0 이 이 포스트를 작성하고나서 얼마 안있어 발표되었고\n2016년 11월 1일 현재 벌써 2.1.1이 나왔고, Mega Boilerplate 는 아직 업데이트를 내놓지 않고있다.\n튜토리얼 공식 튜토리얼 분량이 얼마 안되니까 그냥 다 보도록 하자.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/service-discovery/",
+	"title": "service discovery",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-08-11-165835-survey-of-service-discovery/",
+	"title": "survey of service discovery in MSA",
+	"tags": ["service discovery", "msa"],
+	"description": "",
+	"content": "Service Discovery 의 개념 설명  https://dzone.com/articles/service-discovery-in-a-microservices-architecture http://microservices.io/patterns/client-side-discovery.html http://www.mammatustech.com/Microservice-Service-Discovery-with-Consul  주요 프로젝트 Jason Wilder\u0026rsquo;s blog 에서 여러가지를 간단하게 정리 해 놓았다.\n https://github.com/Netflix/eureka https://www.consul.io/ https://github.com/coreos/etcd NginX  https://www.nginx.com/blog/service-discovery-in-a-microservices-architecture/ https://www.nginx.com/blog/service-discovery-nginx-plus-zookeeper/   zookeeper  http://blog.arungupta.me/zookeeper-microservice-registration-discovery/ https://tech.knewton.com/blog/2014/12/eureka-shouldnt-use-zookeeper-service-discovery/   https://github.com/coreos/etcd  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/documentation/",
+	"title": "documentation",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/javascript/",
+	"title": "javascript",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-07-20-09-51-javascript-documentation/",
+	"title": "Javascript Documentation",
+	"tags": ["javascript", "documentation", "jsdoc"],
+	"description": "",
+	"content": "2016년 가장 널리 사용되는 javascript documentation 은 jsdoc이다.\n http://usejsdoc.org/ https://github.com/jsdoc3/jsdoc https://meteor.hackpad.com/Automatically-Generating-API-Docs-using-JSDoc-EpPmd2iuFEH#:h=Example:-Class  랜더링 툴은\n https://www.npmjs.com/package/jsdoc-to-markdown https://github.com/docstrap/docstrap https://github.com/DBCDK/jsdoc3Template https://github.com/clenemt/docdash https://github.com/kbknapp/clap-rs http://jaguarjs.com/doc/  doc dash가 젤 이뻐보인다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/jsdoc/",
+	"title": "jsdoc",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-07-13-08-bluebird-promise/",
+	"title": "Javascript Promise",
+	"tags": ["javascript", "promise"],
+	"description": "",
+	"content": "문제 Statistics API를 구현하던 도중 여러개의 RESTful API request 들을 하나로 aggregation 해서 리턴을 할 일이 생겼다.\n기술선택 깔끔하게 구현할 수 있는 방법이 없을까 고민하던중에 promise 가 제공하는 .all 기능이 적합하다고 생각했고, Javascript에서 promise 제공 라이브러리가 여러가지 있다고 정도로만 알고 있었기에 본격적으로 서베이를 시작했다.\n관심사는 유명한 q, promise A+, bluebird 세가지였다.\n빌트인 구현은 브라우저에서 uncaught error를 silent 처리 해버리기 때문에 디버깅이 어렵다고 하여 제외하기로 하였다. (라이브러리를 사용해도 스펙 자체는 표준에 가깝기 때문에 대부분의 구현들이 compatible 하다.)\n여러 의견들을 찾아보았고,\nhttps://www.reddit.com/r/javascript/comments/35l3z4/best_promise_library_q_vs_bluebird_vs_jquerys/ 의 맥락으로 보았을때\nbluebird 가 적합하다고 판단했다.\n구현 하나하나의 promise는 이렇게 생겼고\nhttp://code.runnable.com/VZozd4IsKAt1U9ua/promises-with-bluebird-for-node-js-request-callback-and-dual-api\n이것들의 배열을 promise all 로 구현한다.\nhttp://bluebirdjs.com/docs/api/promise.all.html\nrequest.js 에서 사용하는 options 생성을\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/promise/",
+	"title": "promise",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/angular/",
+	"title": "angular",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/angular1.5/",
+	"title": "angular1.5",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-07-06-angular1.5-survey-best-practice/",
+	"title": "The best practice of builing angular 1.x project",
+	"tags": ["angular", "angular1.5"],
+	"description": "",
+	"content": "node project 를 시작하기 위해 Megaboiler Plate를 사용해 보긴 했는데\n나에겐 필요없는 군더더기가 너무 많아서 문제가 좀 있다.\n우리에게 필요한건 api interface 이기 때문에 웹 서버위에 쓰기편한 라우터 정도만 올라가 있으면 충분하다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-06-21-14-46-multiple-specs-swagger-ui/",
+	"title": "make swagger-ui support multiple specs file",
+	"tags": ["swagger", "swagger-ui", "msa", "openapi"],
+	"description": "",
+	"content": "codegen 으로 생성되는 웹서버는 커스터마이징 하는데 한계가 있기 때문에 swagger-ui를 하나 돌리고 여기서 로드해서 보여주는 파일들을 외부파일을 링크하는 방식으로 사용하기로 하였다.\n서버에서는 Apache 의 VirtualHost 기능을 이용해서 .json 이나 .yaml 을 static 하게 서브하도록 설정해 놓았다.\n https://github.com/swagger-api/swagger-ui/issues/1069 https://github.com/swagger-api/swagger-ui/issues/1363 https://gist.github.com/webron/7c41db7f777471fcbc10  의 순서로 제법 괜찮아보이는 해결방법을 찾았다.\n이부분만 고쳐주면 되기 때문에 나중에 스펙파일들의 리스트가 있으면 index.html 파일을 빌드타임에 컴파일해서 쓸수도 있을것이다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/openapi/",
+	"title": "openapi",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/swagger/",
+	"title": "swagger",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/swagger-ui/",
+	"title": "swagger-ui",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-06-21-09-54-make-my-npm-module/",
+	"title": "make my npm module",
+	"tags": ["npm", "node", "nodejs"],
+	"description": "",
+	"content": "기존에 도커 data volume 의 default configuration을 file에 저장하는 용도로 사용했던 코드 조각이 있었는데 이게 여기저기서 사용이 되기 시작해서 유지보수 비용이 증가하게 되었고 때문에 모듈화를 해야겠다고 생각이 되었다.\n사실 configuration을 도와주는 라이브러리는 있지만 사용상 추구하는 바가 다소 다르기 때문에 커스터마이징을 안할수 없는 상황이어서 (조회가 안되면 디폴트값을 다시 조회하여 error tolerant 를 확보하는 등\u0026hellip;) 그냥 새로운 모듈을 만들어서 관리하기 하였다.\n어떻게 node module 을 만드는것이 가장 이쁜 방법인지 잘 모르기 때문에 유명한 라이브러리의 소스코드나 세팅 구조를 참고하기로 하였다.\n https://darrenderidder.github.io/talks/ModulePatterns/#/ https://www.npmjs.com/package/request  라이브러리를 만들고 나서\nnpm adduser 로 npmjs.com에서 가입한 계정으로 로그인을 하고\nnpm publish 하면 package.js 안에 있는 정보대로 퍼블리싱이 된다. 나의경우 완료됨과 거의 동시에 잘 올라가고 npm install 로 설치도 잘 되었다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/cd/",
+	"title": "cd",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/ci/",
+	"title": "ci",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/jenkins/",
+	"title": "jenkins",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/jenkins2/",
+	"title": "jenkins2",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-06-14-1420-jenkins2-make-a-job/",
+	"title": "Jenkins2 create pipeline job",
+	"tags": ["jenkins", "jenkins2", "ci", "cd"],
+	"description": "",
+	"content": "환경 jenkins server : ubuntu 12.04\njenkins : v2.8\n작업환경 : ubuntu 14.04\n사족 freestyle job 은 마우스 클릭만 할 줄 알면 기본적인 빌드를 만들 수 있기 때문에 정리가 무색한것 같아서 다음으로 미루도록 하겠다.\n동기 단계가 복잡하거나 하는 일이 많은 job 의 경우 pipeline job 으로 만드는것이 좋은것 같다.\njenkins2 부터는 설치시에 추천 플러그인으로 설치를 해 준다.\nhttps://github.com/jenkinsci/pipeline-plugin/blob/master/TUTORIAL.md\n여기를 시작으로 해보도록 하겠다.\n목표 내가 필요한것은\n git repository로 부터 코드 받기 swagger-codegen 으로 webserver 생성하기 (kind of build) docker image 로 빌드하기 서버에서 이미 돌고 있는 컨테이너 내리기 서버에 이미지를 밀어넣거나 그쪽에서 pull 받아서 실행시키기\n(이때 포트를 8080이 아닌 다른것으로 설정)  으로 정리된다.\nswagger-codegen 을 사용해서 웹서버를 생성하는것은 쉘 스크립트로 짜져있는 상태고\ndockerfile이랑 이것을 이용해서 dockerimage 를 생성 할 수 있는 스크립트도 있다.\npipeline 생성하기 pipeline 플러그인이 깔려있다면\n에 표시된 + 버튼 을 눌러서 Build Pipeline Veiw 를 추가하자\n나중에 다 수정 할 수 있으니 이름정도만 정해주고 넘어가도 된다.\ntip: 만약 추가중에 취소를 하거나 다른 페이지로 넘어가고 나서 동일한 이름으로 view 를 만드려고 했는데 중복된 이름이라고 나오면서 안될때는 맨위에 검색창에 그 이름으로 검색해서 지우거나 수정하면 된다.\nInitial Job Pipeline 이 시작되는 지점을 정해주어야 한다.\n-\u0026gt; 만든 Pipeline View을 선택하고 Add Step 을 눌러서 job 을 추가하자.\n-\u0026gt; 나의 경우 repository 로부터 빌드를 시작하면 되기 때문에 관련 정보를 입력했다.\n-\u0026gt; 5분마다 polling 해서 바뀐점이 있는지 체크하고 있다면 빌드를 시작하게 된다.\nBuild shell script 로 만들어놨기 때문에 이것을 실행만 하면 된다.\nExecute shell을 선택하고 sh generate.sh 명령만 덜렁 적어놓았다.\n-\u0026gt; 저장하고 나서 configure 를 선택하고\n-\u0026gt; 방금 만든 job 을 선택하고 저장하면\n-\u0026gt; 이렇게 파이프라인이 추가 되었다.\nBuild Docker Image 다음 job 을 만드는데 freestyle job 을 만들어서 릴레이 하는지 pipeline 을 만드는건지 잘 모르겠다.\nfreestyle job 으로 만들어서 트리거를 이전작업으로 설정하니까 빌드 파이프라인에 잘 보인다.\nworkspace 는 job 의 이름으로 되어있는 동일 레벨의 디렉토리가 있었고 별 문제없이 access 가 되었다. 만약 문제가 복잡해지거나 서로 비동기적으로 동작한다는것을 가정한다면 custom workspace 를 이용해서 구현해야 할 거 같다.\n궁금한건 이전 작업으로 트리거 하는부분을 watch 라고 표현이 되어있는데 이게 스레드 돌면서 dirty check 하는것인지 내부적으로 이벤트 핸들링을 해주는지 모르겠다. 만약 안된다면 첫번째 작업 다음에 다음작업을 예약하는것이 더 효율이 좋을것이라고 생각된다.\n우선 Docker build step plugin 을 설치한다.\n이렇게 했는데 에러를 뿜으면서 제대로 빌드가 안된다.\nhttps://github.com/jenkinsci/docker-plugin/issues/389 한계가 있어보인다.\nnative CLI atm을 쓰는게 더 나을거라는 말을 해주는데 뭔지 모르겠음.\n일단은 docker image build 대신 ssh 로 artifact 를 서버로 밀어넣고 실행시켜 보겠다.\n새로운 freestyle job 을 하나 만들고 빌드에서 shell cmd 로 먼저 처리를 한다.\necho copy artifact from previous step ls ./../api-spec-swagger cp ./../api-spec-swagger/bin . -r ls -al sed -i 's/8080/13981/g' ./bin/api_spec/index.js cat ./bin/api_spec/index.js 로 다른 workspace 에서 파일을 복사 해 온다음 내부에 8080 포트를 13981로 변경해주었다.\n이제 ssh로 접속해서 파일들을 복사해주고\ncd api_swagger cd bin cd api_spec npm install pm2 stop index pm2 start index.js ssh로 다음 명령어를 실행해서 서버에서 실행시킨다. pm2 node processor manager 로 name 으로 프로세서 관리를 편하게 해\npipeline script 작성 node { git url: 'https://github.com/user/reponame.git' } "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-06-14-1000-jenkins2-setup/",
+	"title": "Jenkins2 설치 및 구성 (docker)",
+	"tags": ["jenkins", "jenkins2", "ci", "cd", "docker"],
+	"description": "",
+	"content": "설치 Jenkins2 를 설치한다 docker 이미지를 제공하니까 이걸 쓰도록 한다.\n20160614 현재 최신버전은 2.8\nhttps://hub.docker.com/r/jenkinsci/jenkins/tags/\nsudo docker run \\ -p 13980:8080 \\ -d \\ jenkinsci/jenkins 로 실행\n컨테이너의 8080 포트를 13980으로 바인드 한다.\n초기 설정 http://my-ip:13980 로 접속하면\n/var/jenkins_home/secrets/initialAdminPassword 으로 들어가서\n초기 비밀번호를 입력하라는 화면을 보게 된다.\n도커의 shell 에 붙어서 파일을 읽으면 된다.\nsudo docker exec -ti containdername bash 로 쉘에 붙자\ncat /var/jenkins_home/secrets/initialAdminPassword 으로 확인할 수 있다.\n다음은 이런 화면인데 Install suggested plugins 를 선택하면 된다\n나중에 필요한 플러그인은 나중에 언제라도 설치할 수 있기 때문에 망설일 필요 없다.\n그러면 젠킨스 씨가 이렇게 열심히 기본 플러그인을 깔아준다.\n초기 계정을 하나 만들어주자, 만약 회사나 단체라면 관리자 계정을 만든다고 생각하면 된다.\n나중에 내가 쓸 계정은 따로 만들어서 쓰는게 관리상 편할것이다.\nManage Jenkins -\u0026gt; Manage Users -\u0026gt; Create User 에서 다른 유저를 만들수 있고\nManage Users 메뉴에서 상세 설정할 수 있다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/ide/",
+	"title": "ide",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-05-25-webstorm-node-integration/",
+	"title": "webstorm에서 node관련 함수들을 찾을수 없다고 나올때 해결법",
+	"tags": ["nodejs", "webstorm", "ide"],
+	"description": "",
+	"content": "Webstorm에서 node등을 지원한다고 하는데 빨간줄이 죽죽 그어져있는 모습이 보이곤한다.\n설정을 좀 해줘야한다.\n설정으로 가서\nLanguage \u0026amp; Frameworks \u0026gt; Node.js and NPM 으로가서\nCode Assistance 를 Enable 해주면 된다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/package-management/",
+	"title": "package management",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/python/",
+	"title": "python",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-05-24-python-virtualenv/",
+	"title": "python 프로젝트에 virtualenv 적용하고 사용하기",
+	"tags": ["python", "virtualenv", "package management"],
+	"description": "",
+	"content": "What is the virtualenv 프로젝트의 의존성 관리를 할 때 nodejs 의 경우 nasty dependency 라서 디렉토리 독립적으로 운용 가능하지만 파이선은 라이브러리가 시스템에 설치되기 때문에 디펜던시의 버전관리가 어려운 문제가 있으며 복수의 서로 다른 디펜던시를 가진 프로젝트를 운용하는데도 문제가 있다. 이를 해결하기 위한 방법으로 virtualenv 라는 파이선 패키지가 제공되고 있고 이를 사용하는 방법에 대해서 알아보겠다.\nInstallation sudo pip install virtualenv sudo -H pip install virtualenv\nvirtual environment 모드로 변경 virtualenv dependency: virtual enviroment 생성, dependency 디렉토리가 생김 .dependency/activate:\nReference  http://pythoninreal.blogspot.kr/2013/12/virtualenv.html  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/virtualenv/",
+	"title": "virtualenv",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/actionhero/",
+	"title": "actionhero",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-05-17-actionhero-api-gateway-worklog/",
+	"title": "actionhero로 API Gateway 구축하기",
+	"tags": ["web", "micro service architecture", "msa", "actionhero"],
+	"description": "",
+	"content": "서론 라이선스 문제 때문에 LoopBack이 거슬려서 찾아보니 Action Hero 라는걸 찾았다.\nhttp://www.actionherojs.com/\n일단 기본적으로 나에게 필요한 기능은 다 있는것처럼 보인다.\n Reusability Scalability(Clustering) RestfulAPI  얘는 독특하게 Web, WebSocket 뿐만 아니라 Socket 도 지원을 한다.\nnpm install actionhero ./node_modules/.bin/actionhero generate npm install npm start 이렇게 설치하고 초기화하고 시작할 수 있다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/loopback/",
+	"title": "loopback",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-05-16-loopback-api-gateway-worklog/",
+	"title": "loopback으로 API Gateway 구축하기",
+	"tags": ["web", "micro service architecture", "msa", "loopback"],
+	"description": "",
+	"content": "서론 Micro Service Architecture 에 대해서는 다음 링크에 조대협님이 쉽게 잘 설명해주셨다.\n조대협의 블로그 - 마이크로 서비스 아키텍쳐 (MSA의 이해)\n이번 포스팅에서는 Loopback을 사용할것이다.\nLoopback 은 IBM의 자회사인 StrongLoop가 만든 API Gateway 미들웨어이다\nLoopback.io 에서 문서들과 예제들을 확인 할 수 있다.\n설치와 초기 세팅 sudo npm install -g strongloop 설치가 끝나면 프로젝트 디렉토리를 하나 만들고 slc loopback 명령어로 프로젝트를 생성한다.\nmkdir project-name cd project-name slc loopback 그러면 yeoman이 트리거되고 설치가 시작된다. 과정중에 프로젝트 이름, 디렉토리 이름, 보일러플레이트의 타입 등을 고르라고 프로그램이 물어볼것이다.\n나는\n project name enter (accept default value) hello_world 선택  순으로 대답했다.\n완료되면 다음과 같은 안내를 받는다.\nNext steps: Change directory to your app $ cd project-name Create a model in your app $ slc loopback:model Compose your API, run, deploy, profile, and monitor it with Arc $ slc arc Run the app $ node . 시키는대로 slc:loopback:model 명령어로 모델을 하나 만들어보자\nslc loopback:model ? Enter the model name: proj ? Select the data-source to attach undefined to: (no data-source) ? Select model's base class PersistedModel ? Expose proj via the REST API? Yes ? Custom plural form (used to build REST URL): proj ? Common model or server only? server Let's add some proj properties now. Enter an empty property name when done. ? Property name: version invoke loopback:property ? Property type: string ? Required? Yes ? Default value[leave blank for none]: 0.0.1 Let's add another proj property. Enter an empty property name when done. ? Property name: 잘 만든것인지 판단이 안선다. 아무렴 어때 나중에 바꿀수 있겠지\n그다음, 위에서 시켰던대로 slc loopback:arc 로 web-ui 툴을 켠다.\nStrongLoop Arc is running here: http://localhost:57649/#/ 나의 경우 57649 포트에 열렸다. 난감하다 뭔가 계정을 생성한 기억은 없는데\u0026hellip;\n알아보니 이 계정은 로컬계정이 아니다 strongloop에서 가입을 해야한다.\n이부분은 솔직히 맘에 안든다. arc 툴을 유료로 전환할 여지를 주는것인지, 내 API Gateway의 설정을 수집하겠다는것인지 모르겠지만 내가 example 만 보고 진행함에 있어서 이 내용에 대해 읽은것이 없었기 때문에 오해의 소지가 있다.\n그럼 이걸 어찌해야할까? 일단은 arc 를 사용하지 않고 그냥 CLI 와 에디터로 해결 해 보도록 하겠다.\n그럼 실행을 해보자\nnode . or npm start 로 실행하면 된다.\nlocalhost:3000/explorer 로 붙으면 현재 만들어져있는 api list 들을 볼 수 있다.\n적용 기존에 있는걸 사용하기 위해서 레거시 API server에 있는걸 하나 redirection 해서 써 보자. 이거만 가능하면 적어도 여러개의 포트에서 오는걸 하나로 합치는건 웹서버 밑에다가 express 라우팅을 할 필요는 없어진다.\n일단, Express의 router 를 그대로 써서 물릴수가 있다. 이건 기존에 있던 express 레거시 라우터를 마이그레이션 할 때 쓰면 되겠다.\n그 이외엔 datasource 를 만들어서 기존의 REST를 가져올 수 있다. 일단은 GET request 만 알아보았는데.\nslc loopback:datasource 를 이용해서 생성하면 되고 커넥터를 REST로 선택하면 된다. 이후 생성된 파일을\nstrongloop/loopback-example-connector/REST\n의 예제처럼 수정해주면 된다.\n라이선스 Loopback의 많은 부분들이 듀얼라이선스를 사용하고있다. MIT 와 자기네들이 만든 StrongLoop Subscription Agreement. 라는걸 사용한다. 따로 조건이 없기 때문에 둘중에 원하는걸 선택해서 사용해도 (아마도 MIT를) 합법이다. 하지만 문제는 Loopback 전부가 다 듀얼라이선스가 아니라는점이다. API connect 의 경우에는 듀얼라이선스가 아니라 StrongLoop Subscription Agreement만 명기되어있고 DB커넥터의 과반수도 그렇다. 이런경우에는 사용상에 제약이 생긴다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/apt/",
+	"title": "apt",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/os/",
+	"title": "os",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-05-10-covering-autoremove-mistake/",
+	"title": "실수로 한 apt-get autoremove 수습하기",
+	"tags": ["linux", "ubuntu", "os", "apt"],
+	"description": "",
+	"content": "python3.5 를 설치하다가 3.4를 삭제한 상태에서 실수로 autoremove 를 하여 python3.4 와 의존성을 가지던 패키지들이 다 날아가서 네트워크도 안되고 난장판이었다.\n재부팅하니 GUI도 쓸수 없었다.\nnetwork 복구 ctrl+alt+F1 으로 터미널1에 붙어서 작업을 한다.\nsudo vi /etc/network/interfaces 에 다가 네트워크 정보를 박아주고 ifconfig 나 iwconfig등으로 네트워크를 수동으로 잡아주거나 해서 네트워크를 연결시킨다.\n손실된 패키지 솎아내서 복구 일단 apt-get 의 로그를 찾아야겠다 뭔가 아주 많이 지워졌는데 어디부터 날아갔는지 피해산정이 중요하다.\nvi /var/log/dpkg.log | less 에 내용을 보면\n2016-05-10 08:26:02 status installed ruby2.3:amd64 2.3.1-1bbox1~trusty1 2016-05-10 08:26:02 trigproc libc-bin:amd64 2.19-0ubuntu6.7 \u0026lt;none\u0026gt; 2016-05-10 08:26:02 status half-configured libc-bin:amd64 2.19-0ubuntu6.7 2016-05-10 08:26:02 status installed libc-bin:amd64 2.19-0ubuntu6.7 2016-05-10 08:26:03 startup packages remove 2016-05-10 08:26:03 status installed linux-image-extra-3.19.0-56-generic:amd64 3.19.0-56.62~14.04.1 2016-05-10 08:26:03 remove linux-image-extra-3.19.0-56-generic:amd64 3.19.0-56.62~14.04.1 \u0026lt;none\u0026gt; 2016-05-10 08:26:03 status half-configured linux-image-extra-3.19.0-56-generic:amd64 3.19.0-56.62~14.04.1 2016-05-10 08:26:03 status half-installed linux-image-extra-3.19.0-56-generic:amd64 3.19.0-56.62~14.04.1 2016-05-10 08:26:35 status config-files linux-image-extra-3.19.0-56-generic:amd64 3.19.0-56.62~14.04.1 2016-05-10 08:26:35 status config-files linux-image-extra-3.19.0-56-generic:amd64 3.19.0-56.62~14.04.1 2016-05-10 08:26:35 status installed linux-image-3.19.0-56-generic:amd64 3.19.0-56.62~14.04.1 2016-05-10 08:26:35 remove linux-image-3.19.0-56-generic:amd64 3.19.0-56.62~14.04.1 \u0026lt;none\u0026gt; 2016-05-10 08:26:35 status half-configured linux-image-3.19.0-56-generic:amd64 3.19.0-56.62~14.04.1 2016-05-10 08:26:49 status half-installed linux-image-3.19.0-56-generic:amd64 3.19.0-56.62~14.04.1 2016-05-10 08:26:50 status config-files linux-image-3.19.0-56-generic:amd64 3.19.0-56.62~14.04.1 2016-05-10 08:26:50 status config-files linux-image-3.19.0-56-generic:amd64 3.19.0-56.62~14.04.1 2016-05-10 08:34:49 startup archives unpack 이런 데이터가 있다. 우리가 필요한건 이중에서 오늘 날자로 되어있는 remove 로 시작하는 애들인데\n2016-05-10 ..:..:.. remove 로 검색되는 행을 남기고 모두 지운다음\n이처럼 정규식으로 패키지 이름만 남기면 되겠다.\n이렇게 얻은 패키지 목록을 apt-get install 뒤에 붙여주고 설치하면 끝\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/python-flask/",
+	"title": "python flask",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-05-09-building-flask-api-server-log/",
+	"title": "Python Flask 로 RestfulAPI 서버 만들기",
+	"tags": ["web", "python flask"],
+	"description": "",
+	"content": "목표 목표는 RestfulAPI 서버를 만드는것이다.\n요구조건은, WebSocket 을 구현해야 할 수도 있다는 점이고.\n단발성의 API콜이 비주기적으로 많이 들어올수 있다는것.\n되도록이면 Response Time 은 짧은것이 좋다는것.\nRedis 를 캐시로 써서 리턴한다는점이다.\n시작 난 잘 만들어진 보일러플레이트로 시작을 하는것이 좋겠다.\nhttps://github.com/vovantics/flask-bluebone\n문서화가 잘 되어있고 authentication 도 구현되어있다.\n메인테이너가 한명이고 이슈란에 아무것도 없다는게 마음에 좀 걸리는데 리드미에 이렇게 구현한 이유에 대해서 나름대로 설명을 달아놨기 때문에 공부하기에는 좋아보인다.\n이메일이라던지 스테틱파일 서브와 같은 이번 목적이랑 상관없는것들도 포함되어있는데 걷어내면 되니까 일단은 신경쓰지 않는다.\nfabric 이라는걸로 deploy 하는것으로 보이는데\nReference  https://github.com/vovantics/flask-bluebone https://github.com/flask-restful/flask-restful/  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-05-09-python-web-platform-survey/",
+	"title": "Python WebServer Survey for API Server",
+	"tags": ["python", "web"],
+	"description": "",
+	"content": "Restful API 서버를 구현해야 할 문제가 있다.\n요구조건은 다음과 같다.\n Restful API가 구현 가능해야한다. WebSocket 구현이 용이해야 한다. Scalability 가 좋으면 더욱좋다. Response time 이 짧으면 좋다. Python 이면 좋다.  Flask 사용자가 많아서 커뮤니티 서포트가 좋지만 달려있는게 많기 때문에 상대적으로 아주 무겁고 response time이 상당히 길다는 문제가 있다. 플랫폼을 meinheld 로 바꾸고 나서 많이 빨라졌다. plain text serve 의 경우 아예 퍼포먼스가 좀 느리가 느리다 nodejs 에 비해 7배정도 차이가 있음. 하지만 API server 의 경우에는 single query를 빠르게 반복하는일이 오히려 많기 경우에 plain text 는 신경쓰지 않아도 된다. content-type 을 text/plain 으로 주는행위만 하지 않으면 된다.\nwebSocket 을 구현하기 제일 편하다.\nFalcon 미니멀한 구현이기 때문에 제일 빠르게 구현 할 수 있다.\n스케일링도 문제없고 RestfulAPI을 구현하는데 필요한것은 다 포함되어있다.\n대신 webSocket 을 구현하려면 상당히 지저분해진다.\nBottle Flask 와 Falcon의 중간정도 성능과 편의성을 보인다. 커뮤니티가 그렇게 큰 것 같지는 않아보인다.\nPyramid Falcon 에 기능들이 좀 더 추가된 형태이고 성능은 2배정도 느리다\n하지만 Flask 에 비해 3배 빠르며 response time 문제가 없다.\n자잘한 기능들이 더 많긴 하지만 Falcon 에 있는 기능만으로도 충분 하기 때문에\n이 문제에 한해서는 이점을 갖는다고 보기 힘들다.\n마찬가지로 webSocket 을 구현하려면 상당히 지저분해진다.\n공통사항 Bottle 로 Websocket을 구현하는 방법에 대한 안내가 있는데\n이게 wsgi에 웹소켓 기능을 로드해서 쓰는것으로 보인다. get 을 가져오는 Request 는 bottle 에서 나오는것이다.\n아마 wsgi를 사용하는 다른 플랫폼에서도 webSocket을 쓸 수 있겠지만 난이도가 어떨지는 좀 알아봐야겠다.\n결론 오래되고 안정되기는 Django의 손을 들어 줄 수도 있지만. flask도 커뮤니티가 아주 활발하며 안정화를 많이 거쳤기 때문에 근래에 와선 규모나 지원에 대해서는 별로 차이가 없어보인다.\n벤치마크에 따르면 성능은 Django보다 flask가 더 잘 나오고 코드스니펫도 많이 정리되어있다.\n다만 flask-pypy 처럼 사용하면 퍼포먼스가 상당히 떨어지고\ncontent-type 이 plain/text 인 경우도 피해야 한다.\n확실히 속도는 Falcon, Bottle 이 더 유리한면도 있긴 하지만 커뮤니티 서포트나 생산성면에서 감수할 정도로 큰 차이는 아닌것으로 판단한다.\nReference  https://www.techempower.com/benchmarks/#section=data-r12\u0026amp;hw=peak\u0026amp;test=db\u0026amp;p=1lc-e8s-0 http://stackoverflow.com/questions/10316374/bottle-websocket  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/design/",
+	"title": "design",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/diy/",
+	"title": "diy",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/logo/",
+	"title": "logo",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/noizbuster/",
+	"title": "noizbuster",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-04-30-noizbuster-logo-design/",
+	"title": "Noizbuster Logo Design",
+	"tags": ["noizbuster", "logo", "design", "diy"],
+	"description": "",
+	"content": "로고 사이즈를 정하는데 보통 가이드라인들은 300px 로 한다\n아이콘으로는 구글 플레이에서 요구하는 가장큰 아이콘은 512*512\n안드로이드 아이콘 사이즈는 48 px, 72 px, 96 px, 144 px, 192 px\n로고 사이즈는 300x300 에 가로나 세로를 맞춰서\n다른 사이즈로는 150px, 96px, 64px, 32px, 16px로 만들면 된다.\nreference\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/rust/",
+	"title": "rust",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/staticgen/",
+	"title": "staticgen",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/stemcell/",
+	"title": "stemcell",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-04-28-stemcell/",
+	"title": "Stemcell 기획",
+	"tags": ["rust", "stemcell", "staticgen"],
+	"description": "",
+	"content": "동기 jekyll을 비롯하여 StaticGen을 이용하여 블로그나 웹페이지를 빌드해주는 엔진들을 사용해 보았는데, 맘에 안드는것이 좀 있었다.\n front matter 로 사용하는것들이 일관성이 없을뿐더러 .md 파일 자체만 preview 하는경우에 전혀 본문의 일부처럼 보이지 않는다. Static Page 를 빌드하고 나서의 상대 이미지의 경로 문제  front matter 의 경우 그나마 중간에 개행을 추가한 yml 포멧은 md 를 html로 컴파일 했을때 보기에 좀 나아서 사용하고 있지만. 이것역시 다른 엔진이나 테마로 넘어가기엔 호환성이 떨어진다는 문제가 있다(모든 파일을 다시 수정해야한다는 이야기).\n이미지 경로의 경우 나같은 경우 아톰의 img-paste 플러그인으로 md 파일안에 이미지를 링크하는데 이것은 .md 파일과 같은곳에 저장되며 상대경로로 .md 파일안에 링크가 된다. 그런데 staticGen 으로 빌드한 static page 의 경우 destination directory 에 저장된 html 파일과 원본 이미지 파일과의 위치가 다르기 때문에 링크가 죄다 깨지는 문제가 있다.\n이를 해결하기 위해서는 Destination 디렉토리로 .md 파일내부의 상대경로를 수정하는 일종의 compile 과정을 거치게 하거나 image file 들을 destination directory 로 복사 해 주는 과정이 필요하다.\n난 테마나 빌드엔진을 바꿀때 컨텐츠파일의 대부분을 재작성하는것을 원하지 않고, 포스트가 디렉토리 단위로 관리가 되었으면 하는 마음이 있다.\n그래서 정형화된 디렉토리와 파일이름으로 포스트를 작성했을때 이것을 jekyll과 같은 staticGen엔진이 빌드 할 수 있도록 다시 포매팅 해주는 전처리기를 만드려고 한다.\n본 포스트에서는 러프하게 그 계획을 세워보겠다.\nDesign Plan  design directory structure design front-matter load mechanism change image path to destination  Design Directory structure design categoryName = NNNN-name articleName = yyyyMMddhhmmss-title hhmmss is optional\n blogRoot/categoryName/articleName/  check existence of front-matter.yml\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-04-20-ova-to-dockerimg/",
+	"title": "Converting .OVA to docker image",
+	"tags": ["docker", "vm", "virtualbox", "ova"],
+	"description": "",
+	"content": "0.서론 도커 이미지를 만드는것은 그리 어렵지 않았다.\n근데 지금 쓰고있는 VM을 docker image 로 바꿔서 실행하면\n서버나 시뮬레이터를 좀 더 편하게 만들고 실행할때는 속도가 더 빠를것이라고 기대했다.\nVM 툴들은 스냅샷도 지원하니까 버전관리도 할 수 있다.\n물론 도커 이미지를 다른 이미지를 베이스로 하여 올리는것보다는 빌드에 시간도 많이 걸리고\n실행시에 엔트리 포인트도 정해 줘야 할 것 같은 불길한 예감이 들지만\n뭐 어떠한가! 빠른데!\n1. Extracting .vmdk from VM (.OVA) 우선 Virtual machine to docker image 따위의 키워드로 구글링 해보니\n.vmdk 를 docker .img 로 변환하는 방법이 제시되어있었다.\n근데 문제는 내 vm 은 vmdk 가 아니라 vdi를 이용하고 있어서 써먹을수 없는 방법이라는건데\n검색해보니 VM을 아카이브할때 나오는 OVA 파일 내부에 vmdk가 포함되어있다는것을 알게되었다.\n원하는 VM을 OVA 파일로 아카이브 한 후에\n tar -tf [MY_VM].ova [MY_VM].ovf [MY_VM]-disk1.vmdk 내부에 vmdk 파일이 들어있음을 확인 할수 있다.\n tar -xvf [MY_VM].ova 압축을 풀어준다. 용량에 따라 시간이 제법 걸릴수도 있다.\n2. Converting .vmdk to docker image 얻게된 [MY_VM]-disk1.vmdk 파일을 가지고 docker image 를 만들어보자.\n우선 큐에무가 있어야 한다. sudo apt-get install qemu\n qemu-img convert -f vmdk -O raw [MY_VM]-disk1.vmdk [MY_OUT].img 성공! 근데 용량이 40기가에 육박한다\u0026hellip;\n3. Running docker image 용량이 너무 크지만 그래도 이왕 만든거 돌려는 봐야겠다.\n sudo docker load -i [MY_OUT].img  sudo docker run -ti [MY_OUT] bash  참고 :\n ova to vmdk\nhttp://edoceo.com/notabene/ova-to-vmdk-to-qcow2 vmdk to docker image\nhttp://stackoverflow.com/questions/31321076/convert-vagrant-box-to-docker-image  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/ova/",
+	"title": "ova",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/vm/",
+	"title": "vm",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/css/",
+	"title": "css",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-04-12-handling-text-overflow-in-responsivedesign/",
+	"title": "css 넘치는 text 줄임말로 처리하기",
+	"tags": ["web", "css", "markup"],
+	"description": "",
+	"content": "문제 div 나 span 내부에 있는 텍스트들이 너무 길어서 칸 밖으로 나갈때 잘라내거나 ... 등으로 줄임표시 하고 싶은 경우가 있다.\nresponsive 하게 디자인되지 않은 경우에는 대게 width가 px로 정의되기 때문에 text-overflow 옵션을 조정하여 해결할할 수 있으나.\n엘리먼트의 크기가 percentage 와 같이 상대적인 크기로 정의되어있을때는 제대로 동작하지 않는다는 문제가 있다.\n시도해본것 p { white-space: nowrap; width: 100%; overflow: hidden; /* \u0026#34;overflow\u0026#34; value must be different from \u0026#34;visible\u0026#34; */ text-overflow: ellipsis; } float:left; 해결방법 .ellipsis { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; } CSS 를 추가해주면 잘 동작한다\u0026hellip; 이유는 모르겠음\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/markup/",
+	"title": "markup",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/commonmark/",
+	"title": "commonmark",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-04-04-commonmarks-direction/",
+	"title": "Commonmark의 방향에 대한 사견",
+	"tags": ["commonmark", "markdown", "documentation"],
+	"description": "",
+	"content": "markdown 의 variation이 난립함에 따라 표준화에 대한 요구가 떠올랐고\nJohn Gruber 와 커뮤니케이션을 거쳐 (다소 시끌했지만) commonmark 가 총대를 매고 나타났다.\n현재까지 스펙이 0.25 버전까지 올라왔고 업데이트 주기도 길어지고 있다. 하지만 table 이나 code highlight 에 관한 이야기가 아주 활발히 일어나고 있음에도 불구하고 스펙에 들어갈 기미는 보이지 않는다. 다만 extended 기능으로 추가해서 쓰는게 어떠하냐는 이야기뿐.\n나 역시 너무 많은 기능이 commonmark에 포함되어 진입장벽을 높이거나 하는것엔 동의하지 않지만 github flavor의 table 이나 code highlight support 같은경우엔 매우 직관적이며 진입장벽을 높이지 않는다고 생각한다.\n오히려 예약기호들과 본문간의 공백문제(e.g. \u0026lsquo;## title\u0026rsquo; 과 \u0026lsquo;##title\u0026rsquo;)나 여러 부호를 복수로 인정하는 경우 (e.g. bolic 에 \u0026lsquo;**\u0026rsquo; 과 \u0026lsquo;__\u0026rsquo; 혹은 list 의 * 와 -) 가 오히려 혼란을 주고 있다는게 내 생각이다.\n이렇게 된 이상 UnderscoreJS의 Underscore-contrib 처럼 같이 공식 확장을 제공하는것이 좋지 않을까 싶다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/markdown/",
+	"title": "markdown",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/comet/",
+	"title": "comet",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/logpolling/",
+	"title": "logpolling",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/polling/",
+	"title": "polling",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-04-04-serverside-polling/",
+	"title": "똑똑하게 서버사이드 폴링 하기",
+	"tags": ["web", "polling", "comet", "logpolling"],
+	"description": "",
+	"content": "Comet과 LongPolling 웹에서 데이터를 폴링하기 위한 개념으로 comet 이라는 모델이 제시되어있다.\n이것을 구현하는 방법중 하나가 롱 폴링이다.\n comet 에 대한 설명 https://en.wikipedia.org/wiki/Comet_(programming)\n한글로 된 간략한 설명\nhttp://egloos.zum.com/genes1s/v/2699984\n 요약하자면 단발성으로 http request 를 하는것이 아니라 connection을 물고 있다가\n이벤트가 발생하면 응답하여 반응성을 높이는것이다.\npro : 응답성이 빠르다\ncon : 커넥션을 쥐고 있어야 하기 때문에 자원이 많이 든다.\n폴링주기가 제법 길다 \u0026ndash;\u0026gt; 그냥 주기적으로 http request\n폴링주기가 아주 짧다 \u0026ndash;\u0026gt; comet, longpolling 사용\nRestHook  http://resthooks.org/\n 폴링을 webhook 처럼 해라 라고 함.\n파이선 코드는 그렇다고 치는데 nodeJS 코드는 sails 베이스로 되어있어서 바로 가져다가 쓰기 어렵다\n심지어 npm 패키지가 있는것도 아니라서..\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/audio/",
+	"title": "audio",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/earphone/",
+	"title": "earphone",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/phiaton/",
+	"title": "phiaton",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/categories/review/",
+	"title": "review",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/reviews/2016-04-03-phiaton-100nc/",
+	"title": "Review: Phiaton 100nc 블루투스 이어폰",
+	"tags": ["earphone", "phiaton", "audio"],
+	"description": "",
+	"content": "Phiaton 100nc Phiaton 이라는 브랜드는 좀 생소했지만 알고보니 국내 기업 크레신의 브랜드였다.\n공교롭게도 메인 이어폰도 크레신의 C740S 를 쓰고있는데 내구성이나 가격대비 음질이나 모든면에서 만족하면서 사용하고 있다.\n이 제품을 구매하는데 필요한 요구조건은 크게 두가지였다.\n 배터리가 10시간 이상 갈것. noise cencelling을 지원할것. 그리 까다로운 조건은 아니였지만 이 둘을 만족시키는 물건은 그리 많지 않았다.  장점  음질 : 적당히 밸런스 맞는 소리를 내 준다. 올라운드로 사용해도 괜찮다. APT-X 코덱도 지원한다. 멀티페어링 : 이건 별로 기대 안했던 기능이었는데 매우 편했다. 폰이랑 테블릿이랑 두개 물려놓고 스위치를 눌러 전환 할 필요 없이 현재 소리가 나고 있는 기계로 자동으로 알아서 페어링을 물려준다.  중립  가격 : 내가 살때는 9만원 정도 가격을 주고 구입을 했었고 요즘엔 7.5만원 정도에 구할 수 있는것으로 보인다. 이정도면 가격은 훌륭하다. 배터리 : 출퇴근하면서만 사용하는데 3일정도 사용 할 수 있다. 약 10시간정도는 무리 없이 쓴다고 보면 된다. 스펙상 11~12시간이라고 적혀있으니 얼추 맞는 듯 하다.  단점  이어폰 체결 : 안쓸때 이어폰을 본체에 체결시킬 수 있도록 디자인 되어있는데. 못쓰겠다.\n우선 체결부가 이어폰 부분과 요철로 되어있어 꽂는식으로 연결을 하는데 신경써서 잘 조준하지 않으면 들어가지가 않는다.\n이렇게 고생해서 끼워놓고나면 잘 붙어있어야 하는데, 바람만 불어도 쑥 빠진다. 절전옵션 : 블루투스 전원과 노이즈캔슬링 전원이 별도인데, 블루투스를 끈다고 해서 NC가 같이 꺼지는게 아니다. 때문에 사용초기에는 블루투스만 끄고 NC는 끄지 않아서 배터리가 방전되어버리는 일이 종종 있었다.\n노이즈 캔슬러로 쓰라는 의도인지는 잘 모르겠으나 확실히 사용성이 떨어지는건 맞는듯.  총평 사용상 만족도 별1개 : 사용하는 행위 자체가 고통\n별2개 : 대체품만 있으면 바로 포기 할 수 있음\n별3개 : 몇가지의 불편이 있지만 못쓸정도는 아님\n별4개 : 완벽하진 않지만 허용범위내의 사용성을 보임.\n별5개 : 흠잡을데 별로 없이 사용하기 아주 편리함\n재구매 의향 별1개 : 다시는 구매하지 않을것, 브랜드에 대한 불신이 생겼음.\n별2개 : 획기적으로 개선이 되지 않는이상 구매하지 않음.\n별3개 : 같은 제품으로 살 의향 있으나 개선품이 있으면 그걸 선택\n별4개 : 별다른 고민없이 재구매 할 것\n별5개 : 지인에게도 추천 하거나 선물할 수 있을정도\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/blog/",
+	"title": "blog",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/jekyll/",
+	"title": "jekyll",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-03-18-install-jekyll/",
+	"title": "Jekyll 설치 ",
+	"tags": [],
+	"description": "",
+	"content": "Installation Install ruby2.3 on ubuntu\nsudo apt-add-repository ppa:brightbox/ruby-ng sudo apt-get update sudo apt-get install ruby2.3 ruby2.3-dev Install gem\nsudo apt-get install gem\nUpdate gem\nsudo gem install rubygems-update\nInstall Jekyll\nsudo gem install jekyll\nCheck jekyll version\njekyll --version\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-01-18-jekyll-installation/",
+	"title": "Jekyll설치 가이드",
+	"tags": ["web", "blog", "jekyll", "staticweb"],
+	"description": "",
+	"content": "install jekyll install ruby2.3 ubuntu\nsudo apt-add-repository ppa:brightbox/ruby-ng sudo apt-get update sudo apt-get install ruby2.3 ruby2.3-dev install gem\nsudo apt-get install gem\nupdate gem\nsudo gem install rubygems-update\ninstall Jekyll\nsudo gem install jekyll\ncheck jekyll version\njekyll --version\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/staticweb/",
+	"title": "staticweb",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/celery/",
+	"title": "celery",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-01-18-celery-with-mongodb/",
+	"title": "celery with mongodb",
+	"tags": ["python", "celery", "mongodb"],
+	"description": "",
+	"content": "#Celery 와 Mongo DB를 이용한 튜토리얼\n참고링크\nhttp://skillachie.com/2013/06/15/intro-celery-and-mongodb/\n install celery\npip install celery\npip install -U 'celery[mongodb]'or pip install -U celery-with-mongodb\n아래와 같은 형식으로 나중에 브로커를 등록 하면 됨.  BROKER_URL = \u0026#39;mongodb://localhost:27017/database_name\u0026#39; #Where the URL is in the format of: mongodb://userid:password@hostname:port/database_name use test db.createUser( {use: \u0026#34;testUser\u0026#34;, pwd: \u0026#34;test\u0026#34;, roles: [\u0026#34;readWrite\u0026#34;, \u0026#34;dbAdmin\u0026#34;] } ) #다음 명령은 read 권한만 갖고 있는 동일한 사용자를 admin 데이터베이스에 추가하고 testDB2 데이터베이스에 대한 readWrite 권한을 부여한다. use admin db.createUser( {user: \u0026#34;testUser\u0026#34;, userSource: \u0026#34;test\u0026#34;, roles: [\u0026#34;read\u0026#34;], otherDBRoles:{ testDB2: [\u0026#34;readWrite\u0026#34;] } } ) 설정파일을 작성한다. (celeryconfig.py)  from celery.schedules import crontab CELERY_RESULT_BACKEND = \u0026#34;mongodb\u0026#34; CELERY_MONGODB_BACKEND_SETTINGS = { \u0026#34;host\u0026#34;: \u0026#34;127.0.0.1\u0026#34;, \u0026#34;port\u0026#34;: 27017, \u0026#34;database\u0026#34;: \u0026#34;jobqueue\u0026#34;, \u0026#34;taskmeta_collection\u0026#34;: \u0026#34;stock_taskmeta_collection\u0026#34;, }  나의경우 ubuntu 15.10 이라서 mongodb3.2 버전의 데비안패키지가 튜토리얼에 안적혀있었다.  #레포지터리에 접속하기위한 퍼블릭키를 받고 sudo apt-get adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9ECBEC467F0CEB10 #레포지터리를 추가하고 echo \u0026#34;deb http://repo.mongodb.org/apt/debian wheezy/mongodb-org/3.0 main\u0026#34; | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list #설치한다 sudo apt-get update sudo apt-get install -y mongodb-org 별 문제가 없다면 MongoDB Ubuntu Installation 를 따라서 설치하면 된다.\n 다음과 같이 task.py 파일을 작성한다.  from celery import Celery app = Celery(\u0026#39;tasks\u0026#39;, broker=\u0026#39;mongodb://userid:password@localhost:27017//jobqueue\u0026#39;) @app.task def add(x, y): return x + y  pip install 로 설치를 했는데 celery 가 없다고 나오는경우\n우분투의 경우 ~/.local/bin 안에 있을수 있다.\nexport PATH=$PATH:/home/user/.local/bin/ 명령어로 추가하면 정상작동할것임\n "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/frontend/",
+	"title": "frontend",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/js/",
+	"title": "js",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-01-18-js-calendar-components-survey/",
+	"title": "js calendar-componenets-survey",
+	"tags": ["web", "js", "frontend"],
+	"description": "",
+	"content": "#Schedule Viewer\nUbuntu 14.04\nMEAN Stack (with Angular2.0)\nJobQueue : Celery(python) with MongoDB(Broker)\n(Optional) Vagrant\nVisualization\n graspSchedule.js\n DOJO\n[DOJO] (http://dojotoolkit.org/reference-guide/1.10/dojox/calendar.html)\nDemo fullcalandar\nDemo  uikit\n UIKIT Bootstrap  data visualization\n http://www.chartjs.org/ http://d3js.org/ http://sigmajs.org/ http://visjs.org/ https://plot.ly/javascript  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/posts/2016-01-18-react-vs-angular2/",
+	"title": "react-vs-angular2",
+	"tags": ["web", "angular2", "react"],
+	"description": "",
+	"content": "#MEAN VS MERN ###AngularJS 2.0 VS ReactJS\n###Contents\n AngularJS 2.0 React Conclusion Workload Estimate Links   AngularJS 1.3 는 논외로 하기로 함\nhttp://netil.github.io/slides/angularjs/index3.html#/\n 앞으로 메인테넌스를 2년 미만만 지원됨. AngularJS 2.0으로의 마이그레이션 방법 없음 React 보다 7배정도 느림 \u0026ndash;\u0026gt; 2.0 에서 개선 소스코드의 재활용이 react에 비해서 떨어진다. \u0026ndash;\u0026gt; 2.0 에서 개선 watcher가 많아지면 퍼포먼스 하락     angular2.0 VS react     two way data binding one way   ES6 완벽지원 JS ES6일부지원     ###AngularJS 2.0 장점\n 2way data binding 덕분에 서버사이드에서 수시로 바뀌는 값을 구현하기 편함 2.0부터는 렌더링,리랜더링 도 react 보다 더 빠르다. 성능비교 typeScript을 기본으로 지원 : JS가 타입이 없어서 생기는 디버깅 문제점 완화  단점\n watcher가 많아지면 퍼포먼스 하락(2.0 에서 대폭 개선) 1.x 버전과 호환이 안됨. 아직 베타 버전   ###ReactJS 장점\n 렌더링이 빠름 virtual dom 을 사용하여 rerendering 이 효율적임 (even with angular 2.0) JSX는 비엔지니어가 배우기에 직관적이다.  단점\n Flux 아키텍쳐의 진입장벽이 비교적 높음(Flux, JSX) 다른 프레임워크와 조합하지 않으면 사용 할 수 없다. View에만 사용 할 수 있음. (단독으로 사용 불가)   ###Conclusion Angular 2.0 Win\nangular 1.x 버전대가 ReactJS 에 비해 불리하던면이 대부분 개선되어 비슷하거나 오히려 좋아짐.\n서버사이드에서 자주 바뀌는 값을 브라우저에 동기화 할때 코드작성이 훨씬 쉬움, DashBoard 와 같은 기능에 적합하다고 판단\nFlux 아키텍쳐나 JSX 에 대해 추가로 배울 필요가 없음. (JSX는 mandatory가 아니지만 코드를 읽을줄은 알아야함)\nSpring 덕인지 아직은 국내에 MVC패턴에 익숙한 개발자가 Flux에 익숙한 개발자보다 많음\n ###Workload Estimate 업무\n MEAN Stack 구축 : 0.25MM SPA(Single Page Application) 구현 : 0.25 ~ 0.5MM  투입인원\n 양원우 : 0.75 ~ 1 MM  예상소요기간\n 최단 0.5 Month 최장 1.0 Month   ###Links Angular2.0\nReact\n React를 이해하다 Flux로의 카툰 안내서  ES6\n ES6 Features ES6시대의 JavaScript  서비스 구축\nhttps://scotch.io/tutorials/setting-up-a-mean-stack-single-page-application\nhttps://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/2015-ros-study/",
+	"title": "2015 ~ 2016 ROS 스터디",
+	"tags": [],
+	"description": "",
+	"content": "ROS 스터디를 하면서 겪은 시행착오들을 정리했습니다. indigo 를 사용한 오래된 기록이기 때문에 현재는 큰 도움이 안 될 수도 있습니다. "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/kobuki/",
+	"title": "kobuki",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/2015-ros-study/2016-01-15-kobuki-raspberripi2/",
+	"title": "Kobuki(거북이) 라즈베리파이2랑 연결하기",
+	"tags": ["robot", "ros", "raspberryPi", "kobuki"],
+	"description": "",
+	"content": "꼬부기에 쓰기위한 코어로 집에 있는 라즈베리파이2를 사용하기로 했다.\n전력도 외장 배터리를 사용하면 한참 쓸 수 있기 때문에 적절할것이다고 생각했음.\n게다가 설정 끝나면 USB전력 하나만 들어가도 USB무선랜으로 SSH 물려서 쓸 수 있으니 선이 주렁주렁 달려있는것도 피할 수 있음.\n2니까 어느정도 연산력도 있지 않을까 기대해본다.\nROS wiki에 raspberry pi 에 indigo 를 설치하는 항목 을 참고하여 진행함.\n대부분 비슷하겠지만 중간중간 다른곳이 있음.\n준비물\n Raspbian Jessie image 16GB SD-CARD Raspberry pi 2  ###raspberry pi 2 setup\n Downloads Raspbian Jessie Image from internet Burn image into SDcard\nsudo dd bs=1M if=/media/noizbuster/share/Download/2015-11-21-raspbian-jessie.img of=/dev/mmcblk0 extend internal storage (using sudo raspi-config) change locale to en_US UTF-8 (using sudo raspi-config) change CPU clock for Raspberry pi2 connect to wireless network change keyboard layout gb to us which in /etc/default/keyboard file update \u0026amp; upgrade using apt install vim, git, htop, openssh-server, etc\u0026hellip; setup ssh server change boot option to CLI with autologin reboot  ###ROS setup\n#setup remote package reposotiry sudo sh -c \u0026#39;echo \u0026#34;deb http://packages.ros.org/ros/ubuntu jessie main\u0026#34; \u0026gt; /etc/apt/sources.list.d/ros-latest.list\u0026#39; wget https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -O - | sudo apt-key add - #make raspbian up-to-date sudo apt-get update sudo apt-get upgrade #install dependancy sudo apt-get install python-pip python-setuptools python-yaml python-distribute python-docutils python-dateutil python-six #install rosdep sudo pip install rosdep rosinstall_generator wstool rosinstall #initialize rosdep sudo rosdep init rosdep update\t#종종 타임아웃이 떠서 받다가 마는 모습을 볼 수도 있는데 다시 시도하면 해결 되더라 #인스톨을 하기 위한 패키지들의 서브셋들을 생성해주는 기능, 이것도 통신상태가 안좋으면 종종 실패하는데 다시 시도하면 된다. #원래는 GUI툴을 제거한 버전으로 받아오곤 있는데 (jade-ros_comm-wet.rosinstall 이런식임) #난 XWindow툴이니까 SSH 너머로 화면을 받아올 수 있지 않을까 기대해서 전부 다 설치 하기로 했다. #TODO 생각보다 많이 걸리고 쓸데없는거까지 깔리는 느낌인데 (QT IDE같은거) 나중에 개선해봐야겠다. rosinstall_generator desktop_full --rosdistro jade --deps \u0026gt; jade-desktop-full.rosinstall wstool init src jade-desktop-full.rosinstall "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/raspberrypi/",
+	"title": "raspberryPi",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/robot/",
+	"title": "robot",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/ros/",
+	"title": "ros",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/gigabyte/",
+	"title": "gigabyte",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/laptop/",
+	"title": "laptop",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/p34w-v3/",
+	"title": "p34w v3",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/reviews/2016-01-13-review-p34w-v3/",
+	"title": "리뷰 - Gigabyte P34W V3",
+	"tags": ["gigabyte", "laptop", "p34w v3"],
+	"description": "",
+	"content": "쓸만큼 써보고 써보는 리뷰 Gigabyte P34W V3 Laptop 장점 가격대비 높은 성능비 가격대비 아주 높은 성능비를 보인다.\n나는 i7 에 GTX970 이 달려있는 모델을 샀는데 130만원 정도 주었다.\n여기에 SSD추가로 더 달고 램을 16GB로 확장해서 사용하였다.\n높은 확장성 이정도 무게에 이정도 크기의 랩탑에는 대부분 추가 SSD 베이가 없었다.\n이번에 랩탑을 구매하면서 가장 신경쓴 부분은 물리하드2개, 램베이2개, 고성능GPU, CPU 였다.\n램베이2개 고성능프로세서를 만족시키는 랩탑들은 많았고 당시에는 금전적인 여유도 있었기에 Razer Blade 스리즈를 고민하기도 하였으나.\nGTX970이 달려있는 모델에 꽂혀서 문의해보니 M-SATA를 포함해도 물리하드를 한개밖에 못단다고 답변받아 포기하였다.\n그만큼 물리하드를 2개이상 달수 있는 모델이 이정도 크기에서 대안이 없었으며\n이 때문에 가격을 제치고도 구매하게 된 결정적인 계기가 되었다.\n가벼움 이정도 가격, 스펙에 랩탑들이 대부분 무게가 2.3~2.6 킬로에 분포되어 있었다.\n가격차이가 전혀 나지 않았음에도 P34W는 본체무게가 1.7킬로밖에 하지 않는다.\n친절한 AS 초기불량으로 AS를 맡겼을때도 그렇고 힌지부분 케이스가 부서져서 AS를 받았을때 카운터의 직원분이 아주 친절했다.\n기기 상태를 보고 어떤것이 문제인지 카운터에 계시는분도 어느정도 파악 가능한것으로 보였다.\n내가 일정이 좀 급했는데 기사분께 양해를 구해서 빨리 수리 될 수 있게 도와주셨다.\n잘 갖추어진 유틸 window용으로 제공되는 유틸 두개가 좋은편이다.\n하나는 드라이버를 업데이트 해주는건데 전체적으로 차트 모양으로 보여줘서 현재 내 버전과 권장버전을 보여준다.\n권장버전이 아주 최신은 아닌데 주기적으로 업데이트가 되는것으로 봐서 관리는 잘 되는듯 하다.\n다른 하나는 전원옵션이나 색온도, 팬속도등을 컨트롤 할 수 있는 유틸인데 디자인은 좀 촌스럽지만 배치나 직관성은 상당히 좋다.\n7세 꼬마도 무리없이 쓸 수 있을 정도로 아주 잘 만들어놨다.\n넉넉한 포트들  USB3.0 4개 RGB포트 HDMI포트 LAN포트 SD카드리더  이렇게 포트를 제공한다. 이정도 무게에 이정도면 아주 훌륭하다.\nRGB포트가 빠지고 Display 포트가 들어가면 금상첨화겠지만\n내가 때때로 RGB포트를 사용했던 기억을 되짚어보면 아직은 시기상조인가 싶다\n 단점 마감부실 전체적으로 마감이 좀 부실하다는 느낌을 많이 받는다.\n특히 키보드 모듈이 전체적으로 유격이 있고 붕 떠있는 느낌이라 만지거나 볼때마다 거슬린다.\n요즘 랩탑이 대체적으로 얇게 만들어서 어느정도 탄성을 가지는건 알겠는데.\n힌지부분이 연결되어있는 디스플레이 부분이 여닫을때 너무 휜다는 느낌을 받는다. 금속피로가 누적되지 않을까 염려된다.\n초기불량문제 무선랜모듈과 메인보드메인칩셋에 문제가 있어서 AS 받았다.\n주요 증상은 무선랜이 주기적으로 죽어버리고 내장그래픽과 외장그래픽이 서로 연동될때 내장그래픽이 죽어버리는 상황이었다.\n처음에 AS맡겼을때는 기사분이 문제 없다고 포맷해봐라 라는 이야기를 자꾸해서 짜증났었는데.\n내가 네트워크 끊어지는거 로그랑 시연동영상까지 찍어서 그냥 부품 교환해달라고 해서 해결했다.\n원래는 260만원짜리 AORUS을 샀다가 외장그래픽 냉땜문제로 교환받으려다 재고가 없어서 환불받고 이걸 산건데\n이런일이 반년도 안돼서 3번이나 일어나니 GIGABYTE의 마감상태에 대해 의구심이 생길수밖에 없는것 같다.\n키보드 퀄러티 마감부실에서도 살짝 언급을 했지만 키보드 퀄러티가 아주 구리다.\n일단 키캡이 다른제품에 비해서 얇은것 같고 때때로 키보드를 누를때 요철부에 키가 걸려서 휘어지면서 걸린다.\n이제 말이 때때로지 열번누르면 한두번은 그러는것 같아서 타이핑할맛이 안난다.\n특히 자주 누르는 left-ctrl, 화살표 들이 자주 그러니 체감은 더하다.\n키보드 모듈 전체가 본체랑 따로 놀기도 한다. 특히 윗부분은 거의 1mm쯤 유격이 있다.\n뭔가 조립이 잘못된건지 싶어 뒷판을 열어 봤을때 멀쩡해서 얼척없었다.\n화살표 키 생긴것도 맘에 안들고 좌, 우 키가 특히 위에 언급한 문제를 일으킨다. 모양이 좀 작았으면 덜 그랬을것 같다.\n키보드배치 키보드의 질 자체도 문제인데 키 배치도 당췌 적응이 안된다. Asus나 삼성의 키배치가 더 나은듯.\n개인적으로 펑션키가(Fn)가 맨 왼쪽 아래에만 없으면 된다는 주의기 때문에 최악은 아니라고 생각한다.\n헤비급어댑터 어댑터 무게가 700그램에 육박한다. 본체가 가벼운걸 여기서 다 까먹는다.\nRazer Blade 의 두배쯤 되나?\n리눅스드라이버 미제공 및 리눅스용 온도센서 드라이버 미제공 dell의 제품과는 다르게 얘한테 달려있는 온도센서들은 리눅스를 지원하지 않고 홈페이지에서도 배포하지 않는다.\n때문에 laptop mode같은걸로 온도에 따라 CPU 로드율을 관리하거나 할 수가 없다.\n난 삽질을 할 만큼 했다고 생각한다. 아, 그리고 디폴트 세팅이 뭔지 모르겠지만 팬의 속도는 프로세서들의 로드율에 따라 달라지는것 같다.\n그래서 온도가 오르지 않아도 갑자기 하이로드가 걸리면 비행기 이륙하는 소리를 들을 수 있다.\n조악한 내장 스피커 이전에 쓰던 랩탑이 Bang \u0026amp; Olufsen ICEpower® 어쩌고 하면서 음질이 좋다고 했지만 난 잘 모르겠다 였는데\nP34W V3 의 음질을 듣고 아 그게 좋은거였구나 싶었다. 요구르트 통에 실 연결해서 만든 전화기 같은 소리가 난다.\n돌비 어쩌고 하는걸 깔수 있는데 깔아도 저음이 싼티나는건 마찬가지다\n총점 가성비 ★★★★☆\n완성도 ★☆☆☆☆\n디자인 ★★★☆☆\n재구매 ★☆☆☆☆\n총평 전체적으로 참 괜찮은 제품이나 키보드의 하드 트롤링에 때문에\n오히려 집이나 직장에서 평소에 모니터 물려서 쓰다가 유사시에 들고다닐 용도로 쓰기에 좋은것 같다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/2015-ros-study/2016-01-04-ros-7-using_rqtconsole_and_roslaunch/",
+	"title": "ROS Study 007. Using rqt_console and roslaunch",
+	"tags": ["robot", "ros"],
+	"description": "",
+	"content": "Prerequisites rqt and turtlesim package sudo apt-get install ros-\u0026lt;distro\u0026gt;-rqt ros-\u0026lt;distro\u0026gt;-rqt-common-plugins ros-\u0026lt;distro\u0026gt;-turtlesim rqt_console \u0026amp; rqt_logger_level\nrqt_console 은 ROS의 로깅 프레임워크에 붙어서 노드들이 내는 출력들을 보게 한다.\nrosrun rqt_console rqt_console 로 실행한다.\nrqt_logger_level은 debug, info, warning 등의 로깅 레벨을 정할 수 있게 해준다.\nrosrun rqt_logger_level rqt_logger_level로 실행한다.\nUsing roslaunch\nroslaunch 는 정해진 설정대로 여러개의 노드를 한번에 실행 시켜주는것이다. 하나의 프로젝트를 통채로 실행할때 좋다.\n\u0026lt;launch\u0026gt; \u0026lt;group ns=\u0026#34;turtlesim1\u0026#34;\u0026gt; \u0026lt;node pkg=\u0026#34;turtlesim\u0026#34; name=\u0026#34;sim\u0026#34; type=\u0026#34;turtlesim_node\u0026#34;/\u0026gt; \u0026lt;/group\u0026gt; \u0026lt;group ns=\u0026#34;turtlesim2\u0026#34;\u0026gt; \u0026lt;node pkg=\u0026#34;turtlesim\u0026#34; name=\u0026#34;sim\u0026#34; type=\u0026#34;turtlesim_node\u0026#34;/\u0026gt; \u0026lt;/group\u0026gt; \u0026lt;node pkg=\u0026#34;turtlesim\u0026#34; name=\u0026#34;mimic\u0026#34; type=\u0026#34;mimic\u0026#34;\u0026gt; \u0026lt;remap from=\u0026#34;input\u0026#34; to=\u0026#34;turtlesim1/turtle1\u0026#34;/\u0026gt; \u0026lt;remap from=\u0026#34;output\u0026#34; to=\u0026#34;turtlesim2/turtle1\u0026#34;/\u0026gt; \u0026lt;/node\u0026gt; \u0026lt;/launch\u0026gt; 이런식으로 구성된다.\n각각의 노드의 이름을 정해 줄 수 있으며 입출력을 리매핑 해주는것도 가능하다.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/2015-ros-study/2016-01-04-ros-8-using_rosed/",
+	"title": "ROS Study 008. Using rosed to edit files in ROS",
+	"tags": ["robot", "ros"],
+	"description": "",
+	"content": "msg 와 srv 에 대한 설명\nmsg: msg 파일은 로스 메세지의 필드에 대해 설명된 간단한 파일이다. 그것들은 서로 다른 언어로 메세지를 생성하기위해서 사용된다.\nsrv: srv 파일은 서비스에 대해서 설명된 파일이다. 이것은 두개의 부분으로 구성된다:리퀘스트, 리스폰스\nmsg 파일은 패키지에서 msg 디렉토리에 저장된다.\n그리고 srv 파일은 srv디렉토리에 저장된다.\nmsg 파일은 간단한 텍스트파일이다 필트 타입과 필드네임을 각각 줄에 포함한. 필드 타입들은 다음과 같은게 될 수 있다.\n int8, int16, int32, int64 (plus uint*) float32, float64 string time, duration other msg files variable-length array[] and fixed-length array[C]  ROS에는 또한 특별한 타입이 존재하는데 Header 이다 헤더는 타임스템프와 코오디네이트 프레임 정보를 포함하고 있다. 그것들은 ROS에서 일반적으로 사용된다. 당신은 자주 메세지 헤더에서 이런것들을 자주 보게 될것이다.\n여기 헤더를 이용한 메세지에 대한 예제가 있다. 스트링과 두개의 다른 메세지 :\nHeader header string child_frame_id geometry_msgs/PoseWithCovariance pose geometry_msgs/TwistWithCovariance twist srv 파일도 두 부분으로 되어있다는것을 빼면 msg 과 같이 간단한 텍스트파일이다. \u0026mdash;로 리퀘스트와 리스폰스 부분은 구분되어있다.\nint64 A int64 B --- int64 Sum 앞에 A, B 는 리퀘스트 부분이고 뒤에 sum 은 리스폰스 부분이다.\nmsg 만들어보기\n$ cd ~/catkin_ws/src/beginner_tutorials $ mkdir msg $ echo \u0026#34;int64 num\u0026#34; \u0026gt; msg/Num.msg The example .msg file above contains only 1 line. You can, of course, create a more complex file by adding multiple elements, one per line, like this:\nstring first_name string last_name uint8 age uint32 score "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/2015-ros-study/2016-01-04-ros-9-creating_msg_and_srv/",
+	"title": "ROS Study 009. Creating a ROS msg and srv",
+	"tags": ["robot", "ros"],
+	"description": "",
+	"content": "rosed\nrosed 는 rosbash의 일부분이다.\n이 명령어는 패키지명과 파일명으로 바로 파일을 편집 할 수 있도록 해준다.\nrosed roscpp Logger.msg 로 사용하면 roscpp 패키지 내부의 Logger.msg 파일을 바로 에디터로 열어준다.\n역시 탭 컴플리션을 지원하기 때문에 rosed roscpp 상태에서 탭을 두번치면 내부의 파일을 보여준다.\n에디터를 바꾸고싶으면\n nano : export EDITOR='nano -w' vim : export EDITOR='vim -w' emacs : export EDITOR='emacs -nw'  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/2015-ros-study/2016-01-04-ros-17-record_and_playback_data/",
+	"title": "ROS Study 017. Recording and playing back data",
+	"tags": ["robot", "ros"],
+	"description": "",
+	"content": "Description: This tutorial will teach you how to record data from a running ROS system into a .bag file, and then to play back the data to produce similar behavior in a running system.\nKeywords: data, rosbag, record, play, info, bag\nTutorial Level: BEGINNER\nNext Tutorial: Getting started with roswtf\n차례 Recording data (creating a bag file) Recording all published topics Examining and playing the bag file Recording a subset of the data The limitations of rosbag record/play\nRecording data (creating a bag file) This section of the tutorial will instruct you how to record topic data from a running ROS system. The topic data will be accumulated in a bag file.\nFirst, execute the following two commands:\nroscore rosrun turtlesim turtlesim_node rosrun turtlesim turtle_teleop_key This will start two nodes - the turtlesim visualizer and a node that allows for the keyboard control of turtlesim using the arrows keys on the keyboard. If you select the terminal window from which you launched turtle_keyboard, you should see something like the following:\nReading from keyboard Use arrow keys to move the turtle. Pressing the arrow keys on the keyboard should cause the turtle to move around the screen. Note that to move the turtle you must have the terminal from which you launched turtlesim selected and not the turtlesim window.\nRecording all published topics\nFirst lets examine the full list of topics that are currently being published in the running system. To do this, open a new terminal and execute the command:\nrostopic list -v This should yield the following output:\nPublished topics:\n /turtle1/color_sensor [turtlesim/Color] 1 publisher /turtle1/cmd_vel [geometry_msgs/Twist] 1 publisher /rosout [rosgraph_msgs/Log] 2 publishers /rosout_agg [rosgraph_msgs/Log] 1 publisher /turtle1/pose [turtlesim/Pose] 1 publisher  Subscribed topics:\n /turtle1/cmd_vel [geometry_msgs/Twist] 1 subscriber /rosout [rosgraph_msgs/Log] 1 subscriber The list of published topics are the only message types that could potentially be recorded in the data log file, as only published messages are recorded. The topic /turtle1/cmd_vel is the command message published by teleop_turtle that is taken as input by the turtlesim process. The messages /turtle1/color_sensor and /turtle1/pose are output messages published by turtlesim.  We now will record the published data. Open a new terminal window. In this window run the following commands:\nmkdir ~/bagfiles cd ~/bagfiles rosbag record -a Here we are just making a temporary directory to record data and then running rosbag record with the option -a, indicating that all published topics should be accumulated in a bag file.\nMove back to the terminal window with turtle_teleop and move the turtle around for 10 or so seconds.\nIn the window running rosbag record exit with a Ctrl-C. Now examine the contents of the directory ~/bagfiles. You should see a file with a name that begins with the year, data, and time and the suffix .bag. This is the bag file that contains all topics published by any node in the time that rosbag record was running.\nExamining and playing the bag file Now that we\u0026rsquo;ve recorded a bag file using rosbag record we can examine it and play it back using the commands rosbag info and rosbag play. First we are going to see what\u0026rsquo;s recorded in the bag file. We can do the info command \u0026ndash; this command checks the contents of the bag file without playing it back. Execute the following command from the bagfiles directory:\nrosbag info You should see something like:\npath: 2014-12-10-20-08-34.bag version: 2.0 duration: 1:38s (98s) start: Dec 10 2014 20:08:35.83 (1418270915.83) end: Dec 10 2014 20:10:14.38 (1418271014.38) size: 865.0 KB messages: 12471 compression: none [1/1 chunks] types: geometry_msgs/Twist [9f195f881246fdfa2798d1d3eebca84a] rosgraph_msgs/Log [acffd30cd6b6de30f120938c17c593fb] turtlesim/Color [353891e354491c51aabe32df673fb446] turtlesim/Pose [863b248d5016ca62ea2e895ae5265cf9] topics: /rosout 4 msgs : rosgraph_msgs/Log (2 connections) /turtle1/cmd_vel 169 msgs : geometry_msgs/Twist /turtle1/color_sensor 6149 msgs : turtlesim/Color /turtle1/pose 6149 msgs : turtlesim/Pose This tells us topic names and types as well as the number (count) of each message topic contained in the bag file. We can see that of the topics being advertised that we saw in the rostopic output, four of the five were actually published over our recording interval. As we ran rosbag record with the -a flag it recorded all messages published by all nodes.\nThe next step in this tutorial is to replay the bag file to reproduce behavior in the running system. First kill the teleop program that may be still running from the previous section - a Ctrl-C in the terminal where you started turtle_teleop_key. Leave turtlesim running. In a terminal window run the following command in the directory where you took the original bag file:\nrosbag play In this window you should immediately see something like:\n[ INFO] [1418271315.162885976]: Opening 2014-12-10-20-08-34.bag\nWaiting 0.2 seconds after advertising topics\u0026hellip; done.\nHit space to toggle paused, or \u0026rsquo;s' to step. In its default mode rosbag play will wait for a certain period (.2 seconds) after advertising each message before it actually begins publishing the contents of the bag file. Waiting for some duration allows any subscriber of a message to be alerted that the message has been advertised and that messages may follow. If rosbag play publishes messages immediately upon advertising, subscribers may not receive the first several published messages. The waiting period can be specified with the -d option.\nEventually the topic /turtle1/cmd_vel will be published and the turtle should start moving in turtlesim in a pattern similar to the one you executed from the teleop program. The duration between running rosbag play and the turtle moving should be approximately equal to the time between the original rosbag record execution and issuing the commands from the keyboard in the beginning part of the tutorial. You can have rosbag play not start at the beginning of the bag file but instead start some duration past the beginning using the -s argument. A final option that may be of interest is the -r option, which allows you to change the rate of publishing by a specified factor. If you execute:\nrosbag play -r 2 You should see the turtle execute a slightly different trajectory - this is the trajectory that would have resulted had you issued your keyboard commands twice as fast.\nRecording a subset of the data When running a complicated system, such as the pr2 software suite, there may be hundreds of topics being published, with some topics, like camera image streams, potentially publishing huge amounts of data. In such a system it is often impractical to write log files consisting of all topics to disk in a single bag file. The rosbag record command supports logging only particular topics to a bag file, allowing a user to only record the topics of interest to them.\nIf any turtlesim nodes are running exit them and relaunch the keyboard teleop launch file:\nrosrun turtlesim turtlesim_node rosrun turtlesim turtle_teleop_key In your bagfiles directory, run the following command:\nrosbag record -O subset /turtle1/cmd_vel /turtle1/pose The -O argument tells rosbag record to log to a file named subset.bag, and the topic arguments cause rosbag record to only subscribe to these two topics. Move the turtle around for several seconds using the keyboard arrow commands, and then Ctrl-C the rosbag record.\nNow check the contents of the bag file (rosbag info subset.bag). You should see something like this, with only the indicated topics:\npath: subset.bag version: 2.0 duration: 12.6s start: Dec 10 2014 20:20:49.45 (1418271649.45) end: Dec 10 2014 20:21:02.07 (1418271662.07) size: 68.3 KB messages: 813 compression: none [1/1 chunks] types: geometry_msgs/Twist [9f195f881246fdfa2798d1d3eebca84a] turtlesim/Pose [863b248d5016ca62ea2e895ae5265cf9] topics: /turtle1/cmd_vel 23 msgs : geometry_msgs/Twist /turtle1/pose 790 msgs : turtlesim/Pose ###The limitations of rosbag record/play In the previous section you may have noted that the turtle\u0026rsquo;s path may not have exactly mapped to the original keyboard input - the rough shape should have been the same, but the turtle may not have exactly tracked the same path. The reason for this is that the path tracked by turtlesim is very sensitive to small changes in timing in the system, and rosbag is limited in its ability to exactly duplicate the behavior of a running system in terms of when messages are recorded and processed by rosrecord, and when messages are produced and processed when using rosplay. For nodes like turtlesim, where minor timing changes in when command messages are processed can subtly alter behavior, the user should not expect perfectly mimicked behavior.\nNow that you\u0026rsquo;ve learned how to record and play back data, let\u0026rsquo;s learn how to troubleshoot with roswtf.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/2015-ros-study/2016-01-03-ros-4-node/",
+	"title": "ROS Study 004. ros node",
+	"tags": ["robot", "ros"],
+	"description": "",
+	"content": "####본 내용은 개념적인것임으로 기존에 설명된 자료들을 이야기 하고 넘어가도록 하겠다. 한국어로 설명된 카페의 내용이다. http://cafe.naver.com/openrt/2468 ####이하 내용은 wiki.ROS.org 에 게시된 튜토리얼을 대충 번역한것이다. http://wiki.ros.org/ROS/Tutorials/UnderstandingNodes\n ###사전작업\n이 튜토리얼을 위해서 우리는 가벼운 시뮬레이터를 사용할것이다. $ sudo apt-get install ros-\u0026lt;distro\u0026gt;-ros-tutorials \u0026lt;distro\u0026gt;부분을 당신이 사용하는 배포판으로 대체해서 사용하면 된다.(e.g. hydro, groovy, electric, fuerte etc.)\n###그래프컨셉을 빠르게 리뷰하기\n Nodes: 노드는 ROS를 이용해서 실행가능한것이고 ㅇ다른 노트들과 대화(통신)할 수 있는것이다. Messages: 토픽(Topic)을 구독(subscribing) 하거나 발행(publishing)할때 사용되는 ROS 데이터 타입 Topics: 노드는 토픽에 대한 메세지를 발행 할 수 있을 뿐만 아니라 구독 해서 메세지를 받을 수도 있다. Master: 로스 서비스의 이름, 같은 서비스에 있는 노드들이 서로를 찾을 수 있도록 중계해주는 역할. rosout: 로스에서 사용되는 stdout/stderr와 같은 인터페이스 roscore: Master + rosout + parameter server (파라미터 서버에 대해서는 나중에 설명한다.)  ###Nodes 노드\n노드는 로스 패키지내에서 실행 가능한것 이상이 아니다. 로스 노드는 로스 클라이언트 라이브러리를 사용해서 다른 노드들과 통신한다. 노드들은 토픽을 발행하거나 구독 할 수 있다. 노드들은 서비스를 제공하거나 사용할 수 있다.\n###Client Libraries\n로스 클라이언트 라이브러리는 서로 다른 언어로 작성된 노드끼리 통신 할 수 있도록 해준다.\nrospy = python client library\nroscpp = c++ client library\n###roscore\nroscore 는 로스르 이용해서 실행해야할 첫번째것이다.\nPlease run:\n$ roscore 이런 메세지를 볼 수 있을것이다.\n... logging to ~/.ros/log/9cf88ce4-b14d-11df-8a75-00251148e8cf/roslaunch-machine_name-13039.log Checking log directory for disk usage. This may take awhile. Press Ctrl-C to interrupt Done checking log file disk usage. Usage is \u0026lt;1GB. started roslaunch server http://machine_name:33919/ ros_comm version 1.4.7 SUMMARY ======== PARAMETERS * /rosversion * /rosdistro NODES auto-starting new master process[master]: started with pid [13054] ROS_MASTER_URI=http://machine_name:11311/ setting /run_id to 9cf88ce4-b14d-11df-8a75-00251148e8cf process[rosout-1]: started with pid [13067] started core service [/rosout] 만약 로스코어가 초기화 되어있지 않았으면 아마 당신은 네트워크 설정 문제가 있을것이다.Network Setup - Single Machine Configuration 만약 로스코어가 초기화 되지 않고 퍼미션이 부족하다는 메세지를 보았으면 아마도 ~/.ros 경로를 루트가 소유하고 있을것이다. 다음 명령어도 해결 할수 있다.\n$ sudo chown -R \u0026lt;your_username\u0026gt; ~/.ros ###Using rosnode\nroscore를 켜둔채로 새로운 터미널을 열어서 로스 노드를 사용해 보자\nrosnode 는 ROS에서 현재 동작중인 노드들에 대한 정보를 보여준다.\n$ rosnode list /rosout 이것은 우리에게 rosout 한개의 노드만이 실행중이라고 보여준다. 이것은 항상 실행되며 노드에 대한 디버깅 출력되 로그를 모은다.\nrosnode 명령어는 특정 노드에 대한 정보만 리턴 할 수도 있다.\n$ rosnode info /rosout Node [/rosout] Publications: * /rosout_agg [rosgraph_msgs/Log] Subscriptions: * /rosout [unknown type] Services: * /rosout/set_logger_level * /rosout/get_loggers contacting node http://machine_name:54614/ ... Pid: 5092 이제 더 많은 노드들을 봐보자, 이것을 위해 우리는 rosrun을 이용해서 다른 노드들을 가져와 볼 것 이다.\n###Using rosrun\nrosrun 은 패키지 이름을 이용해서 직접적으로 패키지에 있는 노드를 구동 할 수 있게 해준다.(알고 있는 패키지 경로에 대해서만).\nUsage:\n#rosrun [package_name] [node_name] $ rosrun turtlesim turtlesim_node 당신은 turtlesim 창을 볼 수 있을것이다.\nIn a new terminal:\n$ rosnode list /rosout /turtlesim 강력한 로스의 기능중 하나는 커맨드라인에서 노드의 이름을 다시 할당 할수 있는것이다.\nturtlesim window를 닫아 노드를 중단시키고 (혹은 터미널에서 컨트롤+C를 누르고 재실행하는데 다음과 같이 아규먼트를 줄것이다.\n$ rosrun turtlesim turtlesim_node __name:=my_turtle 이제 다시 노드들의 리스트를 보면\n$ rosnode list /rosout /my_turtle 제대로 안닫긴 노드가 리스트에 보일때는 $ rosnode cleanup 을 이용해서 클린업 할 수 있다.\nrosnode 를 이용해서 노드에다가 핑을 날려볼수도 있다.\n$ rosnode ping my_turtle rosnode: node is [/my_turtle] pinging /my_turtle with a timeout of 3.0s xmlrpc reply from http://aqy:42235/ time=1.152992ms xmlrpc reply from http://aqy:42235/ time=1.120090ms xmlrpc reply from http://aqy:42235/ time=1.700878ms xmlrpc reply from http://aqy:42235/ time=1.127958ms ###Review What was covered:\n roscore = ros+core : master (provides name service for ROS) + rosout (stdout/stderr) + parameter server (parameter server will be introduced later) rosnode = ros+node : ROS tool to get information about a node. rosrun = ros+run : runs a node from a given package.  Now that you understand how ROS nodes work, let\u0026rsquo;s look at how ROS topics work. Also, feel free to press Ctrl-C to stop turtlesim_node.\n"
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/2015-ros-study/2016-01-03-ros-5-topic/",
+	"title": "ROS Study 005. Topics",
+	"tags": ["robot", "ros"],
+	"description": "",
+	"content": "###토픽\n rostopic echo [토픽이름] 토픽에서 주고 받는 내용 출력 rostopic list 현재 활성화된 토픽들의 리스트를 본다. rostopic pub [토픽] [메세지타입] [데이터]\t해당토픽에 메세지를 발행한다. rosrun rqt_graph rqt_graph 현재 노드들과 토픽들에 대해서 그래프를 그려준다. rostopic type /turtle1/cmd_vel | rosmsg show 해당 채널의 메세지의 타입과 내용을 보여준다. rostopic hz /turtle1/pose 메세지의 데이터 레이트를 보여준다. rosrun rqt_plot rqt_plot 특정 메세지의 특정값이 시간에 따라 어떻게 변하는지 그래프로 그려줌  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/2015-ros-study/2016-01-03-ros-6-service-and-parameter/",
+	"title": "ROS Study 006. Services and Parameters",
+	"tags": ["robot", "ros"],
+	"description": "",
+	"content": "###서비스 토픽은 발행자가 중단하지 않는이상 지속적으로 메세지를 주고받는다.\n하지만 서비스는 일회성으로 연결 - 서비스요청 - 서비스응답 - 하고 닫는다.\n다시 통신하려면 연결부터 시작해야한다.\nrosservice\n rosservice call [service] [args] 서비스를 아규먼트와 함께 요청한다.  rosservice call /clear 를 실행시키면 거북이가 다닌 경로가 지워진다.   rosservice type spawn| rossrv show 이런식으로 하면 서비스가 가진 타입과 내용물이 보인다.  rosservice call spawn 2 2 0.2 \u0026quot;\u0026quot; 알게된 내용으로 콜 할 수 있다.     ###파라미터 rosparam\n rosparam set [파라미터이름] [값] set parameter rosparam get [파라미터이름] get parameter  rosparam get / 으로 모든 값들을 볼 수 있다.   rosparam load [파일이름] [네임스페이스] load parameters from file rosparam dump [파일이름] [네임스페이스] dump parameters to file       rosparam load params.yaml copy rosparam get copy/background_b\n\t- 를 이용해서 덤프뜰 수 있다. 뒤에 붙은 copy 와 같은 네임스페이스는 생략가능 - `rosparam delete` delete parameter - `rosparam list` list parameter names "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/2015-ros-study/2015-12-30-ros-3-create-package/",
+	"title": "ROS Study 003. Create the Package",
+	"tags": ["robot", "ros"],
+	"description": "",
+	"content": "패키지 만들기\nros 패키지를 만드는 방법은 2가지가 있다.\n roscreate-pkg를 사용한다. groovy 기반의 이전에 쓰던 방법 catkin을 사용한다 Fuerte 이후 버전에서 사용 할 수 있는 최신의 방법  Catkin으로 워크스페이스 만들기\n Workspace 디렉토리 생성 catkin_init_workspace로 Workspace 초기화 catkin_make를 해서 빌드 만약 이 Workspace의 경로를 $ROS_PACKAGE_PATH에 추가 하고 싶으면 source devel/setup.bash 를 하면 된다.   Workspace에는 여러개의 Package가 포함 될 수 있다.\nworkspace_folder/ -- WORKSPACE src/ -- SOURCE SPACE CMakeLists.txt -- 'Toplevel' CMake file, provided by catkin package_1/ CMakeLists.txt -- CMakeLists.txt file for package_1 package.xml -- Package manifest for package_1 ... package_n/ CMakeLists.txt -- CMakeLists.txt file for package_n package.xml -- Package manifest for package_n 이런식으로 Workspace의 내부가 구성된다.\n catkin 으로 패키지 만들기\n Workspace의 src 디렉토리로 이동 catkin_create_pkg beginner_tutorials std_msgs rospy roscpp 로 패키지 생성   파라미터들은 앞에서부터 PackageName, 나머지는 의존성 패키지들    이렇게 디렉토리와 파일들이 생성된다. rosand@rossandbox:~/catkin_ws/src$ ls beginner_tutorials CMakeLists.txt rosand@rossandbox:~/catkin_ws/src$ ls beginner_tutorials/ CMakeLists.txt include package.xml src\n3. `catkin_make`명령어로 빌드를 해본다. - ```bash rosand@rossandbox:~/catkin_ws$ catkin_make Base path: /home/rosand/catkin_ws Source space: /home/rosand/catkin_ws/src Build space: /home/rosand/catkin_ws/build Devel space: /home/rosand/catkin_ws/devel Install space: /home/rosand/catkin_ws/install #### #### Running command: \u0026quot;cmake /home/rosand/catkin_ws/src -DCATKIN_DEVEL_PREFIX=/home/rosand/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/rosand/catkin_ws/install -G Unix Makefiles\u0026quot; in \u0026quot;/home/rosand/catkin_ws/build\u0026quot; #### -- Using CATKIN_DEVEL_PREFIX: /home/rosand/catkin_ws/devel -- Using CMAKE_PREFIX_PATH: /opt/ros/jade -- This workspace overlays: /opt/ros/jade -- Using PYTHON_EXECUTABLE: /usr/bin/python -- Using Debian Python package layout -- Using empy: /usr/bin/empy -- Using CATKIN_ENABLE_TESTING: ON -- Call enable_testing() -- Using CATKIN_TEST_RESULTS_DIR: /home/rosand/catkin_ws/build/test_results -- Found gtest sources under '/usr/src/gtest': gtests will be built -- Using Python nosetests: /usr/bin/nosetests-2.7 -- catkin 0.6.16 -- BUILD_SHARED_LIBS is on -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -- ~~ traversing 1 packages in topological order: -- ~~ - beginner_tutorials -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -- +++ processing catkin package: 'beginner_tutorials' -- ==\u0026gt; add_subdirectory(beginner_tutorials) -- Configuring done -- Generating done -- Build files have been written to: /home/rosand/catkin_ws/build #### #### Running command: \u0026quot;make -j4 -l4\u0026quot; in \u0026quot;/home/rosand/catkin_ws/build\u0026quot; #### 만든 패키지를 $ROS_PACKAGE_PATH 에 추가 한다.   source /devel/setup.bash 를 이용하면 된다. 그러면 \u0026lsquo;echo $ROS_PACAKGE_PATH\u0026rsquo; 로 확인했을때 새로운 경로가 추가된것이 보인다.  /home/rosand/catkin_ws/src:/opt/ros/jade/share:/opt/ros/jade/stacks    rospack 명령어로 해당 Package가 어떤 first-dependancy 를 가지고 있는지 확인할 수 있다.      rosand@rossandbox:~/catkin_ws/devel$ rospack depends1 beginner_tutorials roscpp rospy std_msgs\n - '4.' 에서 언급한 setup.bash를 하지 않으면 경로를 찾지 못하기 때문에 해 주어야 정상적으로 이렇게 볼수 있다. - 이렇게 확인 할수 있는패키지들은 1차 적으로 의존성을 가지는 패키지들인데 의존성 패키지들 또한 다른 패키지에 의존성을 가진다. - ```bash $ rospack depends1 rospy genpy rosgraph rosgraph_msgs roslib std_msgs  이런 간접의존(indirect) 패키지까지 확인할때는 아래와 같이 rospack명령어를 사용하면 된다.    $ rospack depends beginner_tutorials cpp_common rostime roscpp_traits roscpp_serialization genmsg genpy message_runtime rosconsole std_msgs rosgraph_msgs xmlrpcpp roscpp rosgraph catkin rospack roslib rospy\n6. Package.xml 를 수정하여 메인테이너, 라이선스, 의존성등을 관리 할 수 있다. "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/2015-ros-study/2015-12-29-ros-2-navigating-the-filesystem/",
+	"title": "ROS Study 002. Navigating The Filesystem",
+	"tags": ["robot", "ros"],
+	"description": "",
+	"content": "튜토리얼을 위해서 튜토리얼 패키지 설치\nsudo apt-get install ros-\u0026lt;distro\u0026gt;-ros-tutorials ROS의 파일 시스템 컨셉\nROS의 파일 시스템 컨셉은 Package와 Manifest로 이루어져있다.\n Package는 로스코드의 소프트웨어 구성 단위이고 각각의 패키지는 라이브러리, 실행파일, 스크립트 혹은 다른 아티팩트들을 포함할 수 있다. Manifest는 패키지의 다른 패키지와의 의존성, 버전, 관리자, 라이선스 등을 포함하는 메타데이터를 제공하는 패키지에 대한 설명이다.  실습\nROS의 패키지를 관리하고 탐색하는데 사용되는 명령어들\n rospack : ROS의 패키지관리 툴 roscd : ROS의 Package 경로로 이동 rosls : ROS의 Package 경로 내부의 파일을 확인  #ROS 의 roscpp패키지의 위치를 찾는다. rospack find roscpp --\u0026gt; YOUR_INSTALL_PATH/share/roscpp #해당 Package 가 설치된 경로로 Change Directory #Tab Completion 을 지원한다. roscd roscpp pwd --\u0026gt; YOUR_INSTALL_PATH/share/roscpp #내부의 경로로 이동 roscd roscpp/cmake pwd --\u0026gt; YOUR_INSTALL_PATH/share/roscpp/cmake #패키지 내부 파일들을 확인 rosls roscpp_tutorials --\u0026gt;cmake launch package.xml srv "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/2015-ros-study/2015-12-28-ros-1-installation-and-configulation/",
+	"title": "ROS Study 001. Installing and Configuring Your ROS Environment",
+	"tags": ["robot", "ros"],
+	"description": "",
+	"content": "ROS 개발환경 설정  우분투 14.04 LTS IDE : VIM  http://wiki.ros.org/action/login/IDEs#Vim   ROS : JADE Turtle  Ubuntu Setup 1. 우분투 14.04를 VM에 설치함 2. 내 입맛대로 초기 세팅 sudo apt-get remove unity-webapps-common #우분투 웹검색 삭제 sudo apt-get install vim #VIM 설치 sudo apt-get install git #Git 설치 3. ROS 설치 #현재 최신 패키지 리스트 팻칭 sudo sh -c \u0026#39;echo \u0026#34;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main\u0026#34; \u0026gt; /etc/apt/sources.list.d/ros-latest.list\u0026#39; #인증 키 발급 sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net:80 --recv-key 0xB01FA116 #설치 sudo apt-get update sudo apt-get install ros-jade-desktop-full #설치 가능한 패키지 목록 저장해두기 매번 하기 귀찮으니까 apt-cache search ros-jade \u0026gt; available-package-ros.txt 4. ROS 초기 설정 sudo rosdep init rosdep update echo \u0026#34;source /opt/ros/jade/setup.bash\u0026#34; \u0026gt;\u0026gt; ~/.bashrc source ~/.bashrc 5. 제대로 초기설정이 되었는지 확인 echo $ROS_PACKAGE_PATH 6. 이런식으로 나오면 오케이 /home/youruser/catkin_ws/src:/opt/ros/indigo/share:/opt/ros/indigo/stacks 7. OPTIONAL : 난 GUI를 사용할 일이 없기 때문에 host 에서 VM으로 SSH접속을 위한 세팅을 하였다. sudo apt-get install openssh-server sudo vi etc/hosts.allow # 마지막줄에 ssh:ALL 추가 sudo vi etc/hosts.deny # 마지막줄에 ALL:ALL 추가 /etc/init.d/ssh restart - 붙을때는 `ssh -p [포트] [계정명]@주소` 로 접속하면 된다. 실습에 x-window 가 필요한 경우가 있는데 이때는 -X 옵션을 준다.  "
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/tags/visualstudio/",
+	"title": "visualstudio",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://blog.noizbuster.com/ko/series/2015-ros-study/2015-08-11-vs-metafile/",
+	"title": "VS 프로젝트 공유시 제외해야할 파일들",
+	"tags": ["visualstudio"],
+	"description": "",
+	"content": "git이나 svn으로 혹은 어딘가에 제출할때 IDE 의 메타데이터나 로컬 설정파일들은 제외하는것이 좋다.\n특히 VS의 경우 이런 메타데이터들의 크기가 크니 삭제하면 이래저래 많은 도움이 된다.\n공통으로 삭제해야 할 파일들  Debug 디렉토리 (솔루션, 프로젝트 경로상 모두) Release 디렉토리 (솔루션, 프로젝트 경로상 모두) .suo - 작업내역, 탭이나 창 위치정보가 저장됨 .user - 사용자별 설정내역이 저장됨  VS 버전마다 다른경우  ipch 디렉토리 .sdf .ncb 파일  "
+}]

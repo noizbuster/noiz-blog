@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nodejs on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/tags/nodejs/</link>
+    <description>Recent content in nodejs on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 26 Aug 2019 15:16:27 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Express in Practice 001 - Introduction</title>
+      <link>https://blog.noizbuster.com/ko/series/nodejs/express-in-practice/001-introduction/</link>
+      <pubDate>Sat, 17 Aug 2019 06:54:35 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/series/nodejs/express-in-practice/001-introduction/</guid>
+      <description>실전 Express! Express.js 의 5.x 알파버전이 공개되었습니다. Async Router 등의 기능때문에 많이 기대하고 있었는데요. 이 기회를 빌어 Node.js 백엔드에서 가장 많이 사용되는 프레임워크인 Express.js 에 대해 소개하고 실전에서 얻은 경험을 공유해보기 위해 강의를 연재해보려고 합니다.
+Express.js 의 간단한 소개 Express.js 는 여러겹의 middleware로 구성 할 수 있는 Web Framework 입니다.
+좀 더 간단하게 설명해보자면
+graph LR HTTP요청 --&amp;gt; 처리1 처리1 --&amp;gt; 처리2 처리2 --&amp;gt; 처리3 처리3 --&amp;gt; HTTP응답 이와같이 HTTP 요청을 일련된 단계를 거쳐서 응답을 만들어냅니다.</description>
+    </item>
+    
+    <item>
+      <title>Node.js 기초</title>
+      <link>https://blog.noizbuster.com/ko/series/nodejs/nodejs-basic/</link>
+      <pubDate>Sat, 20 Jul 2019 05:34:15 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/series/nodejs/nodejs-basic/</guid>
+      <description>Node.js 백엔드에서 가장 많이 사용되는 프레임워크인 Express.js 에 대해 소개하고 실전에서 얻은 경험을 공유해보기 위해 강의를 연재해보려고 합니다.</description>
+    </item>
+    
+    <item>
+      <title>실전 Express!</title>
+      <link>https://blog.noizbuster.com/ko/series/nodejs/express-in-practice/</link>
+      <pubDate>Mon, 26 Aug 2019 15:16:27 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/series/nodejs/express-in-practice/</guid>
+      <description>Node.js 백엔드에서 가장 많이 사용되는 프레임워크인 Express.js 에 대해 소개하고 실전에서 얻은 경험을 공유해보기 위해 강의를 연재해보려고 합니다.</description>
+    </item>
+    
+    <item>
+      <title>Express in Practice 002 - 프로젝트 만들기</title>
+      <link>https://blog.noizbuster.com/ko/series/nodejs/express-in-practice/002-create-express-project/</link>
+      <pubDate>Mon, 19 Aug 2019 12:55:04 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/series/nodejs/express-in-practice/002-create-express-project/</guid>
+      <description>Express.js 프로젝트 만들기 사전준비  Node.js - Node.js 제대로 설치하기 참고 Git  git, npm 초기화 # 디렉토리를 하나 만들고 &amp;gt; mkdir lecture-express-in-practice &amp;gt; cd lecture-express-in-practice # git 초기화 &amp;gt; git init # npm 초기화 &amp;gt; npm init package name: (lecture-express-in-practice) version: (1.0.0) 0.0.0 description: entry point: (index.js) test command: git repository: https://github.com/noizbuster/lecture-express-in-practice.git keywords: author: NoizBuster license: (ISC) MIT About to write to /home/noizbuster/project/noizbuster/lecture/lecture-express-in-practice/package.json: { &amp;#34;name&amp;#34;: &amp;#34;lecture-express-in-practice&amp;#34;, &amp;#34;version&amp;#34;: &amp;#34;0.0.0&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;main&amp;#34;: &amp;#34;index.</description>
+    </item>
+    
+    <item>
+      <title>Express in Practice 003 - 미들웨어</title>
+      <link>https://blog.noizbuster.com/ko/series/nodejs/express-in-practice/003-middlewares/</link>
+      <pubDate>Mon, 26 Aug 2019 15:16:27 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/series/nodejs/express-in-practice/003-middlewares/</guid>
+      <description>미들웨어 추가하기 널리 사용되는 두가지 미들웨어들을 우리 프로젝트에 추가해보겠습니다.
+이 포스트에서 다루는 미들웨어 패키지 이외에도 필요에 따라 자유롭게 원하는 패키지들을 추가해서 사용하면 됩니다.
+body-parser npm: body-parser
+HTTP body 를 원하는 형태로 파싱해주는 미들웨어 입니다.
+저의 경우 json 으로 파싱을 하는것을 기본으로 두고 사용합니다.
+자세한 내용은 해당 패키지 문서를 참고하세요.
+사용예시 const express = require(&amp;#39;express&amp;#39;); const bodyParser = require(&amp;#39;body-parser&amp;#39;); const app = express(); app.use(bodyParser.json()); app.use(bodyParser.urlencoded({extended: false})); cors npm: cors CORS 는 cross origin resource sharing 의 약자입니다.</description>
+    </item>
+    
+    <item>
+      <title>Lodash - 만능 주머니칼</title>
+      <link>https://blog.noizbuster.com/ko/series/nodejs/package-tour/0001-lodash/</link>
+      <pubDate>Thu, 08 Aug 2019 14:11:59 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/series/nodejs/package-tour/0001-lodash/</guid>
+      <description>Lodash  A modern JavaScript utility library delivering modularity, performance &amp;amp; extras.
+ 처음으로 Package Tour 에서 이야기하고자 하는 패키지는 역시 Lodash 입니다.
+저는 Node.js 를 처음 접하고 다른 사람들의 코드를 읽기 시작하고나서 _.find(data, {id: &#39;MY_ID&#39;}) 와 같은 코드를 자주 접하게 되었습니다.
+Node.js와 Javascript를 배우기 이전에 제가 주로 사용하던 Python 이나 JAVA 같은 언어에서는 $ 나 _ 같은 특수문자를 단독으로 변수명으로서 사용하는 경우를 본적이 없어서 매우 생소했던 기억이 있습니다.
+Lodash 는 array, collection, object 들을 대량으로 조작하는데 필요한 함수들을 다양하게 제공합니다.</description>
+    </item>
+    
+    <item>
+      <title>001. Nodejs 제대로 설치하기</title>
+      <link>https://blog.noizbuster.com/ko/series/nodejs/nodejs-basic/001-install-nodejs/</link>
+      <pubDate>Sat, 20 Jul 2019 05:34:15 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/series/nodejs/nodejs-basic/001-install-nodejs/</guid>
+      <description>Node.js 제대로 설치하기 Node.js 를 설치하는 방법은 아주 다양합니다. 크게 나눠보자면
+ Binary 를 다운로드 받아 사용하는 방법 PackageManager 를 사용해서 설치하는 방법 직접 빌드하는 방법 NVM (Node Version Manager) 를 사용하는 방법  으로 분류 할 수 있습니다.
+거두절미하고 제가 강력하게 추천하는 방법은 NVM 을 사용하는것입니다.
+설치 방법을 빠르게 배우고 싶은 사람은 NVM을 이용한 Node.js 설치 부터 보세요.
+장, 단점 NVM 을 사용하는 경우  Pros  사용하는 Node.js 버전을 쉽게 변경 할 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>Transaction on MongoDB</title>
+      <link>https://blog.noizbuster.com/ko/posts/2016-11-01-132517-mongodb-transaction/</link>
+      <pubDate>Tue, 01 Nov 2016 13:25:17 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2016-11-01-132517-mongodb-transaction/</guid>
+      <description>Introduction 서버 개발을 하는 도중 MongoDB의 서로 다른 Document 에 Atomic 하게 update 가 일어나야 하는 상황이 왔다. 서버는 Node로 되어있고 ORM은 mongoose 를 쓰고있다.
+헌데 Mongoose 에는 consistency를 보장하면서 복수의 Document를 업데이트 하는 API가 구현되어있지 않은것으로 보여 이를 해결하고자 한다.
+Transaction in MongoDB MongoDB 는 Optimistic concurrency control (OCC) 를 채용하고 있고 내부적으로 write lock을 건다고 한다. 때문에 한개 Collection (=table in RDB) 내 에서의 consistency 는 보장이 된다.</description>
+    </item>
+    
+    <item>
+      <title>Angular2 rc5</title>
+      <link>https://blog.noizbuster.com/ko/posts/2016-08-11-173123-angular2-rc5-study/</link>
+      <pubDate>Thu, 11 Aug 2016 17:31:23 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2016-08-11-173123-angular2-rc5-study/</guid>
+      <description>동기 Angular2 rc4가 나왔을때 라우터가 갈려나가는것을 보고 아 이제 좀 고만 고치겠구나 라고 생각했고 이제 슬슬 본격적으로 공부를 해볼까 생각하고 있었는데 얼마안있어 나온 rc5에서 모듈개념이 본격적으로 도입되면서 또 엄청나게 갈려나갔다.
+같은 튜토리얼만 지금 몇번째 보는건지모르겠는데 ㅋㅋ 약간 방향을 바꾸어서 변경된 중요포인트를 확인하고 yeoman 과 같은 보일러플레이트를 활용해서 빠르고 아름답게 초기 환경 설정을 하고 간단한 예제를 만드는것을 목표로 공부를 해 보도록 하겠다.
+부가목표 foundation Bootstrap 레이아웃이 난 맘에 별로 안들었다. 대충 만들기엔 정말 쉽고 편하고 좋은데 너무 정형화 되어있다는 느낌을 받았음.</description>
+    </item>
+    
+    <item>
+      <title>make my npm module</title>
+      <link>https://blog.noizbuster.com/ko/posts/2016-06-21-09-54-make-my-npm-module/</link>
+      <pubDate>Tue, 21 Jun 2016 09:54:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2016-06-21-09-54-make-my-npm-module/</guid>
+      <description>기존에 도커 data volume 의 default configuration을 file에 저장하는 용도로 사용했던 코드 조각이 있었는데 이게 여기저기서 사용이 되기 시작해서 유지보수 비용이 증가하게 되었고 때문에 모듈화를 해야겠다고 생각이 되었다.
+사실 configuration을 도와주는 라이브러리는 있지만 사용상 추구하는 바가 다소 다르기 때문에 커스터마이징을 안할수 없는 상황이어서 (조회가 안되면 디폴트값을 다시 조회하여 error tolerant 를 확보하는 등&amp;hellip;) 그냥 새로운 모듈을 만들어서 관리하기 하였다.
+어떻게 node module 을 만드는것이 가장 이쁜 방법인지 잘 모르기 때문에 유명한 라이브러리의 소스코드나 세팅 구조를 참고하기로 하였다.</description>
+    </item>
+    
+    <item>
+      <title>webstorm에서 node관련 함수들을 찾을수 없다고 나올때 해결법</title>
+      <link>https://blog.noizbuster.com/ko/posts/2016-05-25-webstorm-node-integration/</link>
+      <pubDate>Wed, 25 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2016-05-25-webstorm-node-integration/</guid>
+      <description>Webstorm에서 node등을 지원한다고 하는데 빨간줄이 죽죽 그어져있는 모습이 보이곤한다.
+설정을 좀 해줘야한다.
+설정으로 가서
+Language &amp;amp; Frameworks &amp;gt; Node.js and NPM 으로가서
+Code Assistance 를 Enable 해주면 된다.</description>
+    </item>
+    
+  </channel>
+</rss>

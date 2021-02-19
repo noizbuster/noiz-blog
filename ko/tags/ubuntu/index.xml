@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ubuntu on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/tags/ubuntu/</link>
+    <description>Recent content in ubuntu on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 27 Oct 2020 08:22:34 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu Mouse Wheel in Vmware</title>
+      <link>https://blog.noizbuster.com/ko/posts/2020-10-27-082234-ubuntu-mouse-wheel-in-vmware/</link>
+      <pubDate>Tue, 27 Oct 2020 08:22:34 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2020-10-27-082234-ubuntu-mouse-wheel-in-vmware/</guid>
+      <description>문제? 불가피하게 게임기에서 리눅스를 써야할일이 있을때 virtual box 를 이용해서 우분투를 계속 써왔는데 여러개 모니터를 사용하거나 할때 vram 도 부족하고 마우스가 오작동하는등의 어려움이 있어서 이번에 vmware 를 사용해보기로 했다.
+player 만해도 퍼포먼스가 정말 좋아서 맘에 들었는데.
+마우스 조작과 관련해서 맘에 안드는게 너무 많았다.
+ 마우스의 앞으로, 뒤로 버튼이 동작하지 않음 마우스의 휠이 이상하게 동작함 (위아래로 점프한다거나 하는등 신호가 덜 들어가는 느낌?)  이 문제를 해결하기위해 약 이틀정도 삽질을 해서 해결했다.</description>
+    </item>
+    
+    <item>
+      <title>실수로 한 apt-get autoremove 수습하기</title>
+      <link>https://blog.noizbuster.com/ko/posts/2016-05-10-covering-autoremove-mistake/</link>
+      <pubDate>Tue, 10 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2016-05-10-covering-autoremove-mistake/</guid>
+      <description>python3.5 를 설치하다가 3.4를 삭제한 상태에서 실수로 autoremove 를 하여 python3.4 와 의존성을 가지던 패키지들이 다 날아가서 네트워크도 안되고 난장판이었다.
+재부팅하니 GUI도 쓸수 없었다.
+network 복구 ctrl+alt+F1 으로 터미널1에 붙어서 작업을 한다.
+sudo vi /etc/network/interfaces 에 다가 네트워크 정보를 박아주고 ifconfig 나 iwconfig등으로 네트워크를 수동으로 잡아주거나 해서 네트워크를 연결시킨다.
+손실된 패키지 솎아내서 복구 일단 apt-get 의 로그를 찾아야겠다 뭔가 아주 많이 지워졌는데 어디부터 날아갔는지 피해산정이 중요하다.
+vi /var/log/dpkg.log | less 에 내용을 보면</description>
+    </item>
+    
+  </channel>
+</rss>

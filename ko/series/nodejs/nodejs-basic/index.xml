@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Node.js 기초 on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/series/nodejs/nodejs-basic/</link>
+    <description>Recent content in Node.js 기초 on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sat, 20 Jul 2019 05:34:15 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/series/nodejs/nodejs-basic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>001. Nodejs 제대로 설치하기</title>
+      <link>https://blog.noizbuster.com/ko/series/nodejs/nodejs-basic/001-install-nodejs/</link>
+      <pubDate>Sat, 20 Jul 2019 05:34:15 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/series/nodejs/nodejs-basic/001-install-nodejs/</guid>
+      <description>Node.js 제대로 설치하기 Node.js 를 설치하는 방법은 아주 다양합니다. 크게 나눠보자면
+ Binary 를 다운로드 받아 사용하는 방법 PackageManager 를 사용해서 설치하는 방법 직접 빌드하는 방법 NVM (Node Version Manager) 를 사용하는 방법  으로 분류 할 수 있습니다.
+거두절미하고 제가 강력하게 추천하는 방법은 NVM 을 사용하는것입니다.
+설치 방법을 빠르게 배우고 싶은 사람은 NVM을 이용한 Node.js 설치 부터 보세요.
+장, 단점 NVM 을 사용하는 경우  Pros  사용하는 Node.js 버전을 쉽게 변경 할 수 있다.</description>
+    </item>
+    
+  </channel>
+</rss>

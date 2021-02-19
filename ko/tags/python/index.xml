@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/tags/python/</link>
+    <description>Recent content in python on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 24 May 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>python 프로젝트에 virtualenv 적용하고 사용하기</title>
+      <link>https://blog.noizbuster.com/ko/posts/2016-05-24-python-virtualenv/</link>
+      <pubDate>Tue, 24 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2016-05-24-python-virtualenv/</guid>
+      <description>What is the virtualenv 프로젝트의 의존성 관리를 할 때 nodejs 의 경우 nasty dependency 라서 디렉토리 독립적으로 운용 가능하지만 파이선은 라이브러리가 시스템에 설치되기 때문에 디펜던시의 버전관리가 어려운 문제가 있으며 복수의 서로 다른 디펜던시를 가진 프로젝트를 운용하는데도 문제가 있다. 이를 해결하기 위한 방법으로 virtualenv 라는 파이선 패키지가 제공되고 있고 이를 사용하는 방법에 대해서 알아보겠다.
+Installation sudo pip install virtualenv sudo -H pip install virtualenv
+virtual environment 모드로 변경 virtualenv dependency: virtual enviroment 생성, dependency 디렉토리가 생김 .</description>
+    </item>
+    
+    <item>
+      <title>Python WebServer Survey for API Server</title>
+      <link>https://blog.noizbuster.com/ko/posts/2016-05-09-python-web-platform-survey/</link>
+      <pubDate>Mon, 09 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2016-05-09-python-web-platform-survey/</guid>
+      <description>Restful API 서버를 구현해야 할 문제가 있다.
+요구조건은 다음과 같다.
+ Restful API가 구현 가능해야한다. WebSocket 구현이 용이해야 한다. Scalability 가 좋으면 더욱좋다. Response time 이 짧으면 좋다. Python 이면 좋다.  Flask 사용자가 많아서 커뮤니티 서포트가 좋지만 달려있는게 많기 때문에 상대적으로 아주 무겁고 response time이 상당히 길다는 문제가 있다. 플랫폼을 meinheld 로 바꾸고 나서 많이 빨라졌다. plain text serve 의 경우 아예 퍼포먼스가 좀 느리가 느리다 nodejs 에 비해 7배정도 차이가 있음.</description>
+    </item>
+    
+    <item>
+      <title>celery with mongodb</title>
+      <link>https://blog.noizbuster.com/ko/posts/2016-01-18-celery-with-mongodb/</link>
+      <pubDate>Mon, 18 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2016-01-18-celery-with-mongodb/</guid>
+      <description>#Celery 와 Mongo DB를 이용한 튜토리얼
+참고링크
+http://skillachie.com/2013/06/15/intro-celery-and-mongodb/
+ install celery
+pip install celery
+pip install -U &#39;celery[mongodb]&#39;or pip install -U celery-with-mongodb
+아래와 같은 형식으로 나중에 브로커를 등록 하면 됨.  BROKER_URL = &amp;#39;mongodb://localhost:27017/database_name&amp;#39; #Where the URL is in the format of: mongodb://userid:password@hostname:port/database_name use test db.createUser( {use: &amp;#34;testUser&amp;#34;, pwd: &amp;#34;test&amp;#34;, roles: [&amp;#34;readWrite&amp;#34;, &amp;#34;dbAdmin&amp;#34;] } ) #다음 명령은 read 권한만 갖고 있는 동일한 사용자를 admin 데이터베이스에 추가하고 testDB2 데이터베이스에 대한 readWrite 권한을 부여한다.</description>
+    </item>
+    
+  </channel>
+</rss>

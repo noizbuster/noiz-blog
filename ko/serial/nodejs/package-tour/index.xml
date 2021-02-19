@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Node.js 패키지 투어 on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/serial/nodejs/package-tour/</link>
+    <description>Recent content in Node.js 패키지 투어 on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 08 Aug 2019 14:11:59 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.noizbuster.com/ko/serial/nodejs/package-tour/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lodash - 만능 주머니칼</title>
+      <link>https://blog.noizbuster.com/ko/serial/nodejs/package-tour/0001-lodash/</link>
+      <pubDate>Thu, 08 Aug 2019 14:11:59 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/serial/nodejs/package-tour/0001-lodash/</guid>
+      <description>Lodash  A modern JavaScript utility library delivering modularity, performance &amp;amp; extras.
+ 처음으로 Package Tour 에서 이야기하고자 하는 패키지는 역시 Lodash 입니다.
+저는 Node.js 를 처음 접하고 다른 사람들의 코드를 읽기 시작하고나서 _.find(data, {id: &#39;MY_ID&#39;}) 와 같은 코드를 자주 접하게 되었습니다.
+Node.js와 Javascript를 배우기 이전에 제가 주로 사용하던 Python 이나 JAVA 같은 언어에서는 $ 나 _ 같은 특수문자를 단독으로 변수명으로서 사용하는 경우를 본적이 없어서 매우 생소했던 기억이 있습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

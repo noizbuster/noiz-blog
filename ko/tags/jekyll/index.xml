@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jekyll on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/tags/jekyll/</link>
+    <description>Recent content in jekyll on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 18 Mar 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/tags/jekyll/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jekyll설치 가이드</title>
+      <link>https://blog.noizbuster.com/ko/posts/2016-01-18-jekyll-installation/</link>
+      <pubDate>Fri, 18 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2016-01-18-jekyll-installation/</guid>
+      <description>install jekyll install ruby2.3 ubuntu
+sudo apt-add-repository ppa:brightbox/ruby-ng sudo apt-get update sudo apt-get install ruby2.3 ruby2.3-dev install gem
+sudo apt-get install gem
+update gem
+sudo gem install rubygems-update
+install Jekyll
+sudo gem install jekyll
+check jekyll version
+jekyll --version</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>minikube on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/tags/minikube/</link>
+    <description>Recent content in minikube on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 27 Oct 2020 12:35:32 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/tags/minikube/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>개발보조 목적의 Minikube 설치 및 설정</title>
+      <link>https://blog.noizbuster.com/ko/posts/2020-10-27-123532-installing-minikube/</link>
+      <pubDate>Tue, 27 Oct 2020 12:35:32 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2020-10-27-123532-installing-minikube/</guid>
+      <description>Minikube 로컬환경에서 kubernetes 환경을 간단하게 세팅해서 개발에 활용 할 수 있는 minikube 의 설치방법에 대해 짧게 다뤄보도록 하겠다.
+Minikube Installation Guide
+1. install curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb sudo dpkg -i minikube_latest_amd64.deb minikube start 2. configuration alias kubectl=&amp;quot;minikube kubectl --&amp;quot; 를 bashrc 나 zshrc 등 사용하는 쉘에 alias 로 추가
+source ~/.zshrc 로 로드하거나 새 터미널을 열고
+kubectl get po -A 로 동작 확인</description>
+    </item>
+    
+  </channel>
+</rss>

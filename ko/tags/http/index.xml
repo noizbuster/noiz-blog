@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>http on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/tags/http/</link>
+    <description>Recent content in http on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 07 Mar 2018 14:41:51 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/tags/http/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>http2-header-naming-convention</title>
+      <link>https://blog.noizbuster.com/ko/posts/2018-03-07-144151-http2-header-naming-convention/</link>
+      <pubDate>Wed, 07 Mar 2018 14:41:51 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2018-03-07-144151-http2-header-naming-convention/</guid>
+      <description>HTTP/2 Header Naming Convention server 코딩을 하는중에 header 를 다 lower case 로 자동변환 시켜주는짓을 API 게이트웨이 서버 미들웨어가 하는것을 발견했다.
+뭔가 이유가 있을것 같아 검색을 해보니 HTTP/2 스펙에서 header 이름을 lowerCase로 변환해줘야한다(MUST) 라고 표현하고 있다는걸 알게 되었다.
+HTTP/2 의 사용처가 점점 많아질것이니까 지금부터 미리미리 대비를 해야겠다.
+다른 서비스에서도 lowerCase로 변경해서 내부적으로 처리하도록 하던가 헬퍼 미들웨어를 만들던가 해야지
+References  발견한 stackoverflow 스레드 Secrion 8.1.2 of rfc7540  </description>
+    </item>
+    
+  </channel>
+</rss>

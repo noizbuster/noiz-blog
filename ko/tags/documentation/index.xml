@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>documentation on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/tags/documentation/</link>
+    <description>Recent content in documentation on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 20 Jul 2016 09:51:00 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/tags/documentation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Javascript Documentation</title>
+      <link>https://blog.noizbuster.com/ko/posts/2016-07-20-09-51-javascript-documentation/</link>
+      <pubDate>Wed, 20 Jul 2016 09:51:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2016-07-20-09-51-javascript-documentation/</guid>
+      <description>2016년 가장 널리 사용되는 javascript documentation 은 jsdoc이다.
+ http://usejsdoc.org/ https://github.com/jsdoc3/jsdoc https://meteor.hackpad.com/Automatically-Generating-API-Docs-using-JSDoc-EpPmd2iuFEH#:h=Example:-Class  랜더링 툴은
+ https://www.npmjs.com/package/jsdoc-to-markdown https://github.com/docstrap/docstrap https://github.com/DBCDK/jsdoc3Template https://github.com/clenemt/docdash https://github.com/kbknapp/clap-rs http://jaguarjs.com/doc/  doc dash가 젤 이뻐보인다.</description>
+    </item>
+    
+    <item>
+      <title>Commonmark의 방향에 대한 사견</title>
+      <link>https://blog.noizbuster.com/ko/posts/2016-04-04-commonmarks-direction/</link>
+      <pubDate>Mon, 04 Apr 2016 13:17:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2016-04-04-commonmarks-direction/</guid>
+      <description>markdown 의 variation이 난립함에 따라 표준화에 대한 요구가 떠올랐고
+John Gruber 와 커뮤니케이션을 거쳐 (다소 시끌했지만) commonmark 가 총대를 매고 나타났다.
+현재까지 스펙이 0.25 버전까지 올라왔고 업데이트 주기도 길어지고 있다. 하지만 table 이나 code highlight 에 관한 이야기가 아주 활발히 일어나고 있음에도 불구하고 스펙에 들어갈 기미는 보이지 않는다. 다만 extended 기능으로 추가해서 쓰는게 어떠하냐는 이야기뿐.
+나 역시 너무 많은 기능이 commonmark에 포함되어 진입장벽을 높이거나 하는것엔 동의하지 않지만 github flavor의 table 이나 code highlight support 같은경우엔 매우 직관적이며 진입장벽을 높이지 않는다고 생각한다.</description>
+    </item>
+    
+  </channel>
+</rss>

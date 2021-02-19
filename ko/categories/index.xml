@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/categories/</link>
+    <description>Recent content in Categories on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 18 Feb 2021 05:46:07 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>development</title>
+      <link>https://blog.noizbuster.com/ko/categories/development/</link>
+      <pubDate>Thu, 18 Feb 2021 05:46:07 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/categories/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>frontend</title>
+      <link>https://blog.noizbuster.com/ko/categories/frontend/</link>
+      <pubDate>Thu, 18 Feb 2021 05:46:07 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/categories/frontend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>contemplation</title>
+      <link>https://blog.noizbuster.com/ko/categories/contemplation/</link>
+      <pubDate>Fri, 30 Aug 2019 14:12:03 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/categories/contemplation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nodejs</title>
+      <link>https://blog.noizbuster.com/ko/categories/nodejs/</link>
+      <pubDate>Mon, 26 Aug 2019 15:16:27 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/categories/nodejs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>https://blog.noizbuster.com/ko/categories/java/</link>
+      <pubDate>Fri, 16 Aug 2019 20:29:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/categories/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>review</title>
+      <link>https://blog.noizbuster.com/ko/categories/review/</link>
+      <pubDate>Sun, 03 Apr 2016 10:54:00 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/categories/review/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

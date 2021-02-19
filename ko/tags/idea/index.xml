@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>idea on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/tags/idea/</link>
+    <description>Recent content in idea on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 21 Jan 2020 05:08:37 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/tags/idea/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cannot Use Fcitx in Jetbrains IDE</title>
+      <link>https://blog.noizbuster.com/ko/posts/2020-01-21-050835-cannot-use-fcitx-in-jetbrains-ide/</link>
+      <pubDate>Tue, 21 Jan 2020 05:08:37 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2020-01-21-050835-cannot-use-fcitx-in-jetbrains-ide/</guid>
+      <description>Ubuntu 에서 IDEA 에서 Fcitx 가 사용 불가능한 문제 해결 WebStorm, Intellij, PyCharm 등 IDEA Jetbrains 의 IDE 가 업데이트 되면서 Fcitx 를 사용 할 수 없는 문제가 있다.
+아마도 IDEA가 자신을 실행하기위해 가지고 있는 jdk 가 11버전을 하는데 이것이 바뀌면서 input method 를 자동으로 disable 시키는것으로 보인다. 그래서 IDEA 클라이언트를 돌리는 JVM에 해당기능을 비활성화 해주는 옵션을 주는게 해결 하기위한 아이디어다.
+문제 재현 환경  Ubuntu 18.04 Jetbrains IDEA 2019.3.1  WebStorm, Intellij, PyCharm 등 모두 문제 발생   fcitx 4.</description>
+    </item>
+    
+    <item>
+      <title>fixing-atom-and-idea-file-refresh-issue</title>
+      <link>https://blog.noizbuster.com/ko/posts/2017-01-09-140517-fixing-atom-and-idea-file-refresh-issue/</link>
+      <pubDate>Mon, 09 Jan 2017 14:05:17 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2017-01-09-140517-fixing-atom-and-idea-file-refresh-issue/</guid>
+      <description>Fixing limit of watch issue  sudo vi /etc/sysctl.d/max_user_watches.conf write fs.inotify.max_user_watches = 524288 the file sudo sysctl -p --system restart atom or idea  Reference  https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md#typeerror-unable-to-watch-path https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit  </description>
+    </item>
+    
+  </channel>
+</rss>

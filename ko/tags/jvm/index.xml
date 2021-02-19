@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jvm on NoizBuster</title>
+    <link>https://blog.noizbuster.com/ko/tags/jvm/</link>
+    <description>Recent content in jvm on NoizBuster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 09 Jan 2020 06:54:09 +0000</lastBuildDate><atom:link href="https://blog.noizbuster.com/ko/tags/jvm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kotlin Jvm Library</title>
+      <link>https://blog.noizbuster.com/ko/posts/2020-01-09-065408-kotlin-jvm-library/</link>
+      <pubDate>Thu, 09 Jan 2020 06:54:09 +0000</pubDate>
+      
+      <guid>https://blog.noizbuster.com/ko/posts/2020-01-09-065408-kotlin-jvm-library/</guid>
+      <description>Kotlin 으로 JVM Library 만들기
+1. Gradle 로 Kotlin 프로젝트 생성 mkdir kotlin-jvm-lib cd kotlin-jvm-lib gradle init Welcome to Gradle 6.0.1! Here are the highlights of this release: - Substantial improvements in dependency management, including - Publishing Gradle Module Metadata in addition to pom.xml - Advanced control of transitive versions - Support for optional features and dependencies - Rules to tweak published metadata - Support for Java 13 - Faster incremental Java and Groovy compilation - New Zinc compiler for Scala - VS2019 support - Support for Gradle Enterprise plugin 3.</description>
+    </item>
+    
+  </channel>
+</rss>
